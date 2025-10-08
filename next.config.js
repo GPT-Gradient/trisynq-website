@@ -1,34 +1,49 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
   images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
+    domains: ['localhost'],
+    formats: ['image/avif', 'image/webp'],
   },
-  async generateBuildId() {
-    return 'trisynq-build-' + Date.now()
-  },
+  reactStrictMode: true,
+  poweredByHeader: false,
+  // Enable standalone output for Docker
+  output: 'standalone',
+  // Compress responses
+  compress: true,
+  // Security headers
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
           {
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'
+          },
+          {
+            key: 'Strict-Transport-Security',
+            value: 'max-age=63072000; includeSubDomains; preload'
+          },
+          {
             key: 'X-Frame-Options',
-            value: 'DENY',
+            value: 'SAMEORIGIN'
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            value: 'nosniff'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
+            value: 'origin-when-cross-origin'
+          }
+        ]
+      }
     ]
-  },
+  }
 }
 
 module.exports = nextConfig

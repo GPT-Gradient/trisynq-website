@@ -1,0 +1,58 @@
+import { Project } from '@/types';
+
+export const continuumProjects: Project[] = [
+  {
+    id: 'nexus',
+    name: 'Project NEXUS',
+    tagline: 'Search Transparency',
+    status: 'Phase 1 Beta (First 100)',
+    icon: 'Search',
+    description: 'Proving SMBs compete on expertise vs. marketing budget',
+    link: '/continuum/nexus',
+  },
+  {
+    id: 'data-democracy',
+    name: 'Data Democracy',
+    tagline: 'Analytics for All',
+    status: 'Research Phase',
+    icon: 'BarChart',
+    description: 'Proving AI gives SMBs the data teams enterprises have',
+    link: '/continuum/data-democracy',
+  },
+  {
+    id: 'no-cheating',
+    name: 'Project No-Cheating',
+    tagline: 'Educational AI',
+    status: 'Planning 2025',
+    icon: 'GraduationCap',
+    description: 'Proving AI enhances learning vs. enabling shortcuts',
+    link: '/continuum/no-cheating',
+  },
+  {
+    id: 'ctos-heart',
+    name: 'Project CTO\'s Heart',
+    tagline: 'Special Needs Tech',
+    status: 'Planning Late 2025',
+    icon: 'Heart',
+    description: 'Proving technology adapts to individual learning',
+    link: '/continuum/ctos-heart',
+  },
+  {
+    id: 'safe-spaces',
+    name: 'Project Safe Spaces',
+    tagline: 'Digital Safety',
+    status: 'Planning 2026',
+    icon: 'Shield',
+    description: 'Proving safety and expression coexist transparently',
+    link: '/continuum/safe-spaces',
+  },
+  {
+    id: 're-connect',
+    name: 'Project RE-Connect',
+    tagline: 'Real Estate',
+    status: 'Planning Mid 2026',
+    icon: 'Building',
+    description: 'Proving transparency creates competitive advantage',
+    link: '/continuum/re-connect',
+  },
+];

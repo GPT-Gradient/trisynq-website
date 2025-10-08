@@ -1,8 +1,9 @@
-# Node modules
+# Dependencies
 node_modules
 npm-debug.log
+yarn-error.log
 
-# Next.js build output
+# Next.js
 .next
 out
 
@@ -13,39 +14,30 @@ out
 .env.test.local
 .env.production.local
 
-# Git
-.git
-.gitignore
-
-# Documentation
-*.md
-!README.md
-
-# Tests
-__tests__
-*.test.js
-*.test.ts
-*.test.tsx
-
 # IDE
 .vscode
 .idea
+*.swp
+*.swo
+*~
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
+# Git
+.git
+.gitignore
 
-# Dependencies
-package-lock.json
-yarn.lock
+# CI/CD
+.github
 
-# Cache
-.cache
-.parcel-cache
+# Documentation
+*.md
+!README.md
 
-# Build tools
-.eslintrc.json
-.prettierrc
+# Media/Assets (exclude from build if not needed)
+Media/REQs
+
+# Misc
+.claude

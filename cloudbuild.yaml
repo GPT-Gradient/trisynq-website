@@ -1,21 +1,20 @@
-# Google Cloud Build configuration for TriSynq AI website
+# Google Cloud Build configuration for TriSynq AI Website
 steps:
-  # Build the Docker image
+  # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
       - '-t'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:$BUILD_ID'
+      - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
       - '-t'
       - 'gcr.io/$PROJECT_ID/trisynq-website:latest'
       - '.'
-    timeout: '600s'
 
-  # Push the image to Container Registry
+  # Push the container image to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:$BUILD_ID'
+      - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
@@ -23,43 +22,42 @@ steps:
       - 'gcr.io/$PROJECT_ID/trisynq-website:latest'
 
   # Deploy to Cloud Run
-  - name: 'gcr.io/cloud-builders/gcloud'
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
     args:
       - 'run'
       - 'deploy'
       - 'trisynq-website'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:$BUILD_ID'
+      - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
       - '--region'
       - 'us-central1'
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
-      - '--memory'
-      - '2Gi'
-      - '--cpu'
-      - '2'
-      - '--max-instances'
-      - '10'
-      - '--min-instances'
-      - '1'
       - '--port'
       - '3000'
+      - '--memory'
+      - '512Mi'
+      - '--cpu'
+      - '1'
+      - '--min-instances'
+      - '0'
+      - '--max-instances'
+      - '10'
       - '--set-env-vars'
-      - 'NODE_ENV=production'
-      - '--service-account'
-      - 'trisynq-website@$PROJECT_ID.iam.gserviceaccount.com'
+      - 'NODE_ENV=production,NEXT_TELEMETRY_DISABLED=1'
+      - '--set-secrets'
+      - 'XYNERGY_API_KEY=xynergy-api-key:latest,NEXT_PUBLIC_GA_MEASUREMENT_ID=ga-measurement-id:latest'
 
-# Store images in Container Registry
+# Store images in Google Container Registry
 images:
-  - 'gcr.io/$PROJECT_ID/trisynq-website:$BUILD_ID'
+  - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
   - 'gcr.io/$PROJECT_ID/trisynq-website:latest'
 
-# Build options
+# Build configuration
 options:
+  machineType: 'N1_HIGHCPU_8'
   logging: CLOUD_LOGGING_ONLY
-  machineType: 'E2_HIGHCPU_8'
-  diskSizeGb: 100
 
-# Timeout for the entire build
 timeout: '1200s'

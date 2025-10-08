@@ -1,0 +1,1592 @@
+# Data Discovery Tool - Complete Build Requirements
+
+## **Project Overview**
+Build an interactive, educational lead magnet that helps SMBs discover the enterprise-grade competitive intelligence hiding in their existing data. The tool guides users through industry-specific questions, visually demonstrates their data connections, generates personalized reports, and qualifies leads for 30-minute strategy sessions.
+
+**Project Name**: Data Discovery Tool (internal codename: "Hidden Gold Finder")
+**Primary Goal**: Lead generation + education + qualification
+**Success Metric**: Strategy session bookings from qualified leads
+
+---
+
+## **Current Infrastructure Context**
+
+### **Existing GCP Setup** (from Master Knowledge Base)
+- **Project**: xynergy-dev-1757909467
+- **Region**: us-central1 (standardized)
+- **Deployment Platform**: Cloud Run (all services)
+- **Infrastructure Management**: Terraform
+- **Container Registry**: us-central1-docker.pkg.dev/xynergy-dev-1757909467/xynergy-platform
+- **Database**: Firestore (real-time operational data)
+- **Analytics**: BigQuery (xynergy_analytics dataset)
+- **Storage**: Cloud Storage (content and reports)
+- **Messaging**: Pub/Sub (11 topics configured)
+- **Service Account**: xynergy-platform-sa@xynergy-dev-1757909467.iam.gserviceaccount.com
+
+### **Existing Services Architecture**
+- FastAPI backend pattern (Python)
+- React frontend with TypeScript
+- Tailwind CSS (core utilities only)
+- Docker containerization with --platform linux/amd64
+- Authentication via GCP service accounts
+- Private deployment with authenticated proxy access
+
+### **Design System Standards**
+- **Color Palette**: 
+  - Primary Dark: #1a202c
+  - Secondary Blues: #2d3748, #4299e1
+  - Purple Accents: #553c9a, #9f7aea
+  - Pink Accent: #ed64a6
+  - White/Light: #ffffff, #f7fafc
+- **Typography**: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell
+- **Icons**: Lucide React
+- **Design Philosophy**: Johnny Ive inspired - purposeful simplicity, emotional resonance, ruthless reduction
+
+---
+
+## **Application Architecture**
+
+### **Service Structure**
+New Cloud Run service following existing patterns:
+
+**Service Name**: `trisynq-data-discovery-tool`
+**Deployment Type**: Public-facing (unlike internal Xynergy services)
+**Access Pattern**: No authentication required for tool, authenticated for admin/analytics
+
+### **Technology Stack**
+
+#### **Backend**
+- **Framework**: FastAPI (Python 3.11+)
+- **Key Libraries**:
+  - Pydantic for data validation
+  - Google Cloud libraries (Firestore, Storage, BigQuery)
+  - PDF generation (ReportLab or WeasyPrint)
+  - Email handling (if integrated)
+- **API Structure**: RESTful endpoints
+- **Documentation**: Auto-generated OpenAPI/Swagger
+
+#### **Frontend**
+- **Framework**: React 18+ with TypeScript
+- **State Management**: React hooks (useState, useReducer, useContext)
+- **Styling**: Tailwind CSS (core utilities only, no custom config)
+- **Icons**: Lucide React
+- **Animations**: Framer Motion for transitions
+- **Forms**: React Hook Form for validation
+- **HTTP Client**: Fetch API or Axios
+
+#### **Database/Storage**
+- **User Sessions**: Firestore (anonymous session tracking)
+- **Lead Data**: Firestore collection for captured leads
+- **Analytics Events**: BigQuery for analysis
+- **Generated PDFs**: Cloud Storage bucket
+- **Configuration**: Firestore for dynamic content
+
+---
+
+## **Functional Requirements**
+
+### **1. Landing Page**
+
+#### **Hero Section**
+- **Headline**: "What's Your Data Actually Worth?"
+- **Subheadline**: "Most businesses sit on $50K-500K in untapped competitive intelligence. Find out what you're missing in 5 minutes."
+- **Bold Statement**: "You're not starting from zero. You just didn't know what you already have."
+- **Primary CTA**: "Discover Your Hidden Gold" button → starts tool
+- **Visual**: Animated illustration (treasure chest with data icons flowing out)
+
+#### **Trust Elements**
+- "No login required"
+- "Your data stays yours - we just identify what types you have"
+- "Get a personalized report instantly"
+- "Based on methodology proven with [X] businesses"
+
+#### **SEO Optimization**
+- Proper meta tags
+- Open Graph tags for social sharing
+- Schema markup for tool/application
+- Fast loading (< 2s)
+
+---
+
+### **2. Interactive Tool Flow**
+
+#### **Step 1: Industry Selection**
+**UI Component**: Card-based selection grid
+
+**Industries to Include**:
+1. Professional Services (Consulting, Legal, Accounting)
+2. Retail & E-commerce
+3. Restaurants & Hospitality
+4. Real Estate
+5. Healthcare & Wellness
+6. Home Services (Contractors, HVAC, Plumbing)
+7. Education & Training
+8. Nonprofits
+9. Other (text input for specification)
+
+**Visual Design**:
+- Large, clickable cards with icons
+- Hover effects
+- Selected state indication
+- "Why this matters" tooltip
+
+**Data Capture**:
+```json
+{
+  "sessionId": "uuid",
+  "industry": "string",
+  "industryOther": "string|null",
+  "timestamp": "datetime"
+}
+```
+
+**Scoring Initialization**:
+- Sets industry-specific question flow
+- Initializes scoring weights
+- Loads relevant scenarios
+
+---
+
+#### **Step 2: Business Fundamentals**
+**Progress Indicator**: 25% complete
+
+**Universal Questions** (all industries):
+
+1. **Do you have a website?**
+   - Yes/No toggle
+   - If Yes → Dropdown: "Which platform?"
+     - WordPress
+     - Squarespace
+     - Wix
+     - Shopify
+     - Custom Built
+     - Other (text input)
+   - If No → Show educational tooltip: "That's your first opportunity"
+
+2. **Do you use email for business communication?**
+   - Yes/No toggle
+   - If Yes → Dropdown: "What platform?"
+     - Gmail/Google Workspace
+     - Office 365/Outlook
+     - Apple Mail
+     - Other (text input)
+
+3. **Do you track sales/revenue?**
+   - Yes/No toggle
+   - If Yes → Dropdown: "In what system?"
+     - QuickBooks
+     - Xero
+     - FreshBooks
+     - Excel/Google Sheets
+     - CRM System
+     - Other (text input)
+
+4. **Do you have customer contact information stored?**
+   - Yes/No toggle
+   - If Yes → Dropdown: "Where?"
+     - Spreadsheet (Excel/Sheets)
+     - CRM System
+     - Email Contacts
+     - Other (text input)
+
+**Visual Elements**:
+- Animated "data buckets" that fill as they answer Yes
+- Connection lines appearing between related data sources
+- Running data score counter (background, not yet visible)
+- Smooth transitions between questions
+
+**Data Capture**:
+```json
+{
+  "fundamentals": {
+    "hasWebsite": boolean,
+    "websitePlatform": "string|null",
+    "hasEmail": boolean,
+    "emailPlatform": "string|null",
+    "tracksSales": boolean,
+    "salesSystem": "string|null",
+    "hasCustomerData": boolean,
+    "customerDataLocation": "string|null"
+  }
+}
+```
+
+---
+
+#### **Step 3: Industry-Specific Deep Dive**
+**Progress Indicator**: 50% complete
+
+**Dynamic Question Sets by Industry**:
+
+##### **Professional Services**
+5. **Do you track time spent on client projects?**
+   - Yes/No → If Yes: Dropdown [Harvest, Toggl, QuickBooks Time, Spreadsheet, Other]
+
+6. **Do you have records of which services different clients purchased?**
+   - Yes/No → If Yes: Dropdown based on previous answers
+
+7. **Do you track how clients found you?**
+   - Yes/No → If Yes: Dropdown [CRM, Intake forms, Spreadsheet, Other]
+
+8. **Do you send proposals or quotes?**
+   - Yes/No → If Yes: Dropdown [PandaDoc, DocuSign, PDF, Word/Google Docs, Other]
+
+##### **Retail/E-commerce**
+5. **Do you track inventory?**
+   - Yes/No → If Yes: Dropdown [Shopify, Square, Lightspeed, Excel, Other]
+
+6. **Do you know when customers make repeat purchases?**
+   - Yes/No/Sometimes
+
+7. **Do you have customer purchase history?**
+   - Yes/No → If Yes: Where is it stored?
+
+8. **Do you run promotions or sales?**
+   - Yes/No → If Yes: Do you track which ones work? [Yes/No/Sometimes]
+
+##### **Restaurants & Hospitality**
+5. **Do you use a POS system?**
+   - Yes/No → If Yes: Dropdown [Toast, Square, Clover, Lightspeed, Revel, Other]
+
+6. **Do you track table turnover or busy times?**
+   - Yes/No/Sometimes
+
+7. **Do you have a reservation system?**
+   - Yes/No → If Yes: Dropdown [OpenTable, Resy, Yelp Reservations, Other]
+
+8. **Do you know which menu items are most profitable?**
+   - Yes/Sometimes/No
+
+##### **Real Estate**
+5. **Do you use a CRM for client management?**
+   - Yes/No → If Yes: Which one? [Salesforce, HubSpot, Follow Up Boss, kvCORE, Other]
+
+6. **Do you track lead sources?**
+   - Yes/No/Sometimes
+
+7. **Do you know your conversion rates by lead source?**
+   - Yes/No
+
+8. **Do you track days on market for your listings?**
+   - Yes/No
+
+##### **Home Services**
+5. **Do you use scheduling software?**
+   - Yes/No → If Yes: Dropdown [Jobber, ServiceTitan, Housecall Pro, Other]
+
+6. **Do you track job costs vs. quoted prices?**
+   - Yes/No/Sometimes
+
+7. **Do you get customer reviews?**
+   - Yes/No → If Yes: Where? [Google, Yelp, Angi, Nextdoor, Other]
+
+8. **Do you track repeat vs. new customers?**
+   - Yes/No
+
+##### **Healthcare & Wellness**
+5. **Do you use practice management software?**
+   - Yes/No → If Yes: Which one?
+
+6. **Do you track appointment no-shows?**
+   - Yes/No
+
+7. **Do you have patient outcome data?**
+   - Yes/No
+
+8. **Do you track patient acquisition costs?**
+   - Yes/No
+
+##### **Education & Training**
+5. **Do you use a learning management system?**
+   - Yes/No → If Yes: Which one? [Canvas, Blackboard, Moodle, Custom, Other]
+
+6. **Do you track student completion rates?**
+   - Yes/No
+
+7. **Do you have student performance data?**
+   - Yes/No
+
+8. **Do you track course popularity/enrollment?**
+   - Yes/No
+
+##### **Nonprofits**
+5. **Do you use donor management software?**
+   - Yes/No → If Yes: Which one? [Salesforce NPSP, Bloomerang, DonorPerfect, Other]
+
+6. **Do you track donor retention rates?**
+   - Yes/No
+
+7. **Do you measure program impact?**
+   - Yes/No/Sometimes
+
+8. **Do you track volunteer engagement?**
+   - Yes/No
+
+**Visual Elements**:
+- More data buckets lighting up
+- "Power Combo" badges appearing when complementary data identified
+- Connection web becoming more complex
+- Educational tooltips explaining why each question matters
+
+**Data Capture**:
+```json
+{
+  "industrySpecific": {
+    "question5": {"answer": boolean, "platform": "string|null"},
+    "question6": {"answer": boolean, "details": "string|null"},
+    "question7": {"answer": boolean, "details": "string|null"},
+    "question8": {"answer": boolean, "details": "string|null"}
+  }
+}
+```
+
+---
+
+#### **Step 4: Marketing & Customer Intelligence**
+**Progress Indicator**: 75% complete
+
+**Universal Questions** (all industries):
+
+9. **Do you have social media accounts for your business?**
+   - Yes/No → If Yes: Multi-select checkboxes
+     - Facebook
+     - Instagram
+     - LinkedIn
+     - Twitter
+     - TikTok
+     - YouTube
+     - Other
+
+10. **Do you know where your customers come from?**
+    - Yes/No/Sometimes
+    - If Yes: How? Dropdown [Google Analytics, Ask customers, CRM tracking, Referral tracking, Other]
+
+11. **Do you send marketing emails or newsletters?**
+    - Yes/No → If Yes: Platform? [Mailchimp, Constant Contact, HubSpot, Gmail, Other]
+
+12. **Do you get customer reviews or feedback?**
+    - Yes/No → If Yes: Multi-select where
+      - Google Reviews
+      - Yelp
+      - Facebook
+      - Email feedback
+      - Surveys
+      - Other
+
+13. **Do you track which marketing efforts bring in customers?**
+    - Yes/Sometimes/No
+
+**Visual Elements**:
+- Final data buckets filling
+- Complete connection web visible
+- "Enterprise-Grade Intelligence" badge appears
+- Data score reaching peak
+
+---
+
+#### **Step 5: Hidden Patterns Discovery**
+**Progress Indicator**: 90% complete
+
+**Conditional Questions** (based on data richness):
+
+If they have 5+ data sources:
+
+14. **Do you know which customers are most profitable?**
+    - Yes/No/Sometimes
+
+15. **Can you predict busy seasons or slow periods?**
+    - Yes/No/Sometimes
+
+16. **Do you know what makes customers come back?**
+    - Yes/No/Not really
+
+If they have fewer than 5 sources, skip to results
+
+**Visual Preparation**:
+- Highlight specific data combinations they have
+- Show which combos would answer these questions
+- Build anticipation for results page
+- Final score calculation visible
+
+**Data Capture**:
+```json
+{
+  "hiddenPatterns": {
+    "knowsProfitableCustomers": "yes|no|sometimes",
+    "predictsBusySeasons": "yes|no|sometimes",
+    "understandsRetention": "yes|no|notReally"
+  }
+}
+```
+
+---
+
+### **3. Results Page - "Your Data Intelligence Report"**
+
+#### **Section 1: Data Score Display**
+
+**Visual Component**: Large, animated score reveal
+
+**Score Calculation** (Backend Algorithm):
+```python
+# Data Breadth (0-25 points)
+data_sources_count = count_yes_answers(responses)
+if data_sources_count >= 9: breadth_score = 25
+elif data_sources_count >= 7: breadth_score = 20
+elif data_sources_count >= 5: breadth_score = 15
+elif data_sources_count >= 3: breadth_score = 10
+else: breadth_score = 5
+
+# Data Quality (0-25 points)
+quality_score = calculate_platform_quality(platforms_selected)
+# Spreadsheets only = 5
+# Mix of spreadsheets + software = 15
+# Dedicated platforms = 20
+# Enterprise tools = 25
+
+# Connection Potential (0-30 points)
+power_combos = identify_power_combinations(responses)
+# Website + Sales = 10 points
+# Email + CRM = 10 points
+# Sales + Customer tracking = 10 points
+# Bonus for multiple combos
+
+# Actionability (0-20 points)
+actionability = calculate_implementation_speed(responses, industry)
+
+total_score = breadth_score + quality_score + connection_potential + actionability
+```
+
+**Display Elements**:
+- **Large Score**: "Your Data Intelligence Score: X/100"
+- **Visual Meter**: Animated fill showing their score
+- **Industry Comparison**: "You're in the top X% of [industry] businesses"
+- **Score Breakdown Card**: Shows 4 component scores with brief explanations
+
+---
+
+#### **Section 2: Your Data Map**
+
+**Visual Component**: Interactive node diagram
+
+**Elements**:
+- Each data source as a node (colored by category)
+- Connection lines between related sources
+- "Power Combo" highlights (thicker lines, special color)
+- Hover tooltips explaining connections
+- Click to expand details
+
+**Summary Text**:
+"You have [X] data sources capturing [Y] different types of intelligence about your business."
+
+---
+
+#### **Section 3: Top 3 Immediate Opportunities**
+
+**Dynamic Generation** (Backend Logic):
+
+```python
+def generate_opportunities(responses, industry, score_components):
+    opportunities = []
+    
+    # Identify available power combos
+    power_combos = identify_power_combinations(responses)
+    
+    # Select top 3 based on:
+    # 1. Data availability
+    # 2. Industry relevance
+    # 3. Implementation speed
+    # 4. Typical impact
+    
+    for combo in power_combos[:3]:
+        opportunity = {
+            "title": generate_insight_title(combo, industry),
+            "description": generate_insight_description(combo, industry),
+            "data_sources": combo.sources,
+            "enterprise_use": get_enterprise_example(combo),
+            "typical_impact": get_impact_metrics(combo, industry),
+            "time_to_insight": estimate_implementation_time(combo),
+            "example_scenario": generate_industry_scenario(combo, industry)
+        }
+        opportunities.append(opportunity)
+    
+    return opportunities
+```
+
+**Display Format for Each**:
+```
+╔══════════════════════════════════════════════════════════╗
+║ Opportunity #1: [Insight Title]                          ║
+╠══════════════════════════════════════════════════════════╣
+║                                                          ║
+║ What you'd discover:                                     ║
+║ [Specific pattern or insight they could uncover]        ║
+║                                                          ║
+║ Data sources needed:                                     ║
+║ 🔵 [Their Source 1] + 🔵 [Their Source 2]              ║
+║                                                          ║
+║ How enterprises use this:                                ║
+║ [Real-world Fortune 500 application]                    ║
+║                                                          ║
+║ Typical impact:                                          ║
+║ 📈 [Percentage improvement or dollar value]             ║
+║                                                          ║
+║ Time to insight: [Days/Weeks]                           ║
+║                                                          ║
+║ Example: [Industry-specific scenario]                   ║
+║                                                          ║
+╚══════════════════════════════════════════════════════════╝
+```
+
+**Example Opportunity Templates by Data Combination**:
+
+**Website Analytics + Sales Data**:
+- Title: "Discover Which Content Drives Revenue"
+- Insight: "Identify which blog posts, pages, or resources lead to actual sales, not just traffic"
+- Enterprise Use: "Amazon tracks content-to-conversion paths for every product category"
+- Impact: "Businesses typically see 30-50% improvement in content ROI"
+- Example: "[Industry] business found that case studies about [topic] drove 3x more qualified leads than product pages"
+
+**Email + CRM + Sales**:
+- Title: "Identify High-Value Email Sequences"
+- Insight: "Discover which email touchpoints predict long-term customer value"
+- Enterprise Use: "SaaS companies use this to identify trial-to-paid conversion patterns"
+- Impact: "20-40% increase in customer lifetime value through optimized nurturing"
+- Example: "[Industry] firm discovered that prospects engaging with [specific content] had 2.4x higher project values"
+
+---
+
+#### **Section 4: What You're Missing**
+
+**Component**: Gap Analysis Display
+
+**Content**:
+"Here's what enterprises with your business model typically track that you're not capturing yet:"
+
+**Format**:
+- List 2-3 missing data sources (based on industry benchmarks)
+- Explain what insights each would unlock
+- Difficulty rating: 🟢 Quick Win | 🟡 Medium Effort | 🔴 Long-term
+- Why it matters for their industry
+
+**Tone**: Opportunity, not shame
+"Don't worry - 90% of [industry] businesses aren't tracking these either. But the 10% who do have a massive competitive advantage."
+
+---
+
+#### **Section 5: Enterprise Comparison**
+
+**Component**: Three-column comparison table
+
+**Columns**:
+1. **What You Have**: Their current data sources and capabilities
+2. **What You're Missing**: The gap (from Section 4)
+3. **What's Possible**: If they connected their data + added missing sources
+
+**Visual**: Side-by-side cards or table with clear visual hierarchy
+
+---
+
+#### **Section 6: Industry-Specific Scenarios**
+
+**Component**: Carousel or grid of real scenarios
+
+**Content**: 3-5 anonymized case studies
+- "A [industry] business with your data profile..."
+- Specific approach they took
+- Actual results achieved
+- Different strategies shown (not just one path)
+
+**Example for Professional Services**:
+"A consulting firm with your data profile discovered that clients who engaged with their 'ROI Calculator' tool had 2.4x higher project values and 3x longer client relationships. They now use initial engagement patterns to identify high-potential leads immediately and customize their approach."
+
+---
+
+#### **Section 7: Your Personalized Roadmap**
+
+**Component**: Three expandable path cards
+
+**Path 1: Quick Wins (This Week)**
+- 1-2 immediate insights from current data
+- Specific actionable steps
+- Expected impact
+- "You could do this yourself or with basic tools"
+
+**Path 2: Medium-Term (30-90 Days)**
+- Connect 2-3 data sources for deeper insights
+- What's required
+- Value unlocked
+- "This typically requires some technical setup"
+
+**Path 3: Full Enterprise Intelligence (Complete Picture)**
+- All data connected, AI-powered, predictive
+- Complete competitive advantage
+- "This is where TriSynq's methodology comes in"
+
+**For Each Path**:
+- Clear requirements
+- Expected discoveries
+- Approximate timeline
+- Where TriSynq fits (honest about DIY vs. partnership)
+
+---
+
+#### **Section 8: CTA Section**
+
+##### **Primary CTA: Strategy Session**
+
+**Card Layout**:
+```
+╔══════════════════════════════════════════════════════════╗
+║                Want to Actually Do This?                  ║
+╠══════════════════════════════════════════════════════════╣
+║                                                          ║
+║ 30-Minute Strategy Session                              ║
+║                                                          ║
+║ What happens:                                            ║
+║ ✓ Understand YOUR specific business                     ║
+║ ✓ Custom scenarios for your industry                    ║
+║ ✓ Map your quick wins                                   ║
+║ ✓ Answer all your questions                             ║
+║                                                          ║
+║ What this ISN'T:                                        ║
+║ ✗ A sales pitch                                         ║
+║ ✗ A data audit                                          ║
+║ ✗ Generic consulting                                    ║
+║                                                          ║
+║ Our Promise:                                             ║
+║ "We'll tell you if this isn't right for you.           ║
+║  We're looking for the 20% ready to prove this."       ║
+║                                                          ║
+║          [Book Your Strategy Session]                   ║
+║                                                          ║
+╚══════════════════════════════════════════════════════════╝
+```
+
+**Form/Action**:
+- Button leads to inline form OR external calendar (configurable)
+- If inline form:
+  - Name
+  - Email
+  - Phone (optional)
+  - Best time to call
+  - Brief description of biggest challenge
+- Submit → Confirmation + email notification
+
+##### **Secondary CTA: Download Report**
+
+**Offer**:
+- PDF version of their personalized report
+- Email delivery
+- Bonus guide included
+
+**Form Fields**:
+- Email (required)
+- Business name (optional)
+- Phone (optional)
+
+**Backend Action**:
+- Generate PDF from results
+- Store in Cloud Storage
+- Send email with download link
+- Trigger email nurture sequence
+- Create Firestore lead record
+
+##### **Tertiary CTA: Explore Methodology**
+
+**For users not ready to book**:
+- "See How We Systematically Turn Data Into Intelligence"
+- Links to T.R.A.N.S.L.A.T.E. methodology page
+- Opens in new tab
+
+---
+
+### **4. Lead Scoring & Backend Logic**
+
+#### **Scoring Algorithm**
+
+**Data Model**:
+```python
+class LeadScore:
+    # Component Scores
+    data_breadth: int  # 0-25
+    data_quality: int  # 0-25
+    connection_potential: int  # 0-30
+    actionability: int  # 0-20
+    
+    # Calculated Total
+    total_score: int  # 0-100
+    
+    # Lead Quality (backend only)
+    industry_fit: float  # 0-1 (how well their industry matches TriSynq focus)
+    readiness_score: float  # 0-1 (based on answer patterns)
+    data_richness: str  # "low" | "medium" | "high"
+    
+    # Qualification Tier
+    tier: str  # "hot" | "warm" | "nurture"
+```
+
+**Qualification Tiers**:
+
+**Hot Lead** (immediate follow-up priority):
+- Total score > 70
+- High industry fit (professional services, real estate, etc.)
+- 6+ data sources
+- Shows understanding of data value (pattern questions answered yes)
+
+**Warm Lead** (standard follow-up):
+- Total score 40-70
+- Medium industry fit
+- 3-5 data sources
+- Some awareness of data value
+
+**Nurture Lead** (email campaign):
+- Total score < 40
+- Lower industry fit or early-stage business
+- 1-2 data sources
+- Limited current capability but growth potential
+
+#### **Storage Schema**
+
+**Firestore Collection: `leads`**
+```json
+{
+  "id": "auto-generated-uuid",
+  "sessionId": "uuid",
+  "timestamp": "2025-01-XX HH:MM:SS",
+  "source": "data-discovery-tool",
+  
+  "contactInfo": {
+    "email": "string",
+    "name": "string|null",
+    "businessName": "string|null",
+    "phone": "string|null"
+  },
+  
+  "responses": {
+    "industry": "string",
+    "fundamentals": {...},
+    "industrySpecific": {...},
+    "marketing": {...},
+    "hiddenPatterns": {...}
+  },
+  
+  "scoring": {
+    "totalScore": 0-100,
+    "dataBreadth": 0-25,
+    "dataQuality": 0-25,
+    "connectionPotential": 0-30,
+    "actionability": 0-20,
+    "industryFit": 0-1,
+    "readinessScore": 0-1,
+    "dataRichness": "low|medium|high",
+    "tier": "hot|warm|nurture"
+  },
+  
+  "generatedReport": {
+    "opportunities": [...],
+    "missingData": [...],
+    "roadmap": {...},
+    "pdfUrl": "gs://bucket/path/to/report.pdf"
+  },
+  
+  "actions": {
+    "downloadedReport": boolean,
+    "bookedSession": boolean,
+    "visitedMethodology": boolean
+  },
+  
+  "integrations": {
+    "calendarBooked": boolean,
+    "emailSequenceTriggered": boolean,
+    "crmSynced": boolean
+  }
+}
+```
+
+**BigQuery Analytics Schema**:
+```sql
+CREATE TABLE xynergy_analytics.data_discovery_events (
+  event_id STRING,
+  session_id STRING,
+  timestamp TIMESTAMP,
+  event_type STRING, -- 'page_view', 'question_answered', 'cta_clicked', etc.
+  event_data JSON,
+  user_agent STRING,
+  ip_address STRING,
+  referrer STRING
+)
+```
+
+---
+
+## **Integration Requirements**
+
+### **Calendar Integration** (Phase 2)
+
+**Supported Platforms**:
+- Calendly (primary)
+- Cal.com (alternative)
+- Google Calendar (direct integration)
+
+**Configuration**:
+```python
+# config/integrations.py
+CALENDAR_CONFIG = {
+    "enabled": False,  # Toggle to enable
+    "provider": "calendly",
+    "calendly_url": "YOUR_CALENDLY_LINK",
+    "event_type": "strategy-session-30min"
+}
+```
+
+**Implementation**:
+- If enabled: Direct embed or API booking
+- If disabled: Manual email notification to team
+
+---
+
+### **Email Platform Integration** (Phase 2)
+
+**Supported Platforms**:
+- Mailchimp
+- ConvertKit
+- HubSpot
+- SendGrid
+
+**Configuration**:
+```python
+EMAIL_CONFIG = {
+    "enabled": False,
+    "provider": "mailchimp",
+    "api_key": "ENV_VAR",
+    "list_id": "ENV_VAR",
+    "tags": {
+        "hot_lead": "hot-lead-data-tool",
+        "warm_lead": "warm-lead-data-tool",
+        "nurture": "nurture-data-tool"
+    }
+}
+```
+
+**Sequences to Trigger** (configured in email platform):
+- Report Download sequence
+- Hot lead follow-up
+- Warm lead nurture
+- Long-term nurture for low-scorers
+
+---
+
+### **CRM Integration** (Phase 3)
+
+**Supported Platforms**:
+- HubSpot
+- Salesforce
+- Pipedrive
+
+**Data Sync**:
+- Lead information
+- Scoring data
+- Interaction history
+- Qualification tier
+
+---
+
+### **Analytics Integration** (Phase 1)
+
+**Google Analytics 4**:
+- Page views
+- Tool progression
+- Drop-off points
+- CTA clicks
+- Time on page
+
+**Custom Events**:
+```javascript
+// Track tool progression
+gtag('event', 'tool_progress', {
+  'step': 'industry_selection',
+  'industry': selectedIndustry
+});
+
+// Track lead quality
+gtag('event', 'lead_scored', {
+  'score': totalScore,
+  'tier': qualificationTier
+});
+
+// Track conversions
+gtag('event', 'strategy_session_booked', {
+  'score': totalScore,
+  'industry': industry
+});
+```
+
+---
+
+## **Technical Architecture**
+
+### **Backend Structure**
+
+```
+/backend
+├── /app
+│   ├── main.py              # FastAPI app initialization
+│   ├── /api
+│   │   ├── /routes
+│   │   │   ├── tool.py      # Tool interaction endpoints
+│   │   │   ├── results.py   # Results generation
+│   │   │   ├── leads.py     # Lead capture
+│   │   │   └── pdf.py       # PDF generation
+│   │   └── /models
+│   │       ├── responses.py # Pydantic models for responses
+│   │       ├── scoring.py   # Scoring models
+│   │       └── leads.py     # Lead data models
+│   ├── /services
+│   │   ├── scoring.py       # Scoring algorithm
+│   │   ├── opportunities.py # Opportunity generation
+│   │   ├── scenarios.py     # Industry scenarios
+│   │   ├── pdf_generator.py
+│   │   ├── firestore.py     # Database operations
+│   │   ├── storage.py       # Cloud Storage operations
+│   │   └── integrations/
+│   │       ├── calendar.py
+│   │       ├── email.py
+│   │       └── crm.py
+│   ├── /config
+│   │   ├── settings.py      # Environment configuration
+│   │   ├── industries.py    # Industry-specific configs
+│   │   └── integrations.py  # Integration toggles
+│   └── /utils
+│       ├── analytics.py     # BigQuery logging
+│       └── helpers.py       # Utility functions
+├── Dockerfile
+├── requirements.txt
+└── terraform/               # Infrastructure as code
+    ├── main.tf
+    ├── variables.tf
+    └── outputs.tf
+```
+
+### **Frontend Structure**
+
+```
+/frontend
+├── /src
+│   ├── /components
+│   │   ├── /landing
+│   │   │   ├── Hero.tsx
+│   │   │   └── TrustElements.tsx
+│   │   ├── /tool
+│   │   │   ├── IndustrySelector.tsx
+│   │   │   ├── QuestionCard.tsx
+│   │   │   ├── ProgressBar.tsx
+│   │   │   ├── DataVisualization.tsx
+│   │   │   └── steps/
+│   │   │       ├── BusinessFundamentals.tsx
+│   │   │       ├── IndustrySpecific.tsx
+│   │   │       ├── Marketing.tsx
+│   │   │       └── HiddenPatterns.tsx
+│   │   ├── /results
+│   │   │   ├── ScoreDisplay.tsx
+│   │   │   ├── DataMap.tsx
+│   │   │   ├── OpportunityCard.tsx
+│   │   │   ├── GapAnalysis.tsx
+│   │   │   ├── EnterpriseComparison.tsx
+│   │   │   ├── ScenarioCarousel.tsx
+│   │   │   ├── RoadmapPaths.tsx
+│   │   │   └── CTASection.tsx
+│   │   └── /shared
+│   │       ├── Button.tsx
+│   │       ├── Card.tsx
+│   │       ├── Tooltip.tsx
+│   │       └── Animations.tsx
+│   ├── /hooks
+│   │   ├── useToolState.ts
+│   │   ├── useScoring.ts
+│   │   └── useAnalytics.ts
+│   ├── /contexts
+│   │   └── ToolContext.tsx
+│   ├── /utils
+│   │   ├── api.ts
+│   │   ├── analytics.ts
+│   │   └── validation.ts
+│   ├── /types
+│   │   ├── tool.types.ts
+│   │   ├── scoring.types.ts
+│   │   └── results.types.ts
+│   ├── App.tsx
+│   └── main.tsx
+├── package.json
+├── tsconfig.json
+├── tailwind.config.js
+└── vite.config.ts
+```
+
+---
+
+## **API Endpoints**
+
+### **Tool Interaction**
+
+**POST** `/api/v1/tool/start`
+- Initializes session
+- Returns sessionId
+- Records analytics event
+
+**POST** `/api/v1/tool/answer`
+- Body: `{sessionId, questionId, answer}`
+- Saves response to Firestore
+- Returns next question or completion status
+
+**GET** `/api/v1/tool/progress/{sessionId}`
+- Returns current progress
+- Returns answered questions
+- Used for session recovery
+
+---
+
+### **Results Generation**
+
+**POST** `/api/v1/results/generate`
+- Body: `{sessionId}`
+- Calculates all scores
+- Generates opportunities
+- Identifies gaps
+- Creates scenarios
+- Returns complete results object
+
+**GET** `/api/v1/results/{sessionId}`
+- Retrieves previously generated results
+- Returns results object
+
+---
+
+### **Lead Capture**
+
+**POST** `/api/v1/leads/capture`
+- Body: `{sessionId, email, name, businessName, phone}`
+- Creates lead record in Firestore
+- Triggers integrations (if enabled)
+- Returns confirmation
+
+---
+
+### **PDF Generation**
+
+**POST** `/api/v1/pdf/generate`
+- Body: `{sessionId, email}`
+- Generates PDF from results
+- Stores in Cloud Storage
+- Sends email with link
+- Returns PDF URL
+
+---
+
+### **Calendar Booking** (Phase 2)
+
+**POST** `/api/v1/calendar/book`
+- Body: `{sessionId, email, name, preferredTime}`
+- Books calendar session (if integration enabled)
+- Updates lead record
+- Sends confirmation
+- Returns booking confirmation
+
+---
+
+## **Infrastructure as Code**
+
+### **Terraform Configuration**
+
+**New Resources to Create**:
+
+```hcl
+# Cloud Run Service
+resource "google_cloud_run_service" "data_discovery_tool" {
+  name     = "trisynq-data-discovery-tool"
+  location = var.region
+
+  template {
+    spec {
+      service_account_name = var.service_account_email
+      containers {
+        image = "${var.artifact_registry}/${var.image_name}:${var.image_tag}"
+        ports {
+          container_port = 8080
+        }
+        env {
+          name  = "PROJECT_ID"
+          value = var.project_id
+        }
+        env {
+          name  = "ENVIRONMENT"
+          value = var.environment
+        }
+        resources {
+          limits = {
+            cpu    = "2"
+            memory = "1Gi"
+          }
+        }
+      }
+    }
+    metadata {
+      annotations = {
+        "autoscaling.knative.dev/maxScale" = "10"
+        "autoscaling.knative.dev/minScale" = "0"
+      }
+    }
+  }
+
+  traffic {
+    percent         = 100
+    latest_revision = true
+  }
+}
+
+# Make service publicly accessible
+resource "google_cloud_run_service_iam_member" "public_access" {
+  service  = google_cloud_run_service.data_discovery_tool.name
+  location = google_cloud_run_service.data_discovery_tool.location
+  role     = "roles/run.invoker"
+  member   = "allUsers"
+}
+
+# Cloud Storage Bucket for PDFs
+resource "google_storage_bucket" "reports" {
+  name     = "${var.project_id}-data-discovery-reports"
+  location = var.region
+  
+  uniform_bucket_level_access = true
+  
+  lifecycle_rule {
+    condition {
+      age = 90  # Delete after 90 days
+    }
+    action {
+      type = "Delete"
+    }
+  }
+}
+
+# Firestore collection (created automatically, but document structure)
+# Collection: leads
+# Document: auto-generated ID
+# Structure: as defined in storage schema above
+
+# BigQuery table for analytics
+resource "google_bigquery_table" "discovery_events" {
+  dataset_id = "xynergy_analytics"
+  table_id   = "data_discovery_events"
+  
+  schema = file("${path.module}/schemas/discovery_events.json")
+  
+  time_partitioning {
+    type  = "DAY"
+    field = "timestamp"
+  }
+}
+```
+
+---
+
+## **Docker Configuration**
+
+**Dockerfile**:
+```dockerfile
+FROM --platform=linux/amd64 python:3.11-slim
+
+WORKDIR /app
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy requirements and install
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code
+COPY ./app ./app
+
+# Create non-root user
+RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
+USER appuser
+
+# Expose port
+EXPOSE 8080
+
+# Run application
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8080"]
+```
+
+**requirements.txt**:
+```
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+pydantic==2.5.0
+python-multipart==0.0.6
+google-cloud-firestore==2.13.1
+google-cloud-storage==2.13.0
+google-cloud-bigquery==3.14.0
+reportlab==4.0.7
+weasyprint==60.1
+requests==2.31.0
+python-dotenv==1.0.0
+```
+
+---
+
+## **Environment Configuration**
+
+**Required Environment Variables**:
+```bash
+# GCP Project
+PROJECT_ID=xynergy-dev-1757909467
+REGION=us-central1
+ENVIRONMENT=production
+
+# Service Account
+SERVICE_ACCOUNT_EMAIL=xynergy-platform-sa@xynergy-dev-1757909467.iam.gserviceaccount.com
+
+# Firestore
+FIRESTORE_DATABASE=(default)
+
+# BigQuery
+BIGQUERY_DATASET=xynergy_analytics
+
+# Cloud Storage
+REPORTS_BUCKET=${PROJECT_ID}-data-discovery-reports
+
+# Integrations (Phase 2+)
+CALENDAR_ENABLED=false
+CALENDAR_PROVIDER=calendly
+CALENDLY_URL=
+
+EMAIL_ENABLED=false
+EMAIL_PROVIDER=mailchimp
+MAILCHIMP_API_KEY=
+MAILCHIMP_LIST_ID=
+
+CRM_ENABLED=false
+CRM_PROVIDER=hubspot
+HUBSPOT_API_KEY=
+
+# Analytics
+GA4_MEASUREMENT_ID=
+```
+
+---
+
+## **Design Specifications**
+
+### **Color Usage**
+- **Primary Purple (#9f7aea)**: CTAs, highlights, scores, positive indicators
+- **Secondary Blue (#4299e1)**: Data connections, information, links
+- **Deep Purple (#553c9a)**: Headers, emphasis
+- **Pink (#ed64a6)**: Primary action buttons, urgent CTAs
+- **Dark Navy (#1a202c)**: Main background
+- **Medium Gray (#2d3748)**: Card backgrounds, sections
+- **Light Gray (#f7fafc)**: Text on dark backgrounds
+
+### **Typography**
+- **Headlines**: 32-48px, bold, gradient colors
+- **Subheadlines**: 20-24px, medium weight
+- **Body**: 16px, regular weight, line-height 1.6
+- **Captions**: 14px, medium weight
+- **Buttons**: 16px, semibold, uppercase
+
+### **Spacing**
+- **Section padding**: 60-80px vertical
+- **Card padding**: 30-40px
+- **Element spacing**: 20-30px between major elements
+- **Button padding**: 16px vertical, 32px horizontal
+
+### **Animations**
+- **Transitions**: 0.3s ease for most interactions
+- **Progress fills**: 0.5s ease-out
+- **Page transitions**: 0.4s ease-in-out
+- **Hover effects**: 0.2s ease
+
+### **Responsive Breakpoints**
+- **Mobile**: < 640px
+- **Tablet**: 640px - 1024px
+- **Desktop**: > 1024px
+
+---
+
+## **Performance Requirements**
+
+### **Load Times**
+- **Initial page load**: < 2 seconds
+- **Question transitions**: < 100ms
+- **Results generation**: < 3 seconds
+- **PDF generation**: < 5 seconds
+
+### **Optimization Strategies**
+- Code splitting for React components
+- Lazy loading for images
+- CDN for static assets
+- Minification of CSS/JS
+- Image optimization (WebP format)
+- Progressive loading of results sections
+
+---
+
+## **Security Requirements**
+
+### **Data Protection**
+- **No authentication required** for tool access (public-facing)
+- **HTTPS only** (enforced by Cloud Run)
+- **Input validation** on all form fields
+- **Rate limiting** on API endpoints to prevent abuse
+- **CORS configuration** for frontend domain only
+- **CSP headers** to prevent XSS attacks
+
+### **PII Handling**
+- **Minimal collection**: Only email, name, phone (optional)
+- **Purpose limitation**: Only for follow-up and report delivery
+- **Storage encryption**: Firestore encryption at rest
+- **Access control**: Service account only
+- **Retention policy**: 90 days for reports, indefinite for leads (with option to delete)
+
+### **Compliance**
+- **GDPR**: Privacy policy link, data deletion on request
+- **CCPA**: Privacy notice, opt-out mechanism
+- **Terms of Service**: Clear usage terms
+
+---
+
+## **Testing Requirements**
+
+### **Unit Tests**
+- Scoring algorithm accuracy
+- Opportunity generation logic
+- Industry-specific question routing
+- PDF generation
+
+### **Integration Tests**
+- Firestore read/write operations
+- Cloud Storage upload/download
+- BigQuery analytics logging
+- Email/calendar integrations (when enabled)
+
+### **E2E Tests**
+- Complete tool flow for each industry
+- Results generation accuracy
+- CTA functionality
+- Mobile responsiveness
+
+### **Load Testing**
+- Handle 100 concurrent users
+- Response times under load
+- Database performance
+- PDF generation under load
+
+---
+
+## **Monitoring & Analytics**
+
+### **Application Monitoring**
+- **Cloud Run Metrics**: Request count, latency, error rate
+- **Custom Metrics**: 
+  - Tool completion rate
+  - Drop-off by step
+  - Average score by industry
+  - CTA conversion rates
+
+### **Business Analytics**
+- **Lead Quality**: Distribution of tiers
+- **Popular Industries**: Which industries most engaged
+- **Data Richness**: Average number of sources by industry
+- **Conversion Tracking**: Strategy sessions booked
+
+### **Error Tracking**
+- **Sentry Integration**: For frontend errors
+- **Cloud Logging**: Backend error logs
+- **Alert on**: 5xx errors, high latency, failed PDF generation
+
+---
+
+## **Documentation Requirements**
+
+### **Technical Documentation**
+- API documentation (auto-generated via FastAPI)
+- Deployment guide
+- Environment setup instructions
+- Integration configuration guide
+- Troubleshooting guide
+
+### **User-Facing Documentation**
+- Privacy policy
+- Terms of service
+- FAQ section
+- "How it works" explainer
+
+### **Internal Documentation**
+- Scoring algorithm explanation
+- Opportunity generation logic
+- Industry scenario templates
+- Lead qualification criteria
+
+---
+
+## **Deployment Strategy**
+
+### **Phase 1: MVP Launch**
+**Features**:
+- Complete tool flow (all industries)
+- Results page with all sections
+- PDF generation and download
+- Basic lead capture (email to Firestore)
+- Manual notification to team
+- Google Analytics integration
+
+**Timeline**: 2-3 weeks
+
+**Success Criteria**:
+- Tool completes successfully for all industries
+- Results are accurate and personalized
+- PDFs generate and download properly
+- Lead data captured in Firestore
+
+---
+
+### **Phase 2: Integration Launch**
+**Features**:
+- Calendar integration (Calendly)
+- Email platform integration (Mailchimp)
+- Automated email sequences
+- Enhanced analytics tracking
+
+**Timeline**: 1-2 weeks after Phase 1
+
+**Success Criteria**:
+- Strategy sessions book automatically
+- Email sequences trigger correctly
+- Lead scoring drives appropriate follow-up
+
+---
+
+### **Phase 3: Advanced Features**
+**Features**:
+- CRM integration
+- Advanced analytics dashboard
+- A/B testing framework
+- Lead nurture automation
+- Retargeting pixel integration
+
+**Timeline**: 1 month after Phase 2
+
+**Success Criteria**:
+- CRM syncs lead data automatically
+- Dashboard shows key metrics
+- A/B tests inform optimization
+
+---
+
+## **Success Metrics**
+
+### **Primary Metrics**
+- **Strategy Session Bookings**: # per week
+- **Lead Quality**: % of hot leads vs. warm/nurture
+- **Completion Rate**: % who finish the tool
+- **Email Capture Rate**: % who download report
+
+### **Secondary Metrics**
+- **Time to Complete**: Average duration
+- **Score Distribution**: By industry
+- **Drop-off Points**: Where users abandon
+- **CTA Click Rates**: Which CTAs perform best
+
+### **Business Metrics**
+- **Cost per Lead**: Tool cost / # leads
+- **Lead to Customer**: % of leads that become clients
+- **ROI**: Revenue from tool-sourced clients vs. development cost
+
+---
+
+## **Future Enhancements** (Post-Launch)
+
+### **Version 2.0 Ideas**
+- Save and return later functionality (email link)
+- Share results with team members
+- Compare your score to industry benchmarks (anonymized)
+- Interactive "What if?" scenarios (add hypothetical data sources)
+- Video explanation of results
+- Live chat support during tool
+- Multi-language support
+
+### **Advanced Features**
+- AI-powered scenario generation (Claude API)
+- Industry-specific deep dives
+- Competitive analysis based on public data
+- ROI calculator for implementing recommendations
+- Integration marketplace (connect actual data sources)
+
+---
+
+## **Appendix**
+
+### **Industry-Specific Configuration Files**
+
+Each industry should have a configuration file defining:
+- Question set
+- Dropdown options
+- Scoring weights
+- Opportunity templates
+- Scenario examples
+- Gap analysis benchmarks
+
+**Example: `config/industries/professional_services.yaml`**
+```yaml
+industry: professional_services
+display_name: Professional Services
+
+questions:
+  - id: time_tracking
+    text: Do you track time spent on client projects?
+    type: yes_no_dropdown
+    dropdown_options:
+      - Harvest
+      - Toggl
+      - QuickBooks Time
+      - Spreadsheet
+      - Other
+    scoring_weight: 1.2
+    
+opportunities:
+  - id: client_profitability
+    requirements: [time_tracking, sales_tracking]
+    template: |
+      Discover which clients are most profitable...
+      
+scenarios:
+  - title: Consulting Firm Case Study
+    description: |
+      A consulting firm with your data profile...
+      
+gaps:
+  - data_source: Project management software
+    difficulty: medium
+    impact: high
+    explanation: |
+      Track project scope, timeline, and resource allocation...
+```
+
+---
+
+## **Final Notes**
+
+This requirements document is comprehensive and designed to be implemented in phases by Claude Code or any development team. The architecture follows TriSynq's existing GCP patterns while creating a standalone, public-facing tool that demonstrates methodology, educates prospects, and qualifies leads.
+
+**Key Principles**:
+1. **User Experience First**: Smooth, educational, valuable
+2. **Transparency**: Show them what they have, honestly
+3. **Qualification**: Score leads properly for efficient follow-up
+4. **Phased Rollout**: MVP first, integrations later
+5. **Scalable Architecture**: Built to handle growth
+6. **Integration-Ready**: Easy to connect calendar, email, CRM when ready
+
+The tool embodies TriSynq's mission: removing artificial complexity and showing SMBs they're not starting from zero. It's the "R" in T.R.A.N.S.L.A.T.E. made accessible to everyone.
