@@ -7,7 +7,9 @@ set -e
 PROJECT_ID="xynergy-dev-1757909467"
 REGION="us-central1"
 SERVICE_NAME="clearforge-website"
-IMAGE_TAG="gcr.io/$PROJECT_ID/$SERVICE_NAME:latest"
+ARTIFACT_REGISTRY="us-central1-docker.pkg.dev"
+REPOSITORY="xynergy-platform"
+IMAGE_TAG="$ARTIFACT_REGISTRY/$PROJECT_ID/$REPOSITORY/$SERVICE_NAME:latest"
 
 echo "🚀 Deploying ClearForge Website to Cloud Run..."
 echo "   Project: $PROJECT_ID"
