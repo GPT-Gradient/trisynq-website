@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Xynergy Launch: Escape Vendor Dependency',
-  description: 'Replace $500-5,000/month tools with free/low-cost alternatives. Comprehensive training platform teaching you to build enterprise capabilities without vendor lock-in.',
+  title: 'Xynergy: Powering the Forge',
+  description: 'The AI engine built for clarity, not control.',
 });
 
 export default function XynergyLaunchPage() {
@@ -21,13 +21,16 @@ export default function XynergyLaunchPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Xynergy Launch</span>
+            <span className="text-gradient">Xynergy:</span>
             <br />
-            Escape Vendor Dependency
+            Powering the Forge
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Replace $500-5,000/month subscription tools with free and low-cost alternatives. No more vendor lock-in. No more artificial limitations. Just enterprise capabilities at SMB budgets.
+            The AI engine built for clarity, not control.
+          </p>
+          <p className="text-lg text-gray-300 mb-8">
+            Explainable pipelines. Observable outcomes. Operator-first.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

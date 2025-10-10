@@ -1,0 +1,373 @@
+{
+  "brand": {
+    "company": "ClearForge",
+    "engine": {
+      "name": "Xynergy",
+      "tagline": "The Engine of Clarity.",
+      "value_props": [
+        "Explainable by design (no black boxes)",
+        "Operator-first controls with plain-language policies",
+        "Composable services for data, content, workflow and decisions",
+        "Observable provenance: sources, steps, and audit trails on every output"
+      ],
+      "cta_primary": { "label": "See the Power", "href": "/xynergy" },
+      "cta_secondary": { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+    },
+    "community": {
+      "tagline": "Forge it together.",
+      "pillars": [
+        "Education (freemium → advanced → integrations)",
+        "Engagement (Reddit-style forum, AMAs, office hours)",
+        "Rewards (learn • build • share → points, badges, perks)",
+        "Beta Partners (risk-takers who help steer the roadmap)"
+      ],
+      "tiers": [
+        {
+          "id": "free",
+          "name": "Free",
+          "for": "1–5 person shops",
+          "includes": [
+            "Foundational guides & playbooks",
+            "Step-by-step ‘Do X’ tutorials",
+            "Forum access & community support",
+            "Monthly live Q&A"
+          ]
+        },
+        {
+          "id": "pro",
+          "name": "Pro",
+          "includes": [
+            "Advanced curricula & workflows",
+            "Templates, checklists, and trackers",
+            "Xynergy-powered labs (explainable runs)",
+            "Priority forum channels & office hours"
+          ]
+        },
+        {
+          "id": "integrations",
+          "name": "Integrations+",
+          "includes": [
+            "Platform connectors & automations",
+            "Xynergy API workspace + sandbox",
+            "Co-build sessions with the Forge",
+            "Beta access & roadmap influence"
+          ]
+        }
+      ],
+      "rewards": {
+        "actions": [
+          "Complete courses",
+          "Ship community tutorials",
+          "Share measurable wins",
+          "Answer forum questions",
+          "Report bugs & propose fixes"
+        ],
+        "perks": [
+          "Badges & leaderboard",
+          "Workshop discounts",
+          "Beta priority",
+          "Revenue-share opportunities on approved templates"
+        ]
+      }
+    }
+  },
+
+  "globals": {
+    "rename_all_instances": [
+      { "from": "TriSynq", "to": "ClearForge" },
+      { "from": "trisynq", "to": "clearforge" }
+    ],
+    "navigation_updates": {
+      "who_we_are_menu": [
+        { "replace": { "label": "About TriSynq", "with": "About ClearForge", "href": "/about" } },
+        { "replace": { "label": "Founder Story", "with": "How We Started", "href": "/about-how-we-started" } },
+        { "remove": "Complete Founder Story" }
+      ],
+      "add_primary_items": [
+        { "label": "Community", "href": "/community" },
+        { "label": "Xynergy", "href": "/xynergy" }
+      ]
+    },
+    "cta_labels": {
+      "primary": "See the Power",
+      "secondary": "Build on Xynergy",
+      "tertiary": "Join the Community"
+    }
+  },
+
+  "new_pages": {
+    "/xynergy": {
+      "seo": {
+        "title": "Xynergy — The Engine of Clarity",
+        "description": "Why we built it, how it works, and how partners use Xynergy to turn complexity into clarity."
+      },
+      "hero": {
+        "h1": "Xynergy — The Engine of Clarity.",
+        "sub": "We built our own AI engine because off-the-shelf platforms hid the levers. Xynergy shows the logic, exposes the data, and turns expertise into repeatable advantage.",
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy#overview" },
+          { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+        ]
+      },
+      "sections": [
+        {
+          "id": "overview",
+          "h2": "Unified. Composable. Explainable.",
+          "bullets": [
+            "9 integrated components routed by a central runtime",
+            "Hybrid LLM strategy: internal for speed/cost, external for deep reasoning",
+            "Event-driven pipelines with sub-second interactions on core ops"
+          ],
+          "diagram_hint": "Show 9-block engine with Runtime at center; callouts for Analytics, Content Hub, Marketing Engine, AI Assistant, Scheduler, Reports, Security, Secrets/Config."
+        },
+        {
+          "id": "why",
+          "h2": "Why We Built It",
+          "p": [
+            "Clients needed receipts, not rhetoric.",
+            "We needed provenance, governance, and observable decisions as a feature—not a promise."
+          ]
+        },
+        {
+          "id": "what",
+          "h2": "What It Does",
+          "feature_groups": [
+            {
+              "title": "Strategy & Research",
+              "items": [
+                "Internal-data-first research with freshness scoring",
+                "Competitive & trend intelligence with selective external calls"
+              ]
+            },
+            {
+              "title": "Content & Campaigns",
+              "items": [
+                "Topic clusters, generation pipelines, quality scoring",
+                "Viral detection & automatic amplification workflows"
+              ]
+            },
+            {
+              "title": "Automation & Insights",
+              "items": [
+                "Performance-adaptive scheduling and pivots",
+                "Dashboards, reports, and predictive insight generation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "how",
+          "h2": "How We Use It (and You Can Too)",
+          "columns": [
+            {
+              "title": "Internally",
+              "points": [
+                "Research synthesis & content ops",
+                "Diagnostics and playbook generation",
+                "Explainable runs for every client deliverable"
+              ]
+            },
+            {
+              "title": "With Partners",
+              "points": [
+                "Co-build apps & automations on Xynergy services",
+                "Keep your data isolated, keep the keys",
+                "Ship with an ‘Explain this’ toggle on outputs"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "transparency-loop",
+          "h2": "The Transparency Loop",
+          "p": [
+            "Data → Reasoning → Output → Proof. Every step is logged and reviewable. That’s how trust compounds and learning accelerates."
+          ]
+        },
+        {
+          "id": "cta",
+          "h2": "Ready to Build on Xynergy?",
+          "ctas": [
+            { "label": "See the Power", "href": "/xynergy#what" },
+            { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+          ]
+        }
+      ]
+    },
+
+    "/community": {
+      "seo": {
+        "title": "ClearForge Community — Learn. Build. Get Rewarded.",
+        "description": "Freemium education, forum support, rewards, and beta partnerships. Forge transparency together."
+      },
+      "hero": {
+        "h1": "Forge it together.",
+        "sub": "Education that scales with you, a forum that actually helps, and rewards for the builders who move the world.",
+        "ctas": [
+          { "label": "Join the Community", "href": "/community#join" },
+          { "label": "Start Free", "href": "/community#tiers" }
+        ]
+      },
+      "sections": [
+        {
+          "id": "education",
+          "h2": "Education, Your Way",
+          "tiers_ref": true,
+          "ladder": [
+            "Freemium: step-by-step playbooks for 1–5 person shops",
+            "Pro: advanced workflows, templates, Xynergy labs",
+            "Integrations+: connectors, API workspace, co-builds"
+          ],
+          "cta": { "label": "Browse Courses", "href": "/community#courses" }
+        },
+        {
+          "id": "forum",
+          "h2": "Community Forum (Coming Soon)",
+          "p": [
+            "Reddit-style threads, searchable solutions, expert AMAs, office hours.",
+            "Earn rewards for helpful answers and shipped wins."
+          ],
+          "cta": { "label": "Get Notified", "href": "/community#waitlist" }
+        },
+        {
+          "id": "rewards",
+          "h2": "Earn While You Learn",
+          "p": [
+            "Points for completing courses, publishing tutorials, answering questions, and reporting bugs.",
+            "Redeem for badges, discounts, beta priority, and template revenue share."
+          ],
+          "cta": { "label": "See Rewards", "href": "/community#rewards" }
+        },
+        {
+          "id": "beta",
+          "h2": "Beta Partners",
+          "p": [
+            "Risk-taking operators who help steer the roadmap.",
+            "You get early access. We get real-world truth. Everyone gets better systems."
+          ],
+            "ctas": [
+              { "label": "Apply for Beta", "href": "/beta-program" },
+              { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+            ]
+        },
+        {
+          "id": "join",
+          "h2": "Start Free. Level Up When Ready.",
+          "ctas": [
+            { "label": "Join the Community", "href": "/community#tiers" },
+            { "label": "Start Free", "href": "/community#tiers" }
+          ]
+        }
+      ]
+    }
+  },
+
+  "page_changes": {
+    "home-page.tsx": {
+      "hero": {
+        "h1": "Complexity is the Villain. ClearForge is the Weapon.",
+        "sub": "Powered by Xynergy — our proprietary AI engine that turns expertise and data into explainable systems.",
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy" },
+          { "label": "Join the Community", "href": "/community" }
+        ]
+      },
+      "insert_after_hero": {
+        "id": "xynergy_feature",
+        "h2": "Meet Xynergy — The Engine Behind Everything.",
+        "p": [
+          "Why we built it: transparency and control.",
+          "What it does: research, campaigns, automation, and insight — with receipts.",
+          "How it helps you: faster outcomes, lower cost, no black boxes."
+        ],
+        "ctas": [{ "label": "See the Power", "href": "/xynergy" }]
+      },
+      "community_band": {
+        "id": "community_feature",
+        "h2": "Learn. Build. Get Rewarded.",
+        "p": [
+          "Freemium education for the 1–5 person shop. Advanced tracks and integrations when you’re ready.",
+          "Forum support, AMAs, office hours, and a reward system that celebrates shipped wins."
+        ],
+        "ctas": [
+          { "label": "Join the Community", "href": "/community" }
+        ]
+      },
+      "showcase_cards_append_badges": [
+        { "match_href": "/continuum-nexus", "badge": "Powered by Xynergy" },
+        { "match_href": "/continuum-data-democracy", "badge": "Powered by Xynergy" },
+        { "match_href": "/continuum-safe-spaces", "badge": "Powered by Xynergy" }
+      ]
+    },
+
+    "solutions-page.tsx_or_solutions-platform-page.tsx": {
+      "insert_top": {
+        "h2": "Platform Meets Philosophy.",
+        "p": [
+          "All major solutions run on Xynergy’s composable services with explainable outputs."
+        ],
+        "cta": { "label": "See the Power", "href": "/xynergy" }
+      },
+      "insert_section_after_platform": {
+        "id": "community_section",
+        "h2": "Community Is Part of the Solution",
+        "mirror_components_from": "/community",
+        "components": [
+          { "ref": "education", "compact": true },
+          { "ref": "forum", "compact": true },
+          { "ref": "rewards", "compact": true },
+          { "ref": "beta", "compact": true }
+        ],
+        "ctas": [
+          { "label": "Join the Community", "href": "/community" },
+          { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+        ]
+      }
+    },
+
+    "about-page.tsx": {
+      "seo_title": "About ClearForge",
+      "insert_section": {
+        "id": "why-xynergy",
+        "h2": "Why We Built Xynergy",
+        "p": [
+          "Off-the-shelf AI hid the levers our clients needed. We built an engine that shows its work."
+        ],
+        "cta": { "label": "See the Power", "href": "/xynergy" }
+      }
+    },
+
+    "about-founder-story-page.tsx": {
+      "rename_route_to": "/about-how-we-started",
+      "h1": "How We Started.",
+      "replace_intro": "It didn’t start with AI. It started with burnout—and a refusal to accept complexity as the cost of doing business.",
+      "add_section_after_intro": {
+        "h2": "The Call That Started the Forge",
+        "p": [
+          "When the company was conceived, we reached out to technologists and industry leaders who were equally frustrated.",
+          "The pitch was simple: transparency by default. That collaboration became Xynergy."
+        ],
+        "cta": { "label": "Read the Full Story", "href": "/about-how-we-started#full" }
+      },
+      "remove_from_menu": "Complete Founder Story"
+    },
+
+    "how-we-do-it-page.tsx": {
+      "map_sections_to_xynergy": [
+        { "section": "Discovery", "line": "Xynergy Diagnostics surfaces patterns in your data—and shows its work." },
+        { "section": "Design", "line": "Composable services fit your workflow. No lock-in, no black boxes." },
+        { "section": "Delivery", "line": "Every output ships with provenance and an ‘Explain this’ toggle." }
+      ],
+      "cta": { "label": "See the Power", "href": "/xynergy" }
+    },
+
+    "community-page.tsx": {
+      "mirror_from_new_page": "/community"
+    },
+
+    "continuum-*-pages": {
+      "append_note": "This domain is powered by Xynergy services with explainable workflows.",
+      "cta": { "label": "See the Power", "href": "/xynergy" }
+    }
+  }
+}

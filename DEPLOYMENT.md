@@ -1,6 +1,10 @@
-# TriSynq AI Website - Deployment Guide
+# ClearForge Website - Deployment Guide
 
-Complete guide for deploying the TriSynq AI website to Google Cloud Platform.
+Complete guide for deploying the ClearForge website to Google Cloud Platform.
+
+## Architecture Overview
+
+The ClearForge website uses a v5 architecture with **The Forge** as the central hub, connecting all components and services in a unified platform.
 
 ## Prerequisites
 
@@ -76,20 +80,20 @@ The Cloud Build process will:
 
 ```bash
 # 1. Build the Docker image
-docker build -t gcr.io/$PROJECT_ID/trisynq-website:latest .
+docker build -t gcr.io/$PROJECT_ID/clearforge-website:latest .
 
 # 2. Test locally (optional)
 docker run -p 3000:3000 \
   -e NODE_ENV=production \
   -e NEXT_PUBLIC_XYNERGY_API_URL=https://api.xynergy.io/v1 \
-  gcr.io/$PROJECT_ID/trisynq-website:latest
+  gcr.io/$PROJECT_ID/clearforge-website:latest
 
 # 3. Push to Google Container Registry
-docker push gcr.io/$PROJECT_ID/trisynq-website:latest
+docker push gcr.io/$PROJECT_ID/clearforge-website:latest
 
 # 4. Deploy to Cloud Run
-gcloud run deploy trisynq-website \
-  --image gcr.io/$PROJECT_ID/trisynq-website:latest \
+gcloud run deploy clearforge-website \
+  --image gcr.io/$PROJECT_ID/clearforge-website:latest \
   --region us-central1 \
   --platform managed \
   --allow-unauthenticated \
@@ -111,7 +115,7 @@ The following environment variables are configured in Cloud Run:
 **Public Variables** (set via `--set-env-vars`):
 - `NODE_ENV=production`
 - `NEXT_TELEMETRY_DISABLED=1`
-- `NEXT_PUBLIC_APP_URL=https://trisynq.ai` (update after domain setup)
+- `NEXT_PUBLIC_APP_URL=https://clearforge.ai` (update after domain setup)
 
 **Secret Variables** (set via `--set-secrets`):
 - `XYNERGY_API_KEY` - From Secret Manager
@@ -136,15 +140,15 @@ The following environment variables are configured in Cloud Run:
 
 ```bash
 # Map your domain
-gcloud run services add-iam-policy-binding trisynq-website \
+gcloud run services add-iam-policy-binding clearforge-website \
   --region=us-central1 \
   --member="allUsers" \
   --role="roles/run.invoker"
 
 # Add domain mapping
 gcloud beta run domain-mappings create \
-  --service trisynq-website \
-  --domain trisynq.ai \
+  --service clearforge-website \
+  --domain clearforge.ai \
   --region us-central1
 ```
 
@@ -155,9 +159,9 @@ Add the DNS records provided by the domain mapping command to your DNS provider.
 ### 3. Update Environment Variables
 
 ```bash
-gcloud run services update trisynq-website \
+gcloud run services update clearforge-website \
   --region us-central1 \
-  --update-env-vars NEXT_PUBLIC_APP_URL=https://trisynq.ai
+  --update-env-vars NEXT_PUBLIC_APP_URL=https://clearforge.ai
 ```
 
 ## SSL/TLS Configuration
@@ -170,16 +174,16 @@ Cloud Run automatically provisions and manages SSL/TLS certificates for custom d
 
 ```bash
 # Real-time logs
-gcloud run services logs tail trisynq-website --region=us-central1
+gcloud run services logs tail clearforge-website --region=us-central1
 
 # Recent logs
-gcloud run services logs read trisynq-website --region=us-central1 --limit=100
+gcloud run services logs read clearforge-website --region=us-central1 --limit=100
 ```
 
 ### Cloud Console Monitoring
 
 1. Go to [Cloud Run Console](https://console.cloud.google.com/run)
-2. Select `trisynq-website` service
+2. Select `clearforge-website` service
 3. Navigate to **Logs** or **Metrics** tab
 
 Monitor:
@@ -230,12 +234,12 @@ If you need to rollback to a previous version:
 
 ```bash
 # List revisions
-gcloud run revisions list --service=trisynq-website --region=us-central1
+gcloud run revisions list --service=clearforge-website --region=us-central1
 
 # Rollback to specific revision
-gcloud run services update-traffic trisynq-website \
+gcloud run services update-traffic clearforge-website \
   --region=us-central1 \
-  --to-revisions=trisynq-website-00001-abc=100
+  --to-revisions=clearforge-website-00001-abc=100
 ```
 
 ## Updating the Deployment
@@ -250,7 +254,7 @@ gcloud builds submit --config=cloudbuild.yaml
 ### Update Environment Variables
 
 ```bash
-gcloud run services update trisynq-website \
+gcloud run services update clearforge-website \
   --region=us-central1 \
   --update-env-vars NEW_VAR=value
 ```
@@ -296,7 +300,7 @@ async headers() {
 For global traffic, use Cloud CDN:
 
 ```bash
-gcloud compute backend-services create trisynq-backend \
+gcloud compute backend-services create clearforge-backend \
   --global \
   --enable-cdn
 ```
@@ -334,7 +338,7 @@ gcloud builds log --region=us-central1 [BUILD_ID]
 
 ```bash
 # Check service status
-gcloud run services describe trisynq-website --region=us-central1
+gcloud run services describe clearforge-website --region=us-central1
 
 # Common issues:
 # - Verify secret permissions
@@ -346,7 +350,7 @@ gcloud run services describe trisynq-website --region=us-central1
 
 ```bash
 # View runtime logs
-gcloud run services logs tail trisynq-website --region=us-central1
+gcloud run services logs tail clearforge-website --region=us-central1
 
 # Common issues:
 # - API connection failures (check XYNERGY_API_KEY)
@@ -382,7 +386,7 @@ gcloud run services logs tail trisynq-website --region=us-central1
 
 - **GCP Support**: [Google Cloud Support](https://cloud.google.com/support)
 - **Next.js Docs**: [Next.js Documentation](https://nextjs.org/docs)
-- **TriSynq Team**: hello@trisynq.ai
+- **ClearForge Team**: hello@clearforge.ai
 
 ---
 

@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Public Dashboard | Complete Transparency in Real-Time',
-  description: 'First platform documenting transformation journey publicly. See our methodology, results, learnings, and complete financial transparency. No hiding what doesn\'t work.',
+  title: 'Your Forge Control Center',
+  description: 'Projects, tools, and learning paths at a glance.',
 });
 
 export default function DashboardPage() {
@@ -17,21 +17,21 @@ export default function DashboardPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Complete <span className="text-gradient">Transparency</span> in Real-Time
+            Your Forge <span className="text-gradient">Control Center</span>.
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            First platform documenting transformation journey publicly
+            Projects, tools, and learning paths at a glance.
           </p>
 
           <div className="bg-primary/50 rounded-2xl p-6 border border-accent-pink/30 backdrop-blur-sm">
             <p className="text-lg font-semibold text-white">
-              Show methodology, not secrets. Results, not promises. Learning, not perfection.
+              No decorative charts. No vanity metrics. Just what matters.
             </p>
           </div>
 
           <p className="text-gray-400 mt-6">
-            Dashboard launches as first beta partners come on board. This is what full transparency looks like.
+            Dashboard launches as first beta partners come on board. This is clarity in motion.
           </p>
         </div>
       </Section>
@@ -40,14 +40,14 @@ export default function DashboardPage() {
       <Section background="dark">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Project NEXUS <span className="text-gradient">Private Beta Results</span>
+            Project NEXUS <span className="text-gradient">Private Beta</span>
           </h2>
           <p className="text-xl text-gray-400 mb-4">
-            22 companies tested across 8 industries - 6 months of real data
+            22 companies. 8 industries. 6 months. Real data.
           </p>
           <div className="inline-block bg-accent-pink/10 border border-accent-pink/30 rounded-lg px-4 py-2">
             <p className="text-sm text-accent-pink font-semibold">
-              All data scrubbed for confidentiality - verified through multiple independent sources
+              Data scrubbed for confidentiality. Verified independently.
             </p>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function DashboardPage() {
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <TrendingUp className="w-8 h-8 text-accent-pink" />
-            Aggregate Results - All Participants
+            Aggregate Results
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
@@ -134,7 +134,7 @@ export default function DashboardPage() {
         <div className="mb-16">
           <Card variant="bordered" className="bg-secondary-purple/10">
             <div className="text-center">
-              <h4 className="text-2xl font-bold mb-4 text-secondary-purple-light">Time Investment Dramatically Reduced</h4>
+              <h4 className="text-2xl font-bold mb-4 text-secondary-purple-light">Time Investment Reduced</h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
                 <div>
                   <div className="text-sm text-gray-400 mb-2">Before ASO</div>
@@ -148,7 +148,7 @@ export default function DashboardPage() {
                 </div>
               </div>
               <div className="mt-6 text-xl font-semibold text-secondary-purple-light">
-                75% reduction in owner/team time while dramatically improving results
+                75% less time. Better results.
               </div>
             </div>
           </Card>
@@ -158,7 +158,7 @@ export default function DashboardPage() {
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <Activity className="w-8 h-8 text-accent-pink" />
-            Industry Performance Breakdown
+            Industry Breakdown
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -298,7 +298,7 @@ export default function DashboardPage() {
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <TrendingUp className="w-8 h-8 text-accent-pink" />
-            Before/After Comparison Metrics
+            Before/After
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -430,7 +430,7 @@ export default function DashboardPage() {
             Live Dashboard <span className="text-gradient">(Coming Soon)</span>
           </h2>
           <p className="text-xl text-gray-400">
-            Real-time tracking launches with first beta partners
+            Launches with first beta partners.
           </p>
         </div>
 
@@ -438,12 +438,12 @@ export default function DashboardPage() {
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <Activity className="w-8 h-8 text-accent-pink" />
-            Continuum Projects Dashboard
+            Continuum Projects
           </h3>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <Card variant="bordered">
-              <h4 className="text-xl font-bold mb-4 text-primary-blue">Project NEXUS Metrics (Example)</h4>
+              <h4 className="text-xl font-bold mb-4 text-primary-blue">Project NEXUS</h4>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Beta Participants</span>
@@ -469,7 +469,7 @@ export default function DashboardPage() {
             </Card>
 
             <Card variant="bordered">
-              <h4 className="text-xl font-bold mb-4 text-secondary-purple-light">Other Projects (Example)</h4>
+              <h4 className="text-xl font-bold mb-4 text-secondary-purple-light">Other Projects</h4>
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-400">Research Progress</span>
@@ -492,7 +492,7 @@ export default function DashboardPage() {
           </div>
 
           <p className="text-gray-500 text-sm mt-4 text-center">
-            These are example layouts. Live dashboard coming with first beta partners.
+            Live dashboard coming with first beta partners.
           </p>
         </div>
 
@@ -500,7 +500,7 @@ export default function DashboardPage() {
         <div className="mb-16">
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <TrendingUp className="w-8 h-8 text-accent-pink" />
-            Performance Transparency (When Live)
+            Performance Transparency
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -537,7 +537,7 @@ export default function DashboardPage() {
 
           <div className="mt-6 bg-primary/30 rounded-2xl p-6 border border-accent-pink/30">
             <p className="text-center text-gray-300">
-              Dashboard goes live as we launch. No fake data. Real metrics when they exist.
+              No fake data. Real metrics when they exist.
             </p>
           </div>
         </div>
@@ -610,7 +610,7 @@ export default function DashboardPage() {
         <div>
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
             <DollarSign className="w-8 h-8 text-accent-pink" />
-            Financial Transparency (When Available)
+            Financial Transparency
           </h3>
 
           <Card variant="bordered" className="mb-6">
@@ -649,7 +649,7 @@ export default function DashboardPage() {
 
           <div className="mt-6 bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30">
             <p className="text-center text-accent-pink font-semibold">
-              This isn&apos;t VC-funded. This is grassroots. Financial transparency comes as we build.
+              Not VC-funded. Grassroots. Transparency comes as we build.
             </p>
           </div>
         </div>
@@ -659,18 +659,18 @@ export default function DashboardPage() {
       <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-            <span className="text-gradient">Analysis</span> and Insights
+            Analysis and <span className="text-gradient">Insights</span>
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card variant="bordered">
               <h4 className="text-xl font-bold mb-3 text-primary-blue">Weekly Updates</h4>
-              <p className="text-gray-300">What we learned and implemented</p>
+              <p className="text-gray-300">What we learned. What we implemented.</p>
             </Card>
 
             <Card variant="bordered">
               <h4 className="text-xl font-bold mb-3 text-primary-blue">Trend Analysis</h4>
-              <p className="text-gray-300">Market and algorithm observations</p>
+              <p className="text-gray-300">What the market does. What algorithms do.</p>
             </Card>
 
             <Card variant="bordered">
@@ -690,7 +690,7 @@ export default function DashboardPage() {
 
             <Card variant="bordered">
               <h4 className="text-xl font-bold mb-3 text-primary-blue">Methodology Evolution</h4>
-              <p className="text-gray-300">How our approaches adapt and improve</p>
+              <p className="text-gray-300">How we adapt. How we improve.</p>
             </Card>
           </div>
         </div>
@@ -704,7 +704,7 @@ export default function DashboardPage() {
               What We <span className="text-gradient">Don&apos;t Show</span>
             </h2>
             <p className="text-xl text-gray-400">
-              Clear boundaries for privacy and security
+              Privacy and security come first.
             </p>
           </div>
 
@@ -763,7 +763,7 @@ export default function DashboardPage() {
           <div className="mt-12 text-center space-y-6">
             <div className="bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30">
               <p className="text-xl font-bold text-accent-pink mb-2">
-                Find another company showing this level of transparency
+                Find another company this transparent.
               </p>
               <p className="text-gray-300">
                 We&apos;ll wait.

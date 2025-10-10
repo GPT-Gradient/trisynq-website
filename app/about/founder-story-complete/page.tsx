@@ -5,8 +5,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'The Unlikely Revolutionary: Complete Founder Story',
-  description: 'From mechanic to enterprise architect to revolutionary. The complete, unfiltered 20-year journey of how TriSynq was born from rage, not ambition.',
+  title: 'Founder Story — Complete',
+  description: 'The long-form founder journey behind ClearForge.',
   canonical: '/about/founder-story-complete',
 });
 
@@ -18,7 +18,7 @@ export default function FounderStoryCompletePage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              The Unlikely <span className="text-gradient">Revolutionary</span>
+              The Founder&apos;s <span className="text-gradient">Long-Form Story</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300">
               How a Mechanic Became the Voice Against Big Tech&apos;s Biggest Lie
@@ -29,7 +29,7 @@ export default function FounderStoryCompletePage() {
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-accent-pink/30">
               <Image
                 src="/shawn-sloan.png"
-                alt="Shawn Sloan - TriSynq Founder"
+                alt="Shawn Sloan - ClearForge Founder"
                 fill
                 className="object-cover"
               />
@@ -245,7 +245,7 @@ export default function FounderStoryCompletePage() {
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed">
-            That&apos;s when TriSynq was born. Not from ambition, but from rage. Not from opportunity, but from clarity.
+            That&apos;s when ClearForge was born. Not from ambition, but from rage. Not from opportunity, but from clarity.
           </p>
         </div>
       </Section>
@@ -256,7 +256,7 @@ export default function FounderStoryCompletePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-blue">The Revolution Begins</h2>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
-            TriSynq isn&apos;t just another startup. It&apos;s a <strong className="text-white">technology translation revolution</strong> built on one simple premise: <strong className="text-accent-pink">transparency beats manipulation in every domain.</strong>
+            ClearForge isn&apos;t just another startup. It&apos;s a <strong className="text-white">technology translation revolution</strong> built on one simple premise: <strong className="text-accent-pink">transparency beats manipulation in every domain.</strong>
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -284,13 +284,55 @@ export default function FounderStoryCompletePage() {
         </div>
       </Section>
 
-      {/* The Mission */}
+      {/* Proof Sections */}
       <Section background="medium">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">The <span className="text-gradient">Proof Points</span></h2>
+            <p className="text-xl text-gray-300">Enterprise experience backing the forge.</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20">
+              <h4 className="text-xl font-bold mb-4 text-primary-blue">Mercedes-Benz Stadium</h4>
+              <div className="aspect-video bg-background-dark rounded-lg mb-4 flex items-center justify-center border border-primary-blue/30">
+                <p className="text-gray-500">[Mercedes-Benz Stadium - Technology Backbone Architecture]</p>
+              </div>
+              <p className="text-gray-300">
+                Architected the complete technology backbone for one of the world&apos;s most advanced sports venues.
+              </p>
+            </div>
+
+            <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20">
+              <h4 className="text-xl font-bold mb-4 text-accent-pink">Classified Federal Systems</h4>
+              <div className="aspect-video bg-background-dark rounded-lg mb-4 flex items-center justify-center border border-accent-pink/30">
+                <p className="text-gray-500">[System Architecture Schematic]</p>
+              </div>
+              <p className="text-gray-300">
+                Developed classified solutions for federal agencies requiring the highest levels of security and reliability.
+              </p>
+            </div>
+
+            <div className="bg-primary/30 rounded-xl p-6 border border-secondary-purple/20">
+              <h4 className="text-xl font-bold mb-4 text-secondary-purple-light">Children&apos;s Hospital of Atlanta</h4>
+              <div className="aspect-video bg-background-dark rounded-lg mb-4 flex items-center justify-center border border-secondary-purple/30">
+                <p className="text-gray-500">[Arthur M. Blank Hospital - Technology Infrastructure]</p>
+              </div>
+              <p className="text-gray-300">
+                Designed and architected the technology backbone for the Arthur M. Blank Hospital, supporting critical pediatric care systems.
+              </p>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* The Mission */}
+      <Section background="dark">
         <div className="max-w-4xl mx-auto prose prose-invert prose-lg">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-secondary-purple-light">The Mission: Proving Transparency Works</h2>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
-            TriSynq operates on a radical model: <strong className="text-white">the 20% and the 80%</strong>.
+            ClearForge operates on a radical model: <strong className="text-white">the 20% and the 80%</strong>.
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -308,13 +350,13 @@ export default function FounderStoryCompletePage() {
       </Section>
 
       {/* The Invitation */}
-      <Section background="dark">
+      <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent-pink text-center">The Invitation</h2>
 
           <div className="prose prose-invert prose-lg mb-8">
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
-              This is just the beginning. TriSynq is coming out of hiding, and what you&apos;ll see will challenge everything you&apos;ve been told about technology, costs, and what&apos;s possible for your business.
+              This is just the beginning. ClearForge is coming out of hiding, and what you&apos;ll see will challenge everything you&apos;ve been told about technology, costs, and what&apos;s possible for your business.
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-4">
@@ -326,7 +368,7 @@ export default function FounderStoryCompletePage() {
             </p>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              Above all, know this: as TriSynq steps into the light, there will be no smoke, no mirrors, no hidden agendas. We will show our work. We will share our failures alongside our wins. We will be transparent. Always.
+              Above all, know this: as ClearForge steps into the light, there will be no smoke, no mirrors, no hidden agendas. We will show our work. We will share our failures alongside our wins. We will be transparent. Always.
             </p>
           </div>
 

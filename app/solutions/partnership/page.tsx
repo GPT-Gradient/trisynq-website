@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Handshake, Lightbulb, Code, TrendingUp, CheckCircle, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Partnership Development - Great Ideas Meet Technical Execution',
-  description: 'You bring vision and market knowledge, we bring technology, data, and AI execution. Revenue sharing partnership model, not equity grab. Zero upfront costs for qualified partners.',
+  title: 'Partnership That Feeds Growth',
+  description: 'We scale ideas, not invoices.',
   canonical: '/solutions/partnership',
 });
 
@@ -18,17 +18,18 @@ export default function PartnershipDevelopmentPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Great Idea, No Technical Capability?</span>
-            <br />
-            We&apos;ll Build It With You.
+            <span className="text-gradient">Partnership</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            You bring vision, we bring technology + data + AI execution
+          <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            Co-build products, automations, and frameworks. Share learnings. Keep the keys.
           </p>
-          <div className="bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30 inline-block">
-            <p className="text-lg text-white font-semibold">
-              Revenue sharing, not equity grab
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/contact" size="lg">
+              Propose a Build
+            </Button>
+            <Button href="/data-divide" variant="outline" size="lg">
+              The Data Divide
+            </Button>
           </div>
         </div>
       </Section>
@@ -42,88 +43,26 @@ export default function PartnershipDevelopmentPage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            {/* Partners Bring */}
-            <Card variant="elevated">
-              <div className="flex items-start gap-4 mb-6">
-                <Lightbulb className="w-10 h-10 text-accent-pink flex-shrink-0" />
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">Partners Bring</h3>
-                </div>
+          <Card variant="elevated">
+            <div className="space-y-4">
+              <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20">
+                <h4 className="text-xl font-bold text-white mb-3">Define the problem and shared success metrics</h4>
+                <p className="text-gray-300">
+                  Clear objectives from day one—aligned incentives, measurable outcomes.
+                </p>
               </div>
 
-              <div className="space-y-4">
-                <div className="bg-primary/30 rounded-xl p-5 border border-accent-pink/20">
-                  <h4 className="text-lg font-bold text-white mb-2">Vision and Market Knowledge</h4>
-                  <p className="text-gray-300">
-                    You know the problem and the opportunity
-                  </p>
-                </div>
-
-                <div className="bg-primary/30 rounded-xl p-5 border border-accent-pink/20">
-                  <h4 className="text-lg font-bold text-white mb-2">Domain Expertise</h4>
-                  <p className="text-gray-300">
-                    Deep understanding of your industry
-                  </p>
-                </div>
-
-                <div className="bg-primary/30 rounded-xl p-5 border border-accent-pink/20">
-                  <h4 className="text-lg font-bold text-white mb-2">Industry Understanding</h4>
-                  <p className="text-gray-300">
-                    Market dynamics and customer needs
-                  </p>
-                </div>
-              </div>
-            </Card>
-
-            {/* We Provide */}
-            <Card variant="elevated">
-              <div className="flex items-start gap-4 mb-6">
-                <Code className="w-10 h-10 text-primary-blue flex-shrink-0" />
-                <div>
-                  <h3 className="text-2xl font-bold mb-4 text-white">We Provide</h3>
-                </div>
+              <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20">
+                <h4 className="text-xl font-bold text-white mb-3">Co-design the architecture (open by default)</h4>
+                <p className="text-gray-300">
+                  Transparent design process where you understand every decision.
+                </p>
               </div>
 
-              <div className="space-y-4">
-                <div className="bg-primary/30 rounded-xl p-5 border border-primary-blue/20">
-                  <h4 className="text-lg font-bold text-white mb-2">Technical Execution</h4>
-                  <p className="text-gray-300">
-                    Enterprise-grade development and architecture
-                  </p>
-                </div>
-
-                <div className="bg-primary/30 rounded-xl p-5 border border-primary-blue/20">
-                  <h4 className="text-lg font-bold text-white mb-2">Data Strategy</h4>
-                  <p className="text-gray-300">
-                    Intelligence systems that drive decisions
-                  </p>
-                </div>
-
-                <div className="bg-primary/30 rounded-xl p-5 border border-primary-blue/20">
-                  <h4 className="text-lg font-bold text-white mb-2">AI Implementation</h4>
-                  <p className="text-gray-300">
-                    Authentic amplification of expertise
-                  </p>
-                </div>
-
-                <div className="bg-primary/30 rounded-xl p-5 border border-primary-blue/20">
-                  <h4 className="text-lg font-bold text-white mb-2">Enterprise Translation</h4>
-                  <p className="text-gray-300">
-                    20+ years Fortune 100 capability
-                  </p>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          <Card variant="elevated" className="bg-gradient-to-br from-primary via-secondary-purple to-primary border-secondary-purple-light/30">
-            <div className="flex items-start gap-4">
-              <Handshake className="w-10 h-10 text-secondary-purple-light flex-shrink-0" />
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-white">Build Together</h3>
-                <p className="text-xl text-gray-300">
-                  Your expertise shapes what we create. Our capabilities bring it to life.
+              <div className="bg-primary/30 rounded-xl p-6 border border-secondary-purple-light/20">
+                <h4 className="text-xl font-bold text-white mb-3">Ship with &apos;Proof&apos; baked in—public demos where possible</h4>
+                <p className="text-gray-300">
+                  Show the world how it works, not just what it does.
                 </p>
               </div>
             </div>
@@ -200,7 +139,7 @@ export default function PartnershipDevelopmentPage() {
       </Section>
 
       {/* Success Framework */}
-      <Section background="dark">
+      <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -241,7 +180,7 @@ export default function PartnershipDevelopmentPage() {
 
             <Card variant="elevated">
               <div className="bg-gradient-to-br from-primary-blue/20 to-secondary-purple/5 rounded-xl p-6 border border-primary-blue/30">
-                <h3 className="text-2xl font-bold text-white mb-4">TriSynq Handles</h3>
+                <h3 className="text-2xl font-bold text-white mb-4">ClearForge Handles</h3>
                 <p className="text-lg text-gray-300">
                   All technical risk and implementation complexity
                 </p>
@@ -252,7 +191,7 @@ export default function PartnershipDevelopmentPage() {
       </Section>
 
       {/* Partnership Process */}
-      <Section background="medium">
+      <Section background="dark" id="apply">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -317,7 +256,7 @@ export default function PartnershipDevelopmentPage() {
       </Section>
 
       {/* CTA Section */}
-      <Section background="dark">
+      <Section background="medium">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
             Have an Idea That <span className="text-gradient">Needs Technical Execution?</span>

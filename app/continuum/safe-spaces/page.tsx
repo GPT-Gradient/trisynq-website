@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Project Safe Spaces - Digital Safety for Kids | TriSynq Continuum',
-  description: 'Proving safety and creative expression coexist transparently. Safe platform for kids to create content with parental control, anti-bullying, and predator protection. Planning 2026.',
+  title: 'Safe Spaces: Transparency Without Surveillance',
+  description: 'We design systems where people feel secure because they understand what&apos;s happening behind the curtain.',
 });
 
 export default function ProjectSafeSpacesPage() {
@@ -23,13 +23,11 @@ export default function ProjectSafeSpacesPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Project Safe Spaces</span>
-            <br />
-            Digital Safety for Kids
+            <span className="text-gradient">Safe Spaces: Transparency Without Surveillance.</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Proving safety and creative expression coexist transparently
+            Safety built on comprehension, not fear.
           </p>
 
           <div className="inline-flex items-center gap-2 bg-pink-400/20 border border-pink-400/30 rounded-full px-6 py-3 mb-8">
@@ -49,11 +47,11 @@ export default function ProjectSafeSpacesPage() {
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            The <span className="text-gradient">Digital Dilemma</span>
+            <span className="text-gradient">The Problem</span>
           </h2>
 
           <Card variant="bordered" className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-accent-pink">The Impossible Choice</h3>
+            <h3 className="text-2xl font-bold mb-6 text-accent-pink">Trust dies where surveillance begins.</h3>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
@@ -101,8 +99,14 @@ export default function ProjectSafeSpacesPage() {
       <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            <span className="text-gradient">Safe Platform</span> for Expression
+            <span className="text-gradient">The Approach</span>
           </h2>
+
+          <div className="text-center mb-8">
+            <p className="text-xl text-gray-300">
+              Visible controls, audit trails, explainable AI moderation.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <Card variant="elevated">
@@ -147,9 +151,9 @@ export default function ProjectSafeSpacesPage() {
           </div>
 
           <Card variant="bordered">
-            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">The Balance We&apos;re Proving</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">The Outcome</h3>
             <p className="text-xl text-center text-white mb-4">
-              Freedom with protection. Expression with safety.
+              Users who feel safe because they are informed.
             </p>
             <p className="text-lg text-center text-gray-300">
               Not by restricting creativity. By engineering safety into every interaction.
@@ -353,8 +357,24 @@ export default function ProjectSafeSpacesPage() {
         </div>
       </Section>
 
-      {/* Timeline */}
+      {/* Xynergy Integration */}
       <Section background="medium">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-12">
+            <p className="text-lg text-gray-300 mb-6">
+              This domain is powered by Xynergy services with explainable workflows.
+            </p>
+            <div className="text-center">
+              <Button href="/xynergy" variant="outline" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Timeline */}
+      <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-gradient">Timeline</span> and Development
@@ -390,7 +410,7 @@ export default function ProjectSafeSpacesPage() {
       </Section>
 
       {/* The Commitment */}
-      <Section background="gradient">
+      <Section background="medium">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             The <span className="text-gradient">Non-Negotiable Commitment</span>

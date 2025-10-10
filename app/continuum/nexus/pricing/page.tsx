@@ -381,7 +381,7 @@ export default function NEXUSPricingPage() {
             </Card>
 
             <Card variant="elevated">
-              <h3 className="text-2xl font-bold mb-6 text-primary-blue">Phase 1 Beta with TriSynq</h3>
+              <h3 className="text-2xl font-bold mb-6 text-primary-blue">Phase 1 Beta with ClearForge</h3>
               <div className="space-y-4 mb-6">
                 <div className="flex justify-between items-center pb-3 border-b border-gray-700">
                   <span className="text-gray-300">One-time investment</span>

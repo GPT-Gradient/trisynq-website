@@ -7,8 +7,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Our Mission: A Public Outcry for Transparency',
-  description: 'TriSynq Continuum disrupts through transparency. Democratizing enterprise-grade capabilities for SMBs through complete transparency, translation, and authentic AI amplification.',
+  title: 'The Mission: Restore Trust in Technology',
+  description: 'Strip away the noise and return power to the people who create value.',
 });
 
 export default function ManifestoPage() {
@@ -18,18 +18,14 @@ export default function ManifestoPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            A Public Outcry: Why <span className="text-gradient">Transparency</span> Is Our Only Defense
+            The Mission: Restore Trust in <span className="text-gradient">Technology</span>.
           </h1>
 
           <div className="bg-primary/50 rounded-2xl p-6 mb-8 border border-accent-pink/30 backdrop-blur-sm">
             <p className="text-xl md:text-2xl font-semibold text-white">
-              We&apos;re TriSynq Continuum. We disrupt through transparency.
+              We strip away the noise and return power to the people who create value: small businesses, educators, communities.
             </p>
           </div>
-
-          <p className="text-xl text-gray-300 mb-6">
-            Not through corporate jargon. Not through technical complexity. Through clear, honest explanation of what technology can actually do.
-          </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <Card variant="bordered">
@@ -293,6 +289,12 @@ export default function ManifestoPage() {
             <p className="text-2xl font-bold mb-4 text-white">Demand Transparency</p>
             <p className="text-lg text-gray-300">
               Everywhere you interact with technology
+            </p>
+          </div>
+
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 text-center mt-8">
+            <p className="text-lg text-gray-200">
+              Xynergy is the technical expression of our mission: transparency that people can use.
             </p>
           </div>
 

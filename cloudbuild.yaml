@@ -1,25 +1,25 @@
-# Google Cloud Build configuration for TriSynq AI Website
+# Google Cloud Build configuration for ClearForge Website
 steps:
   # Build the container image
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
       - '-t'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
+      - 'gcr.io/$PROJECT_ID/clearforge-website:$COMMIT_SHA'
       - '-t'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:latest'
+      - 'gcr.io/$PROJECT_ID/clearforge-website:latest'
       - '.'
 
-  # Push the container image to Container Registry
+  # Push to Container Registry
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
+      - 'gcr.io/$PROJECT_ID/clearforge-website:$COMMIT_SHA'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:latest'
+      - 'gcr.io/$PROJECT_ID/clearforge-website:latest'
 
   # Deploy to Cloud Run
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
@@ -27,37 +27,35 @@ steps:
     args:
       - 'run'
       - 'deploy'
-      - 'trisynq-website'
+      - 'clearforge-website'
       - '--image'
-      - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
+      - 'gcr.io/$PROJECT_ID/clearforge-website:$COMMIT_SHA'
       - '--region'
       - 'us-central1'
       - '--platform'
       - 'managed'
       - '--allow-unauthenticated'
-      - '--port'
-      - '3000'
-      - '--memory'
-      - '512Mi'
-      - '--cpu'
-      - '1'
       - '--min-instances'
-      - '0'
+      - '1'
       - '--max-instances'
       - '10'
+      - '--memory'
+      - '1Gi'
+      - '--cpu'
+      - '1'
+      - '--port'
+      - '3000'
       - '--set-env-vars'
-      - 'NODE_ENV=production,NEXT_TELEMETRY_DISABLED=1'
+      - 'NODE_ENV=production,NEXT_PUBLIC_ENVIRONMENT=production,NEXT_TELEMETRY_DISABLED=1'
       - '--set-secrets'
-      - 'XYNERGY_API_KEY=xynergy-api-key:latest,NEXT_PUBLIC_GA_MEASUREMENT_ID=ga-measurement-id:latest'
+      - 'GATEWAY_API_KEY=gateway-api-key:latest,NEXT_PUBLIC_GATEWAY_URL=gateway-url:latest,NEXT_PUBLIC_GA_MEASUREMENT_ID=ga-measurement-id:latest'
 
-# Store images in Google Container Registry
 images:
-  - 'gcr.io/$PROJECT_ID/trisynq-website:$COMMIT_SHA'
-  - 'gcr.io/$PROJECT_ID/trisynq-website:latest'
+  - 'gcr.io/$PROJECT_ID/clearforge-website:$COMMIT_SHA'
+  - 'gcr.io/$PROJECT_ID/clearforge-website:latest'
 
-# Build configuration
 options:
-  machineType: 'N1_HIGHCPU_8'
   logging: CLOUD_LOGGING_ONLY
+  machineType: 'N1_HIGHCPU_8'
 
 timeout: '1200s'

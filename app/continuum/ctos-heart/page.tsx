@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Project CTO\'s Heart - Adaptive Technology for Special Needs | TriSynq Continuum',
-  description: 'Proving technology adapts to individual learning, not vice versa. Apps and tools that identify optimal learning modalities and support IEP development. Planning Late 2025.',
+  title: 'The CTO&apos;s Heart: Tech That Adapts',
+  description: 'From accessibility to automation — we make technology empathize.',
 });
 
 export default function ProjectCTOsHeartPage() {
@@ -23,14 +23,8 @@ export default function ProjectCTOsHeartPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Project CTO&apos;s Heart</span>
-            <br />
-            Technology That Adapts
+            <span className="text-gradient">The CTO&apos;s Heart: Tech That Adapts.</span>
           </h1>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Proving technology adapts to individual learning, not vice versa
-          </p>
 
           <div className="inline-flex items-center gap-2 bg-purple-400/20 border border-purple-400/30 rounded-full px-6 py-3 mb-8">
             <Puzzle className="w-5 h-5 text-purple-400" />
@@ -49,11 +43,11 @@ export default function ProjectCTOsHeartPage() {
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            The <span className="text-gradient">Challenge</span>
+            <span className="text-gradient">The Principle</span>
           </h2>
 
           <Card variant="bordered" className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-accent-pink">The Core Problem</h3>
+            <h3 className="text-2xl font-bold mb-6 text-accent-pink">Human variability is a feature, not a bug.</h3>
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -95,12 +89,12 @@ export default function ProjectCTOsHeartPage() {
       <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            The <span className="text-gradient">Vision</span>
+            <span className="text-gradient">The Practice</span>
           </h2>
 
           <div className="mb-12">
             <Card variant="bordered">
-              <h3 className="text-2xl font-bold mb-6 text-primary-blue">Initial Focus: Individual-Level Support</h3>
+              <h3 className="text-2xl font-bold mb-6 text-primary-blue">Adaptive interfaces, assistive flows, elastic automation.</h3>
               <p className="text-lg text-gray-300 mb-6">
                 Apps, games, and interactive software that systematically determine what learning approaches work best for each individual.
               </p>
@@ -142,9 +136,9 @@ export default function ProjectCTOsHeartPage() {
           </div>
 
           <Card variant="elevated">
-            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">Long-term Goal</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">The Proof</h3>
             <p className="text-lg text-gray-300 text-center mb-6">
-              Pattern identification that advances the entire special needs field. What works for individuals with similar profiles? How can we use data to develop better solutions?
+              Case blurbs with measurable outcomes (placeholders for now).
             </p>
             <div className="bg-primary/30 rounded-2xl p-6 border border-primary-blue/20">
               <p className="text-xl font-semibold text-accent-pink text-center">
@@ -316,8 +310,24 @@ export default function ProjectCTOsHeartPage() {
         </div>
       </Section>
 
-      {/* Timeline */}
+      {/* Xynergy Integration */}
       <Section background="medium">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-12">
+            <p className="text-lg text-gray-300 mb-6">
+              This domain is powered by Xynergy services with explainable workflows.
+            </p>
+            <div className="text-center">
+              <Button href="/xynergy" variant="outline" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Timeline */}
+      <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-gradient">Timeline</span>
@@ -353,7 +363,7 @@ export default function ProjectCTOsHeartPage() {
       </Section>
 
       {/* The Promise */}
-      <Section background="gradient">
+      <Section background="medium">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             The <span className="text-gradient">Promise</span>

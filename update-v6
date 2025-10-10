@@ -1,0 +1,230 @@
+{
+  "meta": {
+    "version": "2025-10-09",
+    "intent": "Apply review fixes: brand corrections, route/CTA repairs, Proof/Continuum messaging, global manifesto/transparency/data-divide/ai-reality-check CTAs, and restore Solutions content.",
+    "brand": { "company": "ClearForge", "engine": "Xynergy" }
+  },
+
+  "globals": {
+    "rename_all_instances": [
+      { "from": "TriSynq", "to": "ClearForge" },
+      { "from": "trisynq", "to": "clearforge" }
+    ],
+    "sitewide_cta_injection": {
+      "locations": [
+        "footer_nav",
+        "post_content_cta",
+        "topic_sidebar",
+        "about_pages_footer",
+        "proof_pages_footer"
+      ],
+      "links": [
+        { "label": "Manifesto", "href": "/manifesto" },
+        { "label": "Transparency Commitment", "href": "/transparency" },
+        { "label": "The Data Divide", "href": "/data-divide" },
+        { "label": "AI Reality Check", "href": "/ai-reality-check" }
+      ]
+    },
+    "redirects": [
+      { "from": "/founder-story", "to": "/about-founder-story-complete" },
+      { "from": "/about-founder-story", "to": "/about-how-we-started" }
+    ]
+  },
+
+  "navigation": {
+    "primary": [
+      { "label": "The Forge", "href": "/forge" },
+      { "label": "Xynergy", "href": "/xynergy" },
+      { "label": "Proof", "href": "/proof" },
+      { "label": "Solutions", "href": "/solutions" },
+      { "label": "Community", "href": "/community" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "ensure_secondary_links": [
+      { "label": "Manifesto", "href": "/manifesto" },
+      { "label": "Transparency", "href": "/transparency" }
+    ]
+  },
+
+  "page_changes": {
+    "about-founder-story-complete-page.tsx": {
+      "brand_fix": true,
+      "replacements": [
+        { "find": "TriSynq", "replace": "ClearForge", "multiple": true }
+      ],
+      "proof_points_update": {
+        "organization_name": { "find": "Children’s Hospital", "replace": "CHOA (Children’s Healthcare of Atlanta)" },
+        "achievements_block": {
+          "title": "Selected Outcomes",
+          "bullets": [
+            "Reduced time-to-decision for clinical ops initiatives by X%.",
+            "Automated data synthesis across N sources with full provenance.",
+            "Delivered explainable dashboards used by cross-functional teams."
+          ],
+          "note": "Replace X%/N with verified metrics when available."
+        }
+      },
+      "append_ctas": [
+        { "label": "Manifesto", "href": "/manifesto" },
+        { "label": "Transparency Commitment", "href": "/transparency" }
+      ]
+    },
+
+    "about-how-we-started-page.tsx": {
+      "fix_cta": {
+        "button_label": "Read the Full Story",
+        "href": "/about-founder-story-complete"
+      },
+      "append_ctas": [
+        { "label": "Manifesto", "href": "/manifesto" },
+        { "label": "AI Reality Check", "href": "/ai-reality-check" }
+      ]
+    },
+
+    "proof-page.tsx": {
+      "continuum_section_update": {
+        "headline": "Continuum Projects",
+        "sub": "These six are the start. What comes next is decided with the Community.",
+        "list_note": "Add 'Propose the Next Project' CTA tying to Community waitlist/form."
+      },
+      "ctas": [
+        { "label": "Propose the Next Continuum", "href": "/community#waitlist" },
+        { "label": "Transparency Commitment", "href": "/transparency" }
+      ]
+    },
+
+    "sitewide": {
+      "inject_cta_blocks_after_content": [
+        {
+          "placement": "after_main_content",
+          "ctas": [
+            { "label": "Manifesto", "href": "/manifesto" },
+            { "label": "Transparency Commitment", "href": "/transparency" },
+            { "label": "The Data Divide", "href": "/data-divide" },
+            { "label": "AI Reality Check", "href": "/ai-reality-check" }
+          ]
+        }
+      ]
+    }
+  },
+
+  "missing_content_restore": {
+    "solutions-index": {
+      "route": "/solutions",
+      "hero": {
+        "h1": "Solutions — Method, Not Magic.",
+        "sub": "Composable outcomes powered by Xynergy. Transparent. Explainable. Yours."
+      },
+      "cards": [
+        { "title": "Platform", "href": "/solutions-platform", "badge": "Powered by Xynergy", "blurb": "Stand up explainable automation, content ops, and analytics with provenance." },
+        { "title": "Consulting", "href": "/solutions-consulting", "blurb": "Hands-on experts who build with you—no black boxes, no vendor lock-in." },
+        { "title": "Custom", "href": "/solutions-custom", "blurb": "Bespoke systems on top of Xynergy services, fully owned and auditable." },
+        { "title": "Partnership", "href": "/solutions-partnership", "blurb": "Co-build products and playbooks. Share the learnings, keep the keys." }
+      ],
+      "footer_ctas": [
+        { "label": "See the Power", "href": "/xynergy" },
+        { "label": "Transparency Commitment", "href": "/transparency" }
+      ]
+    },
+
+    "solutions-platform-page.tsx": {
+      "h1": "Platform",
+      "intro": "Spin up explainable workflows, content engines, and dashboards in weeks—not quarters.",
+      "sections": [
+        {
+          "title": "What You Get",
+          "bullets": [
+            "Research & Insights: internal-first signals with cited external context.",
+            "Content & Campaigns: drafts, scoring, amplification with proof.",
+            "Automation: approved workflows with step-by-step logs.",
+            "Dashboards & Proof: outcomes you can audit and share."
+          ]
+        },
+        {
+          "title": "Why It Works",
+          "bullets": [
+            "Xynergy’s ‘Explain this’ view on every major action.",
+            "Composable services: adopt, extend, or replace as you grow.",
+            "Your data stays your data—isolated by default."
+          ]
+        }
+      ],
+      "ctas": [
+        { "label": "See the Power", "href": "/xynergy" },
+        { "label": "AI Reality Check", "href": "/ai-reality-check" }
+      ]
+    },
+
+    "solutions-consulting-page.tsx": {
+      "h1": "Consulting",
+      "intro": "Operators-first. We build with your team, transfer knowledge, and make you independent.",
+      "offers": [
+        "Discovery sprints with recorded reasoning & artifacts.",
+        "Playbook design with measurable checkpoints.",
+        "Deployment with transparent change logs and training."
+      ],
+      "proof_badge": "All deliverables ship with provenance.",
+      "ctas": [
+        { "label": "Transparency Commitment", "href": "/transparency" },
+        { "label": "Contact", "href": "/contact" }
+      ]
+    },
+
+    "solutions-custom-page.tsx": {
+      "h1": "Custom",
+      "intro": "Your edge, productized. We compose Xynergy services into something only you can ship.",
+      "capabilities": [
+        "Private data models with permissions and retention controls.",
+        "Explainable decisioning for regulated teams.",
+        "Operator UI that shows sources, steps, and confidence."
+      ],
+      "ctas": [
+        { "label": "See the Power", "href": "/xynergy" },
+        { "label": "Manifesto", "href": "/manifesto" }
+      ]
+    },
+
+    "solutions-partnership-page.tsx": {
+      "h1": "Partnership",
+      "intro": "Co-build products, automations, and frameworks. Share learnings. Keep the keys.",
+      "how_it_works": [
+        "Define the problem and shared success metrics.",
+        "Co-design the architecture (open by default).",
+        "Ship with ‘Proof’ baked in—public demos where possible."
+      ],
+      "ctas": [
+        { "label": "Propose a Build", "href": "/contact" },
+        { "label": "The Data Divide", "href": "/data-divide" }
+      ]
+    }
+  },
+
+  "new_or_ensure_pages": {
+    "/manifesto": {
+      "h1": "Manifesto",
+      "sub": "Technology should make humans better—never busier.",
+      "sections": [
+        { "title": "Clarity Over Hype", "p": "We ship proof, not promises." },
+        { "title": "Explainable by Design", "p": "If we can’t show the steps, we won’t ship it." },
+        { "title": "Own Your Stack", "p": "No lock-in. No gatekeepers. Your data stays yours." }
+      ]
+    },
+    "/transparency": {
+      "h1": "Transparency Commitment",
+      "bullets": [
+        "Explain-this view on major outputs.",
+        "Provenance: sources, steps, assumptions.",
+        "Audit logs on automations and changes."
+      ]
+    },
+    "/data-divide": {
+      "h1": "The Data Divide",
+      "p": "Why most orgs drown in data and how we close the gap—practically."
+    },
+    "/ai-reality-check": {
+      "h1": "AI Reality Check",
+      "p": "What AI really can do today, what it can’t, and how to use it without the trust fall."
+    }
+  }
+}

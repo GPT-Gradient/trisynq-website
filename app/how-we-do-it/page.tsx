@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { CheckCircle2, Layers, Users, Eye, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'How We Do It',
-  description: 'The T.R.A.N.S.L.A.T.E. Methodology - Systematic democratization through transparent translation. Every phase removes another artificial barrier.',
+  title: 'Method, Not Magic',
+  description: 'Enterprise architecture, AI translation, clear systems design.',
   canonical: '/how-we-do-it',
 });
 
@@ -18,16 +18,28 @@ export default function HowWeDoItPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">How We Do It:</span>
-            <br />
-            The T.R.A.N.S.L.A.T.E. Methodology
+            Method, Not Magic.
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            Systematic democratization through transparent translation.
+            Enterprise architecture, AI translation, clear systems design.
           </p>
-          <p className="text-lg text-gray-400">
-            Every phase removes another artificial barrier.
-          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+            <div className="bg-primary/30 rounded-xl p-4 border border-primary-blue/20">
+              <h3 className="text-lg font-bold text-primary-blue mb-2">Discovery</h3>
+              <p className="text-gray-300 mb-2">We listen before we automate.</p>
+              <p className="text-sm text-gray-400">Xynergy Diagnostics surfaces patterns in your data—and shows its work.</p>
+            </div>
+            <div className="bg-primary/30 rounded-xl p-4 border border-accent-pink/20">
+              <h3 className="text-lg font-bold text-accent-pink mb-2">Design</h3>
+              <p className="text-gray-300 mb-2">Every system we build can be explained.</p>
+              <p className="text-sm text-gray-400">Composable services fit your workflow. No lock-in, no black boxes.</p>
+            </div>
+            <div className="bg-primary/30 rounded-xl p-4 border border-secondary-purple-light/20">
+              <h3 className="text-lg font-bold text-secondary-purple-light mb-2">Delivery</h3>
+              <p className="text-gray-300 mb-2">Transparency by default, not by request.</p>
+              <p className="text-sm text-gray-400">Every output ships with provenance and an &apos;Explain this&apos; toggle.</p>
+            </div>
+          </div>
         </div>
       </Section>
 
@@ -418,6 +430,22 @@ export default function HowWeDoItPage() {
               </div>
             </div>
           </Card>
+        </div>
+      </Section>
+
+      {/* Xynergy CTA Section */}
+      <Section background="dark">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">See the Power</span>
+          </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            Discover how Xynergy makes complexity transparent and leverageable.
+          </p>
+          <Button href="/xynergy" size="lg">
+            See the Power
+            <ArrowRight className="ml-2 w-5 h-5" />
+          </Button>
         </div>
       </Section>
     </>

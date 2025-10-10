@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { CheckCircle, Users, Award, Target, ArrowRight, AlertCircle, X } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Beta Program Hub - Join the TriSynq Continuum',
-  description: 'Each Continuum project needs pioneers. The earlier you join, the greater the benefits—and the bigger your role in building the transparent alternative. Explore beta opportunities across all 6 projects.',
+  title: 'Beta Program',
+  description: 'Eligibility, expectations, and how we measure progress.',
   canonical: '/beta-program',
 });
 
@@ -106,12 +106,10 @@ export default function BetaProgramHubPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Beta Program</span>
-            <br />
-            Prove It Works, Get Rewarded
+            Beta Program.
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            Each Continuum project needs pioneers. The earlier you join, the greater the benefits—and the bigger your role in building the transparent alternative.
+            Eligibility, expectations, and how we measure progress.
           </p>
         </div>
       </Section>
@@ -120,15 +118,12 @@ export default function BetaProgramHubPage() {
       <Section background="dark">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            How Beta Programs <span className="text-gradient">Work</span>
+            <span className="text-gradient">Eligibility</span>
           </h2>
 
           <div className="text-center mb-12">
             <p className="text-xl text-gray-300">
-              Three-Phase Public Beta Structure
-            </p>
-            <p className="text-lg text-gray-400 mt-2">
-              Every Continuum project follows the same proven approach
+              Operators. Builders. No passengers.
             </p>
           </div>
 
@@ -319,11 +314,11 @@ export default function BetaProgramHubPage() {
       <Section background="dark">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            Why Join <span className="text-gradient">Beta?</span>
+            <span className="text-gradient">Expectations</span>
           </h2>
 
           <p className="text-2xl text-center text-gray-300 mb-12">
-            Beyond Lifetime Access and Affiliate Revenue
+            We ship. You ship. We learn together.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -398,11 +393,11 @@ export default function BetaProgramHubPage() {
       <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="text-gradient">Qualification</span>
+            <span className="text-gradient">Measurement</span>
           </h2>
 
           <p className="text-2xl text-center text-gray-300 mb-12">
-            Not Everyone Qualifies—That&apos;s Okay
+            Proof beats promises. We track outcomes, not vanity.
           </p>
 
           <Card variant="bordered" className="mb-8">

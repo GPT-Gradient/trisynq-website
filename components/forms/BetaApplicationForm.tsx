@@ -42,7 +42,7 @@ export default function BetaApplicationForm() {
         <div className="text-center py-8">
           <h3 className="text-2xl font-bold text-primary-blue mb-4">Application Received!</h3>
           <p className="text-gray-300 mb-4">
-            Thank you for your interest in the beta program. We&apos;ll review your application and respond within 48 hours.
+            Thanks—expect a short Loom showing how we&apos;d wire your use-case on Xynergy.
           </p>
           <p className="text-sm text-gray-400">
             Check your email for confirmation. If you don&apos;t receive it, check your spam folder or contact us directly.

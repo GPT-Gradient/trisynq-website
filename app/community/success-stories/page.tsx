@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { FileText, CheckCircle, TrendingUp, Search, Database, Sparkles, Building2 } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Success Stories',
-  description: 'Real businesses. Real transformation. Coming soon. We won\'t fabricate success stories - when partners achieve results, you\'ll see them here with complete transparency.',
+  title: 'Proof Through Progress',
+  description: 'Short, scannable case blurbs from the six domains.',
   canonical: '/community/success-stories',
 });
 
@@ -18,13 +18,13 @@ export default function SuccessStoriesPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Success Stories</span>
+            <span className="text-gradient">Proof Through Progress.</span>
           </h1>
           <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Real Businesses. Real Transformation.
+            Real businesses. Real transformation.
           </p>
           <p className="text-xl text-gray-300">
-            Coming Soon
+            Coming soon.
           </p>
         </div>
       </Section>
@@ -39,11 +39,11 @@ export default function SuccessStoriesPage() {
                 We&apos;re <span className="text-gradient">Just Starting</span>
               </h2>
               <p className="text-xl text-gray-300 mb-6 max-w-3xl mx-auto">
-                Private beta testing complete. Public beta partners coming on board now.
+                Private beta complete. Public beta partners joining now.
               </p>
               <div className="bg-gradient-to-r from-accent-pink/20 to-secondary-purple/20 rounded-2xl p-6 border border-accent-pink/30 max-w-3xl mx-auto">
                 <p className="text-lg text-gray-300">
-                  <strong className="text-white">The Promise:</strong> When partners achieve results, you&apos;ll see them here - complete with real metrics, full context, and honest assessment of what worked and what didn&apos;t.
+                  <strong className="text-white">The Promise:</strong> When partners achieve results, you&apos;ll see them here. Real metrics, full context, honest assessment.
                 </p>
               </div>
             </div>
@@ -53,11 +53,11 @@ export default function SuccessStoriesPage() {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4 text-white">No Fabrication</h3>
               <p className="text-xl text-gray-300 mb-6">
-                We won&apos;t make up success stories to look established. We&apos;re a startup proving something. Check back as the first 100 partners document their transformation.
+                We won&apos;t fake success stories. We&apos;re a startup proving something. Check back as the first 100 partners document transformation.
               </p>
               <div className="bg-primary/30 rounded-xl p-6 max-w-2xl mx-auto">
                 <p className="text-lg text-gray-300 italic">
-                  &quot;Transparency means showing our journey from the beginning - including when we don&apos;t have case studies yet.&quot;
+                  &quot;Transparency means showing our journey from the beginning. Including when we don&apos;t have case studies yet.&quot;
                 </p>
               </div>
             </div>

@@ -1,0 +1,294 @@
+{
+  "nav_proposal": {
+    "goal": "Group Xynergy, Proof, and Community under one parent to clarify the ecosystem.",
+    "recommended_parent": {
+      "label": "The Forge",
+      "href": "/forge",
+      "children": [
+        { "label": "Xynergy", "href": "/xynergy" },
+        { "label": "Proof", "href": "/proof" },
+        { "label": "Community (Coming Soon)", "href": "/community" }
+      ]
+    },
+    "alternates": [
+      {
+        "label": "Ecosystem",
+        "children": ["Xynergy", "Proof", "Community"]
+      },
+      {
+        "label": "Platform",
+        "children": ["Xynergy", "Proof", "Community"]
+      }
+    ],
+    "actions": [
+      "Create /forge landing page with a 3-card overview that routes to Xynergy, Proof, Community.",
+      "Remove Community and Xynergy as separate top-level items if parent is adopted."
+    ]
+  },
+
+  "page_changes": {
+    "home-page.tsx": {
+      "hero": {
+        "h1": "Complexity is the Villain. ClearForge is the Weapon.",
+        "sub": "Powered by Xynergy — our proprietary AI engine that researches, plans, executes, and proves its work.",
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy" },
+          { "label": "Explore the Forge", "href": "/forge" }
+        ]
+      },
+      "xynergy_feature": {
+        "h2": "Meet Xynergy — The Engine Behind Everything.",
+        "p": [
+          "Built because black-box AI wasn’t enough. Xynergy shows its logic, cites its sources, and gets work done.",
+          "It doesn’t just make suggestions. It executes playbooks, monitors outcomes, and adapts."
+        ],
+        "pillars": [
+          "Explainable by design",
+          "Operator-first controls",
+          "Composable services",
+          "Provenance & audit trails"
+        ],
+        "ctas": [{ "label": "See the Power", "href": "/xynergy" }]
+      },
+      "coming_soon_ribbon": {
+        "label": "Community is coming — education, forum, and rewards.",
+        "href": "/community"
+      }
+    },
+
+    "/xynergy": {
+      "seo": {
+        "title": "Xynergy — Researches, Plans, Executes, Proves.",
+        "description": "A composable AI engine that turns data and expertise into explainable action — with an assistant that works in the background."
+      },
+      "hero": {
+        "h1": "Xynergy — Researches, Plans, Executes, Proves.",
+        "sub": "Not a black box. An engine you can read, direct, and trust.",
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy#overview" },
+          { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+        ]
+      },
+      "sections": [
+        {
+          "id": "plain_english",
+          "h2": "What the Engine Does (Plain English)",
+          "bullets": [
+            "It studies your world: customers, operations, competitors, and content.",
+            "It proposes the next best moves — in your language — with reasons and sources.",
+            "It executes approved tasks in the background and reports back with receipts.",
+            "It learns from results and adjusts the plan — automatically, with your oversight."
+          ]
+        },
+        {
+          "id": "assistant",
+          "h2": "The Xynergy Assistant — Your Background Operator",
+          "p": [
+            "Give it a goal. Approve a playbook. The Assistant schedules, runs, and monitors tasks while you work.",
+            "Every action is logged: what ran, why it ran, what changed, and what’s next."
+          ],
+          "examples": [
+            {
+              "title": "Marketing",
+              "steps": [
+                "Researches topic clusters and drafts posts",
+                "Schedules content, watches early traction",
+                "Amplifies winners and pauses duds"
+              ],
+              "proof": "Shows sources, drafts, timelines, and impact deltas"
+            },
+            {
+              "title": "Operations",
+              "steps": [
+                "Monitors inbound tickets for patterns",
+                "Flags process gaps and drafts SOP updates",
+                "Routes updates to the right owner"
+              ],
+              "proof": "Before/after metrics with annotated diffs"
+            },
+            {
+              "title": "Sales",
+              "steps": [
+                "Watches signals across CRM, site, and content",
+                "Surfaces hot accounts and reasons",
+                "Prepares tailored outreach kits"
+              ],
+              "proof": "Opportunity cards with evidence and confidence"
+            }
+          ]
+        },
+        {
+          "id": "engines_in_terms_people_get",
+          "h2": "The Engines, In Terms People Actually Get",
+          "engines": [
+            {
+              "name": "Research Engine",
+              "does": [
+                "Finds real answers first in your data, then the outside world",
+                "Summarizes in plain language with citations"
+              ],
+              "out": "Briefs you can trust"
+            },
+            {
+              "name": "Content Engine",
+              "does": [
+                "Generates drafts, variations, and repurposes assets",
+                "Scores quality and flags what to ship or fix"
+              ],
+              "out": "Ship-ready content with rationale"
+            },
+            {
+              "name": "Campaign Engine",
+              "does": [
+                "Plans posts, emails, and landing pages",
+                "Auto-boosts winners and pauses losers"
+              ],
+              "out": "Compounding reach with less waste"
+            },
+            {
+              "name": "Automation Engine",
+              "does": [
+                "Runs approved workflows (data cleanups, syncs, updates)",
+                "Logs every step so you can audit or replay"
+              ],
+              "out": "Time back, with receipts"
+            },
+            {
+              "name": "Insights Engine",
+              "does": [
+                "Detects trends, anomalies, and hidden segments",
+                "Explains the ‘why’ in plain English"
+              ],
+              "out": "Decisions with context, not vibes"
+            }
+          ]
+        },
+        {
+          "id": "data_use",
+          "h2": "How We Use Your Data to Serve You Better",
+          "p": [
+            "Your data stays your data. We isolate it by default and log how it’s used.",
+            "We build learning on patterns, not identities — and we show the math.",
+            "Opt-in lets you contribute anonymized insights to a shared brain — and benefit from it."
+          ],
+          "benefits": [
+            "Faster ramp with relevant playbooks",
+            "Better predictions tuned to your context",
+            "Audit-ready compliance posture"
+          ]
+        },
+        {
+          "id": "opportunity_tracking",
+          "h2": "How Opportunities Are Tracked",
+          "bullets": [
+            "Signals watched: content engagement, CRM changes, site behavior, support themes, pipeline variance",
+            "Opportunity Cards: summary, evidence, confidence, next-best-actions",
+            "Lifecycle: created → prioritized → acted → measured → learned"
+          ],
+          "cta": { "label": "See the Power", "href": "/xynergy#assistant" }
+        },
+        {
+          "id": "transparency_loop",
+          "h2": "Proof is the Product",
+          "p": [
+            "Every recommendation and action includes an ‘Explain this’ view: sources, steps, and assumptions.",
+            "No mystery knobs. No trust fall. Just systems you can read and direct."
+          ]
+        },
+        {
+          "id": "build",
+          "h2": "Build on Xynergy",
+          "ctas": [
+            { "label": "Build on Xynergy", "href": "/solutions-partnership" },
+            { "label": "See the Power", "href": "/xynergy#engines_in_terms_people_get" }
+          ]
+        }
+      ]
+    },
+
+    "/forge": {
+      "seo": {
+        "title": "The Forge — Xynergy, Proof, and Community",
+        "description": "Your entry point to the ClearForge ecosystem."
+      },
+      "hero": {
+        "h1": "The Forge",
+        "sub": "Three doors. One direction: clarity you can use.",
+        "cards": [
+          {
+            "title": "Xynergy",
+            "subtitle": "The engine that researches, plans, executes, and proves.",
+            "href": "/xynergy",
+            "badge": "Engine"
+          },
+          {
+            "title": "Proof",
+            "subtitle": "Live outcomes, playbooks, and public demos.",
+            "href": "/proof",
+            "badge": "Receipts"
+          },
+          {
+            "title": "Community",
+            "subtitle": "Education, forum, rewards, beta (coming soon).",
+            "href": "/community",
+            "badge": "Coming Soon"
+          }
+        ]
+      }
+    },
+
+    "/community": {
+      "mode": "coming_soon",
+      "seo": {
+        "title": "Community — Coming Soon",
+        "description": "Freemium education, a real forum, and rewards for builders — all tied to Xynergy."
+      },
+      "hero": {
+        "h1": "Forge it together (Coming Soon).",
+        "sub": "Education that scales with you, a forum that actually helps, and rewards for shipped wins — all connected to the Xynergy engine.",
+        "cta": { "label": "Get Notified", "href": "/community#waitlist" }
+      },
+      "sections": [
+        {
+          "id": "education",
+          "h2": "Education",
+          "ladder": [
+            "Free: step-by-step ‘do X’ tutorials for 1–5 person shops",
+            "Pro: advanced workflows, templates, scorecards",
+            "Integrations+: connectors, API workspace, and co-build sessions"
+          ],
+          "note": "Selected lessons run inside Xynergy Labs with explainable runs."
+        },
+        {
+          "id": "forum",
+          "h2": "Forum",
+          "p": [
+            "Reddit-style threads with searchable solutions, AMAs, and office hours.",
+            "Earn points for helpful answers, tutorials, and verified outcomes."
+          ]
+        },
+        {
+          "id": "rewards",
+          "h2": "Rewards",
+          "p": [
+            "Points → badges → perks. Redeem for discounts, beta priority, and revenue-share on approved templates."
+          ]
+        },
+        {
+          "id": "beta",
+          "h2": "Beta Partners",
+          "p": [
+            "Risk-takers who steer the roadmap. You get early access; we get real-world truth."
+          ],
+          "cta": { "label": "Apply for Beta", "href": "/beta-program" }
+        },
+        {
+          "id": "waitlist",
+          "h2": "Get Notified",
+          "p": ["Join the waitlist and get early invites to private workshops."],
+          "form_fields": ["Name", "Email", "Company", "Focus Area"]
+        }
+      ]
+    }
+  }
+}

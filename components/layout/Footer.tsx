@@ -11,10 +11,10 @@ export default function Footer() {
           {/* Brand */}
           <div className="col-span-1">
             <h3 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-accent-pink mb-4">
-              TriSynq AI
+              ClearForge
             </h3>
             <p className="text-gray-400 text-sm">
-              Democratizing enterprise capabilities through transparent translation across technology, data, and AI.
+              Complexity is the villain. ClearForge is the weapon.
             </p>
           </div>
 
@@ -68,10 +68,10 @@ export default function Footer() {
 
         <div className="mt-12 pt-8 border-t border-primary-blue/20 text-center">
           <p className="text-gray-500 text-sm">
-            © {currentYear} TriSynq Continuum. All rights reserved.
+            © {currentYear} ClearForge. All rights reserved.
           </p>
           <p className="text-gray-600 text-xs mt-2">
-            Building transparency into every interaction
+            Clarity through transparency
           </p>
         </div>
       </div>

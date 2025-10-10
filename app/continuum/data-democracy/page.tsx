@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Data Democracy - AI-Powered Analytics for SMBs | TriSynq Continuum',
-  description: 'Proving AI gives SMBs the data teams enterprises have. Transform siloed data into enterprise-quality intelligence without data scientist salaries. Research phase active.',
+  title: 'Data Democracy: Translating Data for the 43%',
+  description: 'Enterprise-grade insight for small and mid-market businesses — minus the bureaucracy.',
 });
 
 export default function DataDemocracyPage() {
@@ -23,13 +23,11 @@ export default function DataDemocracyPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Data Democracy</span>
-            <br />
-            Analytics for All
+            <span className="text-gradient">Data Democracy: Translating Data for the 43%.</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Proving AI gives SMBs the data teams enterprises have
+            We help small and mid-market businesses harness data like enterprises — minus the bureaucracy.
           </p>
 
           <div className="inline-flex items-center gap-2 bg-blue-400/20 border border-blue-400/30 rounded-full px-6 py-3 mb-8">
@@ -43,11 +41,11 @@ export default function DataDemocracyPage() {
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            You Already Have the Data. <span className="text-gradient">You Just Can&apos;t Use It.</span>
+            <span className="text-gradient">The Problem</span>
           </h2>
 
           <Card variant="bordered" className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-accent-pink">The Reality</h3>
+            <h3 className="text-2xl font-bold mb-6 text-accent-pink">SMBs collect data. They don&apos;t get insight. The gap is translation.</h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <Database className="w-6 h-6 text-accent-pink mt-1 flex-shrink-0" />
@@ -160,11 +158,11 @@ export default function DataDemocracyPage() {
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            The <span className="text-gradient">AI Solution</span>
+            <span className="text-gradient">The Approach</span>
           </h2>
 
           <Card variant="bordered" className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-primary-blue">What Changed</h3>
+            <h3 className="text-2xl font-bold mb-6 text-primary-blue">Plain-language dashboards, explainable metrics, operator-first workflows.</h3>
             <p className="text-lg text-gray-300 mb-6">
               AI can now analyze all data sources simultaneously and explain insights in plain English. No data scientist required.
             </p>
@@ -224,9 +222,9 @@ export default function DataDemocracyPage() {
           </div>
 
           <div className="bg-accent-pink/10 rounded-2xl p-8 border border-accent-pink/30">
-            <h4 className="text-xl font-bold mb-4 text-center text-accent-pink">The Result</h4>
+            <h4 className="text-xl font-bold mb-4 text-center text-accent-pink">The Outcome</h4>
             <p className="text-lg text-center text-white">
-              Data you already have becomes the competitive intelligence enterprises use—without the enterprise costs.
+              Decisions with receipts — not vibes.
             </p>
           </div>
         </div>
@@ -295,8 +293,24 @@ export default function DataDemocracyPage() {
         </div>
       </Section>
 
-      {/* Timeline and Next Steps */}
+      {/* Xynergy Integration */}
       <Section background="dark">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-12">
+            <p className="text-lg text-gray-300 mb-6">
+              This domain is powered by Xynergy services with explainable workflows.
+            </p>
+            <div className="text-center">
+              <Button href="/xynergy" variant="outline" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Timeline and Next Steps */}
+      <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-gradient">Timeline</span> and Next Steps
@@ -332,7 +346,7 @@ export default function DataDemocracyPage() {
       </Section>
 
       {/* The Vision */}
-      <Section background="gradient">
+      <Section background="dark">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             The <span className="text-gradient">Vision</span>

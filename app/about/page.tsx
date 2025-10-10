@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Users, Lightbulb, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Who We Are',
-  description: 'Enterprise expertise meeting small business reality. 50+ combined years building Fortune 100 systems, now democratizing enterprise capabilities through transparent translation.',
+  title: 'About ClearForge',
+  description: 'ClearForge was born out of frustration with complexity. We forge clarity where others sell confusion.',
   canonical: '/about',
 });
 
@@ -18,12 +18,16 @@ export default function WhoWeArePage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Enterprise Expertise</span>
-            <br />
-            Meeting Small Business Reality
+            We Don&apos;t Fit the Mold. We Melt It.
           </h1>
           <p className="text-xl md:text-2xl text-gray-300">
-            We&apos;re a focused team with 50+ combined years building systems for Fortune 100s. Now we&apos;re using that knowledge to level the playing field.
+            ClearForge was born out of frustration with complexity.
+          </p>
+          <p className="text-xl md:text-2xl text-gray-300 mt-4">
+            We saw small businesses locked out of innovation while enterprises fed on opacity.
+          </p>
+          <p className="text-xl md:text-2xl text-gray-300 mt-4">
+            So we built a forge — a place where ideas, data, and humanity combine to create clarity.
           </p>
         </div>
       </Section>
@@ -152,6 +156,27 @@ export default function WhoWeArePage() {
         </div>
       </Section>
 
+      {/* Why Xynergy Section */}
+      <Section background="medium" id="why-xynergy">
+        <div className="max-w-5xl mx-auto">
+          <Card variant="elevated">
+            <div className="text-center mb-8">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Why We Built <span className="text-gradient">Xynergy</span>
+              </h2>
+              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                Off-the-shelf AI hid the levers our clients needed. We built our own engine so every decision could be explained, audited, and improved.
+              </p>
+            </div>
+            <div className="text-center">
+              <Button href="/xynergy" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </Section>
+
       {/* CTA Section */}
       <Section background="dark">
         <div className="max-w-4xl mx-auto text-center">
@@ -162,11 +187,11 @@ export default function WhoWeArePage() {
             Discover how we went from building enterprise systems to democratizing them.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/about/founder-story" size="lg">
-              Read the Founder Story
+            <Button href="/about/team-philosophy" size="lg">
+              Meet the Minds Behind the Forge
             </Button>
-            <Button href="/about/team-philosophy" variant="outline" size="lg">
-              Our Values & Philosophy
+            <Button href="/about/how-we-started" variant="outline" size="lg">
+              Read the Founder Story
             </Button>
           </div>
         </div>

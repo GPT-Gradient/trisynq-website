@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Project NEXUS - Neural EXpert Unified Search | Transparent Search Optimization',
-  description: 'Proving transparent search optimization beats black-box manipulation. Complete ASO automation across traditional search, voice, AI overviews, and social discovery. Phase 1 Beta now open for first 100 partners.',
+  title: 'Nexus: Beating the SEO Black Box',
+  description: 'Proving that truth and human expertise can outrank algorithmic manipulation.',
 });
 
 export default function ProjectNEXUSPage() {
@@ -23,13 +23,11 @@ export default function ProjectNEXUSPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Project NEXUS</span>
-            <br />
-            Neural EXpert Unified Search
+            <span className="text-gradient">Nexus: Beating the SEO Black Box.</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Proving transparent search optimization beats black-box manipulation
+            We&apos;re proving that truth, clarity, and human expertise can outrank algorithmic manipulation.
           </p>
 
           <div className="inline-flex items-center gap-2 bg-green-400/20 border border-green-400/30 rounded-full px-6 py-3 mb-8">
@@ -47,11 +45,11 @@ export default function ProjectNEXUSPage() {
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            Search Optimization Became a <span className="text-gradient">Black Box Game</span>
+            <span className="text-gradient">The Problem</span>
           </h2>
 
           <Card variant="bordered" className="mb-8">
-            <h3 className="text-2xl font-bold mb-6 text-accent-pink">The Current Reality</h3>
+            <h3 className="text-2xl font-bold mb-6 text-accent-pink">Opaque rankings reward spam over expertise.</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
@@ -92,15 +90,12 @@ export default function ProjectNEXUSPage() {
       <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            <span className="text-gradient">ASO</span> - Adaptive Search Optimization
+            <span className="text-gradient">The Approach</span>
           </h2>
 
           <div className="text-center mb-12">
             <p className="text-xl text-gray-300 mb-4">
-              Complete Automation. Complete Transparency.
-            </p>
-            <p className="text-lg text-gray-400">
-              Transparent optimization across ALL search modalities, completely automated
+              Explainable content, citations, structured data, and multi-modal consistency.
             </p>
           </div>
 
@@ -124,8 +119,9 @@ export default function ProjectNEXUSPage() {
           </div>
 
           <div className="bg-accent-pink/10 rounded-2xl p-8 border border-accent-pink/30">
+            <h3 className="text-2xl font-bold mb-4 text-center text-accent-pink">The Outcome</h3>
             <p className="text-xl font-semibold text-center text-white">
-              Your expertise amplified systematically while you maintain complete control
+              Search that surfaces real authority — not tricks.
             </p>
           </div>
         </div>
@@ -317,8 +313,24 @@ export default function ProjectNEXUSPage() {
         </div>
       </Section>
 
-      {/* Beta Program Details */}
+      {/* Xynergy Integration */}
       <Section background="dark">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-12">
+            <p className="text-lg text-gray-300 mb-6">
+              This domain is powered by Xynergy services with explainable workflows.
+            </p>
+            <div className="text-center">
+              <Button href="/xynergy" variant="outline" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Beta Program Details */}
+      <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
             <span className="text-gradient">First 100</span> Beta Partnership
@@ -391,7 +403,7 @@ export default function ProjectNEXUSPage() {
       </Section>
 
       {/* The Proof Strategy */}
-      <Section background="medium">
+      <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             The <span className="text-gradient">Proof Strategy</span>
@@ -424,7 +436,7 @@ export default function ProjectNEXUSPage() {
       </Section>
 
       {/* Evidence So Far */}
-      <Section background="dark">
+      <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
             <span className="text-gradient">Evidence</span> So Far

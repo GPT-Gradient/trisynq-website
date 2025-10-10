@@ -1,15 +1,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Output standalone for Docker deployment
+  output: 'standalone',
+
+  // Image optimization
   images: {
-    domains: ['localhost'],
-    formats: ['image/avif', 'image/webp'],
+    unoptimized: false,
+    domains: ['www.clearforgetech.com', 'localhost'],
+    formats: ['image/webp', 'image/avif'],
   },
+
+  // React configuration
   reactStrictMode: true,
   poweredByHeader: false,
-  // Enable standalone output for Docker
-  output: 'standalone',
-  // Compress responses
+
+  // Compression
   compress: true,
+
   // Security headers
   async headers() {
     return [
@@ -41,6 +48,22 @@ const nextConfig = {
             value: 'origin-when-cross-origin'
           }
         ]
+      }
+    ]
+  },
+
+  // Redirects for legacy URLs
+  async redirects() {
+    return [
+      {
+        source: '/continuum',
+        destination: '/proof',
+        permanent: true
+      },
+      {
+        source: '/the-forge',
+        destination: '/forge',
+        permanent: true
       }
     ]
   }

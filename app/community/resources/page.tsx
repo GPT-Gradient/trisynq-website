@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { BookOpen, FileText, Wrench, Users, Video, Download, Code, Lightbulb, Rocket } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Resources',
-  description: 'Free community resources, methodology documentation, learning materials, tools and templates. Transparent knowledge sharing to democratize enterprise capabilities.',
+  title: 'Resources That Don\'t Patronize',
+  description: 'AI, data, and strategy in plain language.',
   canonical: '/community/resources',
 });
 
@@ -18,13 +18,10 @@ export default function ResourcesPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Community <span className="text-gradient">Resources</span>
+            Resources That Don&apos;t <span className="text-gradient">Patronize.</span>
           </h1>
           <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Knowledge Shared Openly
-          </p>
-          <p className="text-xl text-gray-300 mb-4">
-            Delivered through Xynergy Launch - our primary learning platform
+            We translate AI, data, and business strategy into clear, usable language.
           </p>
           <div className="inline-flex items-center gap-2 bg-accent-pink/20 border border-accent-pink/50 rounded-full px-6 py-2">
             <span className="text-accent-pink font-semibold">Coming 2025</span>
@@ -117,7 +114,7 @@ export default function ResourcesPage() {
                 Free <span className="text-gradient">Access</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Community resources openly available. Partner resources provide additional depth. All updated based on learning.
+                Community resources open. Partner resources deeper. All updated based on learning.
               </p>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/30">
@@ -143,7 +140,7 @@ export default function ResourcesPage() {
             <div className="bg-gradient-to-r from-accent-pink/20 to-secondary-purple/20 rounded-2xl p-6">
               <h3 className="text-xl font-bold mb-3 text-white text-center">Living Documents</h3>
               <p className="text-lg text-gray-300 text-center">
-                All resources updated based on real-world learning. What works, what doesn&apos;t, and why - documented transparently.
+                Updated based on real-world learning. What works, what doesn&apos;t, why. Documented transparently.
               </p>
             </div>
           </Card>

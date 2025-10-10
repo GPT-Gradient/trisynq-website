@@ -31,7 +31,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-accent-pink">
-            TriSynq AI
+            ClearForge
           </Link>
 
           {/* Desktop Navigation */}
@@ -78,16 +78,16 @@ export default function Header() {
               </div>
             ))}
 
-            {/* Get Started CTA Button */}
+            {/* Start Your Forge Journey CTA Button */}
             <Button href="/get-started" size="sm" className="whitespace-nowrap">
-              Get Started
+              Start Your Forge Journey
             </Button>
           </div>
 
           {/* Mobile CTA + Menu Button */}
           <div className="lg:hidden flex items-center gap-3">
             <Button href="/get-started" size="sm" className="text-xs px-3 py-1">
-              Get Started
+              Start
             </Button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -141,7 +141,7 @@ export default function Header() {
             ))}
             <div className="mt-4">
               <Button href="/get-started" className="w-full">
-                Get Started
+                Start Your Forge Journey
               </Button>
             </div>
           </div>

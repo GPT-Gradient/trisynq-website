@@ -1,17 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
-import XynergyAPI from '@/lib/xynergy-api';
+import { getGatewayClient } from '@/lib/gateway-client';
 
+/**
+ * POST /api/contact
+ * Submit contact form to Intelligence Gateway
+ */
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
     // Validate required fields
-    const requiredFields = ['name', 'email', 'type', 'message'];
+    const requiredFields = ['name', 'email', 'message'];
 
     for (const field of requiredFields) {
       if (!data[field]) {
         return NextResponse.json(
-          { success: false, error: `Missing required field: ${field}` },
+          { success: false, message: `Missing required field: ${field}` },
           { status: 400 }
         );
       }
@@ -21,53 +25,20 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
       return NextResponse.json(
-        { success: false, error: 'Invalid email format' },
+        { success: false, message: 'Invalid email format' },
         { status: 400 }
       );
     }
 
-    // Validate contact type
-    const validTypes = [
-      'beta',
-      'partnership',
-      'consulting',
-      'general',
-      'media',
-    ];
-    if (!validTypes.includes(data.type)) {
-      return NextResponse.json(
-        { success: false, error: 'Invalid contact type' },
-        { status: 400 }
-      );
-    }
+    // Submit to Intelligence Gateway
+    const client = getGatewayClient();
+    const result = await client.submitContact(data);
 
-    // Submit to Xynergy API
-    const result = await XynergyAPI.submitContact(data);
-
-    if (result.success) {
-      // Response times based on type
-      const responseTimes: Record<string, string> = {
-        beta: '48 hours',
-        partnership: '48-72 hours',
-        consulting: '48-72 hours',
-        general: '24-48 hours',
-        media: 'case by case',
-      };
-
-      return NextResponse.json({
-        success: true,
-        message: `Message received! We'll respond within ${responseTimes[data.type]}.`,
-      });
-    } else {
-      return NextResponse.json(
-        { success: false, error: result.error || 'Failed to submit message' },
-        { status: 500 }
-      );
-    }
+    return NextResponse.json(result);
   } catch (error) {
     console.error('Contact form error:', error);
     return NextResponse.json(
-      { success: false, error: 'Internal server error' },
+      { success: false, message: 'Failed to submit contact form. Please try again.' },
       { status: 500 }
     );
   }

@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Users, Award, TrendingUp, Target, CheckCircle, Clock } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Beta Partners',
-  description: 'First 100 partners building the future. Complete transparency in results. Real partnerships proving transformation through authentic collaboration.',
+  title: 'Beta Partners: Co-Creators of the Forge',
+  description: 'We don\'t have clients. We have collaborators.',
   canonical: '/community/beta-partners',
 });
 
@@ -18,13 +18,13 @@ export default function BetaPartnersPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Beta Partners</span>
+            Beta Partners: <span className="text-gradient">Co-Creators of the Forge.</span>
           </h1>
           <p className="text-2xl md:text-3xl font-bold text-white mb-4">
-            First 100 Partners Building the Future
+            We don&apos;t have clients. We have collaborators.
           </p>
           <p className="text-xl text-gray-300">
-            Not customers. Partners proving transformation works.
+            Early access, lifetime upside, shared proofs.
           </p>
         </div>
       </Section>
@@ -35,7 +35,7 @@ export default function BetaPartnersPage() {
           <Card variant="elevated" className="mb-12">
             <div className="text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-                Beta Program <span className="text-gradient">Overview</span>
+                The <span className="text-gradient">Program</span>
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Complete transparency. Real partnerships. Documented results.
@@ -64,7 +64,7 @@ export default function BetaPartnersPage() {
 
               <div className="bg-gradient-to-r from-accent-pink/20 to-secondary-purple/20 rounded-2xl p-6 border border-accent-pink/30">
                 <p className="text-lg text-gray-300">
-                  <strong className="text-white">Current Status:</strong> Applications open now. Spots filled as qualified partners come on board.
+                  <strong className="text-white">Current Status:</strong> Applications open. Spots filled as qualified partners join.
                 </p>
               </div>
             </div>
@@ -89,7 +89,7 @@ export default function BetaPartnersPage() {
               <Award className="w-16 h-16 text-accent-pink mx-auto mb-6" />
               <h3 className="text-2xl font-bold mb-4 text-white">Coming Soon</h3>
               <p className="text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
-                We&apos;re just starting. Private beta testing complete. Public beta partners coming on board now.
+                We&apos;re just starting. Private beta complete. Public beta partners joining now.
               </p>
               <div className="bg-primary/30 rounded-2xl p-6 border border-primary-blue/30 max-w-3xl mx-auto">
                 <h4 className="text-lg font-bold mb-3 text-primary-blue">What You&apos;ll See Here</h4>
@@ -126,7 +126,7 @@ export default function BetaPartnersPage() {
           <Card variant="bordered" className="border-accent-pink/30">
             <div className="text-center">
               <p className="text-lg text-gray-300 italic">
-                &quot;We won&apos;t make up success stories to look established. We&apos;re a startup proving something. Check back as the first 100 partners document their transformation.&quot;
+                &quot;We won&apos;t fake success stories. We&apos;re a startup proving something. Check back as the first 100 partners document transformation.&quot;
               </p>
             </div>
           </Card>
@@ -270,7 +270,7 @@ export default function BetaPartnersPage() {
                 </div>
               </div>
               <p className="text-lg text-gray-300">
-                <strong className="text-white">Partnership in Building:</strong> Your success proves methodology. Your results help others. Your expertise is valued.
+                <strong className="text-white">Partnership:</strong> Your success proves methodology. Your results help others. Your expertise matters.
               </p>
             </div>
           </Card>
@@ -279,7 +279,7 @@ export default function BetaPartnersPage() {
             <div className="bg-gradient-to-r from-accent-pink/20 to-secondary-purple/20 rounded-2xl p-6 border border-accent-pink/30">
               <h3 className="text-xl font-bold mb-3 text-white text-center">Investment Required</h3>
               <p className="text-lg text-gray-300 text-center">
-                Partnership terms discussed during qualification. We&apos;re flexible for the right fit. Clear pricing transparency - no hidden costs.
+                Terms discussed during qualification. Flexible for the right fit. No hidden costs.
               </p>
             </div>
           </Card>
@@ -423,14 +423,14 @@ export default function BetaPartnersPage() {
                 Our <span className="text-gradient">Guarantee</span>
               </h2>
               <p className="text-2xl font-bold text-accent-pink mb-6">
-                If our methodology doesn&apos;t work, we don&apos;t deserve your partnership. Period.
+                If it doesn&apos;t work, we don&apos;t deserve your partnership. Period.
               </p>
               <div className="bg-primary/30 rounded-2xl p-6 border border-primary-blue/30">
                 <p className="text-xl text-gray-300 mb-4">
-                  <strong className="text-white">What We Promise:</strong> We&apos;ll bust our asses to make this work. Complete transparency. Real partnership.
+                  <strong className="text-white">What We Promise:</strong> We&apos;ll make this work. Complete transparency. Real partnership.
                 </p>
                 <p className="text-xl text-gray-300">
-                  <strong className="text-white">What We Don&apos;t Promise:</strong> Overnight success. Zero failures. Magic solutions. We&apos;re building this together.
+                  <strong className="text-white">What We Don&apos;t Promise:</strong> Overnight success. Zero failures. Magic. We&apos;re building together.
                 </p>
               </div>
             </div>

@@ -7,8 +7,8 @@ import BetaApplicationForm from '@/components/forms/BetaApplicationForm';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Contact Us | Let\'s Have a Conversation',
-  description: 'Not sales pitches—real conversations about transformation. Beta applications, partnerships, consulting, and general inquiries. Based in Port St. Lucie, FL. Response within 48 hours.',
+  title: 'Ready to Forge Clarity?',
+  description: 'Let&apos;s cut through the noise and build what&apos;s next.',
 });
 
 export default function ContactPage() {
@@ -18,18 +18,16 @@ export default function ContactPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Let&apos;s Have a <span className="text-gradient">Conversation</span>
+            Ready to Forge <span className="text-gradient">Clarity</span>?
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            We don&apos;t do sales pitches. We have conversations about transformation.
+            Let&apos;s cut through the noise and build what&apos;s next.
           </p>
 
-          <div className="bg-primary/50 rounded-2xl p-6 border border-accent-pink/30 backdrop-blur-sm">
-            <p className="text-lg font-semibold text-white">
-              Not everyone is a fit. That&apos;s okay.
-            </p>
-          </div>
+          <p className="text-lg text-gray-400">
+            Tell us what you&apos;re building. We&apos;ll show you how Xynergy makes it transparent.
+          </p>
         </div>
       </Section>
 

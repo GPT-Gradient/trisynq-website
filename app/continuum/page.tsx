@@ -8,8 +8,8 @@ import { continuumProjects } from '@/data/projects';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'The Continuum - Proving Transparency Works Across Multiple Domains',
-  description: 'Systematic validation of transparent methodology across search, data, education, special needs, digital safety, and real estate. Each proof strengthens the next until transparency is undeniable.',
+  title: 'The Continuum: Where Vision Becomes Practice',
+  description: 'Our proving ground for transparent AI, data accessibility, and human impact.',
 });
 
 const iconMap: Record<string, any> = {
@@ -28,18 +28,16 @@ export default function ContinuumOverviewPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Proving Transparency Works,</span>
-            <br />
-            One Domain at a Time
+            The Continuum: <span className="text-gradient">Where Vision Becomes Practice.</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Systematic validation across multiple domains until transparency becomes undeniable
+            Every domain is an experiment in transparency, AI accessibility, and human impact.
           </p>
 
           <div className="bg-primary/50 rounded-2xl p-6 border border-accent-pink/30 backdrop-blur-sm">
             <p className="text-lg md:text-xl font-semibold text-white">
-              Each success strengthens the next. Each proof makes transparency more expected. Each link makes the chain unbreakable.
+              Every Continuum domain is powered by Xynergy.
             </p>
           </div>
         </div>
@@ -123,9 +121,14 @@ export default function ContinuumOverviewPage() {
                           <h3 className="text-2xl font-bold text-white mb-1">{project.name}</h3>
                           <p className="text-sm text-primary-blue">{project.tagline}</p>
                         </div>
-                        <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${statusClass}`}>
-                          {project.status}
-                        </span>
+                        <div className="flex flex-col gap-2 items-end">
+                          <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${statusClass}`}>
+                            {project.status}
+                          </span>
+                          <span className="px-3 py-1 rounded-full text-xs font-semibold border border-secondary-purple-light/30 bg-secondary-purple-light/10 text-secondary-purple-light">
+                            Powered by Xynergy
+                          </span>
+                        </div>
                       </div>
                       <p className="text-gray-300">{project.description}</p>
                     </div>

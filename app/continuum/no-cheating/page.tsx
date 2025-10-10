@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Project No-Cheating - AI That Actually Educates | TriSynq Continuum',
-  description: 'Proving AI enhances learning vs. enabling shortcuts. Adaptive educational AI that tutors, personalizes, and teaches proper AI usage from early age. Planning 2025.',
+  title: 'No Cheating: Teaching AI Ethics in Real Time',
+  description: 'AI as coach, not crutch — learning that sticks.',
 });
 
 export default function ProjectNoCheatingPage() {
@@ -23,13 +23,11 @@ export default function ProjectNoCheatingPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Project No-Cheating</span>
-            <br />
-            Educational AI Done Right
+            <span className="text-gradient">No Cheating: Teaching AI Ethics in Real Time.</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Proving AI enhances learning vs. enabling shortcuts
+            Redefining what &apos;help&apos; means in education.
           </p>
 
           <div className="inline-flex items-center gap-2 bg-purple-400/20 border border-purple-400/30 rounded-full px-6 py-3 mb-8">
@@ -49,11 +47,11 @@ export default function ProjectNoCheatingPage() {
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            The <span className="text-gradient">Educational Dilemma</span>
+            <span className="text-gradient">The Problem</span>
           </h2>
 
           <Card variant="bordered" className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-accent-pink">Two Broken Approaches</h3>
+            <h3 className="text-2xl font-bold mb-6 text-accent-pink">Shortcuts pose as learning.</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
               <div className="bg-red-500/10 rounded-2xl p-6 border border-red-500/30">
@@ -93,8 +91,14 @@ export default function ProjectNoCheatingPage() {
       <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            <span className="text-gradient">AI That Actually Educates</span>
+            <span className="text-gradient">The Approach</span>
           </h2>
+
+          <div className="text-center mb-8">
+            <p className="text-xl text-gray-300">
+              Guided prompts, transparency labels, reflection checkpoints.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <Card variant="elevated">
@@ -139,9 +143,9 @@ export default function ProjectNoCheatingPage() {
           </div>
 
           <Card variant="bordered">
-            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">Starting Point</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">The Outcome</h3>
             <p className="text-lg text-gray-300 mb-6 text-center">
-              Chat interface that adapts to each student&apos;s learning style, pace, and needs. Simple to use, powerful in impact.
+              Retention and integrity, together.
             </p>
 
             <div className="bg-primary/30 rounded-2xl p-6 border border-primary-blue/20">
@@ -256,8 +260,24 @@ export default function ProjectNoCheatingPage() {
         </div>
       </Section>
 
-      {/* Timeline */}
+      {/* Xynergy Integration */}
       <Section background="dark">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-12">
+            <p className="text-lg text-gray-300 mb-6">
+              This domain is powered by Xynergy services with explainable workflows.
+            </p>
+            <div className="text-center">
+              <Button href="/xynergy" variant="outline" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Timeline */}
+      <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-gradient">Timeline</span> and Participation
@@ -293,7 +313,7 @@ export default function ProjectNoCheatingPage() {
       </Section>
 
       {/* The Commitment */}
-      <Section background="gradient">
+      <Section background="dark">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Our <span className="text-gradient">Commitment</span>

@@ -1,0 +1,603 @@
+{
+  "brand": {
+    "name": "ClearForge",
+    "tagline": "Complexity is the villain. ClearForge is the weapon.",
+    "voice": {
+      "principles": [
+        "Confidently rebellious, never angry",
+        "Minimal, poetic, direct",
+        "Intelligent and human",
+        "Emotionally charged but fact-grounded"
+      ],
+      "bans": [
+        "corporate jargon",
+        "opaque claims without receipts",
+        "filler copy and filler images"
+      ]
+    },
+    "design": {
+      "philosophy": "Remove everything that isn’t essential. Words should feel designed. Layouts should feel inevitable.",
+      "imagery": {
+        "allow": ["diagrams", "annotated screenshots", "system schematics"],
+        "avoid": ["stock photos", "decorative filler"],
+        "seo_rules": [
+          "Every image must have meaningful alt text",
+          "Only include images that add comprehension or proof"
+        ]
+      }
+    },
+    "seo_defaults": {
+      "meta_title_suffix": " | ClearForge",
+      "meta_description_max": 155,
+      "primary_keywords": [
+        "AI transparency",
+        "business clarity",
+        "ethical AI",
+        "data accessibility",
+        "enterprise simplification"
+      ],
+      "schema": ["Organization", "WebSite", "Article"]
+    }
+  },
+
+  "globals": {
+    "typography": {
+      "paragraph_max_lines": 4,
+      "headline_style": "short, declarative, emotionally resonant"
+    },
+    "structure_rules": [
+      "Each page requires one H1, supporting H2s, short paragraphs",
+      "Use bold single-sentence statements as rhythm breaks",
+      "CTAs must be specific and value-forward"
+    ],
+    "nav_ctas": [
+      {"label": "See How We Do It", "href": "/how-we-do-it"},
+      {"label": "Start Your Forge Journey", "href": "/get-started"}
+    ]
+  },
+
+  "pages": {
+    "home-page.tsx": {
+      "seo": {
+        "title": "Complexity is the Villain. ClearForge is the Weapon.",
+        "description": "We dismantle black boxes and rebuild technology around clarity—no hype, no smoke. Just systems that make sense.",
+        "schema": ["WebPage"]
+      },
+      "content": {
+        "h1": "Complexity is the Villain. ClearForge is the Weapon.",
+        "subtext": [
+          "We dismantle the black boxes and rebuild technology around clarity.",
+          "No hype. No smoke. Just truth you can see and systems that make sense."
+        ],
+        "hero_ctas": [
+          {"label": "See How We Do It", "href": "/how-we-do-it"},
+          {"label": "Start Your Forge Journey", "href": "/get-started"}
+        ],
+        "sections": [
+          {
+            "id": "problem",
+            "h2": "The Problem",
+            "p": [
+              "The world is drowning in complexity disguised as innovation.",
+              "Big tech hides behind jargon and layers of opacity. You don’t need to."
+            ]
+          },
+          {
+            "id": "promise",
+            "h2": "Our Promise",
+            "p": [
+              "We make advanced technology understandable, actionable, and profitable."
+            ]
+          },
+          {
+            "id": "showcase",
+            "h2": "What We Build",
+            "cards": [
+              {
+                "title": "Build.",
+                "subtitle": "Nexus: Beating the SEO Black Box.",
+                "href": "/continuum-nexus",
+                "alt": "Diagram of Nexus transparency pipeline"
+              },
+              {
+                "title": "Empower.",
+                "subtitle": "Data Democracy: Translating data for the 43%.",
+                "href": "/continuum-data-democracy",
+                "alt": "SMB data translation flow"
+              },
+              {
+                "title": "Protect.",
+                "subtitle": "Safe Spaces: Transparency without surveillance.",
+                "href": "/continuum-safe-spaces",
+                "alt": "User safety architecture schematic"
+              }
+            ]
+          }
+        ]
+      }
+    },
+
+    "about-page.tsx": {
+      "seo": {
+        "title": "We Don’t Fit the Mold. We Melt It.",
+        "description": "ClearForge was born out of frustration with complexity. We forge clarity where others sell confusion.",
+        "schema": ["AboutPage"]
+      },
+      "content": {
+        "h1": "We Don’t Fit the Mold. We Melt It.",
+        "p": [
+          "ClearForge was born out of frustration with complexity.",
+          "We saw small businesses locked out of innovation while enterprises fed on opacity.",
+          "So we built a forge — a place where ideas, data, and humanity combine to create clarity."
+        ],
+        "ctas": [
+          {"label": "Meet the Minds Behind the Forge", "href": "/about-team-philosophy"}
+        ]
+      }
+    },
+
+    "about-founder-story-page.tsx": {
+      "seo": {
+        "title": "It Didn’t Start with AI. It Started with Burnout.",
+        "description": "From enterprise systems to the forge: a founder’s rebellion against complexity.",
+        "schema": ["ProfilePage", "Article"]
+      },
+      "content": {
+        "h1": "It Didn’t Start with AI. It Started with Burnout.",
+        "acts": [
+          {
+            "title": "Act I — The Enterprise Years",
+            "p": [
+              "Mastering global systems. Watching them fail small businesses.",
+              "Power without clarity is power wasted."
+            ]
+          },
+          {
+            "title": "Act II — The Awakening",
+            "p": [
+              "Transparency isn’t a feature; it’s the foundation.",
+              "If people can’t see how it works, they can’t trust it."
+            ]
+          },
+          {
+            "title": "Act III — The Rebellion",
+            "p": [
+              "Leaving corporate comfort to build the forge.",
+              "Not another company — a repair of what broke trust in technology."
+            ]
+          }
+        ],
+        "closing": "I didn’t want to build another company. I wanted to fix what broke trust in technology."
+      }
+    },
+
+    "about-founder-story-complete-page.tsx": {
+      "seo": {
+        "title": "Founder Story — Complete",
+        "description": "The long-form founder journey behind ClearForge.",
+        "schema": ["Article"]
+      },
+      "content": {
+        "h1": "The Founder’s Long-Form Story",
+        "p": [
+          "Use the same three-act structure; expand with specific moments, lessons, and turning points.",
+          "Embed 1–2 annotated screenshots or timeline schematics as proof points (no filler)."
+        ]
+      }
+    },
+
+    "about-team-philosophy-page.tsx": {
+      "seo": {
+        "title": "Philosophy of the Forge",
+        "description": "Principles we won’t compromise: clarity, transparency, human impact.",
+        "schema": ["AboutPage"]
+      },
+      "content": {
+        "h1": "Philosophy of the Forge",
+        "principles": [
+          {"title": "Clarity Over Cleverness", "p": "If it reads smart but says nothing, it’s gone."},
+          {"title": "Explainable by Design", "p": "Every system we build can be explained."},
+          {"title": "Human First", "p": "Tools amplify judgment; they never replace it."},
+          {"title": "Receipts, Not Rhetoric", "p": "Claims come with proof. Always."}
+        ]
+      }
+    },
+
+    "continuum-page.tsx": {
+      "seo": {
+        "title": "The Continuum: Where Vision Becomes Practice",
+        "description": "Our proving ground for transparent AI, data accessibility, and human impact.",
+        "schema": ["CollectionPage"]
+      },
+      "content": {
+        "h1": "The Continuum: Where Vision Becomes Practice.",
+        "overview": "Every domain is an experiment in transparency, AI accessibility, and human impact.",
+        "cards": [
+          {"title": "Nexus", "subtitle": "Beating the SEO Black Box.", "href": "/continuum-nexus"},
+          {"title": "Data Democracy", "subtitle": "Translating data for the 43%.", "href": "/continuum-data-democracy"},
+          {"title": "Safe Spaces", "subtitle": "Transparency without surveillance.", "href": "/continuum-safe-spaces"},
+          {"title": "No Cheating", "subtitle": "AI as coach, not crutch.", "href": "/continuum-no-cheating"},
+          {"title": "CTO’s Heart", "subtitle": "Tech that adapts.", "href": "/continuum-ctos-heart"},
+          {"title": "RE-Connect", "subtitle": "Honesty in real estate.", "href": "/continuum-re-connect"}
+        ]
+      }
+    },
+
+    "continuum-nexus-page.tsx": {
+      "seo": {
+        "title": "Nexus: Beating the SEO Black Box",
+        "description": "Proving that truth and human expertise can outrank algorithmic manipulation.",
+        "schema": ["Article", "TechArticle"]
+      },
+      "content": {
+        "h1": "Nexus: Beating the SEO Black Box.",
+        "summary": "We’re proving that truth, clarity, and human expertise can outrank algorithmic manipulation.",
+        "sections": [
+          {"h2": "Problem", "p": ["Opaque rankings reward spam over expertise."]},
+          {"h2": "Approach", "p": ["Explainable content, citations, structured data, and multi-modal consistency."]},
+          {"h2": "Outcome", "p": ["Search that surfaces real authority — not tricks."]}
+        ],
+        "ctas": [
+          {"label": "Apply to Nexus", "href": "/continuum-nexus-apply"},
+          {"label": "See Pricing", "href": "/continuum-nexus-pricing"}
+        ]
+      }
+    },
+
+    "continuum-nexus-apply-page.tsx": {
+      "seo": {"title": "Apply to Nexus", "description": "Join the experiment in transparent discovery.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "Apply to Nexus",
+        "p": ["Tell us your domain, your voice, your proof. We’ll help the right audience find you — for the right reasons."],
+        "form_fields": ["Company", "Website", "Use Case", "Proof Sources", "Contact"]
+      }
+    },
+
+    "continuum-nexus-pricing-page.tsx": {
+      "seo": {"title": "Nexus Pricing", "description": "Tiered access to the transparency engine.", "schema": ["Offer"]},
+      "content": {
+        "h1": "Nexus Pricing",
+        "tiers": [
+          {"name": "Phase I — Foundation", "price": "$$", "bullets": ["Audit & explainability baseline", "Structured data & citations", "Starter dashboards"]},
+          {"name": "Phase II — Acceleration", "price": "$$$", "bullets": ["Multi-modal optimization", "Feedback loops", "Quarterly playbooks"]},
+          {"name": "Phase III — Scale", "price": "$$$$", "bullets": ["Custom models", "Automation pipelines", "Shared learnings + co-marketing"]}
+        ],
+        "note": "No black boxes. You see what we see."
+      }
+    },
+
+    "continuum-data-democracy-page.tsx": {
+      "seo": {
+        "title": "Data Democracy: Translating Data for the 43%",
+        "description": "Enterprise-grade insight for small and mid-market businesses — minus the bureaucracy.",
+        "schema": ["Article"]
+      },
+      "content": {
+        "h1": "Data Democracy: Translating Data for the 43%.",
+        "summary": "We help small and mid-market businesses harness data like enterprises — minus the bureaucracy.",
+        "sections": [
+          {"h2": "Problem", "p": ["SMBs collect data. They don’t get insight. The gap is translation."]},
+          {"h2": "Approach", "p": ["Plain-language dashboards, explainable metrics, operator-first workflows."]},
+          {"h2": "Outcome", "p": ["Decisions with receipts — not vibes."]}
+        ]
+      }
+    },
+
+    "continuum-safe-spaces-page.tsx": {
+      "seo": {
+        "title": "Safe Spaces: Transparency Without Surveillance",
+        "description": "We design systems where people feel secure because they understand what’s happening behind the curtain.",
+        "schema": ["Article"]
+      },
+      "content": {
+        "h1": "Safe Spaces: Transparency Without Surveillance.",
+        "summary": "Safety built on comprehension, not fear.",
+        "sections": [
+          {"h2": "Problem", "p": ["Trust dies where surveillance begins."]},
+          {"h2": "Approach", "p": ["Visible controls, audit trails, explainable AI moderation."]},
+          {"h2": "Outcome", "p": ["Users who feel safe because they are informed."]}
+        ]
+      }
+    },
+
+    "continuum-no-cheating-page.tsx": {
+      "seo": {
+        "title": "No Cheating: Teaching AI Ethics in Real Time",
+        "description": "AI as coach, not crutch — learning that sticks.",
+        "schema": ["Article", "EducationalOrganization"]
+      },
+      "content": {
+        "h1": "No Cheating: Teaching AI Ethics in Real Time.",
+        "summary": "Redefining what 'help' means in education.",
+        "sections": [
+          {"h2": "Problem", "p": ["Shortcuts pose as learning."]},
+          {"h2": "Approach", "p": ["Guided prompts, transparency labels, reflection checkpoints."]},
+          {"h2": "Outcome", "p": ["Retention and integrity, together."]}
+        ]
+      }
+    },
+
+    "continuum-ctos-heart-page.tsx": {
+      "seo": {
+        "title": "The CTO’s Heart: Tech That Adapts",
+        "description": "From accessibility to automation — we make technology empathize.",
+        "schema": ["Article"]
+      },
+      "content": {
+        "h1": "The CTO’s Heart: Tech That Adapts.",
+        "sections": [
+          {"h2": "Principle", "p": ["Human variability is a feature, not a bug."]},
+          {"h2": "Practice", "p": ["Adaptive interfaces, assistive flows, elastic automation."]},
+          {"h2": "Proof", "p": ["Case blurbs with measurable outcomes."]}
+        ]
+      }
+    },
+
+    "continuum-re-connect-page.tsx": {
+      "seo": {
+        "title": "RE-Connect: Restoring Honesty in Real Estate",
+        "description": "We’re proving that transparency and trust can be business models.",
+        "schema": ["Article"]
+      },
+      "content": {
+        "h1": "RE-Connect: Restoring Honesty in Real Estate.",
+        "sections": [
+          {"h2": "Problem", "p": ["Fees and incentives misaligned with value."]},
+          {"h2": "Approach", "p": ["Open-book pricing, disclosure-first process, trust dashboards."]},
+          {"h2": "Outcome", "p": ["Less friction. More confidence. Better deals."]}
+        ]
+      }
+    },
+
+    "mission-page.tsx": {
+      "seo": {
+        "title": "The Mission: Restore Trust in Technology",
+        "description": "Strip away the noise and return power to the people who create value.",
+        "schema": ["AboutPage"]
+      },
+      "content": {
+        "h1": "The Mission: Restore Trust in Technology.",
+        "p": [
+          "We strip away the noise and return power to the people who create value: small businesses, educators, communities."
+        ]
+      }
+    },
+
+    "mission-economic-liberation-page.tsx": {
+      "seo": {"title": "Economic Liberation: Giving the 43% Their Share", "description": "Data fluency creates equitable growth.", "schema": ["Article"]},
+      "content": {
+        "h1": "Economic Liberation: Giving the 43% Their Share.",
+        "p": [
+          "SMBs drive 43% of U.S. GDP. They deserve enterprise-grade insight at their scale.",
+          "Access without translation is theater. We deliver both."
+        ]
+      }
+    },
+
+    "mission-transparency-page.tsx": {
+      "seo": {"title": "Transparency: The Foundation of Trust", "description": "Show how systems work so people can decide for themselves.", "schema": ["Article"]},
+      "content": {
+        "h1": "Transparency: The Foundation of Trust.",
+        "p": [
+          "Transparency is empowerment, not exposure.",
+          "We show how systems work, what they use, and why they recommend."
+        ]
+      }
+    },
+
+    "how-we-do-it-page.tsx": {
+      "seo": {"title": "Method, Not Magic", "description": "Enterprise architecture, AI translation, clear systems design.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "Method, Not Magic.",
+        "sections": [
+          {"h2": "Discovery", "p": ["We listen before we automate."]},
+          {"h2": "Design", "p": ["Every system we build can be explained."]},
+          {"h2": "Delivery", "p": ["Transparency by default, not by request."]}
+        ]
+      }
+    },
+
+    "solutions-consulting-page.tsx": {
+      "seo": {"title": "Consulting Without the Bullshit", "description": "We don’t sell time. We sell transformation.", "schema": ["Service"]},
+      "content": {
+        "h1": "Consulting Without the Bullshit.",
+        "p": [
+          "We don’t sell time. We sell transformation.",
+          "Roadmaps that reduce friction, improve clarity, and pay for themselves."
+        ],
+        "cta": {"label": "Talk to the Forge", "href": "/contact"}
+      }
+    },
+
+    "solutions-custom-page.tsx": {
+      "seo": {"title": "Custom Without Chaos", "description": "Systems you can understand, adapt, and grow.", "schema": ["Service"]},
+      "content": {
+        "h1": "Custom Without Chaos.",
+        "p": [
+          "Every system we build is yours to understand, adapt, and grow.",
+          "No vendor lock. No secret levers."
+        ],
+        "cta": {"label": "Start Your Build", "href": "/get-started"}
+      }
+    },
+
+    "solutions-partnership-page.tsx": {
+      "seo": {"title": "Partnership That Feeds Growth", "description": "We scale ideas, not invoices.", "schema": ["Service"]},
+      "content": {
+        "h1": "Partnership That Feeds Growth.",
+        "p": [
+          "Co-build programs, shared outcomes, revenue alignment.",
+          "Your momentum is our metric."
+        ]
+      }
+    },
+
+    "solutions-platform-page.tsx": {
+      "seo": {"title": "Platform Meets Philosophy", "description": "Tools designed for transparency, interoperability, and control.", "schema": ["Product"]},
+      "content": {
+        "h1": "Platform Meets Philosophy.",
+        "p": [
+          "All ClearForge tools are designed for transparency, interoperability, and control.",
+          "If you can’t see it, own it, and extend it — we won’t ship it."
+        ]
+      }
+    },
+
+    "community-page.tsx": {
+      "seo": {"title": "We Don’t Build Alone", "description": "Every forge needs fire. Our community is that fire.", "schema": ["CollectionPage"]},
+      "content": {
+        "h1": "We Don’t Build Alone.",
+        "p": ["Every forge needs fire. Our community is that fire."],
+        "links": [
+          {"label": "20% Army", "href": "/community-20-percent-army"},
+          {"label": "Beta Partners", "href": "/community-beta-partners"},
+          {"label": "Resources", "href": "/community-resources"},
+          {"label": "Success Stories", "href": "/community-success-stories"},
+          {"label": "Xynergy Launch", "href": "/community-xynergy-launch"}
+        ]
+      }
+    },
+
+    "community-20-percent-army-page.tsx": {
+      "seo": {"title": "The 20% Army", "description": "We’re the 20% who believe the world can change — and act like it.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "The 20% Army.",
+        "p": [
+          "We’re the 20% who believe the world can change — and act like it.",
+          "If you’re waiting for permission, this isn’t for you."
+        ]
+      }
+    },
+
+    "community-beta-partners-page.tsx": {
+      "seo": {"title": "Beta Partners: Co-Creators of the Forge", "description": "We don’t have clients. We have collaborators.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "Beta Partners: Co-Creators of the Forge.",
+        "p": [
+          "We don’t have clients. We have collaborators.",
+          "Early access, lifetime upside, shared proofs."
+        ]
+      }
+    },
+
+    "community-resources-page.tsx": {
+      "seo": {"title": "Resources That Don’t Patronize", "description": "AI, data, and strategy in plain language.", "schema": ["CollectionPage"]},
+      "content": {
+        "h1": "Resources That Don’t Patronize.",
+        "p": ["We translate AI, data, and business strategy into clear, usable language."],
+        "resource_types": ["Guides", "Playbooks", "Explainers", "Annotated Screenshots"]
+      }
+    },
+
+    "community-success-stories-page.tsx": {
+      "seo": {"title": "Proof Through Progress", "description": "Short, scannable case blurbs from the six domains.", "schema": ["CollectionPage"]},
+      "content": {
+        "h1": "Proof Through Progress.",
+        "cases": [
+          {"title": "Nexus", "p": "Transparent ranking beats manipulation."},
+          {"title": "Data Democracy", "p": "Operators making data-backed calls."},
+          {"title": "Safe Spaces", "p": "Safety through comprehension, not fear."},
+          {"title": "No Cheating", "p": "Retention improves with reflective prompts."},
+          {"title": "CTO’s Heart", "p": "Accessibility by default."},
+          {"title": "RE-Connect", "p": "Trust turns to throughput."}
+        ]
+      }
+    },
+
+    "community-xynergy-launch-page.tsx": {
+      "seo": {"title": "Xynergy: Powering the Forge", "description": "The AI engine built for clarity, not control.", "schema": ["Product"]},
+      "content": {
+        "h1": "Xynergy: Powering the Forge.",
+        "p": [
+          "The AI engine built for clarity, not control.",
+          "Explainable pipelines. Observable outcomes. Operator-first."
+        ]
+      }
+    },
+
+    "contact-page.tsx": {
+      "seo": {"title": "Ready to Forge Clarity?", "description": "Let’s cut through the noise and build what’s next.", "schema": ["ContactPage"]},
+      "content": {
+        "h1": "Ready to Forge Clarity?",
+        "p": ["Let’s cut through the noise and build what’s next."],
+        "form_fields": ["Name", "Email", "Company", "Message"],
+        "ctas": [{"label": "Join the Continuum", "href": "/get-started"}]
+      }
+    },
+
+    "get-started-page.tsx": {
+      "seo": {"title": "Let’s Simplify the Complex", "description": "Discover → Forge → Grow.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "Let’s Simplify the Complex.",
+        "steps": [
+          {"title": "Discover", "p": "We listen before we automate."},
+          {"title": "Forge", "p": "Design systems you can explain."},
+          {"title": "Grow", "p": "Compounding clarity becomes advantage."}
+        ]
+      }
+    },
+
+    "dashboard-page.tsx": {
+      "seo": {"title": "Your Forge Control Center", "description": "Projects, tools, and learning paths at a glance.", "schema": ["WebApplication"]},
+      "content": {
+        "h1": "Your Forge Control Center.",
+        "modules": ["Project Updates", "Tools", "Learning Paths"],
+        "design_notes": ["Minimalist; subtle progress cues; no decorative charts"]
+      }
+    },
+
+    "mission-transparency-page.tsx__DUPLICATE": "Already specified above; ensure single source of truth in build.",
+
+    "what-we-do-page.tsx": {
+      "seo": {"title": "What We Do", "description": "We turn advanced technology into obvious outcomes.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "What We Do.",
+        "p": [
+          "We turn advanced technology into obvious outcomes.",
+          "Clarity in. Leverage out."
+        ],
+        "links": [
+          {"label": "How We Do It", "href": "/how-we-do-it"},
+          {"label": "Solutions", "href": "/solutions-platform"}
+        ]
+      }
+    },
+
+    "who-we-are-page.tsx": {
+      "seo": {"title": "Who We Are", "description": "Technologists, translators, and unapologetic simplifiers.", "schema": ["AboutPage"]},
+      "content": {
+        "h1": "Who We Are.",
+        "p": [
+          "Technologists, translators, and unapologetic simplifiers.",
+          "We measure success in reduced friction and increased trust."
+        ]
+      }
+    },
+
+    "beta-page.tsx": {
+      "seo": {"title": "Join the Beta", "description": "Early access. Lifetime upside. Shared proofs.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "Join the Beta.",
+        "p": [
+          "Early access. Lifetime upside. Shared proofs.",
+          "If you want polish over progress, sit this one out."
+        ],
+        "cta": {"label": "Apply Now", "href": "/beta-program"}
+      }
+    },
+
+    "beta-program-page.tsx": {
+      "seo": {"title": "Beta Program", "description": "Eligibility, expectations, and how we measure progress.", "schema": ["WebPage"]},
+      "content": {
+        "h1": "Beta Program.",
+        "sections": [
+          {"h2": "Eligibility", "p": ["Operators. Builders. No passengers."]},
+          {"h2": "Expectations", "p": ["We ship. You ship. We learn together."]},
+          {"h2": "Measurement", "p": ["Proof beats promises. We track outcomes, not vanity."]}
+        ]
+      }
+    },
+
+    "solutions-section__INDEX": "solutions-consulting-page.tsx, solutions-custom-page.tsx, solutions-partnership-page.tsx, solutions-platform-page.tsx"
+  }
+}

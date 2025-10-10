@@ -7,8 +7,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Economic Liberation: Breaking Down Artificial Complexity',
-  description: 'How artificial complexity costs SMBs billions. TriSynq provides enterprise capabilities through technology translation, data democratization, and AI amplification.',
+  title: 'Economic Liberation: Giving the 43% Their Share',
+  description: 'Data fluency creates equitable growth.',
 });
 
 export default function EconomicLiberationPage() {
@@ -19,11 +19,14 @@ export default function EconomicLiberationPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              How Artificial Complexity Costs SMBs <span className="text-gradient">Billions</span>
+              Economic Liberation: Giving the 43% Their <span className="text-gradient">Share</span>.
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              The systematic lockout isn&apos;t accidental. It&apos;s economic.
+              SMBs drive 43% of U.S. GDP. They deserve enterprise-grade insight at their scale.
+            </p>
+            <p className="text-xl text-gray-300">
+              Access without translation is theater. We deliver both.
             </p>
           </div>
 

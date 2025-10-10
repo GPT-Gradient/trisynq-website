@@ -3,11 +3,11 @@ import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
-import { Cpu, Brain, Mic2, BarChart3, Building2, FileText, TrendingUp, Bell } from 'lucide-react';
+import { Cpu, Brain, Mic2, BarChart3, Building2, FileText, TrendingUp, Bell, BookOpen, MessageSquare, Trophy, Rocket } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Platform Solutions - XynergyOS AI Business Operating System',
-  description: 'The Entrepreneur\'s AI-Driven Business Operating System. Living business memory, voice-first command system, unified business interface, multi-business management. Currently powering TriSynq operations.',
+  title: 'Platform Meets Philosophy',
+  description: 'Tools designed for transparency, interoperability, and control.',
   canonical: '/solutions/platform',
 });
 
@@ -17,24 +17,113 @@ export default function PlatformSolutionsPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
+          {/* Powered by Xynergy Badge */}
+          <div className="mb-6 inline-block">
+            <div className="bg-gradient-to-r from-primary-blue/20 to-secondary-purple-light/20 rounded-full px-6 py-2 border border-primary-blue/30">
+              <p className="text-sm font-bold text-primary-blue">
+                Powered by Xynergy
+              </p>
+            </div>
+          </div>
+
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">XynergyOS</span>
-            <br />
-            The Entrepreneur&apos;s AI-Driven Business Operating System
+            <span className="text-gradient">Platform</span>
           </h1>
-          <div className="bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30 mb-6">
-            <p className="text-lg text-white font-semibold mb-2">
-              Currently powering TriSynq operations
-            </p>
-            <p className="text-gray-300">
-              Commercial release coming after Project NEXUS validation
-            </p>
+          <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            Spin up explainable workflows, content engines, and dashboards in weeks—not quarters.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/xynergy" size="lg">
+              See the Power
+            </Button>
+            <Button href="/ai-reality-check" variant="outline" size="lg">
+              AI Reality Check
+            </Button>
           </div>
         </div>
       </Section>
 
-      {/* Dual Purpose */}
+      {/* What You Get */}
       <Section background="dark">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              What You <span className="text-gradient">Get</span>
+            </h2>
+          </div>
+
+          <Card variant="elevated">
+            <div className="space-y-4">
+              <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20">
+                <h4 className="text-xl font-bold text-white mb-3">Research & Insights</h4>
+                <p className="text-gray-300">
+                  Internal-first signals with cited external context.
+                </p>
+              </div>
+
+              <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20">
+                <h4 className="text-xl font-bold text-white mb-3">Content & Campaigns</h4>
+                <p className="text-gray-300">
+                  Drafts, scoring, amplification with proof.
+                </p>
+              </div>
+
+              <div className="bg-primary/30 rounded-xl p-6 border border-secondary-purple-light/20">
+                <h4 className="text-xl font-bold text-white mb-3">Automation</h4>
+                <p className="text-gray-300">
+                  Approved workflows with step-by-step logs.
+                </p>
+              </div>
+
+              <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20">
+                <h4 className="text-xl font-bold text-white mb-3">Dashboards & Proof</h4>
+                <p className="text-gray-300">
+                  Outcomes you can audit and share.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </Section>
+
+      {/* Why It Works */}
+      <Section background="medium">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Why It <span className="text-gradient">Works</span>
+            </h2>
+          </div>
+
+          <Card variant="elevated">
+            <div className="space-y-4">
+              <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20">
+                <h4 className="text-xl font-bold text-white mb-3">Xynergy&apos;s &apos;Explain this&apos; view on every major action</h4>
+                <p className="text-gray-300">
+                  Full transparency into how AI arrives at every decision.
+                </p>
+              </div>
+
+              <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20">
+                <h4 className="text-xl font-bold text-white mb-3">Composable services: adopt, extend, or replace as you grow</h4>
+                <p className="text-gray-300">
+                  Mix and match capabilities to fit your evolving needs.
+                </p>
+              </div>
+
+              <div className="bg-primary/30 rounded-xl p-6 border border-secondary-purple-light/20">
+                <h4 className="text-xl font-bold text-white mb-3">Your data stays your data—isolated by default</h4>
+                <p className="text-gray-300">
+                  Complete control and privacy of your business intelligence.
+                </p>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </Section>
+
+      {/* Dual Purpose */}
+      <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -47,7 +136,7 @@ export default function PlatformSolutionsPage() {
               <div className="bg-gradient-to-br from-primary-blue/20 to-primary-blue/5 rounded-xl p-6 border border-primary-blue/30">
                 <h3 className="text-2xl font-bold text-white mb-4">Internal Backbone</h3>
                 <p className="text-lg text-gray-300">
-                  Powers all TriSynq operations, managing multiple LLCs and projects across The Continuum
+                  Powers all ClearForge operations, managing multiple LLCs and projects across The Continuum
                 </p>
               </div>
             </Card>
@@ -83,7 +172,7 @@ export default function PlatformSolutionsPage() {
       </Section>
 
       {/* Core Capabilities */}
-      <Section background="medium">
+      <Section background="dark">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -256,7 +345,7 @@ export default function PlatformSolutionsPage() {
       </Section>
 
       {/* Advanced Intelligence */}
-      <Section background="dark">
+      <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -347,7 +436,7 @@ export default function PlatformSolutionsPage() {
       </Section>
 
       {/* Target Markets */}
-      <Section background="medium">
+      <Section background="dark">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -391,6 +480,136 @@ export default function PlatformSolutionsPage() {
         </div>
       </Section>
 
+      {/* Community Section */}
+      <Section background="medium" id="community_section">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Community Is Part of the <span className="text-gradient">Solution</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
+            {/* Education Card */}
+            <Card variant="elevated">
+              <div className="flex items-start gap-4 mb-4">
+                <BookOpen className="w-8 h-8 text-primary-blue flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Education</h3>
+                  <p className="text-gray-300 mb-3">
+                    Tiered education that scales with your needs—from foundational guides to advanced integrations.
+                  </p>
+                  <ul className="space-y-2 text-gray-400">
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary-blue">•</span>
+                      <span>Free: Step-by-step playbooks for 1-5 person shops</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary-blue">•</span>
+                      <span>Pro: Advanced workflows & Xynergy labs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-primary-blue">•</span>
+                      <span>Integrations+: API workspace & co-build sessions</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+
+            {/* Forum Card */}
+            <Card variant="elevated">
+              <div className="flex items-start gap-4 mb-4">
+                <MessageSquare className="w-8 h-8 text-accent-pink flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Forum</h3>
+                  <p className="text-gray-300 mb-3">
+                    Reddit-style community forum coming soon with searchable solutions and expert support.
+                  </p>
+                  <ul className="space-y-2 text-gray-400">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-pink">•</span>
+                      <span>Threaded discussions & searchable solutions</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-pink">•</span>
+                      <span>Expert AMAs & office hours</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-pink">•</span>
+                      <span>Community-driven knowledge base</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+
+            {/* Rewards Card */}
+            <Card variant="elevated">
+              <div className="flex items-start gap-4 mb-4">
+                <Trophy className="w-8 h-8 text-secondary-purple-light flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Rewards</h3>
+                  <p className="text-gray-300 mb-3">
+                    Earn while you learn—points for completing courses, sharing wins, and helping others.
+                  </p>
+                  <ul className="space-y-2 text-gray-400">
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary-purple-light">•</span>
+                      <span>Points for courses, tutorials & forum answers</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary-purple-light">•</span>
+                      <span>Badges, discounts & beta priority</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-secondary-purple-light">•</span>
+                      <span>Revenue-share opportunities on templates</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+
+            {/* Beta Card */}
+            <Card variant="elevated">
+              <div className="flex items-start gap-4 mb-4">
+                <Rocket className="w-8 h-8 text-accent-pink flex-shrink-0" />
+                <div>
+                  <h3 className="text-2xl font-bold text-white mb-3">Beta</h3>
+                  <p className="text-gray-300 mb-3">
+                    Beta partners are risk-takers who help steer the roadmap and get early access.
+                  </p>
+                  <ul className="space-y-2 text-gray-400">
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-pink">•</span>
+                      <span>Early access to new features</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-pink">•</span>
+                      <span>Direct influence on roadmap</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-accent-pink">•</span>
+                      <span>Real-world testing & feedback loops</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </Card>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/community" size="lg">
+              Join the Community
+            </Button>
+            <Button href="/solutions/partnership" variant="outline" size="lg">
+              Build on Xynergy
+            </Button>
+          </div>
+        </div>
+      </Section>
+
       {/* Coming Soon Note */}
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
@@ -401,7 +620,7 @@ export default function PlatformSolutionsPage() {
                 Platform Details & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-6">
-                We&apos;re using XynergyOS internally to power all TriSynq operations. Once we&apos;ve proven it works at scale through The Continuum projects, we&apos;ll make it available to qualified partners.
+                We&apos;re using XynergyOS internally to power all ClearForge operations. Once we&apos;ve proven it works at scale through The Continuum projects, we&apos;ll make it available to qualified partners.
               </p>
               <div className="bg-primary-blue/10 rounded-xl p-6 border border-primary-blue/30">
                 <p className="text-lg text-white font-semibold">

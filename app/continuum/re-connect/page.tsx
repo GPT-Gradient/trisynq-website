@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Project RE-Connect - Transparent Real Estate | TriSynq Continuum',
-  description: 'Proving transparency creates competitive advantage in real estate. Complete fee transparency, value-driven practices, and technology-amplified expertise. Planning Mid 2026.',
+  title: 'RE-Connect: Restoring Honesty in Real Estate',
+  description: 'We&apos;re proving that transparency and trust can be business models.',
 });
 
 export default function ProjectREConnectPage() {
@@ -23,14 +23,8 @@ export default function ProjectREConnectPage() {
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Project RE-Connect</span>
-            <br />
-            Transparent Real Estate
+            <span className="text-gradient">RE-Connect: Restoring Honesty in Real Estate.</span>
           </h1>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Proving transparency creates competitive advantage in real estate
-          </p>
 
           <div className="inline-flex items-center gap-2 bg-pink-400/20 border border-pink-400/30 rounded-full px-6 py-3 mb-8">
             <Building className="w-5 h-5 text-pink-400" />
@@ -49,11 +43,11 @@ export default function ProjectREConnectPage() {
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            The <span className="text-gradient">Industry Disruption</span>
+            <span className="text-gradient">The Problem</span>
           </h2>
 
           <Card variant="bordered" className="mb-12">
-            <h3 className="text-2xl font-bold mb-6 text-accent-pink">What Changed</h3>
+            <h3 className="text-2xl font-bold mb-6 text-accent-pink">Fees and incentives misaligned with value.</h3>
 
             <div className="space-y-6 mb-8">
               <div className="flex items-start gap-4">
@@ -94,8 +88,14 @@ export default function ProjectREConnectPage() {
       <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            <span className="text-gradient">Transparent Real Estate</span>
+            <span className="text-gradient">The Approach</span>
           </h2>
+
+          <div className="text-center mb-8">
+            <p className="text-xl text-gray-300">
+              Open-book pricing, disclosure-first process, trust dashboards.
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <Card variant="elevated">
@@ -140,9 +140,9 @@ export default function ProjectREConnectPage() {
           </div>
 
           <Card variant="bordered">
-            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">Data-Driven Intelligence</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-gradient">The Outcome</h3>
             <p className="text-lg text-gray-300 mb-6 text-center">
-              Technology helping agents and clients make truly informed decisions. Market intelligence, pricing strategies, timing optimization—all transparent.
+              Less friction. More confidence. Better deals.
             </p>
 
             <div className="bg-primary/30 rounded-2xl p-6 border border-primary-blue/20">
@@ -336,8 +336,24 @@ export default function ProjectREConnectPage() {
         </div>
       </Section>
 
-      {/* Timeline */}
+      {/* Xynergy Integration */}
       <Section background="medium">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-12">
+            <p className="text-lg text-gray-300 mb-6">
+              This domain is powered by Xynergy services with explainable workflows.
+            </p>
+            <div className="text-center">
+              <Button href="/xynergy" variant="outline" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </div>
+        </div>
+      </Section>
+
+      {/* Timeline */}
+      <Section background="dark">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
             <span className="text-gradient">Timeline</span> and Participation
@@ -373,7 +389,7 @@ export default function ProjectREConnectPage() {
       </Section>
 
       {/* The Vision */}
-      <Section background="gradient">
+      <Section background="medium">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             The <span className="text-gradient">Vision</span>

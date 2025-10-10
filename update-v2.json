@@ -1,0 +1,251 @@
+{
+  "brand": {
+    "company": "ClearForge",
+    "tagline": "Complexity is the villain. ClearForge is the weapon.",
+    "engine": {
+      "name": "Xynergy",
+      "one_liner": "Xynergy is our proprietary AI engine that makes complexity transparent and leverageable.",
+      "pillars": [
+        "Explainable by design (no black boxes)",
+        "Operator-first (human-in-the-loop, plain-language controls)",
+        "Composable (modular services for data, content, workflow, and decisions)",
+        "Observable (logs, provenance, and audit trails visible to partners and clients)"
+      ]
+    }
+  },
+
+  "globals": {
+    "rename_all_instances": [
+      { "from": "TriSynq", "to": "ClearForge" },
+      { "from": "trisynq", "to": "clearforge" }
+    ],
+    "navigation_updates": {
+      "who_we_are_menu": [
+        { "replace": { "label": "About TriSynq", "with": "About ClearForge", "href": "/about" } },
+        { "replace": { "label": "Founder Story", "with": "How We Started", "href": "/about-how-we-started" } },
+        { "remove": "Complete Founder Story" }
+      ]
+    },
+    "cta_labels": {
+      "primary": "See the Power",
+      "secondary": "Build on Xynergy",
+      "tertiary": "Partner With Us"
+    },
+    "seo_defaults": {
+      "meta_title_suffix": " | ClearForge",
+      "keywords": ["AI transparency", "explainable AI", "data accessibility", "enterprise simplification", "Xynergy"]
+    }
+  },
+
+  "new_pages": {
+    "/xynergy": {
+      "seo": {
+        "title": "Xynergy — The Engine of Clarity",
+        "description": "Why we built Xynergy, how it works, and how partners leverage it to turn complexity into clarity."
+      },
+      "hero": {
+        "h1": "Xynergy — The Engine of Clarity.",
+        "sub": "We built our own AI engine because off-the-shelf platforms hid the levers. Xynergy shows the logic, exposes the data, and turns expertise into repeatable advantage.",
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy#overview" },
+          { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+        ]
+      },
+      "sections": [
+        {
+          "id": "why",
+          "h2": "Why We Built It",
+          "p": [
+            "AI shouldn’t be a black box. Our clients needed receipts, not rhetoric.",
+            "Xynergy exists because transparency, observability, and control aren’t optional—they’re the product."
+          ]
+        },
+        {
+          "id": "what",
+          "h2": "What It Is",
+          "bullets": [
+            "Composable services: ingestion, enrichment, reasoning, generation, and automation.",
+            "Plain-language policies that govern prompts, data use, and outputs.",
+            "Provenance baked in—every output can show its sources and steps."
+          ]
+        },
+        {
+          "id": "how",
+          "h2": "How We Use It",
+          "p": [
+            "Internally: research synthesis, content ops, diagnostics, and playbook generation.",
+            "With partners: power their apps, automate their workflows, and expose explainable dashboards to their operators."
+          ],
+          "note": "Everything shipped on Xynergy includes an ‘Explain this’ toggle."
+        },
+        {
+          "id": "architecture",
+          "h2": "The Transparency Loop",
+          "p": [
+            "Data → Reasoning → Output → Proof. Every step leaves a trail. Clients can review, retrain, and improve."
+          ]
+        },
+        {
+          "id": "cta",
+          "h2": "Ready to Build on Xynergy?",
+          "ctas": [
+            { "label": "See the Power", "href": "/xynergy#what" },
+            { "label": "Partner With Us", "href": "/solutions-partnership" }
+          ]
+        }
+      ]
+    }
+  },
+
+  "page_changes": {
+    "home-page.tsx": {
+      "hero": {
+        "h1": "Complexity is the Villain. ClearForge is the Weapon.",
+        "sub": "We dismantle black boxes and rebuild technology around clarity—powered by Xynergy, our proprietary AI engine.",
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy" },
+          { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+        ]
+      },
+      "insert_after_hero": {
+        "id": "xynergy_feature",
+        "h2": "Meet Xynergy — The Engine Behind Everything.",
+        "p": [
+          "Why we built it: transparency.",
+          "What it does: turns expertise and data into explainable systems.",
+          "How it helps you: faster outcomes, with receipts."
+        ],
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy" }
+        ]
+      },
+      "showcase_cards_append_badges": [
+        { "match_href": "/continuum-nexus", "badge": "Powered by Xynergy" },
+        { "match_href": "/continuum-data-democracy", "badge": "Powered by Xynergy" },
+        { "match_href": "/continuum-safe-spaces", "badge": "Powered by Xynergy" }
+      ]
+    },
+
+    "about-page.tsx": {
+      "seo_title": "About ClearForge",
+      "h1": "We Don’t Fit the Mold. We Melt It.",
+      "insert_section": {
+        "id": "why-xynergy",
+        "h2": "Why We Built Xynergy",
+        "p": [
+          "Off-the-shelf AI hid the levers our clients needed. We built our own engine so every decision could be explained, audited, and improved."
+        ],
+        "cta": { "label": "See the Power", "href": "/xynergy" }
+      }
+    },
+
+    "about-founder-story-page.tsx": {
+      "rename_route_to": "/about-how-we-started",
+      "h1": "How We Started.",
+      "replace_intro": "It didn’t start with AI. It started with burnout—and a simple refusal to accept complexity as the cost of doing business.",
+      "add_section_after_intro": {
+        "h2": "The Call That Started the Forge",
+        "p": [
+          "When I decided to build the company, I reached out to technologists and industry leaders who were just as frustrated.",
+          "I pitched a simple idea: transparency as the default setting. They didn’t just agree—they helped build it. That collaboration became Xynergy."
+        ],
+        "cta": { "label": "Read the Full Story", "href": "/about-how-we-started#full" }
+      },
+      "remove_from_menu": "Complete Founder Story"
+    },
+
+    "about-founder-story-complete-page.tsx": {
+      "remove_from_menu": true,
+      "keep_route_accessible": true,
+      "note": "Reachable only via CTA on /about-how-we-started."
+    },
+
+    "how-we-do-it-page.tsx": {
+      "h1": "Method, Not Magic.",
+      "map_sections_to_xynergy": [
+        { "section": "Discovery", "line": "Xynergy Diagnostics surfaces patterns in your data—and shows its work." },
+        { "section": "Design", "line": "Composable services fit your workflow. No lock-in, no black boxes." },
+        { "section": "Delivery", "line": "Every output ships with provenance and an ‘Explain this’ toggle." }
+      ],
+      "cta": { "label": "See the Power", "href": "/xynergy" }
+    },
+
+    "solutions-platform-page.tsx": {
+      "badge": "Powered by Xynergy",
+      "insert_intro": "Platform meets philosophy. If you can’t see it, own it, and extend it—we won’t ship it.",
+      "link_to_xynergy": { "label": "See the Power", "href": "/xynergy" }
+    },
+
+    "solutions-consulting-page.tsx": {
+      "append_paragraph": "Our consulting runs on Xynergy—so your roadmap, automations, and results are transparent and explainable.",
+      "cta": { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+    },
+
+    "solutions-custom-page.tsx": {
+      "append_paragraph": "We compose Xynergy services to your use-case. You keep control, clarity, and the keys.",
+      "cta": { "label": "See the Power", "href": "/xynergy" }
+    },
+
+    "solutions-partnership-page.tsx": {
+      "insert_top": {
+        "h2": "Partner on Xynergy",
+        "p": [
+          "Co-build products and automations on an engine that shows its work.",
+          "Shared learnings, shared upside, transparent ops."
+        ],
+        "ctas": [
+          { "label": "Build on Xynergy", "href": "/solutions-partnership#apply" },
+          { "label": "See the Power", "href": "/xynergy" }
+        ]
+      }
+    },
+
+    "mission-page.tsx": {
+      "append": "Xynergy is the technical expression of our mission: transparency that people can use."
+    },
+
+    "mission-transparency-page.tsx": {
+      "append": "Every Xynergy output can show sources, steps, and confidence. Transparency isn’t a promise; it’s a feature."
+    },
+
+    "continuum-page.tsx": {
+      "add_banner": "Every Continuum domain is powered by Xynergy.",
+      "cards_add_badges": true
+    },
+
+    "continuum-nexus-page.tsx": {
+      "append": "Nexus runs on Xynergy’s explainable retrieval and ranking workflows.",
+      "cta": { "label": "See the Power", "href": "/xynergy#how" }
+    },
+    "continuum-data-democracy-page.tsx": {
+      "append": "Dashboards and narratives are generated via Xynergy with full provenance.",
+      "cta": { "label": "See the Power", "href": "/xynergy#what" }
+    },
+    "continuum-safe-spaces-page.tsx": {
+      "append": "Moderation and safety policies are enforced by Xynergy’s policy layer—visible to operators.",
+      "cta": { "label": "See the Power", "href": "/xynergy#architecture" }
+    },
+    "continuum-no-cheating-page.tsx": {
+      "append": "Guided prompts and reflection checkpoints are instrumented through Xynergy.",
+      "cta": { "label": "See the Power", "href": "/xynergy#how" }
+    },
+    "continuum-ctos-heart-page.tsx": {
+      "append": "Adaptive interfaces are composed from Xynergy services with explainable decisions.",
+      "cta": { "label": "See the Power", "href": "/xynergy" }
+    },
+    "continuum-re-connect-page.tsx": {
+      "append": "Open-book pricing and trust dashboards are generated via Xynergy’s provenance layer.",
+      "cta": { "label": "See the Power", "href": "/xynergy#architecture" }
+    },
+
+    "community-page.tsx": {
+      "append": "Partners co-create on Xynergy and retain visibility into how their systems think.",
+      "cta": { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+    },
+
+    "contact-page.tsx": {
+      "add_line": "Tell us what you’re building. We’ll show you how Xynergy makes it transparent.",
+      "success_message": "Thanks—expect a short Loom showing how we’d wire your use-case on Xynergy."
+    }
+  }
+}

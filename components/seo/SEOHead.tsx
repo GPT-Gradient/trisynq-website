@@ -15,27 +15,27 @@ export function generateMetadata({
   ogType = 'website',
   canonical,
 }: SEOProps): Metadata {
-  const siteName = 'TriSynq AI';
+  const siteName = 'ClearForge';
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`;
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://trisynq.ai';
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://clearforge.ai';
   const canonicalUrl = canonical || baseUrl;
 
   return {
     title: fullTitle,
     description,
     keywords: [
-      'enterprise technology for small business',
-      'AI for SMBs',
-      'transparent search optimization',
-      'data democratization',
-      'authentic AI amplification',
-      'vendor independence',
+      'AI transparency',
+      'business clarity',
+      'ethical AI',
+      'data accessibility',
+      'enterprise simplification',
+      'transparent technology',
       'SMB enterprise capabilities',
       'technology translation services',
     ],
-    authors: [{ name: 'TriSynq Continuum' }],
-    creator: 'TriSynq AI',
-    publisher: 'TriSynq Continuum',
+    authors: [{ name: 'ClearForge' }],
+    creator: 'ClearForge',
+    publisher: 'ClearForge',
     robots: {
       index: true,
       follow: true,
@@ -71,7 +71,7 @@ export function generateMetadata({
       title: fullTitle,
       description,
       images: [ogImage],
-      creator: '@trisynqai',
+      creator: '@clearforge',
     },
     verification: {
       google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,

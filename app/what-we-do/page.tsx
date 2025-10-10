@@ -21,8 +21,8 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'What We Do - Technology + Data + AI Translation',
-  description: 'We don\'t deliver projects. We transfer capability. Your team understands everything, controls everything, owns everything. Consulting, partnership development, platform solutions, and custom development.',
+  title: 'What We Do',
+  description: 'We turn advanced technology into obvious outcomes.',
   canonical: '/what-we-do',
 });
 
@@ -42,16 +42,14 @@ export default function WhatWeDoPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">What We Do:</span>
-            <br />
-            Technology + Data + AI Translation
+            What We <span className="text-gradient">Do</span>.
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            We don&apos;t deliver projects. We transfer capability.
+            We turn advanced technology into obvious outcomes.
           </p>
           <div className="bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30 inline-block">
             <p className="text-lg text-white font-semibold">
-              Your team understands everything, controls everything, owns everything.
+              Clarity in. Leverage out.
             </p>
           </div>
         </div>

@@ -2,55 +2,46 @@ import { NavItem } from '@/types';
 
 export const mainNavigation: NavItem[] = [
   {
-    label: 'Home',
-    href: '/',
+    label: 'The Forge',
+    href: '/forge',
   },
   {
-    label: 'Who We Are',
-    href: '/who-we-are',
-    children: [
-      { label: 'About TriSynq', href: '/about' },
-      { label: 'Founder Story', href: '/about/founder-story' },
-      { label: 'Complete Founder Journey', href: '/about/founder-story-complete' },
-      { label: 'Team & Philosophy', href: '/about/team-philosophy' },
-      { label: 'Our Mission', href: '/mission' },
-      { label: 'The Continuum', href: '/continuum' },
-    ],
+    label: 'Xynergy',
+    href: '/xynergy',
   },
   {
-    label: 'What We Do',
-    href: '/what-we-do',
-    children: [
-      { label: 'Solutions', href: '/what-we-do' },
-      { label: 'Community', href: '/community' },
-      { label: 'Continuum Projects', href: '/continuum' },
-    ],
+    label: 'Proof',
+    href: '/proof',
   },
   {
-    label: 'How We Do It',
-    href: '/how-we-do-it',
-    children: [
-      { label: 'T.R.A.N.S.L.A.T.E. Methodology', href: '/how-we-do-it' },
-      { label: 'Beta Program Structure', href: '/beta-program' },
-    ],
+    label: 'Solutions',
+    href: '/solutions',
   },
   {
-    label: 'See Our Proof',
-    href: '/dashboard',
+    label: 'Community',
+    href: '/community',
+  },
+  {
+    label: 'About',
+    href: '/about',
+  },
+  {
+    label: 'Contact',
+    href: '/contact',
   },
 ];
 
 export const footerNavigation = {
   mission: [
-    { label: 'Complete Manifesto', href: '/mission' },
-    { label: 'Transparency Commitment', href: '/mission/transparency' },
-    { label: 'The Data Divide', href: '/mission/economic-liberation' },
-    { label: 'AI Reality Check', href: '/mission#ai-reality' },
+    { label: 'Manifesto', href: '/manifesto' },
+    { label: 'Transparency Commitment', href: '/transparency' },
+    { label: 'The Data Divide', href: '/data-divide' },
+    { label: 'AI Reality Check', href: '/ai-reality-check' },
   ],
   company: [
     { label: 'Team Values', href: '/about/team-philosophy' },
-    { label: 'Founder Story', href: '/about/founder-story' },
-    { label: 'Content Hub', href: '/community/resources' },
+    { label: 'How We Started', href: '/about/how-we-started' },
+    { label: 'Content Hub', href: '/forge/topics' },
     { label: 'Get Started', href: '/beta' },
   ],
   legal: [

@@ -45,11 +45,25 @@ export default function GetStartedPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            Ready to Break Down <span className="text-gradient">Barriers?</span>
+            Let&apos;s Simplify the <span className="text-gradient">Complex</span>.
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300">
-            Three ways to work with us—choose your path.
+          <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            Discover → Forge → Grow.
           </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="bg-primary/30 rounded-xl p-4 border border-primary-blue/20">
+              <h3 className="text-lg font-bold text-primary-blue mb-2">Discover</h3>
+              <p className="text-gray-300">We listen before we automate.</p>
+            </div>
+            <div className="bg-primary/30 rounded-xl p-4 border border-accent-pink/20">
+              <h3 className="text-lg font-bold text-accent-pink mb-2">Forge</h3>
+              <p className="text-gray-300">Design systems you can explain.</p>
+            </div>
+            <div className="bg-primary/30 rounded-xl p-4 border border-secondary-purple-light/20">
+              <h3 className="text-lg font-bold text-secondary-purple-light mb-2">Grow</h3>
+              <p className="text-gray-300">Compounding clarity becomes advantage.</p>
+            </div>
+          </div>
         </div>
       </Section>
 

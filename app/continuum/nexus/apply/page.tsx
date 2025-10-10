@@ -603,7 +603,7 @@ export default function NEXUSApplyPage() {
               </div>
 
               <div className="mb-6">
-                <h4 className="font-semibold text-green-400 mb-3">Phase 1 Beta with TriSynq:</h4>
+                <h4 className="font-semibold text-green-400 mb-3">Phase 1 Beta with ClearForge:</h4>
                 <div className="space-y-2 text-gray-300 mb-3">
                   <div className="flex justify-between items-center pb-2 border-b border-gray-700">
                     <span>One-time:</span>
@@ -1738,10 +1738,10 @@ export default function NEXUSApplyPage() {
         </div>
       </Section>
 
-      {/* Final TriSynq Continuum Footer */}
+      {/* Final ClearForge Continuum Footer */}
       <Section background="dark" className="text-center py-12">
         <div className="max-w-3xl mx-auto">
-          <p className="text-2xl font-bold text-gradient mb-4">TriSynq Continuum</p>
+          <p className="text-2xl font-bold text-gradient mb-4">ClearForge Continuum</p>
           <p className="text-xl text-gray-400 mb-8">Transparency Without End</p>
           <div className="space-y-2">
             <p className="text-lg font-semibold text-white">Project NEXUS Phase 1 Beta</p>

@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Users, Shield, Lightbulb, TrendingUp, Target, Zap, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'The 20% Army: Pioneers Proving Transparency Works',
-  description: 'The 20% Army represents Phase 1 beta partners leading the transformation. Pioneers proving that transparency beats manipulation, paving the way for mass adoption.',
+  title: 'The 20% Army',
+  description: 'We\'re the 20% who believe the world can change — and act like it.',
   canonical: '/community/20-percent',
 });
 
@@ -18,13 +18,13 @@ export default function TwentyPercentArmyPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            The <span className="text-gradient">20% Army</span>
+            The <span className="text-gradient">20% Army.</span>
           </h1>
           <p className="text-2xl md:text-3xl font-bold text-white mb-6">
-            Pioneers Proving Transparency Beats Manipulation
+            We&apos;re the 20% who believe the world can change — and act like it.
           </p>
           <p className="text-xl text-gray-300">
-            Phase 1 beta partners leading the transformation that will level the playing field for everyone
+            If you&apos;re waiting for permission, this isn&apos;t for you.
           </p>
         </div>
       </Section>
@@ -34,10 +34,10 @@ export default function TwentyPercentArmyPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              What the 20% Army <span className="text-gradient">Represents</span>
+              What This <span className="text-gradient">Represents</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              More than early adopters. This is a movement of pioneers proving a fundamental truth.
+              More than early adopters. Pioneers proving a truth.
             </p>
           </div>
 
@@ -47,11 +47,11 @@ export default function TwentyPercentArmyPage() {
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-white">The Core Belief</h3>
                 <p className="text-xl text-gray-300 mb-4">
-                  Transparency beats manipulation. Every. Single. Time.
+                  Transparency beats manipulation. Every time.
                 </p>
                 <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20">
                   <p className="text-lg text-gray-300">
-                    For decades, the technology industry has thrived on manufactured complexity. Vendor lock-in. Opaque pricing. Technical jargon that excludes rather than empowers. The 20% Army is proving there&apos;s a better way.
+                    Tech thrives on manufactured complexity. Vendor lock-in. Opaque pricing. Jargon that excludes. The 20% Army is proving there&apos;s a better way.
                   </p>
                 </div>
               </div>
@@ -65,7 +65,7 @@ export default function TwentyPercentArmyPage() {
                 <h3 className="text-xl font-bold text-white">Breaking Barriers</h3>
               </div>
               <p className="text-gray-300">
-                Proving that artificial complexity is just that - artificial. The 20% are dismantling barriers that never should have existed.
+                Artificial complexity is just that. Artificial. We&apos;re dismantling barriers that never should have existed.
               </p>
             </Card>
 
@@ -75,7 +75,7 @@ export default function TwentyPercentArmyPage() {
                 <h3 className="text-xl font-bold text-white">Validating Approaches</h3>
               </div>
               <p className="text-gray-300">
-                Testing transparent translation in real businesses with real stakes. Their success becomes undeniable proof for the 80%.
+                Testing transparency in real businesses. Real stakes. Success becomes undeniable proof.
               </p>
             </Card>
 
@@ -85,7 +85,7 @@ export default function TwentyPercentArmyPage() {
                 <h3 className="text-xl font-bold text-white">Leading Change</h3>
               </div>
               <p className="text-gray-300">
-                Not just adopting new technology - fundamentally changing how business transformation happens through radical transparency.
+                Not just adopting new tech. Changing how transformation happens. Through transparency.
               </p>
             </Card>
           </div>
@@ -97,18 +97,18 @@ export default function TwentyPercentArmyPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Who the <span className="text-gradient">20% Army</span> Is
+              Who <span className="text-gradient">We Are</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Phase 1 beta partners with a specific mindset and mission
+              Specific mindset. Specific mission.
             </p>
           </div>
 
           <Card variant="elevated" className="mb-8">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4 text-white">Not Traditional Clients</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">Not Clients</h3>
               <p className="text-xl text-gray-300">
-                These are partners. Co-creators. Validators of a movement that&apos;s bigger than any single business.
+                Partners. Co-creators. Validators of something bigger.
               </p>
             </div>
 
@@ -118,28 +118,28 @@ export default function TwentyPercentArmyPage() {
                 <div className="bg-background-dark/50 rounded-xl p-6">
                   <h5 className="text-lg font-bold mb-3 text-accent-pink">The Challengers</h5>
                   <p className="text-gray-300">
-                    Leaders who question &quot;that&apos;s how it&apos;s always been done&quot; and see opportunity where others see obstacles
+                    Leaders who question &quot;that&apos;s how it&apos;s always been done.&quot; Who see opportunity where others see obstacles.
                   </p>
                 </div>
 
                 <div className="bg-background-dark/50 rounded-xl p-6">
                   <h5 className="text-lg font-bold mb-3 text-accent-pink">The Innovators</h5>
                   <p className="text-gray-300">
-                    Tired of vendor dependency and artificial complexity. They want to understand, not just consume
+                    Tired of vendor dependency. Tired of artificial complexity. Who want to understand, not just consume.
                   </p>
                 </div>
 
                 <div className="bg-background-dark/50 rounded-xl p-6">
                   <h5 className="text-lg font-bold mb-3 text-accent-pink">The Experts</h5>
                   <p className="text-gray-300">
-                    Whose authentic voices get drowned out by marketing budgets and paid placements. Ready to amplify genuine expertise
+                    Whose authentic voices get drowned out by marketing budgets. Ready to amplify genuine expertise.
                   </p>
                 </div>
 
                 <div className="bg-background-dark/50 rounded-xl p-6">
                   <h5 className="text-lg font-bold mb-3 text-accent-pink">The Transformers</h5>
                   <p className="text-gray-300">
-                    Who see technology, data, and AI as amplifiers of human capability, not replacements for human expertise
+                    Who see AI as amplifier, not replacement. Technology as leverage, not crutch.
                   </p>
                 </div>
               </div>
@@ -150,13 +150,13 @@ export default function TwentyPercentArmyPage() {
             <div className="flex items-start gap-4">
               <Users className="w-10 h-10 text-accent-pink flex-shrink-0" />
               <div>
-                <h3 className="text-xl font-bold mb-3 text-white">Phase 1 Beta Partners</h3>
+                <h3 className="text-xl font-bold mb-3 text-white">The First Wave</h3>
                 <p className="text-lg text-gray-300 mb-4">
-                  The first wave. The brave ones. Partners across multiple domains - search, data, education, special needs, digital safety - proving that transparent translation works regardless of industry.
+                  The brave ones. Partners across search, data, education, safety. Proving transparency works regardless of industry.
                 </p>
                 <div className="bg-primary/30 rounded-xl p-4 border border-primary-blue/20">
                   <p className="text-gray-300">
-                    Each success in one domain strengthens the case for the next. Each validation makes the movement more undeniable.
+                    Each success strengthens the next. Each validation makes the movement undeniable.
                   </p>
                 </div>
               </div>
@@ -170,10 +170,10 @@ export default function TwentyPercentArmyPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              The Movement&apos;s <span className="text-gradient">Impact</span>
+              The <span className="text-gradient">Impact</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Not measured in numbers, but in transformation
+              Not measured in numbers. Measured in transformation.
             </p>
           </div>
 
@@ -181,7 +181,7 @@ export default function TwentyPercentArmyPage() {
             <div className="text-center mb-6">
               <h3 className="text-2xl font-bold mb-4 text-white">Beyond Metrics</h3>
               <p className="text-xl text-gray-300">
-                The impact isn&apos;t about conversion rates or revenue growth. It&apos;s about fundamental shifts in how businesses compete.
+                Not about conversion rates. About fundamental shifts in how businesses compete.
               </p>
             </div>
           </Card>
@@ -193,7 +193,7 @@ export default function TwentyPercentArmyPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-3 text-primary-blue">Independence Over Dependency</h3>
                   <p className="text-gray-300 mb-3">
-                    20% Army partners are breaking free from vendor lock-in. They&apos;re gaining the understanding to make informed decisions instead of being sold solutions.
+                    Breaking free from vendor lock-in. Understanding to decide. Not being sold.
                   </p>
                   <div className="bg-primary/30 rounded-xl p-4">
                     <p className="text-sm text-gray-400 italic">
@@ -210,7 +210,7 @@ export default function TwentyPercentArmyPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-3 text-accent-pink">Confidence Over Fear</h3>
                   <p className="text-gray-300 mb-3">
-                    The 20% are using AI authentically, not fearfully. They&apos;re amplifying their expertise instead of being paralyzed by hype or anxiety.
+                    Using AI authentically. Not fearfully. Amplifying expertise instead of being paralyzed by hype.
                   </p>
                   <div className="bg-primary/30 rounded-xl p-4">
                     <p className="text-sm text-gray-400 italic">
@@ -227,7 +227,7 @@ export default function TwentyPercentArmyPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-3 text-secondary-purple-light">Strategy Over Guesswork</h3>
                   <p className="text-gray-300 mb-3">
-                    Data that was opaque is now interpreted. Insights that were overwhelming are now actionable. Strategy that was guesswork is now informed.
+                    Opaque data, interpreted. Overwhelming insights, actionable. Guesswork, informed.
                   </p>
                   <div className="bg-primary/30 rounded-xl p-4">
                     <p className="text-sm text-gray-400 italic">
@@ -244,7 +244,7 @@ export default function TwentyPercentArmyPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-3 text-primary-blue">Amplification Over Limitation</h3>
                   <p className="text-gray-300 mb-3">
-                    Small teams competing with enterprise capabilities. Authentic expertise cutting through marketing noise. Real value winning over paid placement.
+                    Small teams with enterprise capabilities. Authentic expertise cutting through noise. Real value winning.
                   </p>
                   <div className="bg-primary/30 rounded-xl p-4">
                     <p className="text-sm text-gray-400 italic">
@@ -258,9 +258,9 @@ export default function TwentyPercentArmyPage() {
 
           <Card variant="elevated" className="bg-gradient-to-br from-primary via-primary to-secondary-purple border-secondary-purple-light/30">
             <div className="text-center">
-              <h3 className="text-2xl font-bold mb-4 text-white">The Ripple Effect</h3>
+              <h3 className="text-2xl font-bold mb-4 text-white">The Ripple</h3>
               <p className="text-xl text-gray-300 mb-6">
-                Every 20% partner who proves transparent translation works makes it easier for the next. Each success builds momentum. Each transformation validates the movement.
+                Every partner who proves it works makes it easier for the next. Success builds momentum. Transformation validates the movement.
               </p>
               <div className="flex flex-wrap items-center justify-center gap-2 text-gray-300">
                 <span className="font-semibold text-accent-pink">Pioneers prove</span>
@@ -297,10 +297,10 @@ export default function TwentyPercentArmyPage() {
 
             <div className="text-center">
               <p className="text-xl text-gray-300 mb-4">
-                The 20% Army isn&apos;t just transforming their own businesses. They&apos;re proving that this exclusion was never necessary. That transparency works. That translation is possible.
+                Not just transforming businesses. Proving the exclusion was never necessary. That transparency works.
               </p>
               <p className="text-lg text-accent-pink font-semibold">
-                They&apos;re paving the road for 43% of the economy to compete on merit instead of marketing budget.
+                Paving the road for 43% of the economy to compete on merit.
               </p>
             </div>
           </Card>
@@ -311,7 +311,7 @@ export default function TwentyPercentArmyPage() {
                 <div className="text-4xl font-bold text-accent-pink mb-3">20%</div>
                 <h4 className="text-lg font-bold mb-2 text-white">Pioneers</h4>
                 <p className="text-gray-300">
-                  Proving transparent translation works in real businesses
+                  Proving transparency works in real businesses
                 </p>
               </div>
             </Card>
@@ -321,7 +321,7 @@ export default function TwentyPercentArmyPage() {
                 <div className="text-4xl font-bold text-primary-blue mb-3">80%</div>
                 <h4 className="text-lg font-bold mb-2 text-white">Beneficiaries</h4>
                 <p className="text-gray-300">
-                  Following validated paths without being guinea pigs
+                  Following validated paths. Not being guinea pigs.
                 </p>
               </div>
             </Card>
@@ -331,7 +331,7 @@ export default function TwentyPercentArmyPage() {
                 <div className="text-4xl font-bold text-secondary-purple-light mb-3">100%</div>
                 <h4 className="text-lg font-bold mb-2 text-white">Winners</h4>
                 <p className="text-gray-300">
-                  When transparency becomes inevitable and barriers fall
+                  When transparency becomes inevitable
                 </p>
               </div>
             </Card>
@@ -344,15 +344,15 @@ export default function TwentyPercentArmyPage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Join the <span className="text-gradient">20% Army</span>
+              Join the <span className="text-gradient">20%</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Be part of the movement proving transparency beats manipulation
+              Prove transparency beats manipulation
             </p>
           </div>
 
           <Card variant="elevated" className="mb-8">
-            <h3 className="text-2xl font-bold mb-6 text-center text-white">What Phase 1 Partnership Means</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center text-white">What Partnership Means</h3>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
               <div>
@@ -418,7 +418,7 @@ export default function TwentyPercentArmyPage() {
 
             <div className="bg-gradient-to-r from-accent-pink/20 to-primary-blue/20 rounded-2xl p-6 border border-accent-pink/30 text-center">
               <p className="text-lg text-white font-semibold">
-                Not everyone qualifies - and that&apos;s by design. We&apos;re looking for the 20% who will prove the path for the 80%.
+                Not everyone qualifies. By design. We&apos;re looking for the 20% who will prove the path.
               </p>
             </div>
           </Card>
@@ -434,9 +434,9 @@ export default function TwentyPercentArmyPage() {
 
           <Card variant="bordered" className="border-primary-blue/30">
             <div className="text-center">
-              <h3 className="text-xl font-bold mb-4 text-white">Not Ready to Be a Pioneer?</h3>
+              <h3 className="text-xl font-bold mb-4 text-white">Not Ready?</h3>
               <p className="text-lg text-gray-300 mb-6">
-                That&apos;s completely fine. Follow the journey. Watch transformations unfold transparently. Benefit from proven approaches when you&apos;re ready.
+                That&apos;s fine. Follow the journey. Watch transformations unfold. Benefit when you&apos;re ready.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button href="/dashboard" variant="outline" size="md">
@@ -456,22 +456,22 @@ export default function TwentyPercentArmyPage() {
         <div className="max-w-3xl mx-auto">
           <Card variant="elevated" className="text-center">
             <h2 className="text-3xl font-bold mb-6 text-white">
-              The 20% Army <span className="text-gradient">Isn&apos;t Just a Group</span>
+              Not Just <span className="text-gradient">a Group</span>
             </h2>
             <p className="text-xl text-gray-300 mb-6">
-              It&apos;s a movement. A proof point. A demonstration that transparency beats manipulation, that authentic expertise can cut through marketing noise, that small businesses can compete on merit.
+              A movement. A proof point. Demonstrating that transparency beats manipulation. That authentic expertise cuts through noise. That small businesses compete on merit.
             </p>
             <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20">
               <p className="text-lg text-white font-semibold">
-                Every partner who proves this works makes the case more undeniable. Every success brings us closer to inevitable transformation.
+                Every partner makes the case more undeniable. Every success brings inevitable transformation closer.
               </p>
             </div>
             <div className="mt-8">
               <p className="text-accent-pink text-lg font-semibold">
-                Are you part of the 20% who will prove the path? Or the 80% who will benefit from what they validate?
+                Are you the 20% who proves? Or the 80% who benefits?
               </p>
               <p className="text-gray-400 mt-4">
-                Either way, we all win when transparency becomes inevitable.
+                Either way, we all win.
               </p>
             </div>
           </Card>

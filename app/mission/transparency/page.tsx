@@ -7,8 +7,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Transparency Revolution: Complete Transparency or Nothing',
-  description: 'TriSynq shows all methodology, learnings, failures, and results. First platform documenting transformation journey publicly with complete transparency.',
+  title: 'Transparency: The Foundation of Trust',
+  description: 'Show how systems work so people can decide for themselves.',
 });
 
 export default function TransparencyRevolutionPage() {
@@ -19,11 +19,14 @@ export default function TransparencyRevolutionPage() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
-              <span className="text-gradient">Complete Transparency</span> or Nothing
+              Transparency: The Foundation of <span className="text-gradient">Trust</span>.
             </h1>
 
-            <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              We don&apos;t ask for trust. We show you it works.
+            <p className="text-xl md:text-2xl text-gray-300 mb-4">
+              Transparency is empowerment, not exposure.
+            </p>
+            <p className="text-xl text-gray-300 mb-8">
+              We show how systems work, what they use, and why they recommend.
             </p>
           </div>
 
@@ -297,6 +300,12 @@ export default function TransparencyRevolutionPage() {
             </p>
             <p className="text-lg text-gray-300">
               Complete transparency isn&apos;t a feature. It&apos;s how we operate. It&apos;s who we are. It&apos;s the only way this works.
+            </p>
+          </div>
+
+          <div className="mt-8 bg-background-dark rounded-2xl p-8 border border-primary-blue/20">
+            <p className="text-lg text-gray-200">
+              Every Xynergy output can show sources, steps, and confidence. Transparency isn&apos;t a promise; it&apos;s a feature.
             </p>
           </div>
         </div>

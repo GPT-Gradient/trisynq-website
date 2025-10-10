@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Code, Cpu, Database, TrendingUp, Shield, FileCode, CheckCircle, Cloud } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Custom Development - Enterprise-Grade Solutions at Human-Scale Costs',
-  description: 'Production-ready custom platforms, system integrations, analytics, and AI amplification. Built to scale with your success, not punish growth. 20+ years Fortune 100 expertise applied to SMB reality.',
+  title: 'Custom Without Chaos',
+  description: 'Systems you can understand, adapt, and grow.',
   canonical: '/solutions/custom',
 });
 
@@ -18,62 +18,51 @@ export default function CustomDevelopmentPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient">Enterprise-Grade Solutions</span>
-            <br />
-            at Human-Scale Costs
+            <span className="text-gradient">Custom</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            Production-ready from day one, not prototypes
+          <p className="text-xl md:text-2xl text-gray-300 mb-8">
+            Your edge, productized. We compose Xynergy services into something only you can ship.
           </p>
-          <div className="bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30 inline-block">
-            <p className="text-lg text-white font-semibold">
-              Built to scale with your success, not punish growth
-            </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button href="/xynergy" size="lg">
+              See the Power
+            </Button>
+            <Button href="/manifesto" variant="outline" size="lg">
+              Manifesto
+            </Button>
           </div>
         </div>
       </Section>
 
-      {/* Development Philosophy */}
+      {/* Capabilities */}
       <Section background="dark">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Development <span className="text-gradient">Philosophy</span>
+              <span className="text-gradient">Capabilities</span>
             </h2>
           </div>
 
-          <Card variant="elevated" className="mb-8">
-            <div className="bg-gradient-to-br from-primary via-secondary-purple to-primary rounded-2xl p-8 border border-secondary-purple-light/30 mb-6">
-              <h3 className="text-2xl font-bold text-white mb-4 text-center">
-                Production-ready from day one, not prototypes
-              </h3>
-              <p className="text-xl text-gray-300 text-center">
-                20+ years of Fortune 100 expertise means we know how to build systems that last
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20 text-center">
-                <CheckCircle className="w-10 h-10 text-primary-blue mx-auto mb-3" />
-                <h4 className="text-lg font-bold text-white mb-2">Enterprise Quality</h4>
+          <Card variant="elevated">
+            <div className="space-y-4">
+              <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20">
+                <h4 className="text-xl font-bold text-white mb-3">Private data models with permissions and retention controls</h4>
                 <p className="text-gray-300">
-                  Same standards as billion-dollar systems
+                  Your data architecture, your rules, your compliance requirements.
                 </p>
               </div>
 
-              <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20 text-center">
-                <TrendingUp className="w-10 h-10 text-accent-pink mx-auto mb-3" />
-                <h4 className="text-lg font-bold text-white mb-2">SMB Reality</h4>
+              <div className="bg-primary/30 rounded-xl p-6 border border-accent-pink/20">
+                <h4 className="text-xl font-bold text-white mb-3">Explainable decisioning for regulated teams</h4>
                 <p className="text-gray-300">
-                  Costs and timelines that make sense
+                  Audit trails and transparency built into every AI-powered decision.
                 </p>
               </div>
 
-              <div className="bg-primary/30 rounded-xl p-6 border border-secondary-purple-light/20 text-center">
-                <Shield className="w-10 h-10 text-secondary-purple-light mx-auto mb-3" />
-                <h4 className="text-lg font-bold text-white mb-2">Built to Last</h4>
+              <div className="bg-primary/30 rounded-xl p-6 border border-secondary-purple-light/20">
+                <h4 className="text-xl font-bold text-white mb-3">Operator UI that shows sources, steps, and confidence</h4>
                 <p className="text-gray-300">
-                  Scalable foundation from the start
+                  Your team sees exactly how AI reaches every conclusion.
                 </p>
               </div>
             </div>
@@ -470,6 +459,22 @@ export default function CustomDevelopmentPage() {
         </div>
       </Section>
 
+      {/* Xynergy Integration */}
+      <Section background="dark">
+        <div className="max-w-4xl mx-auto text-center">
+          <Card variant="elevated">
+            <div className="bg-gradient-to-r from-primary-blue/10 to-secondary-purple-light/10 rounded-2xl p-8 border border-primary-blue/30">
+              <p className="text-xl text-gray-300 mb-6">
+                We compose Xynergy services to your use-case. You keep control, clarity, and the keys.
+              </p>
+              <Button href="/xynergy" size="lg">
+                See the Power
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </Section>
+
       {/* CTA Section */}
       <Section background="medium">
         <div className="max-w-4xl mx-auto text-center">
@@ -480,8 +485,8 @@ export default function CustomDevelopmentPage() {
             Let&apos;s discuss what you need to build.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/contact" size="lg">
-              Discuss Your Project
+            <Button href="/get-started" size="lg">
+              Start Your Build
             </Button>
             <Button href="/solutions" variant="outline" size="lg">
               View All Solutions

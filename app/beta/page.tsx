@@ -6,8 +6,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Beta Program | First 100 Partners Building the Future',
-  description: 'Join the first 100 qualified partners. Lifetime access to ALL platforms, unlimited affiliate revenue, direct team access. Not customers—partners proving transformation works.',
+  title: 'Join the Beta',
+  description: 'Early access. Lifetime upside. Shared proofs.',
 });
 
 export default function BetaPage() {
@@ -17,16 +17,16 @@ export default function BetaPage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            First <span className="text-gradient">100 Partners</span> Building the Future
+            Join the <span className="text-gradient">Beta</span>.
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Not first 100 customers. First 100 qualified partners.
+            Early access. Lifetime upside. Shared proofs.
           </p>
 
           <div className="bg-primary/50 rounded-2xl p-6 border border-accent-pink/30 backdrop-blur-sm">
             <p className="text-lg font-semibold text-white">
-              Applications open now. Spots filled as qualified partners come on board.
+              If you want polish over progress, sit this one out.
             </p>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function BetaPage() {
 
         <div className="mt-12 bg-primary/30 rounded-2xl p-6 border border-accent-pink/30">
           <p className="text-lg text-center text-white">
-            We&apos;re a startup. No fancy pricing tiers. No hidden costs. Partnership terms discussed during qualification. If you&apos;re the right fit, we&apos;ll make it work.
+            No pricing tiers. No hidden costs. Partnership terms discussed during qualification. If you&apos;re the right fit, we&apos;ll make it work.
           </p>
         </div>
       </Section>
@@ -196,7 +196,7 @@ export default function BetaPage() {
                 What We Promise
               </h3>
               <p className="text-gray-300">
-                We&apos;ll bust our asses to make this work. Complete transparency. Real partnership.
+                Complete transparency. Real partnership. We make this work.
               </p>
             </Card>
 
@@ -206,7 +206,7 @@ export default function BetaPage() {
                 What We Don&apos;t Promise
               </h3>
               <p className="text-gray-300">
-                Overnight success. Zero failures. Magic solutions. We&apos;re building this together.
+                Overnight success. Zero failures. Magic. We&apos;re building this together.
               </p>
             </Card>
           </div>
@@ -215,7 +215,7 @@ export default function BetaPage() {
             <div className="text-center">
               <h3 className="text-2xl font-bold mb-4 text-accent-pink">The Honesty</h3>
               <p className="text-xl text-white">
-                If methodology doesn&apos;t work, we don&apos;t deserve your partnership. But we&apos;ve tested this privately and we&apos;re confident enough to prove it publicly.
+                If it doesn&apos;t work, we don&apos;t deserve your partnership. We&apos;ve tested this privately. Now we prove it publicly.
               </p>
             </div>
           </Card>
@@ -424,7 +424,7 @@ export default function BetaPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-white">Why only 100?</h3>
                   <p className="text-gray-300">
-                    Focused partnerships for quality refinement. We&apos;re a startup, not a corporation. We need to prove this works before scaling.
+                    Prove it works before scaling. Quality over scale.
                   </p>
                 </div>
               </div>
@@ -436,7 +436,7 @@ export default function BetaPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-white">What happens after 100?</h3>
                   <p className="text-gray-300">
-                    Phase 2 opens to more partners at different terms once we&apos;ve proven methodology publicly.
+                    Phase 2 opens at different terms once methodology is proven.
                   </p>
                 </div>
               </div>
@@ -448,7 +448,7 @@ export default function BetaPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-white">Can I lose access?</h3>
                   <p className="text-gray-300">
-                    No. Lifetime means lifetime. We don&apos;t play games.
+                    No. Lifetime means lifetime.
                   </p>
                 </div>
               </div>
@@ -460,7 +460,7 @@ export default function BetaPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-white">What if I don&apos;t use all platforms?</h3>
                   <p className="text-gray-300">
-                    Access remains regardless. You&apos;re partnering in building all of this.
+                    Access remains. You&apos;re partnering in building all of this.
                   </p>
                 </div>
               </div>
@@ -484,7 +484,7 @@ export default function BetaPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-white">What about cost?</h3>
                   <p className="text-gray-300">
-                    Partnership terms discussed during qualification. We&apos;re flexible for the right fit.
+                    Discussed during qualification. Flexible for the right fit.
                   </p>
                 </div>
               </div>
@@ -496,7 +496,7 @@ export default function BetaPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-white">What if methodology doesn&apos;t work for me?</h3>
                   <p className="text-gray-300">
-                    We&apos;re confident it will. But if we&apos;re wrong, we&apos;re wrong. We&apos;ll figure it out together.
+                    If we&apos;re wrong, we&apos;re wrong. We&apos;ll figure it out together.
                   </p>
                 </div>
               </div>
@@ -518,10 +518,10 @@ export default function BetaPage() {
 
           <div className="bg-accent-pink/10 rounded-2xl p-8 border border-accent-pink/30 mb-8">
             <p className="text-2xl font-bold text-accent-pink mb-4">
-              If our methodology doesn&apos;t work, we don&apos;t deserve your partnership. Period.
+              If it doesn&apos;t work, we don&apos;t deserve your partnership.
             </p>
             <p className="text-gray-300">
-              But we&apos;ve tested this privately and we&apos;re confident enough to prove it publicly.
+              Tested privately. Proven publicly.
             </p>
           </div>
 

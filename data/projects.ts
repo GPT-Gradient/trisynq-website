@@ -7,7 +7,7 @@ export const continuumProjects: Project[] = [
     tagline: 'Search Transparency',
     status: 'Phase 1 Beta (First 100)',
     icon: 'Search',
-    description: 'Proving SMBs compete on expertise vs. marketing budget',
+    description: 'Beating the SEO Black Box.',
     link: '/continuum/nexus',
   },
   {
@@ -16,7 +16,7 @@ export const continuumProjects: Project[] = [
     tagline: 'Analytics for All',
     status: 'Research Phase',
     icon: 'BarChart',
-    description: 'Proving AI gives SMBs the data teams enterprises have',
+    description: 'Translating data for the 43%.',
     link: '/continuum/data-democracy',
   },
   {
@@ -25,7 +25,7 @@ export const continuumProjects: Project[] = [
     tagline: 'Educational AI',
     status: 'Planning 2025',
     icon: 'GraduationCap',
-    description: 'Proving AI enhances learning vs. enabling shortcuts',
+    description: 'AI as coach, not crutch.',
     link: '/continuum/no-cheating',
   },
   {
@@ -34,7 +34,7 @@ export const continuumProjects: Project[] = [
     tagline: 'Special Needs Tech',
     status: 'Planning Late 2025',
     icon: 'Heart',
-    description: 'Proving technology adapts to individual learning',
+    description: 'Tech that adapts.',
     link: '/continuum/ctos-heart',
   },
   {
@@ -43,7 +43,7 @@ export const continuumProjects: Project[] = [
     tagline: 'Digital Safety',
     status: 'Planning 2026',
     icon: 'Shield',
-    description: 'Proving safety and expression coexist transparently',
+    description: 'Transparency without surveillance.',
     link: '/continuum/safe-spaces',
   },
   {
@@ -52,7 +52,7 @@ export const continuumProjects: Project[] = [
     tagline: 'Real Estate',
     status: 'Planning Mid 2026',
     icon: 'Building',
-    description: 'Proving transparency creates competitive advantage',
+    description: 'Honesty in real estate.',
     link: '/continuum/re-connect',
   },
 ];

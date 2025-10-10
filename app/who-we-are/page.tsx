@@ -7,8 +7,8 @@ import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Who We Are: Enterprise Expertise Meeting Small Business Reality',
-  description: 'We spent 20 years building billion-dollar systems for Fortune 100s. Now we\'re tearing down the walls that keep 43% of GDP locked out. Learn about our story, mission, team, and the Continuum.',
+  title: 'Who We Are',
+  description: 'Technologists, translators, and unapologetic simplifiers.',
 });
 
 export default function WhoWeArePage() {
@@ -18,15 +18,15 @@ export default function WhoWeArePage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-8">
-            Who We Are: <span className="text-gradient">Enterprise Expertise</span> Meeting Small Business Reality
+            Who We <span className="text-gradient">Are</span>.
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            We spent 20 years building billion-dollar systems for Fortune 100s.
+            Technologists, translators, and unapologetic simplifiers.
           </p>
 
           <p className="text-xl md:text-2xl text-white font-semibold">
-            Now we&apos;re tearing down the walls that keep 43% of GDP locked out.
+            We measure success in reduced friction and increased trust.
           </p>
         </div>
       </Section>
@@ -49,7 +49,7 @@ export default function WhoWeArePage() {
 
               <div className="space-y-4">
                 <Link
-                  href="/about/founder-story"
+                  href="/about/how-we-started"
                   className="flex items-center justify-between p-4 bg-background-dark rounded-xl border border-primary-blue/30 hover:border-accent-pink/50 transition-all group"
                 >
                   <span className="text-primary-blue font-semibold group-hover:text-accent-pink transition-colors">

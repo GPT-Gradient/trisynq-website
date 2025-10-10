@@ -1,24 +1,21 @@
 import { NextRequest, NextResponse } from 'next/server';
-import XynergyAPI from '@/lib/xynergy-api';
+import { getGatewayClient } from '@/lib/gateway-client';
 
+/**
+ * POST /api/beta
+ * Submit beta program application to Intelligence Gateway
+ */
 export async function POST(request: NextRequest) {
   try {
     const data = await request.json();
 
     // Validate required fields
-    const requiredFields = [
-      'businessName',
-      'industry',
-      'name',
-      'email',
-      'challenges',
-      'whyRightFit',
-    ];
+    const requiredFields = ['company_name', 'contact_name', 'email', 'industry', 'goals'];
 
     for (const field of requiredFields) {
       if (!data[field]) {
         return NextResponse.json(
-          { success: false, error: `Missing required field: ${field}` },
+          { success: false, message: `Missing required field: ${field}` },
           { status: 400 }
         );
       }
@@ -28,29 +25,20 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
       return NextResponse.json(
-        { success: false, error: 'Invalid email format' },
+        { success: false, message: 'Invalid email format' },
         { status: 400 }
       );
     }
 
-    // Submit to Xynergy API
-    const result = await XynergyAPI.submitBetaApplication(data);
+    // Submit to Intelligence Gateway
+    const client = getGatewayClient();
+    const result = await client.submitBetaApplication(data);
 
-    if (result.success) {
-      return NextResponse.json({
-        success: true,
-        message: 'Application submitted successfully. We\'ll review and respond within 48 hours.',
-      });
-    } else {
-      return NextResponse.json(
-        { success: false, error: result.error || 'Failed to submit application' },
-        { status: 500 }
-      );
-    }
+    return NextResponse.json(result);
   } catch (error) {
     console.error('Beta application error:', error);
     return NextResponse.json(
-      { success: false, error: 'Internal server error' },
+      { success: false, message: 'Failed to submit application. Please try again.' },
       { status: 500 }
     );
   }

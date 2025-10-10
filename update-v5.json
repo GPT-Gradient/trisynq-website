@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "version": "2025-10-09",
+    "intent": "Re-structure site around The Forge as the hub; wire Community engagement to Xynergy so user-generated Q&A/methods seed new content; ensure all topic content loops back to The Forge → ClearForge.",
+    "branding": {
+      "company": "ClearForge",
+      "engine": "Xynergy",
+      "voice": ["confidently rebellious", "minimal", "transparent", "human"]
+    }
+  },
+
+  "navigation": {
+    "primary": [
+      { "label": "The Forge", "href": "/forge" },
+      { "label": "Xynergy", "href": "/xynergy" },
+      { "label": "Proof", "href": "/proof" },
+      { "label": "Community", "href": "/community" },
+      { "label": "About", "href": "/about" },
+      { "label": "Contact", "href": "/contact" }
+    ],
+    "notes": [
+      "The Forge acts as hub: routes to Topics (content), Xynergy (engine), Proof (outcomes), Community (engagement).",
+      "Xynergy and Community are also accessible directly for SEO landing."
+    ]
+  },
+
+  "routing_rules": {
+    "topic_hub": "/forge/topics",
+    "topic_slug_pattern": "/forge/topics/:topicSlug",
+    "content_types": [ "blog", "opinion", "how-to", "playbook", "whitepaper", "case", "qa-thread", "release-note" ],
+    "crosslink_policy": [
+      "Every content item must link to: its Topic hub, The Forge, and at least one Proof item.",
+      "Community Q&A threads with accepted answers generate a draft Blog/How-to stub (hidden) → review → publish under same Topic.",
+      "All Topic pages show a ‘Powered by Xynergy’ note when summaries/recommendations are machine-assisted."
+    ]
+  },
+
+  "taxonomy": {
+    "topics": [
+      { "slug": "ai-transparency", "title": "AI Transparency" },
+      { "slug": "data-accessibility", "title": "Data Accessibility" },
+      { "slug": "content-ops", "title": "Content Operations" },
+      { "slug": "automation", "title": "Automation" },
+      { "slug": "search-discovery", "title": "Search & Discovery" },
+      { "slug": "ethics-governance", "title": "Ethics & Governance" },
+      { "slug": "smb-growth", "title": "SMB Growth" },
+      { "slug": "playbooks", "title": "Playbooks" }
+    ],
+    "notes": [
+      "Topics power Home highlights, Forge topic grid, and Community prompts.",
+      "Editors can add new topics; all content must belong to ≥1 topic."
+    ]
+  },
+
+  "pages": {
+    "/": {
+      "hero": {
+        "h1": "Complexity is the Villain. ClearForge is the Weapon.",
+        "sub": "Powered by Xynergy — our proprietary AI engine that researches, plans, executes, and proves.",
+        "ctas": [
+          { "label": "See the Power", "href": "/xynergy" },
+          { "label": "Explore the Forge", "href": "/forge" }
+        ]
+      },
+      "xynergy_feature": {
+        "h2": "Meet Xynergy — The Engine Behind Everything.",
+        "intro": "Built because black-box AI wasn’t enough. Xynergy shows its logic, cites its sources, and gets work done.",
+        "grid_2x4": [
+          "Research Engine — surfaces insights before you ask.",
+          "Content Engine — generates, scores, and refines with feedback.",
+          "Campaign Engine — amplifies what works, pauses what doesn’t.",
+          "Automation Engine — executes approved workflows in real time.",
+          "Insights Engine — detects patterns and opportunities early.",
+          "AI Assistant — runs tasks in the background and reports results.",
+          "Governance Engine — logs decisions, sources, and context.",
+          "Learning Engine — improves from every outcome and shares what’s learned."
+        ],
+        "cta": { "label": "See the Power", "href": "/xynergy" }
+      },
+      "community_teaser": {
+        "h2": "Forge it together.",
+        "p": "A collective of thinkers, doers, and builders — education, forums, live sessions, and rewards.",
+        "ctas": [{ "label": "Join the Waitlist", "href": "/community#waitlist" }]
+      },
+      "topic_strip": {
+        "title": "What we’re talking about",
+        "source": "/forge/topics?featured=true"
+      }
+    },
+
+    "/forge": {
+      "hero": {
+        "h1": "The Forge — Where Technology and Transparency Meet.",
+        "sub": "One hub. Four doors: Topics, Xynergy, Proof, Community."
+      },
+      "cards": [
+        { "title": "Topics", "subtitle": "Blogs, opinions, how-tos, white papers.", "href": "/forge/topics", "badge": "Content Hub" },
+        { "title": "Xynergy", "subtitle": "Researches, plans, executes, proves.", "href": "/xynergy", "badge": "Engine" },
+        { "title": "Proof", "subtitle": "Receipts, outcomes, public demos.", "href": "/proof", "badge": "Results" },
+        { "title": "Community", "subtitle": "Engage, ask, learn, earn. (Coming Soon)", "href": "/community", "badge": "Coming Soon" }
+      ],
+      "secondary": {
+        "title": "Featured Topics",
+        "grid_from": "/forge/topics?featured=true"
+      }
+    },
+
+    "/forge/topics": {
+      "h1": "Explore Topics",
+      "filters": ["topic", "contentType", "date", "most-helpful"],
+      "sections": [
+        { "type": "topic-grid", "source": "taxonomy.topics" },
+        { "type": "latest", "source": "/api/content?sort=latest&limit=12" }
+      ],
+      "notes": [
+        "Every item card shows Topic, type, and ‘Powered by Xynergy’ if summarized or generated.",
+        "Cards include links to related Proof items and Community threads."
+      ]
+    },
+
+    "/forge/topics/:topicSlug": {
+      "template": "topic-landing",
+      "hero_from_topic": true,
+      "layout": {
+        "left": [
+          { "type": "lead-article", "source": "/api/content?topic=:topicSlug&sort=editor_pick&limit=1" },
+          { "type": "latest", "source": "/api/content?topic=:topicSlug&sort=latest&limit=8" }
+        ],
+        "right": [
+          { "type": "community-threads", "source": "/api/community?topic=:topicSlug&sort=active&limit=5" },
+          { "type": "proof", "source": "/api/proof?topic=:topicSlug&limit=3" }
+        ]
+      },
+      "footer_ctas": [
+        { "label": "Explore The Forge", "href": "/forge" },
+        { "label": "See the Power", "href": "/xynergy" }
+      ]
+    },
+
+    "/xynergy": {
+      "hero": {
+        "h1": "Xynergy — Researches, Plans, Executes, Proves.",
+        "sub": "Not a black box. An engine you can read, direct, and trust.",
+        "ctas": [
+          { "label": "See the Power", "href": "#plain-english" },
+          { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+        ]
+      },
+      "sections": [
+        {
+          "id": "plain-english",
+          "h2": "What the engine does — in plain English",
+          "bullets": [
+            "Studies your world: customers, operations, competitors, and content.",
+            "Proposes next best moves — with reasons and sources.",
+            "Executes approved tasks in the background and reports results.",
+            "Learns from outcomes and adjusts the plan — automatically, with your oversight."
+          ]
+        },
+        {
+          "id": "assistant",
+          "h2": "The Xynergy Assistant — your background operator",
+          "examples": [
+            {
+              "title": "Marketing",
+              "steps": ["Research topics", "Draft content", "Schedule & amplify winners", "Report deltas"],
+              "proof": "Sources, drafts, timelines, impact deltas."
+            },
+            {
+              "title": "Operations",
+              "steps": ["Monitor signals", "Detect gaps", "Draft SOP updates", "Route ownership"],
+              "proof": "Before/after metrics with annotated diffs."
+            },
+            {
+              "title": "Sales",
+              "steps": ["Spot hot accounts", "Explain the why", "Prep outreach kits", "Track conversions"],
+              "proof": "Opportunity cards with evidence & confidence."
+            }
+          ]
+        },
+        {
+          "id": "engines",
+          "h2": "The engines, simply",
+          "grid": [
+            { "name": "Research", "does": ["Finds real answers in your data first, then the web"], "out": "Briefs you can trust" },
+            { "name": "Content", "does": ["Drafts, variants, repurposing; quality scoring"], "out": "Ship-ready with rationale" },
+            { "name": "Campaign", "does": ["Plans posts, emails, pages; boosts winners"], "out": "Compounding reach" },
+            { "name": "Automation", "does": ["Runs approved workflows and syncs"], "out": "Time back, with receipts" },
+            { "name": "Insights", "does": ["Finds trends, anomalies, segments; explains why"], "out": "Decisions with context" },
+            { "name": "Governance", "does": ["Tracks sources, steps, policies"], "out": "Audit-ready compliance" },
+            { "name": "Learning", "does": ["Improves from outcomes, shares learnings"], "out": "Better every cycle" },
+            { "name": "Assistant", "does": ["Schedules, executes, monitors"], "out": "Work done while you work" }
+          ]
+        },
+        {
+          "id": "data-opportunities",
+          "h2": "How data serves you",
+          "p": [
+            "Your data stays your data. Isolated by default. Usage is logged and reviewable.",
+            "We learn on patterns, not identities — and show the math."
+          ],
+          "opportunity_tracking": {
+            "signals": ["content engagement", "CRM changes", "site behavior", "support themes", "pipeline variance"],
+            "card": ["summary", "evidence", "confidence", "next-best actions"],
+            "lifecycle": "created → prioritized → acted → measured → learned"
+          }
+        },
+        {
+          "id": "proof",
+          "h2": "Proof is the product",
+          "p": [
+            "Every recommendation and action includes an ‘Explain this’ view: sources, steps, assumptions.",
+            "No mystery knobs. No trust fall. Systems you can read and direct."
+          ],
+          "ctas": [
+            { "label": "See the Power", "href": "#engines" },
+            { "label": "Build on Xynergy", "href": "/solutions-partnership" }
+          ]
+        }
+      ]
+    },
+
+    "/proof": {
+      "hero": { "h1": "Proof", "sub": "Receipts, outcomes, and public demos." },
+      "sections": [
+        { "type": "cases-latest", "source": "/api/proof?sort=latest&limit=8" },
+        { "type": "demos", "source": "/api/demos?limit=6" }
+      ],
+      "notes": [
+        "Each proof item links back to: its Topic page, The Forge, and any Community thread that seeded it."
+      ]
+    },
+
+    "/community": {
+      "mode": "coming_soon",
+      "hero": {
+        "h1": "Forge it together (Coming Soon).",
+        "sub": "A live layer of Q&As, office hours, AMAs, and collaborative build threads — tied directly into Xynergy.",
+        "cta": { "label": "Join the Waitlist", "href": "/community#waitlist" }
+      },
+      "sections": [
+        {
+          "id": "phase1",
+          "h2": "Phase 1 — Content Forge",
+          "p": [
+            "High-value, authentic content to build momentum and help operators now.",
+            "Blogs, opinion pieces, how-to guides, ‘who you don’t need to hire’, white papers, and success stories."
+          ],
+          "notes": [
+            "Drafts may be Xynergy-assisted; every published item is human-edited.",
+            "All items map to Topics and link back to The Forge."
+          ],
+          "cta": { "label": "Read Articles", "href": "/forge/topics" }
+        },
+        {
+          "id": "phase2",
+          "h2": "Phase 2 — Engagement Layer",
+          "p": [
+            "Forums, AMAs, and live sessions to help each other solve real problems.",
+            "Accepted answers and high-signal threads auto-generate draft articles for editorial review."
+          ],
+          "events": ["Weekly office hours", "Monthly AMAs", "Quarterly live workshops"]
+        },
+        {
+          "id": "phase3",
+          "h2": "Phase 3 — Rewards & Recognition",
+          "p": [
+            "Earn points for helpful answers, shipped tutorials, verified outcomes, and bug reports.",
+            "Redeem for perks, early access, and template revenue share."
+          ]
+        },
+        {
+          "id": "phase4",
+          "h2": "Phase 4 — Cohorts & Mentorship",
+          "p": [
+            "Guided peer groups and mentor-led builds with measurable outcomes.",
+            "Topic-specific sprints tied to Proof and Topic hubs."
+          ]
+        },
+        {
+          "id": "waitlist",
+          "h2": "Get notified",
+          "form_fields": ["Name", "Email", "Company", "Focus Area"]
+        }
+      ]
+    },
+
+    "/about-how-we-started": {
+      "hero": { "h1": "How We Started.", "sub": "It didn’t start with AI. It started with burnout — and a refusal to accept complexity as normal." },
+      "sections": [
+        {
+          "id": "spark",
+          "h2": "The Spark That Forged the Company",
+          "p": [
+            "ClearForge was born from frustration: brilliant people trapped by systems that complicated their work.",
+            "Frustration became obsession. Obsession became vision. Vision became ClearForge."
+          ]
+        },
+        {
+          "id": "collaboration",
+          "h2": "Collaboration Became ClearForge",
+          "p": [
+            "One of our founders started reaching out to technologists and industry leaders who believed technology should be transparent and empowering.",
+            "That collaboration became ClearForge — and Xynergy became the engine."
+          ],
+          "cta": { "label": "Read the Full Story", "href": "/founder-story" }
+        },
+        { "id": "act1", "h2": "Act I — The Enterprise Years", "p": ["…"] },
+        { "id": "act2", "h2": "Act II — The Awakening", "p": ["…"] },
+        { "id": "act3", "h2": "Act III — The Rebellion", "p": ["…"] }
+      ]
+    }
+  },
+
+  "community_x_xynergy_integration": {
+    "ingestion": {
+      "sources": ["forum_questions", "accepted_answers", "high-signal_threads", "live_session_QA", "submitted_tutorials"],
+      "xynergy_pipelines": [
+        "summarize_threads → propose_article_outline",
+        "extract_methods → create_howto_draft",
+        "tag_entities/topics → route_to_editors",
+        "detect_gaps → propose_content_briefs"
+      ],
+      "human_review_required": true
+    },
+    "feedback_loops": [
+      "Published content links back to source threads and recognizes contributors.",
+      "Topic pages promote active threads to invite richer answers.",
+      "Proof items cite the Community discussion that seeded the work, when applicable."
+    ]
+  },
+
+  "legal_privacy": {
+    "data_use": [
+      "Community content may be used to generate drafts and summaries; authorship and attributions are preserved.",
+      "Users can opt out of model training on their content; defaults are transparent and editable."
+    ],
+    "provenance": "All Xynergy-assisted content includes a provenance panel (sources, steps, assumptions)."
+  }
+}

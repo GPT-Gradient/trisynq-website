@@ -1,6 +1,6 @@
-# TriSynq AI Website - Quick Start Guide
+# ClearForge Website - Quick Start Guide
 
-Get the TriSynq AI website running in minutes.
+Get the ClearForge website running in minutes.
 
 ## 🚀 Local Development (5 minutes)
 
@@ -61,7 +61,7 @@ Done! Your site is live on Cloud Run.
 
 ## 📦 What's Included
 
-### ✅ Complete Website (26 Pages)
+### ✅ Complete Website (46 Pages)
 - **Homepage** with 6 key sections
 - **About Section** (3 pages)
 - **Mission Section** (3 pages)
@@ -69,6 +69,7 @@ Done! Your site is live on Cloud Run.
 - **Solutions** (4 pages)
 - **Community** (4 pages)
 - **Dashboard, Beta Program, Contact**
+- **The Forge** - v5 architecture central hub
 
 ### ✅ Technical Features
 - Next.js 13+ App Router
@@ -127,7 +128,7 @@ npm run build
 
 ### View Deployed Logs
 ```bash
-gcloud run services logs tail trisynq-website --region=us-central1
+gcloud run services logs tail clearforge-website --region=us-central1
 ```
 
 ## 📚 Documentation
@@ -149,7 +150,7 @@ gcloud run services logs tail trisynq-website --region=us-central1
 3. Review Cloud Build logs: `gcloud builds log [BUILD_ID]`
 
 ### Questions
-- Email: hello@trisynq.ai
+- Email: hello@clearforge.ai
 - Check README.md and DEPLOYMENT.md
 
 ## 🎯 Next Steps

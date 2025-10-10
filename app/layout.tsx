@@ -8,18 +8,20 @@ import WebVitals from '@/components/performance/WebVitals';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://trisynq.ai'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'https://clearforge.ai'),
   title: {
-    default: 'TriSynq AI | Democratizing Enterprise Technology for SMBs',
-    template: '%s | TriSynq AI',
+    default: 'ClearForge | Complexity is the Villain. ClearForge is the Weapon.',
+    template: '%s | ClearForge',
   },
-  description: '43% of U.S. GDP locked out by artificial complexity. We translate enterprise technology, democratize data, and amplify authentic expertise with AI. Complete transparency.',
+  description: 'We dismantle black boxes and rebuild technology around clarity—no hype, no smoke. Just systems that make sense.',
   keywords: [
-    'enterprise technology for small business',
-    'AI for SMBs',
-    'transparent search optimization',
-    'data democratization',
-    'authentic AI amplification',
+    'AI transparency',
+    'business clarity',
+    'ethical AI',
+    'data accessibility',
+    'enterprise simplification',
+    'transparent technology',
+    'SMB enterprise capabilities',
   ],
 };
 
