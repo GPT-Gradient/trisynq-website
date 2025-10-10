@@ -33,7 +33,7 @@ const nextConfig = {
           },
           {
             key: 'X-Frame-Options',
-            value: 'SAMEORIGIN'
+            value: 'DENY' // Changed from SAMEORIGIN for better security
           },
           {
             key: 'X-Content-Type-Options',
@@ -45,7 +45,25 @@ const nextConfig = {
           },
           {
             key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin'
+            value: 'strict-origin-when-cross-origin' // Stricter referrer policy
+          }
+        ]
+      },
+      // CORS headers for API routes
+      {
+        source: '/api/:path*',
+        headers: [
+          {
+            key: 'Access-Control-Allow-Origin',
+            value: process.env.NEXT_PUBLIC_APP_URL || 'https://clearforge.ai'
+          },
+          {
+            key: 'Access-Control-Allow-Methods',
+            value: 'GET,POST,OPTIONS'
+          },
+          {
+            key: 'Access-Control-Allow-Headers',
+            value: 'Content-Type'
           }
         ]
       }

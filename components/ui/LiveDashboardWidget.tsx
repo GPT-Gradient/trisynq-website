@@ -1,27 +1,22 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { Activity } from 'lucide-react';
-import XynergyAPI, { MetricsData } from '@/lib/xynergy-api';
+
+// Placeholder metrics data until Intelligence Gateway metrics endpoint is implemented
+interface MetricsData {
+  betaParticipants?: number | string;
+  communityMembers?: number | string;
+}
+
+const PLACEHOLDER_METRICS: MetricsData = {
+  betaParticipants: 'Coming Soon',
+  communityMembers: 'Coming Soon',
+};
 
 export default function LiveDashboardWidget() {
-  const [metrics, setMetrics] = useState<MetricsData | null>(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const fetchMetrics = async () => {
-      const response = await XynergyAPI.getMetrics();
-      if (response.success && response.data) {
-        setMetrics(response.data);
-      }
-      setLoading(false);
-    };
-
-    fetchMetrics();
-    const interval = setInterval(fetchMetrics, 30000); // Refresh every 30 seconds
-
-    return () => clearInterval(interval);
-  }, []);
+  // Using placeholder data until real API is ready
+  const metrics = PLACEHOLDER_METRICS;
+  const loading = false;
 
   if (loading) {
     return (

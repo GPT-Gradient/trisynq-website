@@ -27,7 +27,7 @@ interface BetaApplication {
   company_name: string;
   contact_name: string;
   email: string;
-  phone: string;
+  phone?: string; // Fixed: should be optional
   website?: string;
   industry: string;
   monthly_revenue?: string;
@@ -102,8 +102,13 @@ class GatewayClient {
   async submitBetaApplication(
     data: BetaApplication
   ): Promise<{ success: boolean; application_id?: string; message: string }> {
-    const response = await this.client.post('/api/beta/apply', data);
-    return response.data;
+    try {
+      const response = await this.client.post('/api/beta/apply', data);
+      return response.data;
+    } catch (error) {
+      console.error('Failed to submit beta application:', error);
+      throw error; // Re-throw to let caller handle with proper user message
+    }
   }
 
   /**
@@ -114,8 +119,13 @@ class GatewayClient {
   async submitContact(
     data: ContactSubmission
   ): Promise<{ success: boolean; submission_id?: string; message: string }> {
-    const response = await this.client.post('/api/leads/contact', data);
-    return response.data;
+    try {
+      const response = await this.client.post('/api/leads/contact', data);
+      return response.data;
+    } catch (error) {
+      console.error('Failed to submit contact form:', error);
+      throw error; // Re-throw to let caller handle with proper user message
+    }
   }
 
   /**

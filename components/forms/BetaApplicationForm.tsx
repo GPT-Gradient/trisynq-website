@@ -327,7 +327,7 @@ export default function BetaApplicationForm() {
         <div className="space-y-4">
           <div>
             <label htmlFor="referralSource" className="block text-sm font-semibold text-white mb-2">
-              How did you hear about TriSynq? *
+              How did you hear about ClearForge? *
             </label>
             <select
               id="referralSource"
