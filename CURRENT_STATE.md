@@ -55,15 +55,16 @@ The ClearForge website is a production-ready Next.js 14.2.33 application success
 - **Language**: TypeScript 5.x
 - **Styling**: Tailwind CSS 3.x
 - **Icons**: Lucide React
+- **Validation**: Zod 3.23.8 (runtime schema validation)
 - **HTTP Client**: Axios 1.6.0
 - **Runtime**: Node.js 20 (Alpine Linux)
 - **Package Manager**: npm
 
 ### Site Structure
 
-**Total Pages**: 52
+**Total Pages**: 53
 **Static Pages**: 49 (pre-rendered at build time)
-**Dynamic Routes**: 3 API routes (server-side)
+**Dynamic Routes**: 4 API routes (server-side)
 **Build Output Size**: 87.3 kB shared JS + page-specific bundles
 
 #### Page Categories
@@ -74,10 +75,11 @@ The ClearForge website is a production-ready Next.js 14.2.33 application success
    - Community pages, Continuum projects
    - Mission pages (Manifesto, Transparency, Data Divide, AI Reality Check)
 
-2. **API Routes** (3 dynamic routes)
+2. **API Routes** (4 dynamic routes)
    - `/api/aso/opportunities` - ASO keyword data (15min cache)
-   - `/api/beta` - Beta application submissions
-   - `/api/contact` - Contact form submissions
+   - `/api/beta` - Beta application submissions (Zod validated)
+   - `/api/contact` - Contact form submissions (Zod validated)
+   - `/api/health` - Health check endpoint for Cloud Run
 
 3. **SEO Routes** (2 generated)
    - `/sitemap.xml` - Dynamic sitemap generation
@@ -752,6 +754,7 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 | axios | ^1.6.0 | HTTP client for Gateway integration |
 | lucide-react | ^0.447.0 | Icon library |
 | tailwindcss | 3.4.14 | Utility-first CSS framework |
+| zod | ^3.23.8 | Runtime type validation and schema definition |
 
 ### Development Dependencies
 

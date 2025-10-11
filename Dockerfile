@@ -1,51 +1,67 @@
-# Multi-stage build for optimized production image
-FROM node:20-alpine AS base
+# ClearForge Website Dockerfile
+# Multi-stage build for Next.js on Cloud Run
+# Platform: linux/amd64 for Cloud Run compatibility
 
-# Install dependencies only when needed
-FROM base AS deps
+# ============================================
+# Stage 1: Dependencies
+# ============================================
+FROM --platform=linux/amd64 node:20-alpine AS deps
 RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Install dependencies based on the preferred package manager
+# Install dependencies
 COPY package.json package-lock.json* ./
 RUN npm ci
 
-# Rebuild the source code only when needed
-FROM base AS builder
+# ============================================
+# Stage 2: Build
+# ============================================
+FROM --platform=linux/amd64 node:20-alpine AS builder
 WORKDIR /app
+
+# Copy dependencies from deps stage
 COPY --from=deps /app/node_modules ./node_modules
+
+# Copy source code
 COPY . .
 
 # Set environment variables for build
-ENV NEXT_TELEMETRY_DISABLED 1
-ENV NODE_ENV production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV NODE_ENV=production
 
-# Build the application
+# Build Next.js application (standalone output)
 RUN npm run build
 
-# Production image, copy all the files and run next
-FROM base AS runner
+# ============================================
+# Stage 3: Production
+# ============================================
+FROM --platform=linux/amd64 node:20-alpine AS runner
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+# Set production environment
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV PORT=8080
+ENV HOSTNAME="0.0.0.0"
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+# Create non-root user for security
+RUN addgroup --system --gid 1001 nodejs && \
+    adduser --system --uid 1001 nextjs
 
-# Copy necessary files
+# Copy built application from builder
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/public ./public
 
-# Create public directory (will copy files if they exist in builder)
-RUN mkdir -p ./public
-
+# Switch to non-root user
 USER nextjs
 
-EXPOSE 3000
+# Expose Cloud Run port
+EXPOSE 8080
 
-ENV PORT 3000
-ENV HOSTNAME "0.0.0.0"
+# Health check for Cloud Run
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s \
+  CMD node -e "require('http').get('http://localhost:8080/api/health', (r) => {process.exit(r.statusCode === 200 ? 0 : 1)})"
 
 # Start the application
 CMD ["node", "server.js"]

@@ -118,8 +118,9 @@ The following environment variables are configured in Cloud Run:
 - `NEXT_PUBLIC_APP_URL=https://clearforge.ai` (update after domain setup)
 
 **Secret Variables** (set via `--set-secrets`):
-- `XYNERGY_API_KEY` - From Secret Manager
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID` - From Secret Manager
+- `GATEWAY_API_KEY` - Intelligence Gateway API key from Secret Manager
+- `NEXT_PUBLIC_GATEWAY_URL` - Gateway base URL from Secret Manager
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID` - Google Analytics ID from Secret Manager
 
 ### Cloud Run Settings
 

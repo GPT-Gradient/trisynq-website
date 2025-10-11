@@ -1,7 +1,17 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { z } from 'zod';
 import { getGatewayClient } from '@/lib/gateway-client';
 import { rateLimit, getIdentifier, getRemainingRequests } from '@/lib/rate-limiter';
 import { withSmartRetry } from '@/lib/retry';
+
+// Zod validation schema per TRD specification
+const ContactSchema = z.object({
+  name: z.string().min(1).max(100),
+  email: z.string().email(),
+  message: z.string().min(10).max(2000),
+  phone: z.string().optional(),
+  company: z.string().max(100).optional(),
+});
 
 /**
  * POST /api/contact
@@ -30,38 +40,32 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const data = await request.json();
+    const body = await request.json();
 
-    // Validate required fields
-    const requiredFields = ['name', 'email', 'message'];
-
-    for (const field of requiredFields) {
-      if (!data[field]) {
-        return NextResponse.json(
-          { success: false, message: `Missing required field: ${field}` },
-          { status: 400 }
-        );
-      }
-    }
-
-    // Validate email format
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(data.email)) {
-      return NextResponse.json(
-        { success: false, message: 'Invalid email format' },
-        { status: 400 }
-      );
-    }
+    // Zod validation
+    const validated = ContactSchema.parse(body);
 
     // Submit to Intelligence Gateway with retry logic
     const client = getGatewayClient();
     const result = await withSmartRetry(
-      () => client.submitContact(data),
+      () => client.submitContact(validated),
       { retries: 2, initialDelay: 1000 }
     );
 
-    return NextResponse.json(result);
+    return NextResponse.json(result, { status: 201 });
   } catch (error) {
+    // Handle Zod validation errors
+    if (error instanceof z.ZodError) {
+      return NextResponse.json(
+        {
+          success: false,
+          message: 'Validation failed',
+          errors: error.issues,
+        },
+        { status: 400 }
+      );
+    }
+
     console.error('Contact form error:', error);
     return NextResponse.json(
       { success: false, message: 'Failed to submit contact form. Please try again.' },

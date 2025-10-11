@@ -8,9 +8,10 @@ A production-ready Next.js 14+ website for ClearForge — making complexity tran
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **Icons**: Lucide React
+- **Validation**: Zod (runtime type validation)
 - **Deployment**: Google Cloud Platform (Cloud Run)
 - **Analytics**: Google Analytics 4
-- **API Integration**: Xynergy Platform
+- **API Integration**: Intelligence Gateway
 
 ## 📋 Prerequisites
 
@@ -288,8 +289,9 @@ The website integrates with the Intelligence Gateway service for:
 ### API Routes
 
 - `GET /api/aso/opportunities` - Fetch ASO keyword opportunities (cached 15 minutes)
-- `POST /api/beta` - Submit beta program application
-- `POST /api/contact` - Submit contact form inquiry
+- `POST /api/beta` - Submit beta program application (Zod validated)
+- `POST /api/contact` - Submit contact form inquiry (Zod validated)
+- `GET /api/health` - Health check endpoint for Cloud Run monitoring
 
 ### Gateway Client
 

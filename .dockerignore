@@ -1,43 +1,36 @@
 # Dependencies
 node_modules
 npm-debug.log
-yarn-error.log
 
-# Next.js
+# Build output
 .next
 out
 
 # Environment files
 .env
 .env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.development
+.env.*.local
+
+# Git
+.git
+.gitignore
+
+# Documentation
+*.md
+!README.md
+docs/
 
 # IDE
 .vscode
 .idea
 *.swp
 *.swo
-*~
 
-# OS
-.DS_Store
-Thumbs.db
-
-# Git
-.git
-.gitignore
-
-# CI/CD
-.github
-
-# Documentation
-*.md
-!README.md
-
-# Media/Assets (exclude from build if not needed)
-Media/REQs
+# Testing
+coverage
+.nyc_output
 
 # Misc
-.claude
+.DS_Store
+*.log
