@@ -10,8 +10,8 @@ import { continuumProjects } from '@/data/projects';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Drowning in Marketing Tech? Getting Zero Results?',
-  description: 'Stop paying for tools you don\'t understand. We built technology that shows its work, proves results, and actually helps your business grow.',
+  title: 'Tech Isn\'t a Cost Center. It\'s a Revenue Engine.',
+  description: 'Fortune 500s figured this out 15 years ago. We tear down the walls and show you how enterprise tech generates revenue—without the enterprise price tag.',
 });
 
 const iconMap: Record<string, any> = {
@@ -30,16 +30,16 @@ export default function HomePage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Drowning in <span className="text-gradient">Marketing Tech</span>?<br />
-            Getting <span className="text-gradient">Zero Results</span>?
+            Tech Isn&apos;t a <span className="text-gradient">Cost Center</span>.<br />
+            It&apos;s a <span className="text-gradient">Revenue Engine</span>.
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-4">
-            You're spending on tools you don't understand. Agencies that won't explain how they work. Tech that hides what it's actually doing.
+            Fortune 500s figured this out 15 years ago. They stopped buying tools and started building systems that generate revenue.
           </p>
 
           <p className="text-lg md:text-xl text-gray-400 mb-8">
-            We built something different: Technology that shows its work. Proves its results. And actually helps your business grow.
+            We tear down the walls. Show you how enterprise tech actually works. Build you the same revenue-generating systems—without the enterprise price tag or complexity.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

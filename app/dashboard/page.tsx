@@ -620,7 +620,7 @@ export default function DashboardPage() {
                 <h5 className="text-lg font-semibold text-white mb-3">Methodology & Results</h5>
                 <ul className="space-y-2 text-gray-400 text-sm">
                   <li>• How we achieve outcomes</li>
-                  <li>• What works and what doesn't</li>
+                  <li>• What works and what doesn&apos;t</li>
                   <li>• Partner success metrics</li>
                   <li>• Performance improvements</li>
                 </ul>
