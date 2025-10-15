@@ -1,0 +1,40 @@
+# .gcloudignore for ClearForge Website
+# This file specifies files that are *not* uploaded to Google Cloud Build
+
+# Git files
+.git
+.gitignore
+
+# Build output (will be rebuilt in Cloud Build)
+.next
+out
+node_modules
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.*.local
+
+# Documentation
+*.md
+!README.md
+docs/
+
+# IDE
+.vscode
+.idea
+*.swp
+*.swo
+
+# Testing
+coverage
+.nyc_output
+
+# Misc
+.DS_Store
+*.log
+.claude
+
+# DO NOT exclude public folder - it contains static assets needed for deployment
+# public folder must be included for Docker build
