@@ -115,7 +115,7 @@ export default function TransparencyRevolutionPage() {
                   <li>• Beta participants across all projects</li>
                   <li>• Real-time performance tracking</li>
                   <li>• Community contribution counts</li>
-                  <li>• Financial sustainability metrics</li>
+                  <li>• Project development progress</li>
                 </ul>
               </div>
 

@@ -606,50 +606,40 @@ export default function DashboardPage() {
           </Card>
         </div>
 
-        {/* Financial Transparency */}
+        {/* Company Transparency */}
         <div>
           <h3 className="text-3xl font-bold mb-8 flex items-center gap-3">
-            <DollarSign className="w-8 h-8 text-accent-pink" />
-            Financial Transparency
+            <Users className="w-8 h-8 text-accent-pink" />
+            Company Transparency
           </h3>
 
           <Card variant="bordered" className="mb-6">
-            <h4 className="text-xl font-bold mb-4 text-primary-blue">Sustainability Metrics</h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <h4 className="text-xl font-bold mb-4 text-primary-blue">What We Share</h4>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <p className="text-sm text-gray-400 mb-2">Investment in Continuum</p>
-                <p className="text-2xl font-bold text-white">Coming Soon</p>
+                <h5 className="text-lg font-semibold text-white mb-3">Methodology & Results</h5>
+                <ul className="space-y-2 text-gray-400 text-sm">
+                  <li>• How we achieve outcomes</li>
+                  <li>• What works and what doesn't</li>
+                  <li>• Partner success metrics</li>
+                  <li>• Performance improvements</li>
+                </ul>
               </div>
               <div>
-                <p className="text-sm text-gray-400 mb-2">Partnership Revenue</p>
-                <p className="text-2xl font-bold text-white">Coming Soon</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-400 mb-2">Platform Development Costs</p>
-                <p className="text-2xl font-bold text-white">Coming Soon</p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-400 mb-2">Break-even Progress</p>
-                <p className="text-2xl font-bold text-white">Coming Soon</p>
+                <h5 className="text-lg font-semibold text-white mb-3">Growth & Progress</h5>
+                <ul className="space-y-2 text-gray-400 text-sm">
+                  <li>• Beta participant numbers</li>
+                  <li>• Project development stages</li>
+                  <li>• Community contributions</li>
+                  <li>• Platform maturity</li>
+                </ul>
               </div>
             </div>
           </Card>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card variant="elevated">
-              <h4 className="text-lg font-bold mb-3 text-secondary-purple-light">Transparent Accounting</h4>
-              <p className="text-gray-300">How beta program funds research and development</p>
-            </Card>
-
-            <Card variant="elevated">
-              <h4 className="text-lg font-bold mb-3 text-secondary-purple-light">Growth Projections</h4>
-              <p className="text-gray-300">Realistic expectations and timelines</p>
-            </Card>
-          </div>
-
           <div className="mt-6 bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30">
             <p className="text-center text-accent-pink font-semibold">
-              Not VC-funded. Grassroots. Transparency comes as we build.
+              Not VC-funded. Grassroots. Building sustainably with our community.
             </p>
           </div>
         </div>

@@ -18,21 +18,38 @@ export default function FounderStoryCompletePage() {
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              The Founder&apos;s <span className="text-gradient">Long-Form Story</span>
+              The Founders&apos; <span className="text-gradient">Story</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300">
               How a Mechanic Became the Voice Against Big Tech&apos;s Biggest Lie
             </p>
           </div>
 
-          <div className="flex justify-center mb-8">
-            <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-accent-pink/30">
-              <Image
-                src="/shawn-sloan.png"
-                alt="Shawn Sloan - ClearForge Founder"
-                fill
-                className="object-cover"
-              />
+          <div className="flex justify-center gap-8 mb-8 flex-wrap">
+            <div className="text-center">
+              <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-accent-pink/30 mb-4">
+                <Image
+                  src="/shawn-sloan.png"
+                  alt="Shawn Sloan - ClearForge Co-Founder"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white">Shawn Sloan</h3>
+              <p className="text-gray-400">Co-Founder & CTO</p>
+            </div>
+
+            <div className="text-center">
+              <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary-blue/30 mb-4">
+                <Image
+                  src="/josh.jpg"
+                  alt="Josh - ClearForge Co-Founder"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <h3 className="text-xl font-bold text-white">Josh</h3>
+              <p className="text-gray-400">Co-Founder</p>
             </div>
           </div>
         </div>

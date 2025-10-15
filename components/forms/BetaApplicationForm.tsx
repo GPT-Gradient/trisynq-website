@@ -15,7 +15,21 @@ export default function BetaApplicationForm() {
     setError('');
 
     const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData.entries());
+
+    // Transform form data to match API schema
+    const interests = formData.getAll('interests') as string[];
+
+    const data = {
+      company_name: formData.get('company_name') as string,
+      contact_name: formData.get('contact_name') as string,
+      email: formData.get('email') as string,
+      industry: formData.get('industry') as string,
+      phone: formData.get('phone') as string || undefined,
+      website: formData.get('website') as string || undefined,
+      goals: formData.get('goals') as string,
+      interests: interests.length > 0 ? interests : undefined,
+      referred_by: formData.get('referred_by') as string || undefined,
+    };
 
     try {
       const response = await fetch('/api/beta', {
@@ -59,13 +73,13 @@ export default function BetaApplicationForm() {
         <h3 className="text-xl font-bold mb-4 text-primary-blue">Business Details</h3>
         <div className="space-y-4">
           <div>
-            <label htmlFor="businessName" className="block text-sm font-semibold text-white mb-2">
+            <label htmlFor="company_name" className="block text-sm font-semibold text-white mb-2">
               Business Name *
             </label>
             <input
               type="text"
-              id="businessName"
-              name="businessName"
+              id="company_name"
+              name="company_name"
               required
               className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors"
               placeholder="Your business name"
@@ -88,13 +102,13 @@ export default function BetaApplicationForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-white mb-2">
+              <label htmlFor="contact_name" className="block text-sm font-semibold text-white mb-2">
                 Your Name *
               </label>
               <input
                 type="text"
-                id="name"
-                name="name"
+                id="contact_name"
+                name="contact_name"
                 required
                 className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors"
                 placeholder="John Doe"
@@ -103,13 +117,12 @@ export default function BetaApplicationForm() {
 
             <div>
               <label htmlFor="role" className="block text-sm font-semibold text-white mb-2">
-                Your Role *
+                Your Role
               </label>
               <input
                 type="text"
                 id="role"
                 name="role"
-                required
                 className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors"
                 placeholder="e.g., CEO, Founder, Owner"
               />
@@ -160,42 +173,9 @@ export default function BetaApplicationForm() {
         </div>
       </Card>
 
-      {/* Current Challenges */}
-      <Card variant="bordered">
-        <h3 className="text-xl font-bold mb-4 text-primary-blue">Current Challenges</h3>
-        <div className="space-y-4">
-          <div>
-            <label htmlFor="challenges" className="block text-sm font-semibold text-white mb-2">
-              What are your biggest challenges right now? *
-            </label>
-            <textarea
-              id="challenges"
-              name="challenges"
-              required
-              rows={4}
-              className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors resize-none"
-              placeholder="Describe the specific challenges you're facing..."
-            />
-          </div>
-
-          <div>
-            <label htmlFor="currentApproach" className="block text-sm font-semibold text-white mb-2">
-              What have you tried so far?
-            </label>
-            <textarea
-              id="currentApproach"
-              name="currentApproach"
-              rows={3}
-              className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors resize-none"
-              placeholder="What solutions or approaches have you already attempted?"
-            />
-          </div>
-        </div>
-      </Card>
-
       {/* Transformation Goals */}
       <Card variant="bordered">
-        <h3 className="text-xl font-bold mb-4 text-primary-blue">Transformation Goals</h3>
+        <h3 className="text-xl font-bold mb-4 text-primary-blue">Your Goals</h3>
         <div className="space-y-4">
           <div>
             <label htmlFor="goals" className="block text-sm font-semibold text-white mb-2">
@@ -205,50 +185,20 @@ export default function BetaApplicationForm() {
               id="goals"
               name="goals"
               required
-              rows={4}
+              rows={5}
               className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors resize-none"
-              placeholder="Describe your vision of success and transformation..."
+              placeholder="Describe your vision of success and what you're trying to achieve..."
             />
-          </div>
-
-          <div>
-            <label htmlFor="timeline" className="block text-sm font-semibold text-white mb-2">
-              What&apos;s your timeline for seeing results?
-            </label>
-            <select
-              id="timeline"
-              name="timeline"
-              className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white focus:outline-none focus:border-accent-pink transition-colors"
-            >
-              <option value="">Select timeline...</option>
-              <option value="immediate">Immediate (1-3 months)</option>
-              <option value="short">Short-term (3-6 months)</option>
-              <option value="medium">Medium-term (6-12 months)</option>
-              <option value="long">Long-term (12+ months)</option>
-              <option value="flexible">Flexible - focused on right approach</option>
-            </select>
+            <p className="text-xs text-gray-500 mt-2">Minimum 10 characters</p>
           </div>
         </div>
       </Card>
 
-      {/* The 20% */}
-      <Card variant="bordered">
-        <h3 className="text-xl font-bold mb-4 text-accent-pink">Why You&apos;re Part of the 20%</h3>
-        <div className="space-y-4">
-          <div>
-            <label htmlFor="whyYou" className="block text-sm font-semibold text-white mb-2">
-              Why are you the right fit for this beta program? *
-            </label>
-            <textarea
-              id="whyYou"
-              name="whyYou"
-              required
-              rows={4}
-              className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors resize-none"
-              placeholder="What makes you an innovator? Why are you willing to prove transparency works?"
-            />
-          </div>
 
+      {/* Areas of Interest */}
+      <Card variant="bordered">
+        <h3 className="text-xl font-bold mb-4 text-primary-blue">Areas of Interest</h3>
+        <div className="space-y-4">
           <div>
             <label className="block text-sm font-semibold text-white mb-3">
               Which areas are most important to you? (Check all that apply)
@@ -301,23 +251,6 @@ export default function BetaApplicationForm() {
               </label>
             </div>
           </div>
-
-          <div>
-            <label htmlFor="commitment" className="block text-sm font-semibold text-white mb-2">
-              What level of involvement can you commit to? *
-            </label>
-            <select
-              id="commitment"
-              name="commitment"
-              required
-              className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white focus:outline-none focus:border-accent-pink transition-colors"
-            >
-              <option value="">Select commitment level...</option>
-              <option value="full">Full participation - active feedback and implementation</option>
-              <option value="moderate">Moderate - regular check-ins and feedback</option>
-              <option value="light">Light - willing to try and share results</option>
-            </select>
-          </div>
         </div>
       </Card>
 
@@ -326,97 +259,20 @@ export default function BetaApplicationForm() {
         <h3 className="text-xl font-bold mb-4 text-primary-blue">How You Found Us</h3>
         <div className="space-y-4">
           <div>
-            <label htmlFor="referralSource" className="block text-sm font-semibold text-white mb-2">
-              How did you hear about ClearForge? *
-            </label>
-            <select
-              id="referralSource"
-              name="referralSource"
-              required
-              className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white focus:outline-none focus:border-accent-pink transition-colors"
-            >
-              <option value="">Select source...</option>
-              <option value="search">Search Engine</option>
-              <option value="social">Social Media</option>
-              <option value="referral">Referral from someone</option>
-              <option value="content">Blog/Article/Content</option>
-              <option value="networking">Networking Event</option>
-              <option value="other">Other</option>
-            </select>
-          </div>
-
-          <div>
-            <label htmlFor="referralDetails" className="block text-sm font-semibold text-white mb-2">
-              Additional details (optional)
+            <label htmlFor="referred_by" className="block text-sm font-semibold text-white mb-2">
+              How did you hear about ClearForge?
             </label>
             <input
               type="text"
-              id="referralDetails"
-              name="referralDetails"
+              id="referred_by"
+              name="referred_by"
               className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors"
-              placeholder="e.g., specific person's name, article title, etc."
+              placeholder="e.g., Google search, referral from John Doe, LinkedIn, etc."
             />
           </div>
         </div>
       </Card>
 
-      {/* Additional Information */}
-      <Card variant="bordered">
-        <h3 className="text-xl font-bold mb-4 text-primary-blue">Anything Else?</h3>
-        <div>
-          <label htmlFor="additionalInfo" className="block text-sm font-semibold text-white mb-2">
-            Additional information you&apos;d like us to know
-          </label>
-          <textarea
-            id="additionalInfo"
-            name="additionalInfo"
-            rows={4}
-            className="w-full px-4 py-3 bg-background-dark border border-primary-blue/30 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-accent-pink transition-colors resize-none"
-            placeholder="Anything else you'd like to share with us?"
-          />
-        </div>
-      </Card>
-
-      {/* Transparency Agreement */}
-      <Card variant="elevated">
-        <div className="space-y-4">
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              name="transparencyAgreement"
-              required
-              className="w-5 h-5 bg-background-dark border-primary-blue/30 rounded text-accent-pink focus:ring-accent-pink mt-1"
-            />
-            <span className="text-gray-300">
-              I understand that this is a beta program focused on transparency. I&apos;m comfortable with anonymized results being shared publicly (my identity protected unless I choose otherwise). *
-            </span>
-          </label>
-
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              name="partnershipMindset"
-              required
-              className="w-5 h-5 bg-background-dark border-primary-blue/30 rounded text-accent-pink focus:ring-accent-pink mt-1"
-            />
-            <span className="text-gray-300">
-              I understand this is a partnership, not a vendor relationship. I&apos;m willing to provide honest feedback and help refine the methodology. *
-            </span>
-          </label>
-
-          <label className="flex items-start gap-3 cursor-pointer">
-            <input
-              type="checkbox"
-              name="realisticExpectations"
-              required
-              className="w-5 h-5 bg-background-dark border-primary-blue/30 rounded text-accent-pink focus:ring-accent-pink mt-1"
-            />
-            <span className="text-gray-300">
-              I have realistic expectations. I understand this is a startup proving something new, not a corporation with thousands of case studies. *
-            </span>
-          </label>
-        </div>
-      </Card>
 
       {error && (
         <div className="bg-red-500/10 border border-red-500/30 rounded-lg p-4">

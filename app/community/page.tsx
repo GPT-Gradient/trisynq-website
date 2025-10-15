@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
+import WaitlistForm from '@/components/forms/WaitlistForm';
 import { generateMetadata } from '@/components/seo/SEOHead';
 import { FileText, Users, Award, GraduationCap } from 'lucide-react';
 
@@ -218,19 +219,7 @@ export default function CommunityPage() {
             </p>
           </div>
 
-          <Card variant="elevated" className="max-w-2xl mx-auto">
-            <div className="space-y-6">
-              <p className="text-gray-300 text-center mb-8">
-                Form fields: <span className="text-white font-semibold">Name</span>, <span className="text-white font-semibold">Email</span>, <span className="text-white font-semibold">Company</span>, <span className="text-white font-semibold">Focus Area</span>
-              </p>
-
-              <div className="bg-primary-dark/50 border border-primary-blue/30 rounded-lg p-8 text-center">
-                <p className="text-gray-400 italic">
-                  Waitlist form coming soon
-                </p>
-              </div>
-            </div>
-          </Card>
+          <WaitlistForm />
         </div>
       </Section>
     </>

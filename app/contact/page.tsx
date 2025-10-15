@@ -4,6 +4,7 @@ import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import BetaApplicationForm from '@/components/forms/BetaApplicationForm';
+import ContactForm from '@/components/forms/ContactForm';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
@@ -113,7 +114,7 @@ export default function ContactPage() {
               <p className="text-sm text-gray-500 mb-4">
                 Response within 24-48 hours
               </p>
-              <Button href="#general-form" variant="outline" className="w-full">
+              <Button href="#contact-form" variant="outline" className="w-full">
                 Get in Touch
               </Button>
             </div>
@@ -162,8 +163,24 @@ export default function ContactPage() {
         </div>
       </Section>
 
+      {/* General Contact Form */}
+      <Section background="medium" id="contact-form">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="text-gradient">Get in Touch</span>
+            </h2>
+            <p className="text-xl text-gray-400">
+              Tell us how we can help you
+            </p>
+          </div>
+
+          <ContactForm />
+        </div>
+      </Section>
+
       {/* Beta Application Form */}
-      <Section background="medium" id="beta-application">
+      <Section background="dark" id="beta-application">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-4">

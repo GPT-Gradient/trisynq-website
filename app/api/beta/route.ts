@@ -4,7 +4,7 @@ import { getGatewayClient } from '@/lib/gateway-client';
 import { rateLimit, getIdentifier, getRemainingRequests } from '@/lib/rate-limiter';
 import { withSmartRetry } from '@/lib/retry';
 
-// Zod validation schema matching gateway client BetaApplication interface
+// Zod validation schema per TRD specification (lines 539-549)
 const BetaApplicationSchema = z.object({
   company_name: z.string().min(1).max(100),
   contact_name: z.string().min(1).max(100),
@@ -12,9 +12,8 @@ const BetaApplicationSchema = z.object({
   industry: z.string().min(1).max(50),
   phone: z.string().optional(),
   website: z.string().url().optional().or(z.literal('')),
-  monthly_revenue: z.string().optional(),
-  current_marketing: z.array(z.string()).min(1, 'Select at least one marketing channel'),
   goals: z.string().min(10).max(1000),
+  interests: z.array(z.string()).optional(),
   referred_by: z.string().optional(),
 });
 

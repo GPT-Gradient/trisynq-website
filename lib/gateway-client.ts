@@ -27,12 +27,11 @@ interface BetaApplication {
   company_name: string;
   contact_name: string;
   email: string;
-  phone?: string; // Fixed: should be optional
-  website?: string;
   industry: string;
-  monthly_revenue?: string;
-  current_marketing: string[];
+  phone?: string;
+  website?: string;
   goals: string;
+  interests?: string[];
   referred_by?: string;
 }
 

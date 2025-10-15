@@ -10,8 +10,8 @@ import { continuumProjects } from '@/data/projects';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Complexity is the Villain. ClearForge is the Weapon.',
-  description: 'We dismantle black boxes and rebuild technology around clarity—no hype, no smoke. Just systems that make sense.',
+  title: 'Drowning in Marketing Tech? Getting Zero Results?',
+  description: 'Stop paying for tools you don\'t understand. We built technology that shows its work, proves results, and actually helps your business grow.',
 });
 
 const iconMap: Record<string, any> = {
@@ -30,21 +30,24 @@ export default function HomePage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Complexity is the Villain.</span>
-            <br />
-            ClearForge is the Weapon.
+            Drowning in <span className="text-gradient">Marketing Tech</span>?<br />
+            Getting <span className="text-gradient">Zero Results</span>?
           </h1>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Powered by Xynergy — our proprietary AI engine that researches, plans, executes, and proves its work.
+          <p className="text-xl md:text-2xl text-gray-300 mb-4">
+            You're spending on tools you don't understand. Agencies that won't explain how they work. Tech that hides what it's actually doing.
+          </p>
+
+          <p className="text-lg md:text-xl text-gray-400 mb-8">
+            We built something different: Technology that shows its work. Proves its results. And actually helps your business grow.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
-              See the Power
+            <Button href="/beta-program" size="lg">
+              See If You Qualify
             </Button>
-            <Button href="/forge" variant="outline" size="lg">
-              Explore the Forge
+            <Button href="/continuum/nexus" variant="outline" size="lg">
+              Show Me How It Works
             </Button>
           </div>
         </div>
@@ -347,7 +350,7 @@ export default function HomePage() {
               <div>• Failed experiments and learnings</div>
               <div>• Success metrics with full context</div>
               <div>• Community contributions tracked</div>
-              <div>• Financial sustainability progress</div>
+              <div>• Platform development progress</div>
             </div>
 
             <p className="text-accent-pink font-semibold mt-6">
