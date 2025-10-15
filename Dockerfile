@@ -53,9 +53,8 @@ COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 # Copy public folder (contains static assets like images)
-# Create directory first to ensure it exists even if source is empty
-RUN mkdir -p ./public
-COPY --from=builder --chown=nextjs:nodejs /app/public/* ./public/ || true
+# Note: Next.js standalone doesn't include public folder, must copy explicitly
+COPY --from=builder /app/public ./public
 
 # Switch to non-root user
 USER nextjs
