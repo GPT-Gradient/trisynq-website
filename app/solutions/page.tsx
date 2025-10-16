@@ -3,7 +3,7 @@ import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
-import { Cpu, Users, Wrench, Handshake } from 'lucide-react';
+import { Cpu, Users, Wrench, Handshake, GraduationCap } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Solutions — Method, Not Magic',
@@ -28,7 +28,7 @@ export default function SolutionsPage() {
 
       {/* Solutions Grid */}
       <Section background="dark">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Platform */}
           <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-primary-blue/30 hover:border-primary-blue/60">
             <div className="flex flex-col h-full">
@@ -119,6 +119,29 @@ export default function SolutionsPage() {
               <div className="mt-auto">
                 <Button href="/solutions/partnership" className="w-full group-hover:bg-primary-blue/90">
                   Explore Partnership
+                </Button>
+              </div>
+            </div>
+          </Card>
+
+          {/* Training */}
+          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-accent-pink/30 hover:border-accent-pink/60">
+            <div className="flex flex-col h-full">
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="bg-accent-pink/20 rounded-full p-4">
+                    <GraduationCap className="w-10 h-10 text-accent-pink" />
+                  </div>
+                </div>
+                <h2 className="text-3xl font-bold mb-3 text-white">Training</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  Learn enterprise data and AI patterns. Virtual or on-site. Transfer knowledge, not dependency.
+                </p>
+              </div>
+
+              <div className="mt-auto">
+                <Button href="/training" variant="outline" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
+                  Explore Training
                 </Button>
               </div>
             </div>
