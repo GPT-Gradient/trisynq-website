@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import { Search, CheckCircle, ArrowRight, Zap, TrendingUp } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
@@ -16,10 +17,15 @@ export default function ProjectNEXUSPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-5xl mx-auto">
-          <div className="flex justify-center mb-6">
-            <div className="bg-accent-pink/20 p-4 rounded-full border border-accent-pink/30">
-              <Search className="w-12 h-12 text-accent-pink" />
-            </div>
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/logos/nexus-with-text-primary.png"
+              alt="Project Nexus"
+              width={300}
+              height={250}
+              className="max-w-xs"
+              priority
+            />
           </div>
 
           <h1 className="text-5xl md:text-7xl font-bold mb-6">

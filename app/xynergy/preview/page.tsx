@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -32,6 +33,16 @@ export default function XynergyPreviewPage() {
         <div className="text-center max-w-5xl mx-auto mb-16">
           <div className="inline-block bg-primary-blue/20 text-primary-blue px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary-blue/30">
             Coming Soon • Beta Access Available
+          </div>
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/logos/xOS-logo-with-tagline-primary.png"
+              alt="XynergyOS - Autonomous. Intelligent. Reliable."
+              width={400}
+              height={300}
+              className="max-w-sm"
+              priority
+            />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Meet <span className="text-gradient">XynergyOS</span>

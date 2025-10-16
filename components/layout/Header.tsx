@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { mainNavigation } from '@/data/navigation';
 import Button from '@/components/ui/Button';
@@ -30,8 +31,17 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-accent-pink">
-            ClearForge
+          <Link href="/" className="flex items-center gap-2 group">
+            <Image
+              src="/logos/clearforge-no-text.png"
+              alt="ClearForge"
+              width={40}
+              height={40}
+              className="transition-transform group-hover:scale-105"
+            />
+            <span className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary-blue to-accent-pink">
+              ClearForge
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

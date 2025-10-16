@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight, Search, BarChart, GraduationCap, Heart, Shield, Building } from 'lucide-react';
 import Section from '@/components/ui/Section';
@@ -27,6 +28,16 @@ export default function ContinuumOverviewPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-5xl mx-auto">
+          <div className="flex justify-center mb-8">
+            <Image
+              src="/logos/continuum-logo-with-tagline-primary.png"
+              alt="The Continuum - Evolving. Connecting. Proving."
+              width={400}
+              height={300}
+              className="max-w-sm"
+              priority
+            />
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             The Continuum: <span className="text-gradient">Where Vision Becomes Practice.</span>
           </h1>

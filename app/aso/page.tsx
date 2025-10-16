@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
@@ -17,6 +18,16 @@ export default function ASOPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/logos/aso-text-tagline.png"
+              alt="ASO - Accelerated. Scalable. Optimized."
+              width={350}
+              height={250}
+              className="max-w-xs"
+              priority
+            />
+          </div>
           <div className="mb-4">
             <span className="inline-block bg-accent-pink/20 text-accent-pink text-sm font-semibold px-4 py-2 rounded-full">
               Adaptive Search Optimization
