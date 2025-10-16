@@ -321,6 +321,26 @@ export default function CulturePage() {
         </div>
       </Section>
 
+      {/* Join Us Section */}
+      <Section background="medium">
+        <div className="max-w-5xl mx-auto">
+          <Card variant="elevated" className="bg-gradient-to-br from-primary via-primary to-secondary-purple border-accent-pink/30 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              This Culture Sounds Like <span className="text-gradient">Your Kind of Place?</span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              We&apos;re looking for people who value transparency, learning in public, and partner-first thinking.
+            </p>
+            <p className="text-base text-gray-400 mb-8">
+              If this resonates, come build something worth building with us.
+            </p>
+            <Button href="/careers" size="lg">
+              Explore Careers at ClearForge
+            </Button>
+          </Card>
+        </div>
+      </Section>
+
       {/* CTA Section */}
       <Section background="gradient">
         <div className="max-w-4xl mx-auto text-center">

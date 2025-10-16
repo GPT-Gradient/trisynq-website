@@ -177,6 +177,26 @@ export default function WhoWeArePage() {
         </div>
       </Section>
 
+      {/* Join Us Section */}
+      <Section background="medium">
+        <div className="max-w-5xl mx-auto">
+          <Card variant="elevated" className="bg-gradient-to-br from-primary via-primary to-secondary-purple border-accent-pink/30 text-center">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+              Want to <span className="text-gradient">Join Us?</span>
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              We&apos;re building a team that values life, respects voices, and shares success.
+            </p>
+            <p className="text-base text-gray-400 mb-8">
+              Take PTO seriously. Live your life. Deliver great work. Grow together.
+            </p>
+            <Button href="/careers" size="lg">
+              Explore Careers at ClearForge
+            </Button>
+          </Card>
+        </div>
+      </Section>
+
       {/* CTA Section */}
       <Section background="dark">
         <div className="max-w-4xl mx-auto text-center">

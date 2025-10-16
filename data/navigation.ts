@@ -57,6 +57,7 @@ export const mainNavigation: NavItem[] = [
       { label: 'Team Philosophy', href: '/about/team-philosophy' },
       { label: 'How We Started', href: '/about/how-we-started' },
       { label: 'Founder Story', href: '/about/founder-story-complete' },
+      { label: 'Careers', href: '/careers' },
     ],
   },
   {
@@ -75,6 +76,7 @@ export const footerNavigation = {
   company: [
     { label: 'Team Values', href: '/about/team-philosophy' },
     { label: 'How We Started', href: '/about/how-we-started' },
+    { label: 'Careers', href: '/careers' },
     { label: 'Content Hub', href: '/forge/topics' },
     { label: 'Get Started', href: '/beta' },
   ],
