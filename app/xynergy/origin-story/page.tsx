@@ -45,11 +45,11 @@ export default function XynergyOriginStoryPage() {
           <Card variant="elevated" className="border-2 border-accent-pink/30 mb-8">
             <div className="space-y-6 text-gray-300">
               <p className="text-xl text-gray-200">
-                We needed to solve App Store Optimization at scale. Not just keyword rankings—the entire ecosystem of research, content generation, A/B testing, and performance tracking.
+                We needed to solve <strong className="text-white">Adaptive Search Optimization (ASO)</strong> at scale. Not just keyword rankings—the entire ecosystem of research, content generation, performance tracking, and intelligent decision-making across SEO, GEO (local search), and VSO (video search).
               </p>
 
               <p className="text-lg">
-                The problem? Every ASO tool on the market was a black box. You put data in, it spits recommendations out, and you have no idea <strong className="text-white">why</strong> or <strong className="text-white">how</strong> it arrived at those conclusions.
+                The problem? Every search optimization tool on the market was a black box. You put data in, it spits recommendations out, and you have no idea <strong className="text-white">why</strong> or <strong className="text-white">how</strong> it arrived at those conclusions.
               </p>
 
               <p className="text-lg">
@@ -62,10 +62,11 @@ export default function XynergyOriginStoryPage() {
             <Card>
               <h3 className="text-xl font-bold mb-3 text-accent-pink">The Problem</h3>
               <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Black-box ASO tools with no transparency</li>
+                <li>• Black-box search optimization tools with no transparency</li>
                 <li>• No way to understand the &quot;why&quot; behind recommendations</li>
                 <li>• Can&apos;t audit decisions or track provenance</li>
                 <li>• Zero visibility into what data drove what action</li>
+                <li>• Paying repeatedly for the same data and insights</li>
               </ul>
             </Card>
 
@@ -74,6 +75,7 @@ export default function XynergyOriginStoryPage() {
               <ul className="text-gray-300 space-y-2 text-sm">
                 <li>• Explainable recommendations with full reasoning</li>
                 <li>• Source tracking for every data point</li>
+                <li>• Intelligence that compounds over time</li>
                 <li>• Audit trails for compliance and optimization</li>
                 <li>• Systems that show their work, not hide it</li>
               </ul>
