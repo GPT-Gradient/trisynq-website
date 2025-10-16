@@ -4,6 +4,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'build'
+      - '--no-cache'
       - '-t'
       - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$COMMIT_SHA'
       - '-t'
