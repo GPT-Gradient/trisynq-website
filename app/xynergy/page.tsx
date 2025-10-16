@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { CheckCircle, Cpu, FileText, Zap, BarChart, Activity } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Xynergy — Researches, Plans, Executes, Proves.',
-  description: 'A composable AI engine that turns data and expertise into explainable action — with an assistant that works in the background.',
+  title: 'Xynergy CORE — Contextual Orchestration & Reasoning Engine',
+  description: 'The framework Fortune 500s use to generate billions—now accessible without the enterprise complexity tax. Researches, Plans, Executes, Proves.',
   canonical: '/xynergy',
 });
 
@@ -17,19 +17,79 @@ export default function XynergyPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
+          <div className="mb-4">
+            <span className="inline-block bg-accent-pink/20 text-accent-pink text-sm font-semibold px-4 py-2 rounded-full">
+              Contextual Orchestration &amp; Reasoning Engine
+            </span>
+          </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Xynergy — Researches, Plans, Executes, <span className="text-gradient">Proves</span>.
+            Xynergy <span className="text-gradient">CORE</span>
           </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
+          <p className="text-xl md:text-2xl text-gray-300 mb-4">
+            Researches, Plans, Executes, <span className="text-primary-blue font-semibold">Proves</span>.
+          </p>
+          <p className="text-lg text-gray-400 mb-8">
             Not a black box. An engine you can read, direct, and trust.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="#overview" size="lg">
-              See the Power
+            <Button href="#backstory" size="lg">
+              Learn the Story
             </Button>
-            <Button href="/solutions-partnership" variant="outline" size="lg">
-              Build on Xynergy
+            <Button href="/solutions/partnership" variant="outline" size="lg">
+              Build on Xynergy CORE
             </Button>
+          </div>
+        </div>
+      </Section>
+
+      {/* The Backstory */}
+      <Section background="medium" id="backstory">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+            The <span className="text-gradient">Backstory</span>
+          </h2>
+
+          <Card variant="elevated" className="border-2 border-primary-blue/30 mb-8">
+            <div className="space-y-6 text-gray-300">
+              <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
+                After 20 years building enterprise systems for Fortune 100s, we saw the pattern.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                The same architectures. The same data flows. The same AI patterns—just wrapped in different vendor packaging and priced for enterprise budgets.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                <strong className="text-white">Xynergy CORE</strong> is what happens when you strip away the vendor lock-in, remove the artificial complexity, and expose the actual patterns that make these systems work.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                It&apos;s not a product. It&apos;s a <strong className="text-primary-blue">framework</strong>. A proven approach to contextual orchestration and reasoning that enterprises use to generate billions—now accessible to businesses that make up 43% of GDP.
+              </p>
+            </div>
+          </Card>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            <Card>
+              <h3 className="text-xl font-bold mb-3 text-primary-blue">C — Contextual</h3>
+              <p className="text-gray-300 text-sm">
+                Understands your business context. Your data. Your operations. Your goals.
+              </p>
+            </Card>
+
+            <Card>
+              <h3 className="text-xl font-bold mb-3 text-accent-pink">O+R — Orchestration &amp; Reasoning</h3>
+              <p className="text-gray-300 text-sm">
+                Coordinates multiple engines. Reasons about next-best actions. Shows its work.
+              </p>
+            </Card>
+
+            <Card>
+              <h3 className="text-xl font-bold mb-3 text-secondary-purple-light">E — Engine</h3>
+              <p className="text-gray-300 text-sm">
+                Not a tool. A framework. Composable, explainable, and fully auditable.
+              </p>
+            </Card>
           </div>
         </div>
       </Section>
@@ -513,18 +573,21 @@ export default function XynergyPage() {
         </div>
       </Section>
 
-      {/* Build on Xynergy */}
+      {/* Build on Xynergy CORE */}
       <Section background="gradient" id="build">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Build on <span className="text-gradient">Xynergy</span>
+            Build on <span className="text-gradient">Xynergy CORE</span>
           </h2>
+          <p className="text-xl text-gray-300 mb-8">
+            The framework is accessible. The patterns are proven. Let&apos;s build together.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/solutions-partnership" size="lg">
-              Build on Xynergy
+            <Button href="/solutions/partnership" size="lg">
+              Partner With Us
             </Button>
-            <Button href="#engines_in_terms_people_get" variant="outline" size="lg">
-              See the Power
+            <Button href="/contact" variant="outline" size="lg">
+              Start a Conversation
             </Button>
           </div>
         </div>

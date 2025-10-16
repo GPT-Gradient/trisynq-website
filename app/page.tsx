@@ -108,18 +108,71 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Community Teaser */}
-      <Section background="medium" id="community_teaser">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Forge it together.</span>
-          </h2>
-          <p className="text-xl text-gray-300 mb-8">
-            A collective of thinkers, doers, and builders — education, forums, live sessions, and rewards.
-          </p>
-          <Button href="/community#waitlist" size="lg">
-            Join the Waitlist
-          </Button>
+      {/* The 20% Who Lead Change */}
+      <Section background="medium" id="twenty_percent_army">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              The <span className="text-gradient">20% Who Lead Change</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-4">
+              You&apos;re not afraid to test new approaches. You understand that enterprise capabilities shouldn&apos;t require enterprise budgets.
+            </p>
+            <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+              Join the leaders who are proving transparency wins.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Card variant="elevated" className="border-2 border-primary-blue/30">
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">Early Access to Xynergy CORE</h3>
+              <p className="text-gray-300 mb-4">
+                The framework Fortune 500s use to generate billions—now accessible without the enterprise complexity tax.
+              </p>
+              <p className="text-sm text-gray-400">
+                Build contextual orchestration and reasoning into your systems.
+              </p>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-accent-pink/30">
+              <h3 className="text-2xl font-bold mb-4 text-accent-pink">Proof Partner Opportunities</h3>
+              <p className="text-gray-300 mb-4">
+                Work directly with our team. Help validate methodologies. Share learnings, keep the keys.
+              </p>
+              <p className="text-sm text-gray-400">
+                Your success proves it for everyone else.
+              </p>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-secondary-purple/30">
+              <h3 className="text-2xl font-bold mb-4 text-secondary-purple-light">Training &amp; Knowledge Transfer</h3>
+              <p className="text-gray-300 mb-4">
+                Learn how enterprise systems actually work. Virtual or on-site. Patterns, not just tools.
+              </p>
+              <p className="text-sm text-gray-400">
+                Build capability, not dependency.
+              </p>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-primary-blue/30">
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">Transparent Results, Shared Learnings</h3>
+              <p className="text-gray-300 mb-4">
+                See what works. See what doesn&apos;t. No black boxes. No vendor lock-in.
+              </p>
+              <p className="text-sm text-gray-400">
+                Real metrics, full context, honest assessment.
+              </p>
+            </Card>
+          </div>
+
+          <div className="text-center space-x-4">
+            <Button href="/beta-program" size="lg">
+              Become a Proof Partner
+            </Button>
+            <Button href="/training" variant="outline" size="lg">
+              Explore Training
+            </Button>
+          </div>
         </div>
       </Section>
 
