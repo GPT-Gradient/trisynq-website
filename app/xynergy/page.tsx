@@ -32,7 +32,7 @@ export default function XynergyPage() {
             Not a black box. An engine you can read, direct, and trust.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="#backstory" size="lg">
+            <Button href="/xynergy/origin-story" size="lg">
               Learn the Story
             </Button>
             <Button href="/solutions/partnership" variant="outline" size="lg">
@@ -94,8 +94,89 @@ export default function XynergyPage() {
         </div>
       </Section>
 
+      {/* Your Voice, Your Brand, Your Expertise */}
+      <Section background="dark" id="content_expertise">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+            Your Voice. Your Brand. <span className="text-gradient">Your Expertise</span>.
+          </h2>
+
+          <Card variant="elevated" className="border-2 border-accent-pink/30 mb-8">
+            <div className="space-y-6 text-gray-300">
+              <p className="text-xl md:text-2xl text-gray-200 text-center leading-relaxed">
+                Here&apos;s the truth about content and AI: <strong className="text-white">The engine is only as good as what you feed it.</strong>
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                Xynergy CORE doesn&apos;t replace your expertise. It <strong className="text-primary-blue">amplifies</strong> it. It doesn&apos;t write in some generic &quot;AI voice.&quot; It learns <strong className="text-primary-blue">your voice</strong>, understands <strong className="text-primary-blue">your brand</strong>, and reasons with <strong className="text-primary-blue">your knowledge</strong>.
+              </p>
+
+              <p className="text-lg leading-relaxed">
+                Without your domain expertise, your brand guidelines, your strategic context—CORE is just another automation tool. <strong className="text-white">With it</strong>, CORE becomes an extension of your team that thinks, writes, and operates the way you do.
+              </p>
+            </div>
+          </Card>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-accent-pink">What CORE Needs From You</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink flex-shrink-0">•</span>
+                  <span><strong className="text-white">Your Voice:</strong> Brand guidelines, tone, style, what sounds like you vs what doesn&apos;t</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink flex-shrink-0">•</span>
+                  <span><strong className="text-white">Your Knowledge:</strong> Domain expertise, industry context, what matters to your customers</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink flex-shrink-0">•</span>
+                  <span><strong className="text-white">Your Strategy:</strong> Business goals, competitive positioning, where you&apos;re going</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink flex-shrink-0">•</span>
+                  <span><strong className="text-white">Your Data:</strong> Customer insights, performance metrics, what&apos;s actually working</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">What CORE Gives Back</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-blue flex-shrink-0">•</span>
+                  <span><strong className="text-white">Content at Scale:</strong> Generate dozens of variants in your voice, not generic AI-speak</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-blue flex-shrink-0">•</span>
+                  <span><strong className="text-white">Strategic Reasoning:</strong> Recommendations grounded in your data and your goals</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-blue flex-shrink-0">•</span>
+                  <span><strong className="text-white">Consistent Execution:</strong> Every piece follows your brand, every decision uses your logic</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-blue flex-shrink-0">•</span>
+                  <span><strong className="text-white">Explainable Outputs:</strong> See exactly why CORE made each decision based on your inputs</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          <div className="bg-background-dark rounded-3xl p-8 border border-primary-blue/30">
+            <h3 className="text-2xl font-bold mb-4 text-center text-white">The Content Truth</h3>
+            <p className="text-lg text-gray-300 text-center mb-4">
+              Generic AI tools produce generic content. CORE produces content that sounds like you, because it learns from you.
+            </p>
+            <p className="text-accent-pink text-center font-semibold">
+              Your expertise is the secret sauce. CORE just helps you scale it.
+            </p>
+          </div>
+        </div>
+      </Section>
+
       {/* What the Engine Does (Plain English) */}
-      <Section background="dark" id="plain_english">
+      <Section background="medium" id="plain_english">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

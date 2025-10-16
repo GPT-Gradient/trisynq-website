@@ -3,7 +3,7 @@ import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
 import { generateMetadata } from '@/components/seo/SEOHead';
-import { Cpu, Users, Wrench, Handshake, GraduationCap } from 'lucide-react';
+import { Cpu, Users, Wrench, Handshake, GraduationCap, Briefcase } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
   title: 'Solutions — Method, Not Magic',
@@ -142,6 +142,32 @@ export default function SolutionsPage() {
               <div className="mt-auto">
                 <Button href="/training" variant="outline" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
                   Explore Training
+                </Button>
+              </div>
+            </div>
+          </Card>
+
+          {/* B2B */}
+          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-secondary-purple/30 hover:border-secondary-purple/60">
+            <div className="flex flex-col h-full">
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="bg-secondary-purple/20 rounded-full p-4">
+                    <Briefcase className="w-10 h-10 text-secondary-purple-light" />
+                  </div>
+                  <div className="bg-accent-pink/20 text-accent-pink px-4 py-1 rounded-full text-xs font-semibold">
+                    Coming Soon
+                  </div>
+                </div>
+                <h2 className="text-3xl font-bold mb-3 text-white">B2B Services</h2>
+                <p className="text-lg text-gray-300 mb-6">
+                  Comprehensive B2B solutions and services designed for scale. Roadmap in development.
+                </p>
+              </div>
+
+              <div className="mt-auto">
+                <Button href="/solutions/b2b" variant="outline" className="w-full border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
+                  View Roadmap
                 </Button>
               </div>
             </div>
