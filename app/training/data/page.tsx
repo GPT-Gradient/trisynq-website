@@ -17,7 +17,7 @@ export default function DataTrainingPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto">
-          <Button href="/training" variant="outline" className="mb-8">
+          <Button href="/training" variant="bordered" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Training
           </Button>
@@ -103,21 +103,21 @@ export default function DataTrainingPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Data Engineers</h3>
               <p className="text-gray-400 text-sm">
                 Level up from pipeline builder to data architect. Learn the strategic thinking behind the tools.
               </p>
             </Card>
 
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Engineering Leaders</h3>
               <p className="text-gray-400 text-sm">
                 Make informed decisions about data architecture without getting sold expensive solutions.
               </p>
             </Card>
 
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Analytics Teams</h3>
               <p className="text-gray-400 text-sm">
                 Understand what&apos;s possible and how to work effectively with data engineering.
@@ -194,21 +194,21 @@ export default function DataTrainingPage() {
           </h2>
 
           <div className="space-y-6 mb-12">
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-primary-blue">Enterprise Experience, Not Theory</h3>
               <p className="text-gray-300">
                 Taught by architects who&apos;ve built these systems for Fortune 100 companies. Learn what actually works vs what sounds good in whitepapers.
               </p>
             </Card>
 
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-primary-blue">Tool-Agnostic Thinking</h3>
               <p className="text-gray-300">
                 We teach patterns and principles that work across any tool stack. Not vendor training disguised as education.
               </p>
             </Card>
 
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-primary-blue">Your Data, Your Problems</h3>
               <p className="text-gray-300">
                 Bring your actual challenges. We&apos;ll work through them together and build solutions you can implement immediately.
@@ -225,7 +225,7 @@ export default function DataTrainingPage() {
               <Button href="/contact" size="lg">
                 Schedule a Conversation
               </Button>
-              <Button href="/training" variant="outline" size="lg">
+              <Button href="/training" variant="bordered" size="lg">
                 Explore Other Training
               </Button>
             </div>

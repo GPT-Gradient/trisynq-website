@@ -17,7 +17,7 @@ export default function CombinedTrainingPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto">
-          <Button href="/training" variant="outline" className="mb-8">
+          <Button href="/training" variant="bordered" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Training
           </Button>
@@ -48,7 +48,7 @@ export default function CombinedTrainingPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <Card variant="outline" className="bg-background-medium">
+            <Card variant="bordered" className="bg-background-medium">
               <h3 className="text-xl font-bold mb-3 text-accent-pink">The Problem With Separate Training</h3>
               <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Data teams build pipelines AI can&apos;t use</li>
@@ -59,7 +59,7 @@ export default function CombinedTrainingPage() {
               </ul>
             </Card>
 
-            <Card variant="outline" className="bg-background-medium">
+            <Card variant="bordered" className="bg-background-medium">
               <h3 className="text-xl font-bold mb-3 text-secondary-purple-light">The Enterprise Approach</h3>
               <ul className="text-gray-300 space-y-2 text-sm">
                 <li>• Design data systems for AI from day one</li>
@@ -142,21 +142,21 @@ export default function CombinedTrainingPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Engineering Leaders</h3>
               <p className="text-gray-400 text-sm">
                 Build teams and systems that integrate data and AI from the ground up.
               </p>
             </Card>
 
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Architects</h3>
               <p className="text-gray-400 text-sm">
                 Design end-to-end systems that enterprises actually deploy at scale.
               </p>
             </Card>
 
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Cross-Functional Teams</h3>
               <p className="text-gray-400 text-sm">
                 Get data engineers and ML engineers speaking the same language.
@@ -233,21 +233,21 @@ export default function CombinedTrainingPage() {
           </h2>
 
           <div className="space-y-6 mb-12">
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-secondary-purple-light">The Complete System View</h3>
               <p className="text-gray-300">
                 Most training teaches tools in isolation. We teach how the entire system works together—data, AI, governance, and business value as one integrated whole.
               </p>
             </Card>
 
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-secondary-purple-light">Real Enterprise Patterns</h3>
               <p className="text-gray-300">
                 These aren&apos;t theoretical architectures. These are the exact patterns Fortune 500s use to generate billions in revenue from data and AI systems.
               </p>
             </Card>
 
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-secondary-purple-light">Your Systems, Your Data</h3>
               <p className="text-gray-300">
                 We work with your actual architecture, data, and business challenges. Leave with a concrete plan to integrate or rebuild your systems.
@@ -264,7 +264,7 @@ export default function CombinedTrainingPage() {
               <Button href="/contact" size="lg">
                 Schedule a Conversation
               </Button>
-              <Button href="/training" variant="outline" size="lg">
+              <Button href="/training" variant="bordered" size="lg">
                 Explore Other Training
               </Button>
             </div>

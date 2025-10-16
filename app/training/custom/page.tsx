@@ -17,7 +17,7 @@ export default function CustomTrainingPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto">
-          <Button href="/training" variant="outline" className="mb-8">
+          <Button href="/training" variant="bordered" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Training
           </Button>
@@ -48,7 +48,7 @@ export default function CustomTrainingPage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-6 mb-12">
-            <Card variant="outline" className="bg-background-medium">
+            <Card variant="bordered" className="bg-background-medium">
               <h3 className="text-xl font-bold mb-3 text-accent-pink">You Have...</h3>
               <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Industry-specific regulations or requirements</li>
@@ -60,7 +60,7 @@ export default function CustomTrainingPage() {
               </ul>
             </Card>
 
-            <Card variant="outline" className="bg-background-medium">
+            <Card variant="bordered" className="bg-background-medium">
               <h3 className="text-xl font-bold mb-3 text-primary-blue">You Need...</h3>
               <ul className="text-gray-300 space-y-2 text-sm">
                 <li>• Training that addresses your actual reality</li>
@@ -184,7 +184,7 @@ export default function CustomTrainingPage() {
           </h2>
 
           <div className="space-y-6 mb-12">
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-primary-blue">Healthcare Data & AI Governance</h3>
               <p className="text-gray-400 text-sm mb-2">
                 <strong className="text-gray-300">Challenge:</strong> Healthcare provider needed to implement AI while maintaining HIPAA compliance and patient data governance.
@@ -194,7 +194,7 @@ export default function CustomTrainingPage() {
               </p>
             </Card>
 
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-primary-blue">Financial Services Real-Time Analytics</h3>
               <p className="text-gray-400 text-sm mb-2">
                 <strong className="text-gray-300">Challenge:</strong> Regional bank needed to build real-time fraud detection without replacing legacy systems.
@@ -204,7 +204,7 @@ export default function CustomTrainingPage() {
               </p>
             </Card>
 
-            <Card variant="outline">
+            <Card variant="bordered">
               <h3 className="text-xl font-bold mb-2 text-primary-blue">Manufacturing IoT & Predictive Maintenance</h3>
               <p className="text-gray-400 text-sm mb-2">
                 <strong className="text-gray-300">Challenge:</strong> Manufacturing company wanted to implement predictive maintenance using IoT sensor data but lacked internal ML capability.
@@ -308,7 +308,7 @@ export default function CustomTrainingPage() {
             <Button href="/contact" size="lg">
               Schedule Discovery Call
             </Button>
-            <Button href="/training" variant="outline" size="lg">
+            <Button href="/training" variant="bordered" size="lg">
               Explore Standard Programs
             </Button>
           </div>

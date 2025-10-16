@@ -17,7 +17,7 @@ export default function AITrainingPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto">
-          <Button href="/training" variant="outline" className="mb-8">
+          <Button href="/training" variant="bordered" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Training
           </Button>
@@ -103,21 +103,21 @@ export default function AITrainingPage() {
           </h2>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Business Leaders</h3>
               <p className="text-gray-400 text-sm">
                 Cut through vendor hype. Make informed AI investment decisions based on reality, not marketing.
               </p>
             </Card>
 
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">ML Engineers</h3>
               <p className="text-gray-400 text-sm">
                 Learn to build production AI systems, not just notebooks. Enterprise patterns that scale.
               </p>
             </Card>
 
-            <Card variant="outline" className="text-center">
+            <Card variant="bordered" className="text-center">
               <h3 className="text-xl font-bold mb-3 text-white">Data Scientists</h3>
               <p className="text-gray-400 text-sm">
                 Bridge the gap between models and production. Deploy systems that actually create value.
@@ -194,7 +194,7 @@ export default function AITrainingPage() {
           </h2>
 
           <div className="space-y-6 mb-12">
-            <Card variant="outline" className="bg-background-dark/50">
+            <Card variant="bordered" className="bg-background-dark/50">
               <div className="flex gap-4">
                 <div className="text-4xl">❌</div>
                 <div>
@@ -209,7 +209,7 @@ export default function AITrainingPage() {
               </div>
             </Card>
 
-            <Card variant="outline" className="bg-background-dark/50">
+            <Card variant="bordered" className="bg-background-dark/50">
               <div className="flex gap-4">
                 <div className="text-4xl">✓</div>
                 <div>
@@ -241,7 +241,7 @@ export default function AITrainingPage() {
               <Button href="/contact" size="lg">
                 Schedule a Conversation
               </Button>
-              <Button href="/training" variant="outline" size="lg">
+              <Button href="/training" variant="bordered" size="lg">
                 Explore Other Training
               </Button>
             </div>
