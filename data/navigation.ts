@@ -8,6 +8,11 @@ export const mainNavigation: NavItem[] = [
   {
     label: 'Xynergy',
     href: '/xynergy',
+    children: [
+      { label: 'Xynergy CORE Overview', href: '/xynergy' },
+      { label: 'Origin Story', href: '/xynergy/origin-story' },
+      { label: 'ASO Platform', href: '/aso' },
+    ],
   },
   {
     label: 'Proof',
@@ -16,6 +21,26 @@ export const mainNavigation: NavItem[] = [
   {
     label: 'Solutions',
     href: '/solutions',
+    children: [
+      { label: 'All Solutions', href: '/solutions' },
+      { label: 'Platform', href: '/solutions/platform' },
+      { label: 'Consulting', href: '/solutions/consulting' },
+      { label: 'Partnership', href: '/solutions/partnership' },
+      { label: 'Custom', href: '/solutions/custom' },
+      { label: 'B2B Services', href: '/solutions/b2b' },
+    ],
+  },
+  {
+    label: 'Training',
+    href: '/training',
+    children: [
+      { label: 'All Training Programs', href: '/training' },
+      { label: 'Data Training', href: '/training/data' },
+      { label: 'AI Training', href: '/training/ai' },
+      { label: 'Data + AI Combined', href: '/training/combined' },
+      { label: 'Revenue Generator Workshop', href: '/training/revenue-workshop' },
+      { label: 'Custom Training', href: '/training/custom' },
+    ],
   },
   {
     label: 'Community',
@@ -24,6 +49,15 @@ export const mainNavigation: NavItem[] = [
   {
     label: 'About',
     href: '/about',
+    children: [
+      { label: 'About ClearForge', href: '/about' },
+      { label: 'Mission & Vision', href: '/about/mission-vision' },
+      { label: 'Values', href: '/about/values' },
+      { label: 'Culture', href: '/about/culture' },
+      { label: 'Team Philosophy', href: '/about/team-philosophy' },
+      { label: 'How We Started', href: '/about/how-we-started' },
+      { label: 'Founder Story', href: '/about/founder-story-complete' },
+    ],
   },
   {
     label: 'Contact',
