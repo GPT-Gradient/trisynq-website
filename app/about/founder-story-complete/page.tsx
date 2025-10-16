@@ -276,7 +276,7 @@ export default function FounderStoryCompletePage() {
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
-            &quot;You know what&apos;s crazy?&quot; Josh leaned back. &quot;Between your enterprise contacts and my community network—the Port St. Lucie Business Club alone has over 400 active business owners—we&apos;re talking about thousands of people who already believe in this. They want this.&quot;
+            &quot;You know what&apos;s crazy?&quot; Josh leaned back. &quot;Between your enterprise contacts and my community network—the Port St. Lucie Business Club alone has over 6,700 active business owners—we&apos;re talking about thousands of people who already believe in this. They want this.&quot;
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
