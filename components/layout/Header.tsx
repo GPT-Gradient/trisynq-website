@@ -22,7 +22,7 @@ export default function Header() {
   const handleMouseLeave = useCallback(() => {
     closeTimeoutRef.current = setTimeout(() => {
       setOpenDropdown(null);
-    }, 300);
+    }, 150);
   }, []);
 
   return (

@@ -6,8 +6,8 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Zap, Eye, BookOpen, Users, FileText, BarChart } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Culture & Transparency — How We Work',
-  description: 'The 10x Rule. Radical transparency. Learning in public. Partner-first thinking. See how we report progress and hold ourselves accountable.',
+  title: 'Culture Hub — For Team, Partners & Clients',
+  description: 'Explore our mission, values, team philosophy, and stories. See how we work, what we believe, and who we are—transparently and operationally.',
   canonical: '/about/culture',
 });
 
@@ -18,14 +18,90 @@ export default function CulturePage() {
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Culture &amp; <span className="text-gradient">Transparency</span>
+            Culture <span className="text-gradient">Hub</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            How we work. How we report. How we hold ourselves accountable.
+            For our team, our partners, and our clients—this is how we work, what we believe, and who we are.
           </p>
           <p className="text-lg text-gray-400">
             Not aspirational. Operational.
           </p>
+        </div>
+      </Section>
+
+      {/* Culture Hub Navigation */}
+      <Section background="dark">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Explore Our <span className="text-gradient">Culture</span>
+            </h2>
+            <p className="text-xl text-gray-300">
+              Dig into the principles, values, and stories that define ClearForge.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-primary-blue/30 hover:border-primary-blue/60">
+              <h3 className="text-xl font-bold mb-3 text-primary-blue">Mission & Vision</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Why we exist and where we&apos;re headed. Democratizing enterprise capabilities through transparent translation.
+              </p>
+              <Button href="/about/mission-vision" variant="outline" className="w-full text-sm">
+                Read Mission & Vision
+              </Button>
+            </Card>
+
+            <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-accent-pink/30 hover:border-accent-pink/60">
+              <h3 className="text-xl font-bold mb-3 text-accent-pink">Values</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                The principles that guide every decision. Transparency, humility, impact, and ownership.
+              </p>
+              <Button href="/about/values" variant="outline" className="w-full text-sm border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
+                Explore Our Values
+              </Button>
+            </Card>
+
+            <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-secondary-purple/30 hover:border-secondary-purple/60">
+              <h3 className="text-xl font-bold mb-3 text-secondary-purple-light">Team Philosophy</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                How we build teams and treat people. Translation capability, real outcomes, no pretense.
+              </p>
+              <Button href="/about/team-philosophy" variant="outline" className="w-full text-sm border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
+                See Team Philosophy
+              </Button>
+            </Card>
+
+            <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-primary-blue/30 hover:border-primary-blue/60">
+              <h3 className="text-xl font-bold mb-3 text-primary-blue">How We Started</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                The origin story. How we went from frustration to action, and why transparency matters.
+              </p>
+              <Button href="/about/how-we-started" variant="outline" className="w-full text-sm">
+                Read Origin Story
+              </Button>
+            </Card>
+
+            <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-accent-pink/30 hover:border-accent-pink/60">
+              <h3 className="text-xl font-bold mb-3 text-accent-pink">Founder Story</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                The complete journey. From mechanic and mortgage expert to building enterprise systems for everyone.
+              </p>
+              <Button href="/about/founder-story-complete" variant="outline" className="w-full text-sm border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
+                Read Complete Story
+              </Button>
+            </Card>
+
+            <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-secondary-purple/30 hover:border-secondary-purple/60">
+              <h3 className="text-xl font-bold mb-3 text-secondary-purple-light">Careers</h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Join the team. See what it&apos;s like to work here—PTO, culture, compensation, and ownership.
+              </p>
+              <Button href="/careers" variant="outline" className="w-full text-sm border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
+                Explore Careers
+              </Button>
+            </Card>
+          </div>
         </div>
       </Section>
 

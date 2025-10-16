@@ -60,6 +60,10 @@ export default function FounderStoryCompletePage() {
         <div className="max-w-4xl mx-auto prose prose-invert prose-lg">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-primary-blue">The Accidental Journey</h2>
 
+          <p className="text-gray-300 text-lg leading-relaxed mb-4 italic">
+            <strong className="text-white">Hi, I&apos;m Shawn.</strong> I&apos;m the CTO and Co-Founder of ClearForge. This is my story—how I went from being a mechanic to building enterprise systems for Fortune 100 companies, and why I&apos;m now tearing down the walls that keep those capabilities locked away.
+          </p>
+
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
             I never meant to end up in technology. Hell, I never even dreamed about it.
           </p>
@@ -175,8 +179,12 @@ export default function FounderStoryCompletePage() {
         <div className="max-w-4xl mx-auto prose prose-invert prose-lg">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-accent-pink">Meet Josh: The Other Translator</h2>
 
+          <p className="text-gray-300 text-lg leading-relaxed mb-4 italic">
+            <strong className="text-white">Hi, I&apos;m Josh.</strong> I come in later in this story, but that&apos;s how the best partnerships work—you don&apos;t force it, you find it. I&apos;m the CEO and Co-Founder of ClearForge, and my path to this moment was just as unlikely as Shawn&apos;s.
+          </p>
+
           <p className="text-gray-300 text-lg leading-relaxed mb-4">
-            Josh wasn&apos;t supposed to be in mortgages either.
+            I wasn&apos;t supposed to be in mortgages either.
           </p>
 
           <p className="text-gray-300 text-lg leading-relaxed mb-4">

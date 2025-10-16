@@ -51,12 +51,11 @@ export const mainNavigation: NavItem[] = [
     href: '/about',
     children: [
       { label: 'About ClearForge', href: '/about' },
+      { label: 'Culture Hub', href: '/about/culture' },
       { label: 'Mission & Vision', href: '/about/mission-vision' },
       { label: 'Values', href: '/about/values' },
-      { label: 'Culture', href: '/about/culture' },
       { label: 'Team Philosophy', href: '/about/team-philosophy' },
       { label: 'How We Started', href: '/about/how-we-started' },
-      { label: 'Founder Story', href: '/about/founder-story-complete' },
       { label: 'Careers', href: '/careers' },
     ],
   },
