@@ -29,7 +29,7 @@ export default function FounderStoryCompletePage() {
             <div className="text-center">
               <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-accent-pink/30 mb-4">
                 <Image
-                  src="/shawn-sloan.png"
+                  src="/shawn.png"
                   alt="Shawn Sloan - ClearForge Co-Founder"
                   fill
                   className="object-cover"
@@ -43,13 +43,13 @@ export default function FounderStoryCompletePage() {
               <div className="relative w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-primary-blue/30 mb-4">
                 <Image
                   src="/josh.jpg"
-                  alt="Josh - ClearForge Co-Founder"
+                  alt="Josh - ClearForge Co-Founder & CEO"
                   fill
                   className="object-cover"
                 />
               </div>
               <h3 className="text-xl font-bold text-white">Josh</h3>
-              <p className="text-gray-400">Co-Founder</p>
+              <p className="text-gray-400">Co-Founder & CEO</p>
             </div>
           </div>
         </div>
