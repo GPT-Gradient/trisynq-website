@@ -200,7 +200,7 @@ export default function AITrainingPage() {
                 <div>
                   <h3 className="text-xl font-bold mb-2 text-white">What We DON&apos;T Teach</h3>
                   <ul className="text-gray-400 space-y-1 text-sm">
-                    <li>• "AI will solve everything" magical thinking</li>
+                    <li>• &quot;AI will solve everything&quot; magical thinking</li>
                     <li>• Vendor product training disguised as education</li>
                     <li>• Building systems that can&apos;t be explained or governed</li>
                     <li>• Chasing AI for AI&apos;s sake without business value</li>
