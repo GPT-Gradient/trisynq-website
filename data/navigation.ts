@@ -10,6 +10,7 @@ export const mainNavigation: NavItem[] = [
     href: '/xynergy',
     children: [
       { label: 'Xynergy CORE Overview', href: '/xynergy' },
+      { label: 'XynergyOS Preview', href: '/xynergy/preview' },
       { label: 'Origin Story', href: '/xynergy/origin-story' },
       { label: 'ASO Platform', href: '/aso' },
     ],

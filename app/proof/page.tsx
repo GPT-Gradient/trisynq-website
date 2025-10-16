@@ -114,8 +114,167 @@ export default function ProofPage() {
         </div>
       </Section>
 
-      {/* Dashboard Preview */}
+      {/* XynergyOS: Real Product, Real Interface */}
       <Section background="dark">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-primary-blue/20 text-primary-blue px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary-blue/30">
+              Production-Deployed • Beta Coming Soon
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="text-gradient">XynergyOS</span>: Real Product. Real Interface.
+            </h2>
+            <p className="text-xl text-gray-300 mb-4">
+              Not a mockup. Not a concept. A fully functional AI operating system deployed on Google Cloud Platform.
+            </p>
+            <p className="text-lg text-gray-400">
+              94 React components. 25+ pages. ADHD-optimized glassmorphic design. Production-ready.
+            </p>
+          </div>
+
+          {/* Feature Screenshots Grid */}
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <Card variant="elevated" className="border-2 border-primary-blue/30">
+              <div className="bg-gradient-to-br from-primary-blue/20 via-secondary-purple/10 to-transparent rounded-xl p-8 border border-primary-blue/20 aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-primary-blue mb-2">Command Center</p>
+                  <p className="text-sm text-gray-400">Screenshot Coming Soon</p>
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Command Center Dashboard</h3>
+              <p className="text-gray-300 mb-4">
+                Multi-business project management with real-time metrics. Manage 6+ projects simultaneously with glassmorphic cards and instant visual feedback.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>✓ Real-time metrics across all projects</li>
+                <li>✓ Priority-based task surfacing</li>
+                <li>✓ Cross-project dependency tracking</li>
+              </ul>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-secondary-purple/30">
+              <div className="bg-gradient-to-br from-secondary-purple/20 via-primary-blue/10 to-transparent rounded-xl p-8 border border-secondary-purple/20 aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-secondary-purple-light mb-2">Morning Briefing</p>
+                  <p className="text-sm text-gray-400">Screenshot Coming Soon</p>
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Morning Briefing Overlay</h3>
+              <p className="text-gray-300 mb-4">
+                Daily intelligence digest with dopamine-optimized UI. What happened overnight, what needs attention, what opportunities emerged.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>✓ AI-curated news and market signals</li>
+                <li>✓ Action items prioritized by urgency</li>
+                <li>✓ Quick-action buttons for responses</li>
+              </ul>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-accent-pink/30">
+              <div className="bg-gradient-to-br from-accent-pink/20 via-secondary-purple/10 to-transparent rounded-xl p-8 border border-accent-pink/20 aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-accent-pink mb-2">Research Sessions</p>
+                  <p className="text-sm text-gray-400">Screenshot Coming Soon</p>
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">Research Sessions (Strategy Lab)</h3>
+              <p className="text-gray-300 mb-4">
+                AI-powered competitive intelligence with full source tracking. Living Memory system captures institutional knowledge.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>✓ Multi-threaded research queries</li>
+                <li>✓ Source attribution (no hallucinations)</li>
+                <li>✓ Export to reports and dashboards</li>
+              </ul>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-primary-blue/30">
+              <div className="bg-gradient-to-br from-primary-blue/20 via-accent-pink/10 to-transparent rounded-xl p-8 border border-primary-blue/20 aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <p className="text-2xl font-bold text-primary-blue mb-2">ASO Engine</p>
+                  <p className="text-sm text-gray-400">Screenshot Coming Soon</p>
+                </div>
+              </div>
+              <h3 className="text-2xl font-bold mb-3">ASO Engine (Automated SEO)</h3>
+              <p className="text-gray-300 mb-4">
+                Real-time keyword opportunity feed with competitor gap analysis. Automated content briefs with ROI transparency.
+              </p>
+              <ul className="text-sm text-gray-400 space-y-1">
+                <li>✓ Keyword opportunities with traffic estimates</li>
+                <li>✓ Competitor tracking and analysis</li>
+                <li>✓ Campaign tracking with transparent ROI</li>
+              </ul>
+            </Card>
+          </div>
+
+          {/* Design System Proof */}
+          <Card variant="elevated" className="border-2 border-primary-blue/30 mb-8">
+            <h3 className="text-2xl font-bold mb-6 text-center">ADHD-Optimized Design System</h3>
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="bg-primary-blue/20 rounded-xl p-4 mb-3">
+                  <p className="text-3xl font-bold text-primary-blue">#0066CC</p>
+                </div>
+                <p className="text-sm text-gray-400">Electric Blue</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-secondary-purple/20 rounded-xl p-4 mb-3">
+                  <p className="text-3xl font-bold text-secondary-purple-light">#6600CC</p>
+                </div>
+                <p className="text-sm text-gray-400">Purple</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-accent-pink/20 rounded-xl p-4 mb-3">
+                  <p className="text-3xl font-bold text-accent-pink">#FF0080</p>
+                </div>
+                <p className="text-sm text-gray-400">Hot Pink</p>
+              </div>
+              <div className="text-center">
+                <div className="bg-white/5 rounded-xl p-4 mb-3">
+                  <p className="text-3xl font-bold text-white">#0A0A0B</p>
+                </div>
+                <p className="text-sm text-gray-400">Near Black</p>
+              </div>
+            </div>
+            <div className="mt-6 text-center">
+              <p className="text-gray-300 mb-2">High contrast for instant recognition. Dopamine feedback loops. Parallel information processing.</p>
+              <p className="text-sm text-gray-400">Built for ADHD brains. Stunning for everyone.</p>
+            </div>
+          </Card>
+
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-8">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              <div>
+                <p className="text-4xl font-bold text-primary-blue mb-2">94</p>
+                <p className="text-gray-300">React Components</p>
+                <p className="text-sm text-gray-400 mt-2">Production-tested UI library</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-secondary-purple-light mb-2">25+</p>
+                <p className="text-gray-300">Page Views</p>
+                <p className="text-sm text-gray-400 mt-2">Full feature coverage</p>
+              </div>
+              <div>
+                <p className="text-4xl font-bold text-accent-pink mb-2">&lt; 100ms</p>
+                <p className="text-gray-300">Interaction Speed</p>
+                <p className="text-sm text-gray-400 mt-2">Instant visual feedback</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button href="/xynergy/preview" size="lg" className="mr-4">
+              See Full Preview
+            </Button>
+            <Button href="/beta" variant="outline" size="lg">
+              Join Beta Waitlist
+            </Button>
+          </div>
+        </div>
+      </Section>
+
+      {/* Dashboard Preview */}
+      <Section background="medium">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">

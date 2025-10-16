@@ -108,8 +108,93 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* XynergyOS Preview Teaser */}
+      <Section background="medium" id="xynergyos_preview">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <div className="inline-block bg-primary-blue/20 text-primary-blue px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary-blue/30">
+              Coming Soon • Beta Access Available
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Now Meet <span className="text-gradient">XynergyOS</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-4">
+              The engine is powerful. But the interface? That&apos;s where magic happens.
+            </p>
+            <p className="text-lg text-gray-400 max-w-4xl mx-auto">
+              Your AI operating system for managing 6+ projects. ADHD-optimized. Jony Ive beautiful. Voice-first. Transparent costs.
+            </p>
+          </div>
+
+          {/* Feature Preview Grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <Card variant="elevated" className="border-2 border-primary-blue/30">
+              <div className="bg-gradient-to-br from-primary-blue/20 via-secondary-purple/10 to-transparent rounded-xl p-6 border border-primary-blue/20 aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <p className="text-sm text-gray-400">Command Center</p>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Command Center</h3>
+              <p className="text-gray-400 text-sm">
+                Executive dashboard. Multi-business management. Real-time metrics. Everything that matters in one view.
+              </p>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-secondary-purple/30">
+              <div className="bg-gradient-to-br from-secondary-purple/20 via-primary-blue/10 to-transparent rounded-xl p-6 border border-secondary-purple/20 aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <p className="text-sm text-gray-400">Morning Briefing</p>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Morning Briefing</h3>
+              <p className="text-gray-400 text-sm">
+                Daily intelligence digest. What happened overnight. What needs attention. What opportunities emerged.
+              </p>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-accent-pink/30">
+              <div className="bg-gradient-to-br from-accent-pink/20 via-secondary-purple/10 to-transparent rounded-xl p-6 border border-accent-pink/20 aspect-video flex items-center justify-center mb-4">
+                <div className="text-center">
+                  <p className="text-sm text-gray-400">Research Sessions</p>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold mb-2">Research Sessions</h3>
+              <p className="text-gray-400 text-sm">
+                Strategy lab with AI-powered intelligence. Full source tracking. Living Memory. No hallucinations.
+              </p>
+            </Card>
+          </div>
+
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-8">
+            <div className="grid md:grid-cols-3 gap-6 text-center">
+              <div>
+                <p className="text-3xl font-bold text-primary-blue mb-2">$0.50</p>
+                <p className="text-sm text-gray-400">Per query vs. $20/seat/month</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold text-secondary-purple-light mb-2">10/10</p>
+                <p className="text-sm text-gray-400">Glassmorphic design beauty</p>
+              </div>
+              <div>
+                <p className="text-3xl font-bold text-accent-pink mb-2">ADHD</p>
+                <p className="text-sm text-gray-400">Optimized for parallel thinking</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Button href="/xynergy/preview" size="lg" className="mr-4">
+              See Full Preview
+            </Button>
+            <Button href="/beta" variant="outline" size="lg">
+              Join Beta Waitlist
+            </Button>
+          </div>
+        </div>
+      </Section>
+
       {/* The 20% Who Lead Change */}
-      <Section background="medium" id="twenty_percent_army">
+      <Section background="dark" id="twenty_percent_army">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
