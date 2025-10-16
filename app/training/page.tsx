@@ -116,7 +116,7 @@ export default function TrainingPage() {
               </div>
 
               <div className="mt-auto">
-                <Button href="/training/ai" variant="bordered" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
+                <Button href="/training/ai" variant="outline" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
                   Explore AI Training
                 </Button>
               </div>
@@ -148,7 +148,7 @@ export default function TrainingPage() {
               </div>
 
               <div className="mt-auto">
-                <Button href="/training/combined" variant="bordered" className="w-full border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
+                <Button href="/training/combined" variant="outline" className="w-full border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
                   Explore Combined Training
                 </Button>
               </div>
@@ -247,7 +247,7 @@ export default function TrainingPage() {
             </p>
             <p className="text-accent-pink mt-4">— Shawn Sloan, Co-Founder & CTO</p>
           </div>
-          <Button href="/about/founder-story-complete" variant="bordered" size="lg">
+          <Button href="/about/founder-story-complete" variant="outline" size="lg">
             Meet the Team
           </Button>
         </div>

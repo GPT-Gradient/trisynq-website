@@ -17,7 +17,7 @@ export default function CombinedTrainingPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="max-w-4xl mx-auto">
-          <Button href="/training" variant="bordered" className="mb-8">
+          <Button href="/training" variant="outline" className="mb-8">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to Training
           </Button>
@@ -264,7 +264,7 @@ export default function CombinedTrainingPage() {
               <Button href="/contact" size="lg">
                 Schedule a Conversation
               </Button>
-              <Button href="/training" variant="bordered" size="lg">
+              <Button href="/training" variant="outline" size="lg">
                 Explore Other Training
               </Button>
             </div>
