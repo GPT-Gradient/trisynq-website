@@ -27,6 +27,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 .pnpm-debug.log*
+*.log
+build_output.log
 
 # Runtime data
 pids
@@ -127,6 +129,17 @@ Thumbs.db
 
 # Vercel
 .vercel
+
+# Context documents (conversation materials)
+# Allow the folder structure but ignore contents
+.context/current/*
+.context/processed/*
+!.context/README.md
+!.context/current/.gitkeep
+!.context/processed/.gitkeep
+
+# Temp files
+*.dockercachebu
 
 # Claude Code
 .claude/

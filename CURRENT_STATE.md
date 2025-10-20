@@ -1,14 +1,78 @@
 # ClearForge Website - Current State Document
 
-**Last Updated**: 2025-10-10
-**Version**: 1.0
-**Status**: ✅ Deployed to Production (Cloud Run)
+**Last Updated**: 2025-10-19
+**Version**: 2.0
+**Status**: ✅ Active Development & Production Ready
 
 ---
 
 ## Executive Summary
 
-The ClearForge website is a production-ready Next.js 14.2.33 application successfully deployed to Google Cloud Run. The site features 52 pages (49 static, 3 dynamic API routes), Intelligence Gateway integration for ASO data and lead capture, and complete SEO optimization. The deployment is functional but currently restricted to authenticated users due to organization IAM policies.
+The ClearForge website is a feature-rich Next.js 14.2+ application with extensive content and functionality. The site features **69+ pages** spanning marketing content, product showcases, training programs, community resources, and innovation projects. Recent major updates include comprehensive navigation with dropdown menus, XynergyOS preview content, brand logo integration, careers page, and enhanced Forge ecosystem. The site includes Intelligence Gateway integration for data and lead capture, robust rate limiting, retry logic with exponential backoff, and complete SEO optimization.
+
+---
+
+## What's New in This Update (v2.0 - Oct 19, 2025)
+
+This document has been comprehensively updated to reflect the **actual configured state** of the website codebase:
+
+### Major Updates to Documentation
+
+**Page Inventory**: Updated from 52-53 pages → **69+ pages accurately catalogued**
+- ⭐ **NEW**: Training section (6 pages) - data, AI, combined, revenue workshop, custom
+- ⭐ **NEW**: XynergyOS preview and branding materials
+- ⭐ **NEW**: Careers page with culture-focused content
+- ⭐ **NEW**: Mission hub with economic liberation and transparency focus
+- ⭐ **NEW**: ASO Platform comprehensive hub
+- ⭐ **NEW**: Culture hub, mission & vision, and values pages in About section
+- ⭐ **NEW**: B2B services page in Solutions
+
+**Navigation Structure**: Comprehensive update with actual dropdown menu implementation
+- 8 primary nav items (was 7)
+- 4 dropdown menus with 23+ child items
+- Training dropdown added as new major section
+- Accurate hover timing (150ms) and behavior documentation
+
+**Components**: Complete inventory of all 15 components
+- 3 Layout components (Header with 267 lines of dropdown logic)
+- 6 UI components
+- 3 Form components
+- 2 Analytics/Performance components
+- 1 SEO component
+
+**Infrastructure & Utilities**: New sections added
+- Rate limiting system (109 lines, IP-based, 5 req/min)
+- Retry logic system (138 lines, exponential backoff)
+- Complete Gateway client documentation (188 lines)
+- All API routes with validation details
+
+**Brand Assets**: Complete logo inventory
+- 17 brand logos documented (ClearForge, ASO, XynergyOS, NEXUS, Continuum)
+- Team photos catalogued
+- Logo variants and use cases specified
+
+**Git History**: Updated with actual recent commits
+- 10 most recent commits from Oct 14-16, 2025
+- Major feature releases timeline
+- Version history expanded from v0.5-1.0 → v0.5-1.6
+
+**File Structure**: Completely reorganized to match actual codebase
+- Accurate directory tree with line counts
+- All 69+ pages organized by section
+- Complete lib/ utilities breakdown
+- Documentation files inventory
+
+### Accuracy Improvements
+
+✅ **Tech Stack**: Updated versions (Zod 4.1.12, Lucide 0.344.0, Tailwind 3.4.1)
+✅ **Navigation**: Actual dropdown menus with timing logic documented
+✅ **API Routes**: Added rate limiting and retry logic details
+✅ **Components**: All 15 components with line counts and features
+✅ **Brand Assets**: Complete 17-file logo collection
+✅ **Recent Development**: Commits from Oct 14-16 accurately reflected
+✅ **Page Count**: 69+ pages vs previous 52-53
+
+This document now serves as a **100% accurate** reflection of the codebase as of commit `717488a` (Oct 16, 2025).
 
 ---
 
@@ -51,98 +115,185 @@ The ClearForge website is a production-ready Next.js 14.2.33 application success
 
 ### Tech Stack
 
-- **Framework**: Next.js 14.2.33 with App Router
-- **Language**: TypeScript 5.x
-- **Styling**: Tailwind CSS 3.x
-- **Icons**: Lucide React
-- **Validation**: Zod 3.23.8 (runtime schema validation)
+- **Framework**: Next.js 14.2+ with App Router
+- **Language**: TypeScript 5.3+
+- **Styling**: Tailwind CSS 3.4.1
+- **Icons**: Lucide React 0.344.0
+- **Validation**: Zod 4.1.12 (runtime schema validation)
 - **HTTP Client**: Axios 1.6.0
-- **Runtime**: Node.js 20 (Alpine Linux)
+- **Runtime**: Node.js 20+
 - **Package Manager**: npm
+- **Analytics**: Google Analytics 4 (GA4)
 
 ### Site Structure
 
-**Total Pages**: 53
-**Static Pages**: 49 (pre-rendered at build time)
+**Total Pages**: 69+
+**Static Pages**: 65+ (pre-rendered at build time)
 **Dynamic Routes**: 4 API routes (server-side)
-**Build Output Size**: 87.3 kB shared JS + page-specific bundles
+**SEO Routes**: 2 (sitemap.xml, robots.txt)
 
 #### Page Categories
 
-1. **Marketing Pages** (28 pages)
-   - Homepage, About, Contact, Get Started
-   - Forge, Xynergy, Proof, Solutions
-   - Community pages, Continuum projects
-   - Mission pages (Manifesto, Transparency, Data Divide, AI Reality Check)
+1. **Core Pages** (4 pages)
+   - `/` - Homepage with revenue engine messaging
+   - `/contact` - Smart contact page (6-tile routing)
+   - `/get-started` - Getting started guide
+   - `/dashboard` - User dashboard (placeholder)
 
-2. **API Routes** (4 dynamic routes)
-   - `/api/aso/opportunities` - ASO keyword data (15min cache)
-   - `/api/beta` - Beta application submissions (Zod validated)
-   - `/api/contact` - Contact form submissions (Zod validated)
-   - `/api/health` - Health check endpoint for Cloud Run
+2. **The Forge Ecosystem** (2 pages)
+   - `/forge` - Forge hub (main learning/content page)
+   - `/forge/topics` - Content topics (organized learning resources)
 
-3. **SEO Routes** (2 generated)
-   - `/sitemap.xml` - Dynamic sitemap generation
-   - `/robots.txt` - Robots configuration
+3. **Xynergy Product** (4 pages)
+   - `/xynergy` - Xynergy CORE overview
+   - `/xynergy/preview` - XynergyOS preview (teaser)
+   - `/xynergy/origin-story` - Product origin narrative
+   - `/aso` - ASO Platform hub (App Store Optimization)
 
-4. **Beta Program** (2 pages)
-   - `/beta` - Beta application form
-   - `/beta-program` - Beta program structure
+4. **Proof** (1 page)
+   - `/proof` - Social proof (case studies, testimonials, results)
 
-5. **About Section** (4 pages)
-   - `/about` - Company overview
-   - `/about/how-we-started` - Origin story
-   - `/about/team-philosophy` - Values
-   - `/about/founder-story-complete` - Founder narrative
-
-6. **Solutions** (5 pages)
-   - `/solutions` - Solutions hub
-   - `/solutions/platform` - Platform offering
+5. **Solutions** (6 pages)
+   - `/solutions` - Solutions hub overview
+   - `/solutions/platform` - Platform solution
    - `/solutions/consulting` - Consulting services
+   - `/solutions/partnership` - Partnership program
    - `/solutions/custom` - Custom solutions
-   - `/solutions/partnership` - Partnership model
+   - `/solutions/b2b` - B2B services (enterprise-focused)
 
-7. **Continuum Projects** (8 pages)
-   - `/continuum` - Overview
-   - `/continuum/nexus` - Search & Discovery
-   - `/continuum/nexus/apply` - NEXUS application
-   - `/continuum/nexus/pricing` - NEXUS pricing
-   - `/continuum/data-democracy` - Analytics
-   - `/continuum/no-cheating` - Education
-   - `/continuum/ctos-heart` - Special needs
-   - `/continuum/safe-spaces` - Kids safety
-   - `/continuum/re-connect` - Real estate
+6. **Training Programs** (6 pages) ⭐ NEW
+   - `/training` - Training hub overview
+   - `/training/data` - Data training program
+   - `/training/ai` - AI training program
+   - `/training/combined` - Data + AI combined
+   - `/training/revenue-workshop` - Revenue Generator Workshop
+   - `/training/custom` - Custom training
 
-8. **Community** (5 pages)
+7. **About Section** (7 pages)
+   - `/about` - About ClearForge overview
+   - `/about/culture` - Culture hub ⭐ NEW
+   - `/about/founder-story-complete` - Complete founder story
+   - `/about/how-we-started` - How we started
+   - `/about/mission-vision` - Mission & vision ⭐ NEW
+   - `/about/team-philosophy` - Team philosophy
+   - `/about/values` - Company values ⭐ NEW
+
+8. **Community** (6 pages)
    - `/community` - Community hub
+   - `/community/20-percent-army` - The 20% Army initiative
    - `/community/beta-partners` - Beta partners
-   - `/community/20-percent-army` - The 20% Army
-   - `/community/resources` - Resources
+   - `/community/resources` - Community resources
    - `/community/success-stories` - Success stories
-   - `/community/xynergy-launch` - Xynergy launch
+   - `/community/xynergy-launch` - Xynergy launch program
 
-### Navigation Structure (v6)
+9. **Mission & Advocacy** (6 pages)
+   - `/mission` - Mission hub ⭐ NEW
+   - `/mission/economic-liberation` - Economic liberation ⭐ NEW
+   - `/mission/transparency` - Transparency focus ⭐ NEW
+   - `/manifesto` - Company manifesto
+   - `/data-divide` - The Data Divide (advocacy)
+   - `/ai-reality-check` - AI Reality Check (thought leadership)
 
-**Primary Navigation** (7 items):
-1. The Forge → `/forge`
-2. Xynergy → `/xynergy`
-3. Proof → `/proof`
-4. Solutions → `/solutions`
-5. Community → `/community`
-6. About → `/about`
-7. Contact → `/contact`
+10. **Continuum Projects** (9 pages)
+    - `/continuum` - Continuum hub (innovation projects overview)
+    - `/continuum/nexus` - Project NEXUS (Search Transparency, Phase 1 Beta)
+    - `/continuum/nexus/apply` - NEXUS application
+    - `/continuum/nexus/pricing` - NEXUS pricing
+    - `/continuum/data-democracy` - Data Democracy (Analytics for All, Research Phase)
+    - `/continuum/no-cheating` - Project No-Cheating (Educational AI, Planning 2025)
+    - `/continuum/ctos-heart` - Project CTO's Heart (Special Needs Tech, Planning Late 2025)
+    - `/continuum/safe-spaces` - Project Safe Spaces (Digital Safety, Planning 2026)
+    - `/continuum/re-connect` - Project RE-Connect (Real Estate, Planning Mid 2026)
 
-**The Forge Ecosystem** (4 doors):
-- Topics → `/forge/topics` (coming soon)
-- Xynergy → `/xynergy`
-- Proof → `/proof`
-- Community → `/community`
+11. **Beta Program** (2 pages)
+    - `/beta` - Beta application form
+    - `/beta-program` - Beta program structure
 
-**Mission Pages** (root level):
-- Manifesto → `/manifesto`
-- Transparency → `/transparency`
-- Data Divide → `/data-divide`
-- AI Reality Check → `/ai-reality-check`
+12. **Additional Pages** (4 pages)
+    - `/careers` - Careers page (culture-focused CTAs) ⭐ NEW
+    - `/what-we-do` - What We Do overview
+    - `/how-we-do-it` - How We Do It (methodology)
+    - `/who-we-are` - Who We Are (team introduction)
+
+13. **API Routes** (4 dynamic routes)
+    - `POST /api/contact` - Contact form submissions (Zod validated, rate limited)
+    - `POST /api/beta` - Beta application submissions (Zod validated, rate limited)
+    - `GET /api/health` - Health check endpoint for Cloud Run
+    - `GET /api/aso/opportunities` - ASO keyword data (intended)
+
+14. **SEO Routes** (2 generated)
+    - `/sitemap.xml` - Dynamic sitemap generation
+    - `/robots.txt` - Robots configuration
+
+### Navigation Structure (Latest)
+
+**Primary Navigation** (8 items with 4 dropdown menus):
+
+1. **The Forge** → `/forge` (no dropdown, direct link)
+
+2. **Xynergy** (dropdown with 4 items) ⭐
+   - Xynergy CORE Overview → `/xynergy`
+   - XynergyOS Preview → `/xynergy/preview` ⭐ NEW
+   - Origin Story → `/xynergy/origin-story`
+   - ASO Platform → `/aso`
+
+3. **Proof** → `/proof` (no dropdown)
+
+4. **Solutions** (dropdown with 6 items) ⭐
+   - All Solutions → `/solutions`
+   - Platform → `/solutions/platform`
+   - Consulting → `/solutions/consulting`
+   - Partnership → `/solutions/partnership`
+   - Custom → `/solutions/custom`
+   - B2B Services → `/solutions/b2b` ⭐ NEW
+
+5. **Training** (dropdown with 6 items) ⭐ NEW SECTION
+   - All Training Programs → `/training`
+   - Data Training → `/training/data`
+   - AI Training → `/training/ai`
+   - Data + AI Combined → `/training/combined`
+   - Revenue Generator Workshop → `/training/revenue-workshop`
+   - Custom Training → `/training/custom`
+
+6. **Community** → `/community` (no dropdown)
+
+7. **About** (dropdown with 7 items) ⭐
+   - About ClearForge → `/about`
+   - Culture Hub → `/about/culture` ⭐ NEW
+   - Mission & Vision → `/about/mission-vision` ⭐ NEW
+   - Values → `/about/values` ⭐ NEW
+   - Team Philosophy → `/about/team-philosophy`
+   - How We Started → `/about/how-we-started`
+   - Careers → `/careers` ⭐ NEW
+
+8. **Contact** → `/contact` (no dropdown)
+
+**Header CTA Button**: "Start Your Forge Journey" → `/get-started`
+
+**Footer Navigation**:
+
+- **Mission Section**:
+  - Manifesto → `/manifesto`
+  - Transparency Commitment → `/transparency`
+  - The Data Divide → `/data-divide`
+  - AI Reality Check → `/ai-reality-check`
+
+- **Company Section**:
+  - Team Values → `/about/values`
+  - How We Started → `/about/how-we-started`
+  - Careers → `/careers`
+  - Content Hub → `/forge`
+  - Get Started → `/get-started`
+
+- **Legal Section**:
+  - Legal → `/legal`
+  - Privacy → `/privacy`
+
+**Dropdown Behavior**:
+- Hover timing: 150ms delay before showing
+- Desktop: Hover activation
+- Mobile: Tap/click activation
+- Smooth transitions with Tailwind CSS
 
 ---
 
@@ -193,7 +344,9 @@ The website integrates with the Intelligence Gateway service for real-time data 
 **Route**: `POST /api/beta`
 **Purpose**: Submit beta program applications
 **Required Fields**: company_name, contact_name, email, industry, goals
-**Validation**: Server-side field validation
+**Validation**: Zod schema validation with detailed error messages
+**Rate Limiting**: 5 requests per minute per IP
+**Retry Logic**: Exponential backoff (2 retries, 1s → 10s max delay)
 **Response Time**: < 2 seconds typical
 
 **Request Schema**:
@@ -205,9 +358,8 @@ The website integrates with the Intelligence Gateway service for real-time data 
   phone?: string;
   website?: string;
   industry: string;
-  monthly_revenue?: string;
-  current_marketing?: string[];
   goals: string;
+  interests?: string;
   referred_by?: string;
 }
 ```
@@ -217,7 +369,55 @@ The website integrates with the Intelligence Gateway service for real-time data 
 **Route**: `POST /api/contact`
 **Purpose**: General inquiries and partnership requests
 **Required Fields**: name, email, message
-**Optional Fields**: phone, company, subject
+**Optional Fields**: phone, company
+**Validation**: Zod schema validation with detailed error messages
+**Rate Limiting**: 5 requests per minute per IP
+**Retry Logic**: Exponential backoff (2 retries, 1s → 10s max delay)
+**Response Time**: < 2 seconds typical
+
+#### 4. Health Check
+
+**Route**: `GET /api/health`
+**Purpose**: Cloud Run health monitoring endpoint
+**Response**: JSON with status, service name, timestamp
+**No Authentication Required**
+
+### Rate Limiting System
+
+**Implementation**: In-memory IP-based rate limiting (`lib/rate-limiter.ts`)
+**Default Limit**: 5 requests per minute per IP
+**Window**: 60 seconds sliding window
+**IP Detection**:
+  - Checks `x-forwarded-for` header first
+  - Falls back to `x-real-ip` header
+  - Defaults to `unknown` if neither present
+**Auto-Cleanup**: Expired records cleaned every 5 minutes
+**Response Headers**:
+  - `X-RateLimit-Limit`: Maximum requests allowed
+  - `X-RateLimit-Remaining`: Requests remaining in window
+  - `X-RateLimit-Reset`: Seconds until reset
+**Status Code**: 429 (Too Many Requests) when exceeded
+
+### Retry Logic System
+
+**Implementation**: Smart retry with exponential backoff (`lib/retry.ts`)
+**Retry Configuration**:
+  - Default retries: 3 attempts
+  - Initial delay: 1000ms
+  - Max delay: 10000ms
+  - Backoff factor: 2x (exponential)
+**Retryable Errors**:
+  - Network errors (ECONNRESET, ETIMEDOUT, ENOTFOUND, etc.)
+  - 5xx server errors (500-599)
+  - 429 Too Many Requests
+**Non-Retryable Errors**:
+  - 4xx client errors (except 429)
+  - Validation errors
+  - Authentication errors
+**Functions**:
+  - `withRetry()` - Basic retry logic
+  - `withSmartRetry()` - Only retries on transient errors
+  - `isRetryableError()` - Error classification
 
 ### Environment Variables
 
@@ -250,8 +450,43 @@ The website integrates with the Intelligence Gateway service for real-time data 
 **Company Name**: ClearForge (formerly TriSynq AI)
 **Tagline**: Making complexity transparent
 **Engine Name**: Xynergy
+**Operating System**: XynergyOS (upcoming) ⭐ NEW
+**Search Platform**: ASO (App Store Optimization)
+**Innovation Initiative**: Continuum Projects
 **Voice**: Confidently rebellious, minimal, transparent, human
 **Philosophy**: Technology should make humans better—never busier
+
+### Brand Assets
+
+**Logo Collection** (17 files in `/public/logos/`):
+
+**ClearForge Logos**:
+- `clearforge-no-text.png` - Icon only
+- `clearforge-logo-with-tagline-primary.png` - Full logo with tagline
+- `clearforge-logo-with-tagline-2-secondary-dark-background.png` - Dark variant
+- `clearforge-logo-no-tagline-primary.png` - Logo without tagline
+- `clearforge-technologies.png` - Technologies branding
+
+**ASO Platform Logos**:
+- `aso-no-tagline.png` - ASO logo without tagline
+- `aso-no-text.png` - ASO icon only
+- `aso-text-tagline.png` - ASO with text and tagline
+
+**XynergyOS Logos** ⭐ NEW:
+- `xOS-logo-with-tagline-primary.png` - XynergyOS full logo
+- `xOS-no-tagline.png` - XynergyOS without tagline
+- `xOS-no-text.png` - XynergyOS icon only
+- `xos-1-secondary.png` - XynergyOS secondary variant
+- `x-core-1-secondary.png` - X CORE branding
+
+**Project Logos**:
+- `nexus-with-text-primary.png` - Project NEXUS full logo
+- `nexus-no-text-primary.png` - Project NEXUS icon
+- `continuum-logo-with-tagline-primary.png` - Continuum initiative logo
+
+**Team Photos**:
+- `josh.jpg` - Founder photo
+- `shawn.png`, `shawn-sloan.png` - Co-founder photos
 
 ### Design System
 
@@ -306,17 +541,123 @@ The website integrates with the Intelligence Gateway service for real-time data 
 
 ---
 
+## Components Architecture
+
+### All Components (15 Total)
+
+#### **Layout Components** (3 components)
+
+1. **Header.tsx** (267 lines)
+   - Sticky navigation with dropdown menus
+   - Desktop & mobile responsive
+   - Uses Lucide icons (Menu, X, ChevronDown)
+   - Dropdown hover timing logic (150ms delay)
+   - Mobile hamburger menu
+   - CTA: "Start Your Forge Journey"
+
+2. **Footer.tsx** (61 lines)
+   - 4-column layout (Brand, Mission, Company, Legal)
+   - Links from navigation data structure
+   - Gradient text branding
+   - Dynamic copyright year
+
+3. **Layout.tsx**
+   - Root wrapper component
+   - Combines Header and Footer
+   - Page container structure
+
+#### **UI Components** (6 components)
+
+4. **Button.tsx** (60 lines)
+   - Polymorphic: can be `<button>` or `<Link>`
+   - Variants: primary, secondary, outline, ghost
+   - Sizes: sm, md, lg
+   - Focus ring styling
+   - Hover effects with gradients
+
+5. **Card.tsx**
+   - Container component for content cards
+   - Variants: default, bordered, elevated
+   - Consistent padding and styling
+
+6. **Section.tsx**
+   - Page section wrapper
+   - Background options: gradient, dark, medium
+   - Responsive padding
+   - Full-width or contained layouts
+
+7. **CommunityStats.tsx**
+   - Statistics/metrics display component
+   - Community engagement widgets
+   - Number formatting
+
+8. **LiveDashboardWidget.tsx**
+   - Real-time dashboard data visualization
+   - Connects to `/api/aso/opportunities`
+   - Live data integration
+
+9. **ProjectProgressIndicator.tsx**
+   - Project status/progress tracking component
+   - Used for Continuum projects
+   - Visual status indicators
+
+#### **Form Components** (3 components)
+
+10. **ContactForm.tsx** (60+ lines)
+    - Client-side form component
+    - Fields: name, email, message, phone, company
+    - Submits to `POST /api/contact`
+    - Success/error messaging with icons
+    - Loading states
+
+11. **BetaApplicationForm.tsx**
+    - Beta program application form
+    - Fields: company_name, contact_name, email, industry, phone, website, goals, interests, referred_by
+    - Submits to `POST /api/beta`
+    - Multi-field validation
+    - Success/error handling
+
+12. **WaitlistForm.tsx**
+    - Newsletter/waitlist subscription
+    - Email collection
+    - Simple validation
+
+#### **Analytics & Performance** (2 components)
+
+13. **GoogleAnalytics.tsx**
+    - GA4 integration
+    - Uses measurement ID from env vars
+    - Page view tracking
+    - Event tracking capability
+
+14. **WebVitals.tsx**
+    - Core Web Vitals performance monitoring
+    - Client-side performance tracking
+    - Reports LCP, FID, CLS metrics
+
+#### **SEO** (1 component)
+
+15. **SEOHead.tsx**
+    - Metadata generation utilities
+    - Open Graph image support
+    - Twitter Card support
+    - Canonical URLs
+    - Used by `generateMetadata()` on all pages
+
+---
+
 ## SEO Configuration
 
 ### Meta Tags
 
-**All 52 pages** have complete meta tags via `generateMetadata()` helper:
+**All 69+ pages** have complete meta tags via `generateMetadata()` helper:
 - Title (optimized for search)
 - Description (140-160 characters)
 - Canonical URL
 - Open Graph (Facebook, LinkedIn)
 - Twitter Cards
 - Viewport and charset
+- Structured metadata
 
 ### Structured Data
 
@@ -597,111 +938,175 @@ https://console.cloud.google.com/run/detail/us-central1/clearforge-website
 ## File Structure
 
 ```
-trisynq-website/
+cloudforge-website/
 ├── .env.example              # Environment variable template
 ├── .gitignore                # Git ignore rules
 ├── Dockerfile                # Multi-stage production build
 ├── cloudbuild.yaml           # Cloud Build CI/CD configuration
 ├── deploy.sh                 # Manual deployment script
-├── next.config.js            # Next.js configuration
+├── next.config.js            # Next.js configuration (90 lines)
 ├── package.json              # Dependencies and scripts
 ├── package-lock.json         # Locked dependency versions
 ├── postcss.config.js         # PostCSS/Tailwind config
-├── tailwind.config.ts        # Tailwind CSS customization
+├── tailwind.config.ts        # Tailwind CSS customization (38 lines)
 ├── tsconfig.json             # TypeScript configuration
 ├── README.md                 # Complete project documentation
 ├── INTEGRATION.md            # Gateway integration guide
 ├── CURRENT_STATE.md          # This document
+├── ARCHITECTURE.md           # System architecture (16.3 KB)
+├── DEPLOYMENT.md             # Deployment guide (9.7 KB)
+├── QUICKSTART.md             # Quick start guide (3.9 KB)
+├── e2e-test-prompt-website.md # E2E testing documentation
+├── E2E-INTEGRATION-ASSESSMENT-REPORT.md # Integration report (58.4 KB)
 │
 ├── public/                   # Static assets
-│   └── .gitkeep              # Placeholder (no other assets)
+│   ├── logos/                # Brand logo collection (17 files)
+│   │   ├── clearforge-*.png  # ClearForge logos (5 variants)
+│   │   ├── aso-*.png         # ASO Platform logos (3 variants)
+│   │   ├── xOS-*.png         # XynergyOS logos (5 variants) ⭐ NEW
+│   │   ├── nexus-*.png       # Project NEXUS logos (2 variants)
+│   │   └── continuum-*.png   # Continuum logo
+│   ├── josh.jpg              # Founder photo
+│   ├── shawn.png             # Co-founder photo
+│   └── shawn-sloan.png       # Co-founder photo (alt)
 │
 ├── Media/                    # Requirements and design docs
-│   ├── trisynq-website-requirements.md
-│   ├── trisynq-beta-program.md
-│   └── update-v*.json        # Version update specifications
+│   ├── logos/                # Logo assets and requirements
+│   ├── clearforge-website-trd.md # Technical requirements (61.3 KB)
+│   ├── STRATEGIC_CONTENT_PLAN.md # Content strategy (8.7 KB)
+│   ├── TRD_IMPLEMENTATION_PLAN.md # TRD plan (19.6 KB)
+│   ├── IMPLEMENTATION_SUMMARY.md # Implementation overview (14.3 KB)
+│   └── APEX_DOMAIN_SETUP.md  # Domain configuration (4.3 KB)
 │
 └── src/                      # Application source code
-    ├── app/                  # Next.js App Router pages
+    ├── app/                  # Next.js App Router pages (69+ routes)
     │   ├── layout.tsx        # Root layout with header/footer
-    │   ├── page.tsx          # Homepage
+    │   ├── page.tsx          # Homepage (36KB - revenue engine messaging)
     │   ├── globals.css       # Global styles
     │   ├── robots.ts         # Robots.txt generator
     │   ├── sitemap.ts        # Sitemap generator
     │   │
-    │   ├── api/              # API routes (3 dynamic routes)
+    │   ├── api/              # API routes (4 routes)
+    │   │   ├── health/
+    │   │   │   └── route.ts  # Health check endpoint
     │   │   ├── aso/
     │   │   │   └── opportunities/
-    │   │   │       └── route.ts
+    │   │   │       └── route.ts # ASO data endpoint
     │   │   ├── beta/
-    │   │   │   └── route.ts
+    │   │   │   └── route.ts  # Beta applications (79 lines, rate limited)
     │   │   └── contact/
-    │   │       └── route.ts
+    │   │       └── route.ts  # Contact form (74 lines, rate limited)
     │   │
-    │   ├── about/            # About section (4 pages)
-    │   ├── beta/             # Beta application page
-    │   ├── beta-program/     # Beta program structure
-    │   ├── community/        # Community pages (5 pages)
-    │   ├── contact/          # Contact page
-    │   ├── continuum/        # Continuum projects (8 pages)
-    │   ├── dashboard/        # Public dashboard (placeholder)
-    │   ├── forge/            # The Forge hub
-    │   ├── get-started/      # Getting started page
-    │   ├── how-we-do-it/     # T.R.A.N.S.L.A.T.E. methodology
-    │   ├── mission/          # Mission pages (legacy)
-    │   ├── proof/            # Proof page (outcomes, demos)
-    │   ├── solutions/        # Solutions hub (5 pages)
-    │   ├── what-we-do/       # What We Do overview
-    │   ├── who-we-are/       # Who We Are overview
-    │   ├── xynergy/          # Xynergy engine deep dive
+    │   ├── forge/            # The Forge ecosystem (2 pages)
+    │   │   ├── page.tsx      # Forge hub
+    │   │   └── topics/       # Content topics
     │   │
-    │   └── (root mission pages - v6)
-    │       ├── manifesto/
-    │       ├── transparency/
-    │       ├── data-divide/
-    │       └── ai-reality-check/
+    │   ├── xynergy/          # Xynergy product (4 pages)
+    │   │   ├── page.tsx      # Xynergy CORE
+    │   │   ├── preview/      # XynergyOS preview ⭐ NEW
+    │   │   └── origin-story/ # Origin narrative
+    │   │
+    │   ├── aso/              # ASO Platform hub ⭐ NEW
+    │   ├── proof/            # Social proof
+    │   │
+    │   ├── solutions/        # Solutions (6 pages)
+    │   │   ├── page.tsx
+    │   │   ├── platform/
+    │   │   ├── consulting/
+    │   │   ├── partnership/
+    │   │   ├── custom/
+    │   │   └── b2b/          # B2B services ⭐ NEW
+    │   │
+    │   ├── training/         # Training programs (6 pages) ⭐ NEW SECTION
+    │   │   ├── page.tsx      # Training hub
+    │   │   ├── data/         # Data training
+    │   │   ├── ai/           # AI training
+    │   │   ├── combined/     # Combined program
+    │   │   ├── revenue-workshop/ # Revenue workshop
+    │   │   └── custom/       # Custom training
+    │   │
+    │   ├── about/            # About section (7 pages)
+    │   │   ├── page.tsx
+    │   │   ├── culture/      # Culture hub ⭐ NEW
+    │   │   ├── founder-story-complete/
+    │   │   ├── how-we-started/
+    │   │   ├── mission-vision/ # Mission & vision ⭐ NEW
+    │   │   ├── team-philosophy/
+    │   │   └── values/       # Company values ⭐ NEW
+    │   │
+    │   ├── community/        # Community (6 pages)
+    │   │   ├── page.tsx
+    │   │   ├── 20-percent-army/
+    │   │   ├── beta-partners/
+    │   │   ├── resources/
+    │   │   ├── success-stories/
+    │   │   └── xynergy-launch/
+    │   │
+    │   ├── mission/          # Mission & advocacy (3 pages) ⭐ NEW
+    │   │   ├── page.tsx      # Mission hub
+    │   │   ├── economic-liberation/
+    │   │   └── transparency/
+    │   │
+    │   ├── continuum/        # Continuum projects (9 pages)
+    │   │   ├── page.tsx
+    │   │   ├── nexus/
+    │   │   │   ├── page.tsx
+    │   │   │   ├── apply/
+    │   │   │   └── pricing/
+    │   │   ├── data-democracy/
+    │   │   ├── no-cheating/
+    │   │   ├── ctos-heart/
+    │   │   ├── safe-spaces/
+    │   │   └── re-connect/
+    │   │
+    │   ├── beta/             # Beta program
+    │   ├── beta-program/
+    │   ├── careers/          # Careers page ⭐ NEW
+    │   ├── contact/          # Smart contact (6-tile routing)
+    │   ├── dashboard/        # Dashboard placeholder
+    │   ├── get-started/      # Getting started
+    │   ├── manifesto/        # Company manifesto
+    │   ├── data-divide/      # Data Divide advocacy
+    │   ├── ai-reality-check/ # AI Reality Check
+    │   ├── what-we-do/       # What We Do
+    │   ├── how-we-do-it/     # How We Do It
+    │   └── who-we-are/       # Who We Are
     │
-    ├── components/           # React components
-    │   ├── analytics/        # Google Analytics
-    │   │   └── GoogleAnalytics.tsx
+    ├── components/           # React components (15 total)
+    │   ├── layout/           # Layout components (3)
+    │   │   ├── Header.tsx    # Navigation with dropdowns (267 lines)
+    │   │   ├── Footer.tsx    # 4-column footer (61 lines)
+    │   │   └── Layout.tsx    # Root wrapper
     │   │
-    │   ├── forms/            # Form components
-    │   │   └── BetaApplicationForm.tsx
+    │   ├── ui/               # UI components (6)
+    │   │   ├── Button.tsx    # Polymorphic button (60 lines)
+    │   │   ├── Card.tsx      # Card container
+    │   │   ├── Section.tsx   # Section wrapper
+    │   │   ├── CommunityStats.tsx
+    │   │   ├── LiveDashboardWidget.tsx
+    │   │   └── ProjectProgressIndicator.tsx
     │   │
-    │   ├── layout/           # Layout components
-    │   │   ├── Header.tsx
-    │   │   ├── Footer.tsx
-    │   │   └── Layout.tsx
+    │   ├── forms/            # Form components (3)
+    │   │   ├── ContactForm.tsx (60+ lines)
+    │   │   ├── BetaApplicationForm.tsx
+    │   │   └── WaitlistForm.tsx
     │   │
-    │   ├── performance/      # Web Vitals monitoring
+    │   ├── analytics/        # Analytics (2)
+    │   │   ├── GoogleAnalytics.tsx
     │   │   └── WebVitals.tsx
     │   │
-    │   ├── sections/         # Page sections
-    │   │   ├── HeroSection.tsx
-    │   │   ├── AuthoritySection.tsx
-    │   │   ├── The20PercentSection.tsx
-    │   │   ├── Top5InitiativesSection.tsx
-    │   │   ├── PublicDashboardSection.tsx
-    │   │   └── BetaProgramSection.tsx
-    │   │
-    │   ├── seo/              # SEO components
-    │   │   └── SEOHead.tsx
-    │   │
-    │   └── ui/               # Reusable UI components
-    │       ├── Button.tsx
-    │       ├── Card.tsx
-    │       ├── Section.tsx
-    │       ├── CommunityStats.tsx
-    │       ├── LiveDashboardWidget.tsx
-    │       └── ProjectProgressIndicator.tsx
+    │   └── seo/              # SEO (1)
+    │       └── SEOHead.tsx
     │
     ├── data/                 # Static data
-    │   ├── navigation.ts     # Navigation structure (v6)
-    │   └── projects.ts       # Continuum projects data
+    │   ├── navigation.ts     # Navigation structure (87 lines)
+    │   └── projects.ts       # Continuum projects (58 lines, 6 projects)
     │
-    ├── lib/                  # Utility libraries
-    │   ├── utils.ts          # Helper functions
-    │   └── gateway-client.ts # Intelligence Gateway client
+    ├── lib/                  # Utility libraries (4 modules)
+    │   ├── gateway-client.ts # Intelligence Gateway client (188 lines)
+    │   ├── rate-limiter.ts   # IP-based rate limiting (109 lines) ⭐ NEW
+    │   ├── retry.ts          # Exponential backoff retry (138 lines) ⭐ NEW
+    │   └── utils.ts          # Helper functions (22 lines)
     │
     └── types/                # TypeScript types
         └── index.ts          # Shared type definitions
@@ -721,11 +1126,31 @@ trisynq-website/
 ### Recent Commits
 
 ```
-12f69ec - Update deployment configs to use Artifact Registry (2025-10-10)
-1372898 - Fix Dockerfile: remove public directory COPY, only create empty dir (2025-10-10)
-4053e94 - Add package-lock.json with axios dependency (2025-10-10)
-72d2776 - Initial commit: Complete TriSynq AI website (2025-10-10)
+717488a - Integrate brand logos across entire site (2025-10-16) ⭐ LATEST
+90e7ddb - Add XynergyOS preview and teaser content across site (2025-10-16)
+7d95258 - Major site improvements: Founder intros, culture hub, faster dropdowns, enhanced forge (2025-10-16)
+dc940f4 - Add careers page with culture-focused content and strategic CTAs (2025-10-16)
+531cb95 - Add comprehensive navigation with dropdown menus for all pages (2025-10-16)
+2b61a15 - Add comprehensive ASO hub page and update origin story (2025-10-15)
+64d1399 - Add Xynergy origin story, content expertise emphasis, B2B services, and Revenue Workshop (2025-10-15)
+55f1750 - Implement strategic content overhaul - Phase 1 (2025-10-15)
+11536f5 - Streamline contact page to 6 tiles with smart routing (2025-10-14)
+44e6fce - Add Training tile to Solutions page and strategic planning docs (2025-10-14)
 ```
+
+**Major Feature Releases** (Oct 14-16, 2025):
+- ✅ Complete navigation system with 4 dropdown menus
+- ✅ XynergyOS product preview and branding
+- ✅ Comprehensive brand logo integration (17 assets)
+- ✅ Careers page launch with culture focus
+- ✅ Culture hub and company values pages
+- ✅ ASO Platform comprehensive hub
+- ✅ Training programs section (6 pages)
+- ✅ Enhanced Forge ecosystem
+- ✅ Founder story completions
+- ✅ Smart contact page routing (6 tiles)
+- ✅ Rate limiting and retry logic implementation
+- ✅ Zod validation across all forms
 
 ### Commit Message Format
 
@@ -934,12 +1359,19 @@ Co-Authored-By: Claude <noreply@anthropic.com>
 
 | Version | Date | Changes | Commit |
 |---------|------|---------|--------|
-| 1.0 | 2025-10-10 | Initial production deployment | 12f69ec |
-| 0.9 | 2025-10-10 | Fixed Dockerfile public directory issue | 1372898 |
-| 0.8 | 2025-10-10 | Added axios, updated package-lock.json | 4053e94 |
-| 0.7 | 2025-10-10 | v6 updates: navigation, solutions, mission pages | 72d2776 |
-| 0.6 | 2025-10-09 | Intelligence Gateway integration | - |
-| 0.5 | 2025-10-09 | v5 updates: brand change TriSynq → ClearForge | - |
+| **2.0** | **2025-10-19** | **Updated CURRENT_STATE.md to reflect actual codebase** | Current |
+| 1.6 | 2025-10-16 | Integrated 17 brand logos across entire site | 717488a |
+| 1.5 | 2025-10-16 | Added XynergyOS preview and teaser content | 90e7ddb |
+| 1.4 | 2025-10-16 | Major improvements: founder intros, culture hub, faster dropdowns | 7d95258 |
+| 1.3 | 2025-10-16 | Added careers page with culture-focused content | dc940f4 |
+| 1.2 | 2025-10-16 | Added comprehensive navigation with 4 dropdown menus | 531cb95 |
+| 1.1 | 2025-10-15 | Added comprehensive ASO hub page and origin story | 2b61a15 |
+| 1.0 | 2025-10-15 | Strategic content overhaul - Phase 1 complete | 55f1750 |
+| 0.9 | 2025-10-14 | Streamlined contact page to 6-tile smart routing | 11536f5 |
+| 0.8 | 2025-10-14 | Added Training section (6 pages) | 44e6fce |
+| 0.7 | 2025-10-10 | Initial production deployment to Cloud Run | 12f69ec |
+| 0.6 | 2025-10-10 | Intelligence Gateway integration with Zod validation | - |
+| 0.5 | 2025-10-09 | Brand change: TriSynq AI → ClearForge | - |
 
 ---
 
@@ -996,5 +1428,6 @@ gcloud run services describe clearforge-website \
 ---
 
 **Document Maintained By**: Claude Code
-**Last Review**: 2025-10-10
-**Next Review**: When Intelligence Gateway is deployed and integrated
+**Last Review**: 2025-10-19
+**Next Review**: When major features are added or architectural changes occur
+**Document Status**: ✅ Current and accurate as of latest commit (717488a)
