@@ -102,7 +102,7 @@ class GatewayClient {
     data: BetaApplication
   ): Promise<{ success: boolean; application_id?: string; message: string }> {
     try {
-      const response = await this.client.post('/api/beta/apply', data);
+      const response = await this.client.post('/api/public/beta', data);
       return response.data;
     } catch (error) {
       console.error('Failed to submit beta application:', error);
@@ -119,7 +119,7 @@ class GatewayClient {
     data: ContactSubmission
   ): Promise<{ success: boolean; submission_id?: string; message: string }> {
     try {
-      const response = await this.client.post('/api/leads/contact', data);
+      const response = await this.client.post('/api/public/contact', data);
       return response.data;
     } catch (error) {
       console.error('Failed to submit contact form:', error);
@@ -135,7 +135,7 @@ class GatewayClient {
   async subscribeNewsletter(
     data: NewsletterSubscription
   ): Promise<{ success: boolean; message: string }> {
-    const response = await this.client.post('/api/leads/newsletter', data);
+    const response = await this.client.post('/api/public/newsletter', data);
     return response.data;
   }
 

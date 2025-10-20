@@ -57,7 +57,7 @@ gcloud run deploy $SERVICE_NAME \
   --max-instances 10 \
   --memory 1Gi \
   --cpu 1 \
-  --port 3000 \
+  --port 8080 \
   --set-env-vars NODE_ENV=production,NEXT_PUBLIC_ENVIRONMENT=production,NEXT_TELEMETRY_DISABLED=1 \
   --set-secrets GATEWAY_API_KEY=gateway-api-key:latest,NEXT_PUBLIC_GATEWAY_URL=gateway-url:latest,NEXT_PUBLIC_GA_MEASUREMENT_ID=ga-measurement-id:latest
 
