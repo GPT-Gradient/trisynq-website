@@ -257,8 +257,183 @@ export default function DataDividePage() {
         </div>
       </Section>
 
-      {/* Real-World Impact */}
+      {/* A CTO's Rebellion Section */}
       <Section background="medium">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              A CTO&apos;s <span className="text-gradient">Rebellion</span>
+            </h2>
+            <p className="text-xl text-gray-300 italic">
+              The Case for Honest Systems
+            </p>
+            <p className="text-sm text-gray-400 mt-2">
+              By Shawn Sloan, Founder & CTO, ClearForge Technologies
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-accent-pink">The Breakaway</h3>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  For 20 years, I architected within the machine — enterprise systems with limitless scale and even less soul. The brief was always the same: automate, optimize, control. But somewhere along the way, I realized something dangerous — we&apos;d stopped <strong className="text-white">building systems for people</strong> and started building systems that manage them.
+                </p>
+                <p>
+                  I wasn&apos;t burned out. I was <em>walled in.</em> Every new product promised empowerment but delivered more dependency. Every innovation meeting began with &quot;What can&apos;t we show?&quot; instead of &quot;What should we share?&quot;
+                </p>
+                <p>
+                  That&apos;s when I walked. Not because I had another job — but because I had a conviction: <strong className="text-accent-pink">the future belongs to the honest systems.</strong>
+                </p>
+              </div>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">The Problem We Created (And the Lie We Believed)</h3>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  Big Tech has a transparency allergy. It confuses secrecy with security, and complexity with value. We built black boxes and called them progress. We wrapped simple ideas in acronyms and gatekept clarity for sport.
+                </p>
+                <p>
+                  The lie? That opacity protects innovation. It doesn&apos;t. It isolates it. We&apos;ve created a world where the very people who fund the future — small businesses, nonprofits, educators, builders — are told they &quot;don&apos;t get it.&quot;
+                </p>
+                <p className="text-accent-pink font-semibold">
+                  We made technology harder to understand because it was easier to sell that way.
+                </p>
+              </div>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-secondary-purple-light">What I Saw From the Inside</h3>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  Every launch cycle, I watched teams try to speak truth to strategy — only to be met with &quot;we&apos;ll abstract that later.&quot; We shipped metrics instead of meaning. We gamified productivity while eroding purpose. Organizations optimized for dashboards, not decisions.
+                </p>
+                <p>
+                  I realized the next great leap in technology wouldn&apos;t come from better AI — it would come from better <em>intent.</em> From re-engineering trust at the infrastructure level.
+                </p>
+                <p className="text-white font-semibold">
+                  So I started over. From zero. With ClearForge.
+                </p>
+              </div>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-accent-pink">Building ClearForge: Where the System Serves the Story</h3>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  ClearForge began as a rebellion disguised as a platform — a place to build what Big Tech forgot: <strong className="text-white">clarity, comprehension, and connection.</strong> We don&apos;t sell opacity; we sell understanding. Every part of our ecosystem is designed to be seen.
+                </p>
+                <p>
+                  <strong className="text-primary-blue">The Foundry</strong>, our product platform, isn&apos;t a mystery model — it&apos;s a transparent ecosystem where data flows are traceable, automation is explainable, and every decision has receipts. From network orchestration to business intelligence, visibility is built into the architecture.
+                </p>
+                <p>
+                  <strong className="text-secondary-purple-light">Foundry Business: OS</strong>, our cognitive operating system, doesn&apos;t replace human thought — it reflects it. It learns <em>with</em> you, not over you. Built for people managing multiple projects simultaneously, it preserves context instead of demanding you abandon your way of thinking.
+                </p>
+                <p className="text-accent-pink font-semibold italic">
+                  Because intelligence without understanding isn&apos;t innovation — it&apos;s surveillance in slow motion.
+                </p>
+              </div>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">The Crisis of Translation</h3>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  Technology doesn&apos;t fail because it can&apos;t do enough. It fails because we don&apos;t explain what it already can. Architects think in systems; humans think in stories. Somewhere in between, trust dies.
+                </p>
+                <p className="text-white font-semibold">
+                  Translation is the new currency of progress.
+                </p>
+                <p>
+                  That&apos;s why at ClearForge, our north star isn&apos;t scalability — it&apos;s <em>comprehensibility.</em> We design systems that don&apos;t just run — they <em>report back.</em> Every AI decision in The Foundry explains its reasoning, every automation chain tells you what triggered it, and every integration is human-readable.
+                </p>
+                <p className="text-accent-pink font-semibold">
+                  Transparency beats paranoia. Every. Single. Time.
+                </p>
+              </div>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-secondary-purple-light">The Honest System Philosophy</h3>
+              <div className="space-y-4 text-gray-300">
+                <p>
+                  An honest system doesn&apos;t mean open source everything. It means:
+                </p>
+                <ul className="space-y-2 ml-6">
+                  <li>• Users can see how decisions are made</li>
+                  <li>• Stakeholders can verify outcomes</li>
+                  <li>• Errors are traceable, fixable, and owned</li>
+                  <li>• The system learns from accountability, not avoidance</li>
+                </ul>
+                <p>
+                  This is the foundation of <strong className="text-primary-blue">ClearForge Foundry</strong> — infrastructure built for precision <em>and proof.</em>
+                </p>
+                <p className="text-accent-pink font-semibold italic">
+                  When the system itself becomes self-evident, it becomes self-correcting. That&apos;s the next evolution of AI — not artificial intelligence, but <em>accountable intelligence.</em>
+                </p>
+              </div>
+            </Card>
+
+            <Card variant="elevated" className="bg-gradient-to-br from-primary via-primary to-secondary-purple border-accent-pink/30">
+              <h3 className="text-2xl font-bold mb-4 text-white text-center">The Rebellion Isn&apos;t Against Technology</h3>
+              <div className="space-y-4 text-gray-200 text-center">
+                <p className="text-xl">
+                  It&apos;s against pretending.
+                </p>
+                <p>
+                  This isn&apos;t anti-tech. It&apos;s anti-theater. We&apos;re not rejecting progress — we&apos;re rejecting performance. The world doesn&apos;t need another platform that promises simplicity while deploying complexity as a business model.
+                </p>
+                <p className="text-accent-pink font-bold text-lg">
+                  At ClearForge, we call it <strong>The Honest Advantage</strong> — systems that compound value by compounding trust.
+                </p>
+                <p className="text-white font-semibold">
+                  Transparency scales. Sunlight compounds. And honesty — finally — becomes a competitive edge.
+                </p>
+              </div>
+            </Card>
+
+            <Card variant="bordered" className="bg-background-dark border-primary-blue/30">
+              <div className="text-center">
+                <p className="text-2xl font-bold mb-4 text-white">
+                  The Pledge of the Honest Builder
+                </p>
+                <div className="space-y-3 text-gray-300 text-lg">
+                  <p>
+                    If you build with us, build in daylight.
+                  </p>
+                  <p>
+                    If you partner with us, expect your assumptions to be challenged.
+                  </p>
+                  <p>
+                    If you join us, remember: your logic is part of the product.
+                  </p>
+                  <p className="text-white font-semibold mt-6">
+                    ClearForge isn&apos;t a company. It&apos;s a correction.
+                  </p>
+                  <p className="text-accent-pink italic">
+                    Because the rebellion isn&apos;t about leaving Big Tech. It&apos;s about leaving behind the idea that innovation requires secrecy.
+                  </p>
+                </div>
+                <div className="mt-8 pt-6 border-t border-primary-blue/20">
+                  <p className="text-gray-400 italic">
+                    — Shawn Sloan
+                  </p>
+                  <p className="text-sm text-gray-500 mt-1">
+                    Founder & CTO, ClearForge Technologies
+                  </p>
+                  <p className="text-primary-blue font-semibold mt-2">
+                    &quot;Build visibly. Translate relentlessly. Trust by design.&quot;
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </Section>
+
+      {/* Real-World Impact */}
+      <Section background="dark">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             The <span className="text-gradient">Real-World</span> Impact

@@ -123,14 +123,14 @@ export default function FoundryPage() {
               </p>
 
               <p className="text-lg leading-relaxed">
-                Without your domain expertise, your brand guidelines, your strategic context—CORE is just another automation tool. <strong className="text-white">With it</strong>, CORE becomes an extension of your team that thinks, writes, and operates the way you do.
+                Without your domain expertise, your brand guidelines, your strategic context—the Foundry is just another automation tool. <strong className="text-white">With it</strong>, the Foundry becomes an extension of your team that thinks, writes, and operates the way you do.
               </p>
             </div>
           </Card>
 
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <Card variant="elevated">
-              <h3 className="text-2xl font-bold mb-4 text-accent-pink">What CORE Needs From You</h3>
+              <h3 className="text-2xl font-bold mb-4 text-accent-pink">What Foundry Needs From You</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-accent-pink flex-shrink-0">•</span>
@@ -152,7 +152,7 @@ export default function FoundryPage() {
             </Card>
 
             <Card variant="elevated">
-              <h3 className="text-2xl font-bold mb-4 text-primary-blue">What CORE Gives Back</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">What Foundry Gives Back</h3>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-3">
                   <span className="text-primary-blue flex-shrink-0">•</span>
@@ -168,7 +168,7 @@ export default function FoundryPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-primary-blue flex-shrink-0">•</span>
-                  <span><strong className="text-white">Explainable Outputs:</strong> See exactly why CORE made each decision based on your inputs</span>
+                  <span><strong className="text-white">Explainable Outputs:</strong> See exactly why the Foundry made each decision based on your inputs</span>
                 </li>
               </ul>
             </Card>
@@ -177,10 +177,10 @@ export default function FoundryPage() {
           <div className="bg-background-dark rounded-3xl p-8 border border-primary-blue/30">
             <h3 className="text-2xl font-bold mb-4 text-center text-white">The Content Truth</h3>
             <p className="text-lg text-gray-300 text-center mb-4">
-              Generic AI tools produce generic content. CORE produces content that sounds like you, because it learns from you.
+              Generic AI tools produce generic content. The Foundry produces content that sounds like you, because it learns from you.
             </p>
             <p className="text-accent-pink text-center font-semibold">
-              Your expertise is the secret sauce. CORE just helps you scale it.
+              Your expertise is the secret sauce. The Foundry just helps you scale it.
             </p>
           </div>
         </div>
