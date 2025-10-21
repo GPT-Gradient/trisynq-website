@@ -27,8 +27,16 @@ export default function HomePage() {
   return (
     <>
       {/* Hero Section */}
-      <Section background="gradient" className="pt-32 pb-20">
-        <div className="text-center max-w-5xl mx-auto">
+      <Section background="gradient" className="pt-32 pb-20 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background-dark/50 to-background-dark z-10" />
+          <img
+            src="/images/hero-background.png"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="text-center max-w-5xl mx-auto relative z-20">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Tech Isn&apos;t a <span className="text-gradient">Cost Center</span>.<br />
             It&apos;s a <span className="text-gradient">Revenue Engine</span>.

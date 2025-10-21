@@ -372,7 +372,7 @@ export default function FoundryBusinessPage() {
             <Card variant="elevated">
               <h3 className="text-2xl font-bold mb-4 text-primary-blue">High Contrast Visual Hierarchy</h3>
               <p className="text-gray-300 mb-4">
-                Electric blue (#0066CC), hot pink (#FF0080), purple (#6600CC) against near-black (#0A0A0B).
+                Electric blue, hot pink, and vibrant purple against near-black backgrounds.
                 Instant recognition. No squinting. No confusion.
               </p>
               <p className="text-gray-400 text-sm">

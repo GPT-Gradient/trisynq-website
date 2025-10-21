@@ -29,7 +29,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 bg-background-dark/95 backdrop-blur-sm border-b border-primary-blue/20">
       <nav className="max-w-7xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center gap-8">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <Image
@@ -45,7 +45,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden lg:flex items-center space-x-6 flex-1">
             {mainNavigation.map((item) => (
               <div
                 key={item.href}
@@ -89,13 +89,13 @@ export default function Header() {
             ))}
 
             {/* Start Your Forge Journey CTA Button */}
-            <Button href="/get-started" size="sm" className="whitespace-nowrap">
+            <Button href="/get-started" size="sm" className="whitespace-nowrap ml-auto">
               Start Your Forge Journey
             </Button>
           </div>
 
           {/* Mobile CTA + Menu Button */}
-          <div className="lg:hidden flex items-center gap-3">
+          <div className="lg:hidden flex items-center gap-3 ml-auto">
             <Button href="/get-started" size="sm" className="text-xs px-3 py-1">
               Start
             </Button>

@@ -212,28 +212,28 @@ export default function PublicDashboardPage() {
             <h3 className="text-2xl font-bold mb-6 text-center">Context-Switching Optimized Design System</h3>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
-                <div className="bg-primary-blue/20 rounded-xl p-4 mb-3">
-                  <p className="text-3xl font-bold text-primary-blue">#0066CC</p>
+                <div className="bg-primary-blue rounded-xl p-8 mb-3">
+                  <div className="w-full h-16" />
                 </div>
-                <p className="text-sm text-gray-400">Electric Blue</p>
+                <p className="text-sm text-gray-400">Primary Blue</p>
               </div>
               <div className="text-center">
-                <div className="bg-secondary-purple/20 rounded-xl p-4 mb-3">
-                  <p className="text-3xl font-bold text-secondary-purple-light">#6600CC</p>
+                <div className="bg-secondary-purple-light rounded-xl p-8 mb-3">
+                  <div className="w-full h-16" />
                 </div>
-                <p className="text-sm text-gray-400">Purple</p>
+                <p className="text-sm text-gray-400">Secondary Purple</p>
               </div>
               <div className="text-center">
-                <div className="bg-accent-pink/20 rounded-xl p-4 mb-3">
-                  <p className="text-3xl font-bold text-accent-pink">#FF0080</p>
+                <div className="bg-accent-pink rounded-xl p-8 mb-3">
+                  <div className="w-full h-16" />
                 </div>
-                <p className="text-sm text-gray-400">Hot Pink</p>
+                <p className="text-sm text-gray-400">Accent Pink</p>
               </div>
               <div className="text-center">
-                <div className="bg-white/5 rounded-xl p-4 mb-3">
-                  <p className="text-3xl font-bold text-white">#0A0A0B</p>
+                <div className="bg-background-dark rounded-xl p-8 mb-3 border border-gray-700">
+                  <div className="w-full h-16" />
                 </div>
-                <p className="text-sm text-gray-400">Near Black</p>
+                <p className="text-sm text-gray-400">Background Dark</p>
               </div>
             </div>
             <div className="mt-6 text-center">
