@@ -5,6 +5,7 @@
  */
 
 import axios, { AxiosInstance, AxiosError } from 'axios';
+import { Article, ArticleListResponse } from '@/types';
 
 interface GatewayConfig {
   baseURL: string;
@@ -137,6 +138,63 @@ class GatewayClient {
   ): Promise<{ success: boolean; message: string }> {
     const response = await this.client.post('/api/public/newsletter', data);
     return response.data;
+  }
+
+  /**
+   * Get articles from the content system
+   * @param params - Query parameters (limit, category, page)
+   * @returns Article list with pagination info
+   */
+  async getArticles(params?: {
+    limit?: number;
+    category?: string;
+    page?: number;
+  }): Promise<ArticleListResponse> {
+    try {
+      const response = await this.client.get('/api/public/content/articles', {
+        params: {
+          limit: params?.limit || 20,
+          category: params?.category,
+          page: params?.page || 1,
+        },
+      });
+      return response.data;
+    } catch (error) {
+      console.error('Failed to fetch articles:', error);
+      return { articles: [], total: 0, page: 1, limit: 20 };
+    }
+  }
+
+  /**
+   * Get a single article by slug
+   * @param slug - Article slug
+   * @returns Article data
+   */
+  async getArticleBySlug(slug: string): Promise<Article | null> {
+    try {
+      const response = await this.client.get(`/api/public/content/articles/${slug}`);
+      return response.data.article || response.data;
+    } catch (error) {
+      console.error(`Failed to fetch article ${slug}:`, error);
+      return null;
+    }
+  }
+
+  /**
+   * Get featured articles
+   * @param limit - Number of featured articles to return (default: 3)
+   * @returns Array of featured articles
+   */
+  async getFeaturedArticles(limit: number = 3): Promise<Article[]> {
+    try {
+      const response = await this.client.get('/api/public/content/featured', {
+        params: { limit },
+      });
+      return response.data.articles || [];
+    } catch (error) {
+      console.error('Failed to fetch featured articles:', error);
+      return [];
+    }
   }
 
   /**

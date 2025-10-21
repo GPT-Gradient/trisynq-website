@@ -303,7 +303,7 @@ export default function DataDividePage() {
             <Button href="/solutions" size="lg">
               Explore Solutions
             </Button>
-            <Button href="/xynergy" variant="outline" size="lg">
+            <Button href="/foundry" variant="outline" size="lg">
               See How Xynergy Works
             </Button>
           </div>

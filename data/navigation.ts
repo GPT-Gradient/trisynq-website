@@ -2,17 +2,32 @@ import { NavItem } from '@/types';
 
 export const mainNavigation: NavItem[] = [
   {
-    label: 'The Forge',
-    href: '/forge',
+    label: 'Foundry',
+    href: '/foundry',
+    children: [
+      // Platform
+      { label: 'The Foundry Platform', href: '/foundry' },
+      { label: 'Foundry Connect (API)', href: '/foundry/connect' },
+      // Products
+      { label: 'Foundry Business: OS', href: '/foundry/business' },
+      { label: 'Foundry Search: Visibility', href: '/foundry/search' },
+      // Info
+      { label: 'Product Roadmap', href: '/foundry/roadmap' },
+      { label: 'Pricing', href: '/foundry/pricing' },
+    ],
   },
   {
-    label: 'Xynergy',
-    href: '/xynergy',
+    label: 'The Forge',
+    href: '/forge',
     children: [
-      { label: 'Xynergy CORE Overview', href: '/xynergy' },
-      { label: 'XynergyOS Preview', href: '/xynergy/preview' },
-      { label: 'Origin Story', href: '/xynergy/origin-story' },
-      { label: 'ASO Platform', href: '/aso' },
+      // Four Doors
+      { label: 'Knowledge Forge', href: '/forge/knowledge' },
+      { label: 'Tool Forge', href: '/forge/tools' },
+      { label: 'Community Forge', href: '/forge/community' },
+      { label: 'Build Forge', href: '/forge/build' },
+      // Additional
+      { label: 'Blog / Articles', href: '/blog' },
+      { label: 'Continuum Projects', href: '/continuum' },
     ],
   },
   {
@@ -20,44 +35,18 @@ export const mainNavigation: NavItem[] = [
     href: '/proof',
   },
   {
-    label: 'Solutions',
-    href: '/solutions',
-    children: [
-      { label: 'All Solutions', href: '/solutions' },
-      { label: 'Platform', href: '/solutions/platform' },
-      { label: 'Consulting', href: '/solutions/consulting' },
-      { label: 'Partnership', href: '/solutions/partnership' },
-      { label: 'Custom', href: '/solutions/custom' },
-      { label: 'B2B Services', href: '/solutions/b2b' },
-    ],
-  },
-  {
-    label: 'Training',
-    href: '/training',
-    children: [
-      { label: 'All Training Programs', href: '/training' },
-      { label: 'Data Training', href: '/training/data' },
-      { label: 'AI Training', href: '/training/ai' },
-      { label: 'Data + AI Combined', href: '/training/combined' },
-      { label: 'Revenue Generator Workshop', href: '/training/revenue-workshop' },
-      { label: 'Custom Training', href: '/training/custom' },
-    ],
-  },
-  {
-    label: 'Community',
-    href: '/community',
-  },
-  {
     label: 'About',
     href: '/about',
     children: [
-      { label: 'About ClearForge', href: '/about' },
-      { label: 'Culture Hub', href: '/about/culture' },
+      // Company
       { label: 'Mission & Vision', href: '/about/mission-vision' },
+      { label: 'Our Story', href: '/about/how-we-started' },
       { label: 'Values', href: '/about/values' },
-      { label: 'Team Philosophy', href: '/about/team-philosophy' },
-      { label: 'How We Started', href: '/about/how-we-started' },
-      { label: 'Careers', href: '/careers' },
+      { label: 'Team', href: '/about/team-philosophy' },
+      // Resources
+      { label: 'Manifesto', href: '/manifesto' },
+      { label: 'Data Divide', href: '/data-divide' },
+      { label: 'Transparency Commitment', href: '/transparency' },
     ],
   },
   {
@@ -77,7 +66,7 @@ export const footerNavigation = {
     { label: 'Team Values', href: '/about/team-philosophy' },
     { label: 'How We Started', href: '/about/how-we-started' },
     { label: 'Careers', href: '/careers' },
-    { label: 'Content Hub', href: '/forge/topics' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Get Started', href: '/beta' },
   ],
   legal: [

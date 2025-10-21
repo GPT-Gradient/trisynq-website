@@ -7,9 +7,9 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { CheckCircle, Cpu, FileText, Zap, BarChart, Activity } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Xynergy CORE — Contextual Orchestration & Reasoning Engine',
+  title: 'ClearForge Foundry — Contextual Orchestration & Reasoning Engine',
   description: 'The framework Fortune 500s use to generate billions—now accessible without the enterprise complexity tax. Researches, Plans, Executes, Proves.',
-  canonical: '/xynergy',
+  canonical: '/foundry',
 });
 
 export default function XynergyPage() {
@@ -21,7 +21,7 @@ export default function XynergyPage() {
           <div className="flex justify-center mb-6">
             <Image
               src="/logos/x-core-1-secondary.png"
-              alt="Xynergy CORE"
+              alt="ClearForge Foundry"
               width={350}
               height={250}
               className="max-w-xs"
@@ -34,7 +34,7 @@ export default function XynergyPage() {
             </span>
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Xynergy <span className="text-gradient">CORE</span>
+            ClearForge <span className="text-gradient">Foundry</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-4">
             Researches, Plans, Executes, <span className="text-primary-blue font-semibold">Proves</span>.
@@ -43,11 +43,11 @@ export default function XynergyPage() {
             Not a black box. An engine you can read, direct, and trust.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy/origin-story" size="lg">
+            <Button href="/foundry/origin-story" size="lg">
               Learn the Story
             </Button>
             <Button href="/solutions/partnership" variant="outline" size="lg">
-              Build on Xynergy CORE
+              Build on ClearForge Foundry
             </Button>
           </div>
         </div>
@@ -71,7 +71,7 @@ export default function XynergyPage() {
               </p>
 
               <p className="text-lg leading-relaxed">
-                <strong className="text-white">Xynergy CORE</strong> is what happens when you strip away the vendor lock-in, remove the artificial complexity, and expose the actual patterns that make these systems work.
+                <strong className="text-white">ClearForge Foundry</strong> is what happens when you strip away the vendor lock-in, remove the artificial complexity, and expose the actual patterns that make these systems work.
               </p>
 
               <p className="text-lg leading-relaxed">
@@ -669,7 +669,7 @@ export default function XynergyPage() {
       <Section background="gradient" id="build">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Build on <span className="text-gradient">Xynergy CORE</span>
+            Build on <span className="text-gradient">ClearForge Foundry</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             The framework is accessible. The patterns are proven. Let&apos;s build together.

@@ -31,3 +31,37 @@ export interface SEOProps {
   ogType?: string;
   canonical?: string;
 }
+
+export interface Author {
+  name: string;
+  avatar?: string;
+  role?: string;
+}
+
+export interface Article {
+  id: string;
+  slug: string;
+  title: string;
+  excerpt: string;
+  content: string;
+  author: Author;
+  category: 'blog' | 'how-to' | 'white-paper' | 'playbook' | 'opinion';
+  tags: string[];
+  featured_image?: string;
+  published_at: string;
+  updated_at?: string;
+  views?: number;
+  featured?: boolean;
+  seo?: {
+    title?: string;
+    description?: string;
+    og_image?: string;
+  };
+}
+
+export interface ArticleListResponse {
+  articles: Article[];
+  total: number;
+  page?: number;
+  limit?: number;
+}

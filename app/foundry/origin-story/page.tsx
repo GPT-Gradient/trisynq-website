@@ -6,9 +6,9 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Lightbulb, MessageSquare, Wrench, Rocket } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'The Origin Story — How Xynergy CORE Was Born',
-  description: 'From ASO automation to enterprise framework. The story of how Xynergy CORE evolved from solving one problem to becoming a comprehensive orchestration engine.',
-  canonical: '/xynergy/origin-story',
+  title: 'The Origin Story — How ClearForge Foundry Was Born',
+  description: 'From ASO automation to enterprise framework. The story of how ClearForge Foundry evolved from solving one problem to becoming a comprehensive orchestration engine.',
+  canonical: '/foundry/origin-story',
 });
 
 export default function XynergyOriginStoryPage() {
@@ -21,7 +21,7 @@ export default function XynergyOriginStoryPage() {
             The <span className="text-gradient">Origin Story</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            How Xynergy CORE evolved from ASO automation to enterprise framework.
+            How ClearForge Foundry evolved from ASO automation to enterprise framework.
           </p>
           <p className="text-lg text-gray-400">
             Every great system starts with a real problem. Here&apos;s ours.
@@ -292,7 +292,7 @@ export default function XynergyOriginStoryPage() {
             <Button href="/beta-program" size="lg">
               Join Phase 1
             </Button>
-            <Button href="/xynergy" variant="outline" size="lg">
+            <Button href="/foundry" variant="outline" size="lg">
               Explore Xynergy CORE
             </Button>
           </div>

@@ -327,7 +327,7 @@ export default function ProjectNEXUSPage() {
               This domain is powered by Xynergy services with explainable workflows.
             </p>
             <div className="text-center">
-              <Button href="/xynergy" variant="outline" size="lg">
+              <Button href="/foundry" variant="outline" size="lg">
                 See the Power
               </Button>
             </div>

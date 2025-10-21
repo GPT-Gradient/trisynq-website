@@ -110,7 +110,7 @@ export default function WhatWeDoPage() {
                 <div className="flex-1">
                   <h3 className="text-2xl font-bold mb-2 text-white">Platform Solutions</h3>
                   <p className="text-lg text-accent-pink font-semibold mb-4">
-                    XynergyOS and Proven Systems
+                    Foundry Business: OS and Proven Systems
                   </p>
                   <p className="text-gray-300 mb-6">
                     Leverage our battle-tested platforms and frameworks. Get enterprise capabilities at human-scale costs with full transparency and control.

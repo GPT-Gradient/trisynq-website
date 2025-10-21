@@ -250,7 +250,7 @@ export default function TransparencyPage() {
             These aren&apos;t just principles. They&apos;re built into every line of code.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
+            <Button href="/foundry" size="lg">
               Explore Xynergy
             </Button>
             <Button href="/proof" variant="outline" size="lg">

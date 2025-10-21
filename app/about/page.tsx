@@ -169,7 +169,7 @@ export default function WhoWeArePage() {
               </p>
             </div>
             <div className="text-center">
-              <Button href="/xynergy" size="lg">
+              <Button href="/foundry" size="lg">
                 See the Power
               </Button>
             </div>

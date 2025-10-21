@@ -442,7 +442,7 @@ export default function HowWeDoItPage() {
           <p className="text-xl text-gray-300 mb-8">
             Discover how Xynergy makes complexity transparent and leverageable.
           </p>
-          <Button href="/xynergy" size="lg">
+          <Button href="/foundry" size="lg">
             See the Power
             <ArrowRight className="ml-2 w-5 h-5" />
           </Button>

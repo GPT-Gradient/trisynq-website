@@ -114,7 +114,7 @@ export default function ProofPage() {
         </div>
       </Section>
 
-      {/* XynergyOS: Real Product, Real Interface */}
+      {/* Foundry Business: OS: Real Product, Real Interface */}
       <Section background="dark">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
@@ -122,13 +122,13 @@ export default function ProofPage() {
               Production-Deployed • Beta Coming Soon
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gradient">XynergyOS</span>: Real Product. Real Interface.
+              <span className="text-gradient">Foundry Business: OS</span>: Real Product. Real Interface.
             </h2>
             <p className="text-xl text-gray-300 mb-4">
               Not a mockup. Not a concept. A fully functional AI operating system deployed on Google Cloud Platform.
             </p>
             <p className="text-lg text-gray-400">
-              94 React components. 25+ pages. ADHD-optimized glassmorphic design. Production-ready.
+              94 React components. 25+ pages. Context-switching optimized glassmorphic design. Production-ready.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function ProofPage() {
 
           {/* Design System Proof */}
           <Card variant="elevated" className="border-2 border-primary-blue/30 mb-8">
-            <h3 className="text-2xl font-bold mb-6 text-center">ADHD-Optimized Design System</h3>
+            <h3 className="text-2xl font-bold mb-6 text-center">Context-Switching Optimized Design System</h3>
             <div className="grid md:grid-cols-4 gap-6">
               <div className="text-center">
                 <div className="bg-primary-blue/20 rounded-xl p-4 mb-3">
@@ -238,7 +238,7 @@ export default function ProofPage() {
             </div>
             <div className="mt-6 text-center">
               <p className="text-gray-300 mb-2">High contrast for instant recognition. Dopamine feedback loops. Parallel information processing.</p>
-              <p className="text-sm text-gray-400">Built for ADHD brains. Stunning for everyone.</p>
+              <p className="text-sm text-gray-400">Built for managing complexity. Stunning for everyone.</p>
             </div>
           </Card>
 
@@ -263,7 +263,7 @@ export default function ProofPage() {
           </div>
 
           <div className="text-center">
-            <Button href="/xynergy/preview" size="lg" className="mr-4">
+            <Button href="/foundry/business" size="lg" className="mr-4">
               See Full Preview
             </Button>
             <Button href="/beta" variant="outline" size="lg">

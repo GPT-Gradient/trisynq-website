@@ -172,7 +172,7 @@ export default function ManifestoPage() {
             These aren&apos;t just words. They&apos;re the foundation of everything we build.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
+            <Button href="/foundry" size="lg">
               Explore Xynergy
             </Button>
             <Button href="/transparency" variant="outline" size="lg">

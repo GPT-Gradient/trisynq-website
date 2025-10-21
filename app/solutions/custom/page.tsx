@@ -24,7 +24,7 @@ export default function CustomDevelopmentPage() {
             Your edge, productized. We compose Xynergy services into something only you can ship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
+            <Button href="/foundry" size="lg">
               See the Power
             </Button>
             <Button href="/manifesto" variant="outline" size="lg">
@@ -467,7 +467,7 @@ export default function CustomDevelopmentPage() {
               <p className="text-xl text-gray-300 mb-6">
                 We compose Xynergy services to your use-case. You keep control, clarity, and the keys.
               </p>
-              <Button href="/xynergy" size="lg">
+              <Button href="/foundry" size="lg">
                 See the Power
               </Button>
             </div>

@@ -468,7 +468,7 @@ export default function AIRealityCheckPage() {
             No hype. No black boxes. Just AI you can understand and control.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
+            <Button href="/foundry" size="lg">
               Explore Xynergy
             </Button>
             <Button href="/manifesto" variant="outline" size="lg">

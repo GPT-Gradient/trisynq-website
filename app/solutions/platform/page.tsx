@@ -33,7 +33,7 @@ export default function PlatformSolutionsPage() {
             Spin up explainable workflows, content engines, and dashboards in weeks—not quarters.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
+            <Button href="/foundry" size="lg">
               See the Power
             </Button>
             <Button href="/ai-reality-check" variant="outline" size="lg">
@@ -620,7 +620,7 @@ export default function PlatformSolutionsPage() {
                 Platform Details & Availability
               </h2>
               <p className="text-xl text-gray-300 mb-6">
-                We&apos;re using XynergyOS internally to power all ClearForge operations. Once we&apos;ve proven it works at scale through The Continuum projects, we&apos;ll make it available to qualified partners.
+                We&apos;re using Foundry Business: OS internally to power all ClearForge operations. Once we&apos;ve proven it works at scale through The Continuum projects, we&apos;ll make it available to qualified partners.
               </p>
               <div className="bg-primary-blue/10 rounded-xl p-6 border border-primary-blue/30">
                 <p className="text-lg text-white font-semibold">
@@ -636,7 +636,7 @@ export default function PlatformSolutionsPage() {
       <Section background="medium">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Interested in <span className="text-gradient">XynergyOS?</span>
+            Interested in <span className="text-gradient">Foundry Business: OS?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
             Join the beta program to get early access when it&apos;s ready.

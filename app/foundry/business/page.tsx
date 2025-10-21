@@ -20,9 +20,9 @@ import {
 } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'XynergyOS Preview — Your AI Operating System',
-  description: 'Get a sneak peek at XynergyOS: the ADHD-optimized AI platform that manages your entire business universe. Command Center, Morning Briefing, Research Sessions, and more.',
-  canonical: '/xynergy/preview',
+  title: 'Foundry Business: OS Preview — Your AI Operating System',
+  description: 'Get a sneak peek at Foundry Business: OS: the context-switching optimized AI platform that manages your entire business universe. Command Center, Morning Briefing, Research Sessions, and more.',
+  canonical: '/foundry/business',
 });
 
 export default function XynergyPreviewPage() {
@@ -37,7 +37,7 @@ export default function XynergyPreviewPage() {
           <div className="flex justify-center mb-8">
             <Image
               src="/logos/xOS-logo-with-tagline-primary.png"
-              alt="XynergyOS - Autonomous. Intelligent. Reliable."
+              alt="Foundry Business: OS - Autonomous. Intelligent. Reliable."
               width={400}
               height={300}
               className="max-w-sm"
@@ -45,14 +45,14 @@ export default function XynergyPreviewPage() {
             />
           </div>
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Meet <span className="text-gradient">XynergyOS</span>
+            Meet <span className="text-gradient">Foundry Business: OS</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Your AI operating system for managing complexity. Built for founders who juggle 6+ projects,
             think in parallel streams, and refuse to drown in busywork.
           </p>
           <p className="text-lg text-gray-400 mb-8">
-            ADHD-optimized design. Glassmorphic beauty. Voice-first interface. Transparent costs.
+            Context-switching optimized design. Glassmorphic beauty. Voice-first interface. Transparent costs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/beta" size="lg">
@@ -86,7 +86,7 @@ export default function XynergyPreviewPage() {
               Not Another <span className="text-gradient">Dashboard</span>
             </h2>
             <p className="text-xl text-gray-300">
-              XynergyOS is an operating system for your entire business universe. Not a tool. Not a platform. An OS.
+              Foundry Business: OS is an operating system for your entire business universe. Not a tool. Not a platform. An OS.
             </p>
           </div>
 
@@ -96,7 +96,7 @@ export default function XynergyPreviewPage() {
                 <div className="bg-primary-blue/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Brain className="w-8 h-8 text-primary-blue" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">ADHD-Optimized</h3>
+                <h3 className="text-xl font-bold mb-3">Context-Switching Optimized</h3>
                 <p className="text-gray-300 text-sm">
                   High contrast. Instant recognition. Parallel processing. Dopamine feedback loops. Built for how your brain actually works.
                 </p>
@@ -108,7 +108,7 @@ export default function XynergyPreviewPage() {
                 <div className="bg-secondary-purple/20 rounded-full p-4 w-16 h-16 mx-auto mb-4 flex items-center justify-center">
                   <Sparkles className="w-8 h-8 text-secondary-purple-light" />
                 </div>
-                <h3 className="text-xl font-bold mb-3">Jony Ive Beauty</h3>
+                <h3 className="text-xl font-bold mb-3">Elegant Simplicity</h3>
                 <p className="text-gray-300 text-sm">
                   Glassmorphic design with subtle depth, glows, and gradients. Every pixel serves a purpose. No clutter. Just clarity.
                 </p>
@@ -364,7 +364,7 @@ export default function XynergyPreviewPage() {
               Built for <span className="text-gradient">Your Brain</span>
             </h2>
             <p className="text-xl text-gray-300">
-              ADHD-optimized design isn&apos;t just a feature. It&apos;s the foundation.
+              Context-switching optimized design isn&apos;t just a feature. It&apos;s the foundation.
             </p>
           </div>
 
@@ -406,7 +406,7 @@ export default function XynergyPreviewPage() {
                 Apple Shortcuts integration. Speak your commands. Get instant responses. No typing required.
               </p>
               <p className="text-gray-400 text-sm">
-                Perfect for when your hands are full or your brain is in flow state. Just talk. XynergyOS listens.
+                Perfect for when your hands are full or your brain is in flow state. Just talk. Foundry Business: OS listens.
               </p>
             </Card>
           </div>
@@ -461,8 +461,8 @@ export default function XynergyPreviewPage() {
                 <ul className="text-gray-400 text-sm space-y-1">
                   <li>Glassmorphic UI</li>
                   <li>Inter + JetBrains Mono</li>
-                  <li>ADHD-Optimized</li>
-                  <li>Jony Ive Inspired</li>
+                  <li>Context-Switching Optimized</li>
+                  <li>Elegant Design Philosophy</li>
                 </ul>
               </div>
             </div>
@@ -477,13 +477,13 @@ export default function XynergyPreviewPage() {
             Ready to <span className="text-gradient">Try It?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Beta access is limited. Join the waitlist now to get early access to XynergyOS.
+            Beta access is limited. Join the waitlist now to get early access to Foundry Business: OS.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button href="/beta" size="lg">
               Join Beta Waitlist
             </Button>
-            <Button href="/xynergy" variant="outline" size="lg">
+            <Button href="/foundry" variant="outline" size="lg">
               Learn More About Xynergy
             </Button>
           </div>

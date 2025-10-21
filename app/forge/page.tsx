@@ -7,7 +7,7 @@ import { Cpu, FileCheck, Users, FileText } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
   title: 'The Forge — Where Technology and Transparency Meet',
-  description: 'One hub. Four doors: Topics, Xynergy, Proof, Community.',
+  description: 'One hub. Four doors: Knowledge, Tools, Community, Build.',
   canonical: '/forge',
 });
 
@@ -24,7 +24,7 @@ export default function ForgePage() {
             Where technology and transparency meet. Where complexity gets melted down and reforged into clarity.
           </p>
           <p className="text-lg text-gray-400">
-            One hub. Four doors: Topics, Xynergy, Proof, Community.
+            One hub. Four doors: Knowledge, Tools, Community, Build.
           </p>
         </div>
       </Section>
@@ -128,7 +128,7 @@ export default function ForgePage() {
 
           {/* Four Ecosystem Cards */}
           <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Topics Card */}
+          {/* Knowledge Card */}
           <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-secondary-purple/30 hover:border-secondary-purple/60">
             <div className="flex flex-col h-full">
               <div className="mb-6">
@@ -137,24 +137,24 @@ export default function ForgePage() {
                     <FileText className="w-10 h-10 text-secondary-purple-light" />
                   </div>
                   <div className="bg-secondary-purple/20 text-secondary-purple-light px-4 py-1 rounded-full text-sm font-semibold">
-                    Content Hub
+                    Learn
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Topics</h2>
+                <h2 className="text-2xl font-bold mb-3 text-white">Knowledge</h2>
                 <p className="text-sm text-gray-300 mb-6">
-                  Blogs, opinions, how-tos, white papers.
+                  Blogs, how-tos, white papers, playbooks.
                 </p>
               </div>
 
               <div className="mt-auto">
-                <Button href="/forge/topics" variant="outline" className="w-full border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
-                  Explore Topics
+                <Button href="/forge/knowledge" variant="outline" className="w-full border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
+                  Explore Knowledge
                 </Button>
               </div>
             </div>
           </Card>
 
-          {/* Xynergy Card */}
+          {/* Tools Card */}
           <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-primary-blue/30 hover:border-primary-blue/60">
             <div className="flex flex-col h-full">
               <div className="mb-6">
@@ -163,44 +163,18 @@ export default function ForgePage() {
                     <Cpu className="w-10 h-10 text-primary-blue" />
                   </div>
                   <div className="bg-primary-blue/20 text-primary-blue px-4 py-1 rounded-full text-sm font-semibold">
-                    Engine
+                    Products
                   </div>
                 </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Xynergy</h2>
+                <h2 className="text-2xl font-bold mb-3 text-white">Tools</h2>
                 <p className="text-sm text-gray-300 mb-6">
-                  Researches, plans, executes, proves.
+                  Foundry Business: OS, Search, Connect API.
                 </p>
               </div>
 
               <div className="mt-auto">
-                <Button href="/xynergy" className="w-full group-hover:bg-primary-blue/90">
-                  Explore Xynergy
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          {/* Proof Card */}
-          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-accent-pink/30 hover:border-accent-pink/60">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <div className="flex items-center justify-between mb-4">
-                  <div className="bg-accent-pink/20 rounded-full p-4">
-                    <FileCheck className="w-10 h-10 text-accent-pink" />
-                  </div>
-                  <div className="bg-accent-pink/20 text-accent-pink px-4 py-1 rounded-full text-sm font-semibold">
-                    Results
-                  </div>
-                </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Proof</h2>
-                <p className="text-sm text-gray-300 mb-6">
-                  Receipts, outcomes, public demos.
-                </p>
-              </div>
-
-              <div className="mt-auto">
-                <Button href="/proof" variant="outline" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
-                  See the Proof
+                <Button href="/forge/tools" className="w-full group-hover:bg-primary-blue/90">
+                  Explore Tools
                 </Button>
               </div>
             </div>
@@ -215,18 +189,44 @@ export default function ForgePage() {
                     <Users className="w-10 h-10 text-accent-pink" />
                   </div>
                   <div className="bg-accent-pink/20 text-accent-pink px-4 py-1 rounded-full text-sm font-semibold">
-                    Coming Soon
+                    Connect
                   </div>
                 </div>
                 <h2 className="text-2xl font-bold mb-3 text-white">Community</h2>
                 <p className="text-sm text-gray-300 mb-6">
-                  Engage, ask, learn, earn. (Coming Soon)
+                  20% Army, beta partners, success stories.
                 </p>
               </div>
 
               <div className="mt-auto">
-                <Button href="/community" variant="outline" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
-                  Learn More
+                <Button href="/forge/community" variant="outline" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
+                  Join Community
+                </Button>
+              </div>
+            </div>
+          </Card>
+
+          {/* Build Card */}
+          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-primary-blue/30 hover:border-primary-blue/60">
+            <div className="flex flex-col h-full">
+              <div className="mb-6">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="bg-primary-blue/20 rounded-full p-4">
+                    <FileCheck className="w-10 h-10 text-primary-blue" />
+                  </div>
+                  <div className="bg-primary-blue/20 text-primary-blue px-4 py-1 rounded-full text-sm font-semibold">
+                    Coming Soon
+                  </div>
+                </div>
+                <h2 className="text-2xl font-bold mb-3 text-white">Build</h2>
+                <p className="text-sm text-gray-300 mb-6">
+                  Open source, templates, frameworks.
+                </p>
+              </div>
+
+              <div className="mt-auto">
+                <Button href="/forge/build" variant="outline" className="w-full border-primary-blue text-primary-blue hover:bg-primary-blue hover:text-white">
+                  Explore Build
                 </Button>
               </div>
             </div>
@@ -235,26 +235,44 @@ export default function ForgePage() {
         </div>
       </Section>
 
-      {/* Featured Topics Section - Placeholder */}
+      {/* Why The Forge Matters */}
       <Section background="dark">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gradient">Featured Topics</span>
+              <span className="text-gradient">Why It Matters</span>
             </h2>
             <p className="text-xl text-gray-300">
-              Blogs, opinions, playbooks, and insights on transparency, automation, and growth.
+              The Forge isn&apos;t just a resource hub—it&apos;s a commitment to transparency and accessibility.
             </p>
           </div>
 
-          <Card variant="elevated" className="text-center py-12">
-            <p className="text-lg text-gray-300 mb-6">
-              Content hub launching soon. Stay tuned for deep dives, how-tos, and thought leadership.
-            </p>
-            <Button href="/forge/topics" variant="outline">
-              Explore Topics
-            </Button>
-          </Card>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card variant="elevated">
+              <h3 className="text-xl font-bold mb-3 text-primary-blue">Knowledge Without Gatekeeping</h3>
+              <p className="text-gray-300">
+                Enterprise-grade insights, tutorials, and research—available to everyone. No consultants required.
+              </p>
+            </Card>
+            <Card variant="elevated">
+              <h3 className="text-xl font-bold mb-3 text-accent-pink">Tools Without Lock-In</h3>
+              <p className="text-gray-300">
+                Build on our platforms or use our open source libraries. You own what you build.
+              </p>
+            </Card>
+            <Card variant="elevated">
+              <h3 className="text-xl font-bold mb-3 text-secondary-purple-light">Community Without Paywalls</h3>
+              <p className="text-gray-300">
+                Connect with builders, operators, and advocates. Get compensated for valuable contributions.
+              </p>
+            </Card>
+            <Card variant="elevated">
+              <h3 className="text-xl font-bold mb-3 text-primary-blue">Building Without Barriers</h3>
+              <p className="text-gray-300">
+                Reference architectures, starter templates, and frameworks. Start fast, scale intelligently.
+              </p>
+            </Card>
+          </div>
         </div>
       </Section>
 
@@ -268,11 +286,11 @@ export default function ForgePage() {
             Pick your entry point and explore the ClearForge ecosystem.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
-              Explore Xynergy
+            <Button href="/foundry" size="lg">
+              Explore Foundry
             </Button>
-            <Button href="/proof" variant="outline" size="lg">
-              See the Proof
+            <Button href="/beta" variant="outline" size="lg">
+              Join Beta Program
             </Button>
           </div>
         </div>

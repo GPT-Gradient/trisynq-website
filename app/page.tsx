@@ -43,25 +43,25 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/beta-program" size="lg">
-              See If You Qualify
+            <Button href="/data-divide" size="lg">
+              Read The Data Divide
             </Button>
-            <Button href="/continuum/nexus" variant="outline" size="lg">
-              Show Me How It Works
+            <Button href="/foundry" variant="outline" size="lg">
+              Explore The Foundry
             </Button>
           </div>
         </div>
       </Section>
 
-      {/* Xynergy Feature Section */}
-      <Section background="dark" id="xynergy_feature">
+      {/* ClearForge Foundry Feature Section */}
+      <Section background="dark" id="foundry_feature">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              <span className="text-gradient">Meet Xynergy — The Engine Behind Everything.</span>
+              <span className="text-gradient">Meet ClearForge Foundry — The Engine Behind Everything.</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Built because black-box AI wasn&apos;t enough. Xynergy shows its logic, cites its sources, and gets work done.
+              Built because black-box AI wasn&apos;t enough. ClearForge Foundry shows its logic, cites its sources, and gets work done.
             </p>
           </div>
 
@@ -101,28 +101,28 @@ export default function HomePage() {
           </div>
 
           <div className="text-center">
-            <Button href="/xynergy" size="lg">
+            <Button href="/foundry" size="lg">
               See the Power
             </Button>
           </div>
         </div>
       </Section>
 
-      {/* XynergyOS Preview Teaser */}
-      <Section background="medium" id="xynergyos_preview">
+      {/* Foundry Business: OS Preview Teaser */}
+      <Section background="medium" id="foundry_business_preview">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <div className="inline-block bg-primary-blue/20 text-primary-blue px-4 py-2 rounded-full text-sm font-semibold mb-6 border border-primary-blue/30">
               Coming Soon • Beta Access Available
             </div>
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Now Meet <span className="text-gradient">XynergyOS</span>
+              Now Meet <span className="text-gradient">Foundry Business: OS</span>
             </h2>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-4">
               The engine is powerful. But the interface? That&apos;s where magic happens.
             </p>
             <p className="text-lg text-gray-400 max-w-4xl mx-auto">
-              Your AI operating system for managing 6+ projects. ADHD-optimized. Jony Ive beautiful. Voice-first. Transparent costs.
+              Your AI operating system for managing 6+ projects. Context-switching optimized. Elegant simplicity. Voice-first. Transparent costs.
             </p>
           </div>
 
@@ -176,14 +176,14 @@ export default function HomePage() {
                 <p className="text-sm text-gray-400">Glassmorphic design beauty</p>
               </div>
               <div>
-                <p className="text-3xl font-bold text-accent-pink mb-2">ADHD</p>
+                <p className="text-3xl font-bold text-accent-pink mb-2">Multi-Project</p>
                 <p className="text-sm text-gray-400">Optimized for parallel thinking</p>
               </div>
             </div>
           </div>
 
           <div className="text-center">
-            <Button href="/xynergy/preview" size="lg" className="mr-4">
+            <Button href="/foundry/business" size="lg" className="mr-4">
               See Full Preview
             </Button>
             <Button href="/beta" variant="outline" size="lg">
@@ -210,7 +210,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             <Card variant="elevated" className="border-2 border-primary-blue/30">
-              <h3 className="text-2xl font-bold mb-4 text-primary-blue">Early Access to Xynergy CORE</h3>
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">Early Access to ClearForge Foundry</h3>
               <p className="text-gray-300 mb-4">
                 The framework Fortune 500s use to generate billions—now accessible without the enterprise complexity tax.
               </p>

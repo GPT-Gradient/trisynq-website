@@ -7,9 +7,9 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { Search, TrendingUp, Target, Zap, Database, BarChart, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'ASO — Adaptive Search Optimization',
-  description: 'The new way to conduct business search. Intelligence that compounds, costs that decrease, transparency at every step. Multi-modality search optimization (SEO, GEO, VSO) powered by Xynergy CORE.',
-  canonical: '/aso',
+  title: 'Foundry Search: Visibility — Adaptive Search Optimization',
+  description: 'The new way to conduct business search. Intelligence that compounds, costs that decrease, transparency at every step. Multi-modality search optimization (SEO, GEO, VSO) powered by ClearForge Foundry.',
+  canonical: '/foundry/search',
 });
 
 export default function ASOPage() {
@@ -40,7 +40,7 @@ export default function ASOPage() {
             Intelligence that compounds. Costs that decrease. Transparency at every step.
           </p>
           <p className="text-lg text-gray-400 mb-8">
-            Multi-modality search optimization (SEO, GEO, VSO) powered by Xynergy CORE.
+            Multi-modality search optimization (SEO, GEO, VSO) powered by ClearForge Foundry.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="#problem" size="lg">
@@ -137,7 +137,7 @@ export default function ASOPage() {
               </p>
 
               <p className="text-lg">
-                Powered by <strong className="text-white">Xynergy CORE</strong>, ASO handles all three search modalities (SEO, GEO, VSO) in one unified platform. Complete transparency. Full explainability. Audit trails for every decision.
+                Powered by <strong className="text-white">ClearForge Foundry</strong>, ASO handles all three search modalities (SEO, GEO, VSO) in one unified platform. Complete transparency. Full explainability. Audit trails for every decision.
               </p>
             </div>
           </Card>
@@ -490,7 +490,7 @@ export default function ASOPage() {
             Ready to <span className="text-gradient">Rethink Search</span>?
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            ASO is powered by Xynergy CORE and available through our Platform and Partnership solutions.
+            ASO is powered by ClearForge Foundry and available through our Platform and Partnership solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/solutions/platform" size="lg">

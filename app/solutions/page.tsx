@@ -185,7 +185,7 @@ export default function SolutionsPage() {
             Explore how Xynergy powers transparent, explainable solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/xynergy" size="lg">
+            <Button href="/foundry" size="lg">
               See the Power
             </Button>
             <Button href="/transparency" variant="outline" size="lg">
