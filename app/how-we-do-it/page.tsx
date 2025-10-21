@@ -433,14 +433,14 @@ export default function HowWeDoItPage() {
         </div>
       </Section>
 
-      {/* Xynergy CTA Section */}
+      {/* ClearForge Foundry CTA Section */}
       <Section background="dark">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             <span className="text-gradient">See the Power</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Discover how Xynergy makes complexity transparent and leverageable.
+            Discover how ClearForge Foundry makes complexity transparent and leverageable.
           </p>
           <Button href="/foundry" size="lg">
             See the Power

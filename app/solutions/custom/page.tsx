@@ -21,7 +21,7 @@ export default function CustomDevelopmentPage() {
             <span className="text-gradient">Custom</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Your edge, productized. We compose Xynergy services into something only you can ship.
+            Your edge, productized. We compose ClearForge Foundry services into something only you can ship.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/foundry" size="lg">
@@ -459,13 +459,13 @@ export default function CustomDevelopmentPage() {
         </div>
       </Section>
 
-      {/* Xynergy Integration */}
+      {/* ClearForge Foundry Integration */}
       <Section background="dark">
         <div className="max-w-4xl mx-auto text-center">
           <Card variant="elevated">
             <div className="bg-gradient-to-r from-primary-blue/10 to-secondary-purple-light/10 rounded-2xl p-8 border border-primary-blue/30">
               <p className="text-xl text-gray-300 mb-6">
-                We compose Xynergy services to your use-case. You keep control, clarity, and the keys.
+                We compose ClearForge Foundry services to your use-case. You keep control, clarity, and the keys.
               </p>
               <Button href="/foundry" size="lg">
                 See the Power

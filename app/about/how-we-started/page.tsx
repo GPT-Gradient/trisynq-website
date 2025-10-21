@@ -53,7 +53,7 @@ export default function FounderStoryPage() {
                 One of our founders started reaching out to technologists and industry leaders who believed technology should be transparent and empowering.
               </p>
               <p className="text-xl text-gray-300">
-                That collaboration became ClearForge — and Xynergy became the engine.
+                That collaboration became ClearForge — and ClearForge Foundry became the engine.
               </p>
               <div className="text-center mt-8">
                 <Button href="/about/founder-story-complete" variant="outline" size="lg">

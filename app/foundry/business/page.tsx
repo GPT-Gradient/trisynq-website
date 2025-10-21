@@ -25,7 +25,7 @@ export const metadata: Metadata = generateMetadata({
   canonical: '/foundry/business',
 });
 
-export default function XynergyPreviewPage() {
+export default function FoundryBusinessPage() {
   return (
     <>
       {/* Hero Section */}

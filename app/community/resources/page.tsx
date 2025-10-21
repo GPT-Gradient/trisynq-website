@@ -29,7 +29,7 @@ export default function ResourcesPage() {
         </div>
       </Section>
 
-      {/* Xynergy Launch Section */}
+      {/* ClearForge Foundry Launch Section */}
       <Section background="dark">
         <div className="max-w-5xl mx-auto">
           <Card variant="elevated" className="mb-8 border-2 border-accent-pink/50">
@@ -37,7 +37,7 @@ export default function ResourcesPage() {
               <Rocket className="w-16 h-16 text-accent-pink flex-shrink-0" />
               <div className="flex-1">
                 <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-                  Xynergy Launch: <span className="text-gradient">Our Training Platform</span>
+                  ClearForge Foundry Launch: <span className="text-gradient">Our Training Platform</span>
                 </h2>
                 <p className="text-xl text-gray-300 mb-4">
                   The primary delivery mechanism for all educational content - from fundamentals to advanced implementation.
@@ -97,7 +97,7 @@ export default function ResourcesPage() {
 
             <div className="text-center">
               <Button href="/community/xynergy-launch" size="lg" className="mb-2">
-                Explore Xynergy Launch
+                Explore ClearForge Foundry Launch
               </Button>
               <p className="text-sm text-gray-400">Learn more about our comprehensive training platform</p>
             </div>
@@ -214,30 +214,30 @@ export default function ResourcesPage() {
               <div className="bg-primary/30 rounded-xl p-5 border border-accent-pink/20">
                 <h4 className="text-lg font-bold mb-2 text-white">Technology Translation Guides</h4>
                 <p className="text-gray-300 mb-3">
-                  Enterprise capabilities explained in business terms - delivered through Xynergy Launch
+                  Enterprise capabilities explained in business terms - delivered through ClearForge Foundry Launch
                 </p>
-                <div className="text-sm text-gray-400">Available via Xynergy Launch (Coming 2025)</div>
+                <div className="text-sm text-gray-400">Available via ClearForge Foundry Launch (Coming 2025)</div>
               </div>
               <div className="bg-primary/30 rounded-xl p-5 border border-accent-pink/20">
                 <h4 className="text-lg font-bold mb-2 text-white">Data Literacy Resources</h4>
                 <p className="text-gray-300 mb-3">
                   Understanding and leveraging data for competitive advantage
                 </p>
-                <div className="text-sm text-gray-400">Available via Xynergy Launch (Coming 2025)</div>
+                <div className="text-sm text-gray-400">Available via ClearForge Foundry Launch (Coming 2025)</div>
               </div>
               <div className="bg-primary/30 rounded-xl p-5 border border-accent-pink/20">
                 <h4 className="text-lg font-bold mb-2 text-white">AI Understanding Content</h4>
                 <p className="text-gray-300 mb-3">
                   How AI amplifies expertise without replacing authenticity
                 </p>
-                <div className="text-sm text-gray-400">Available via Xynergy Launch (Coming 2025)</div>
+                <div className="text-sm text-gray-400">Available via ClearForge Foundry Launch (Coming 2025)</div>
               </div>
               <div className="bg-primary/30 rounded-xl p-5 border border-accent-pink/20">
                 <h4 className="text-lg font-bold mb-2 text-white">Xynergy Launch Platform Tutorials</h4>
                 <p className="text-gray-300 mb-3">
-                  Using the Xynergy Launch platform effectively for learning and transformation
+                  Using the ClearForge Foundry Launch platform effectively for learning and transformation
                 </p>
-                <div className="text-sm text-gray-400">Available via Xynergy Launch (Coming 2025)</div>
+                <div className="text-sm text-gray-400">Available via ClearForge Foundry Launch (Coming 2025)</div>
               </div>
             </div>
           </Card>
@@ -341,7 +341,7 @@ export default function ResourcesPage() {
               Multiple formats for different learning styles
             </p>
             <p className="text-lg text-accent-pink">
-              All delivered through Xynergy Launch
+              All delivered through ClearForge Foundry Launch
             </p>
           </div>
 
@@ -453,7 +453,7 @@ export default function ResourcesPage() {
               <div className="bg-primary/30 rounded-xl p-6 mb-6">
                 <p className="text-lg font-bold mb-3 text-white">Xynergy Launch Free Tier</p>
                 <p className="text-gray-300">
-                  Core methodology, implementation guides, basic tools, and community learnings available to everyone through Xynergy Launch.
+                  Core methodology, implementation guides, basic tools, and community learnings available to everyone through ClearForge Foundry Launch.
                 </p>
               </div>
               <ul className="space-y-3 text-gray-300">
@@ -481,7 +481,7 @@ export default function ResourcesPage() {
               <div className="bg-primary/30 rounded-xl p-6 mb-6">
                 <p className="text-lg font-bold mb-3 text-white">Beta Partner Access</p>
                 <p className="text-gray-300">
-                  Advanced resources, detailed implementations, custom adaptations, and direct support. Benefits include Xynergy Launch paid tiers.
+                  Advanced resources, detailed implementations, custom adaptations, and direct support. Benefits include ClearForge Foundry Launch paid tiers.
                 </p>
               </div>
               <ul className="space-y-3 text-gray-300">
@@ -538,7 +538,7 @@ export default function ResourcesPage() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button href="/community/xynergy-launch" size="lg">
-                  Explore Xynergy Launch
+                  Explore ClearForge Foundry Launch
                 </Button>
                 <Button href="/beta" variant="outline" size="lg">
                   Become a Beta Partner

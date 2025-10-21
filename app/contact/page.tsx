@@ -140,7 +140,7 @@ export default function ContactPage() {
                 </div>
                 <h2 className="text-2xl font-bold mb-3 text-white">Custom Solutions</h2>
                 <p className="text-gray-300 mb-4">
-                  Bespoke systems on top of Xynergy CORE. Fully owned and auditable by you.
+                  Bespoke systems on top of ClearForge Foundry. Fully owned and auditable by you.
                 </p>
                 <p className="text-sm text-gray-500">
                   Response: 48-72 hours

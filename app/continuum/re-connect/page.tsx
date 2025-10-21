@@ -336,12 +336,12 @@ export default function ProjectREConnectPage() {
         </div>
       </Section>
 
-      {/* Xynergy Integration */}
+      {/* ClearForge Foundry Integration */}
       <Section background="medium">
         <div className="max-w-4xl mx-auto">
           <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 mb-12">
             <p className="text-lg text-gray-300 mb-6">
-              This domain is powered by Xynergy services with explainable workflows.
+              This domain is powered by ClearForge Foundry services with explainable workflows.
             </p>
             <div className="text-center">
               <Button href="/foundry" variant="outline" size="lg">

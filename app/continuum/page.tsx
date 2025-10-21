@@ -137,7 +137,7 @@ export default function ContinuumOverviewPage() {
                             {project.status}
                           </span>
                           <span className="px-3 py-1 rounded-full text-xs font-semibold border border-secondary-purple-light/30 bg-secondary-purple-light/10 text-secondary-purple-light">
-                            Powered by Xynergy
+                            Powered by ClearForge Foundry
                           </span>
                         </div>
                       </div>

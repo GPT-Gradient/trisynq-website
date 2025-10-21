@@ -304,7 +304,7 @@ export default function DataDividePage() {
               Explore Solutions
             </Button>
             <Button href="/foundry" variant="outline" size="lg">
-              See How Xynergy Works
+              See How ClearForge Foundry Works
             </Button>
           </div>
         </div>

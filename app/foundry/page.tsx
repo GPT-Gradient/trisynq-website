@@ -12,7 +12,7 @@ export const metadata: Metadata = generateMetadata({
   canonical: '/foundry',
 });
 
-export default function XynergyPage() {
+export default function FoundryPage() {
   return (
     <>
       {/* Hero Section */}
@@ -119,7 +119,7 @@ export default function XynergyPage() {
               </p>
 
               <p className="text-lg leading-relaxed">
-                Xynergy CORE doesn&apos;t replace your expertise. It <strong className="text-primary-blue">amplifies</strong> it. It doesn&apos;t write in some generic &quot;AI voice.&quot; It learns <strong className="text-primary-blue">your voice</strong>, understands <strong className="text-primary-blue">your brand</strong>, and reasons with <strong className="text-primary-blue">your knowledge</strong>.
+                ClearForge Foundry doesn&apos;t replace your expertise. It <strong className="text-primary-blue">amplifies</strong> it. It doesn&apos;t write in some generic &quot;AI voice.&quot; It learns <strong className="text-primary-blue">your voice</strong>, understands <strong className="text-primary-blue">your brand</strong>, and reasons with <strong className="text-primary-blue">your knowledge</strong>.
               </p>
 
               <p className="text-lg leading-relaxed">
@@ -218,12 +218,12 @@ export default function XynergyPage() {
         </div>
       </Section>
 
-      {/* The Xynergy Assistant — Your Background Operator */}
+      {/* The Lumen — Your Background Operator */}
       <Section background="medium" id="assistant">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              The Xynergy Assistant — Your <span className="text-gradient">Background Operator</span>
+              The Lumen — Your <span className="text-gradient">Background Operator</span>
             </h2>
           </div>
 
@@ -665,7 +665,7 @@ export default function XynergyPage() {
         </div>
       </Section>
 
-      {/* Build on Xynergy CORE */}
+      {/* Build on ClearForge Foundry */}
       <Section background="gradient" id="build">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">

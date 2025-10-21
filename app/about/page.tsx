@@ -156,13 +156,13 @@ export default function WhoWeArePage() {
         </div>
       </Section>
 
-      {/* Why Xynergy Section */}
+      {/* Why ClearForge Foundry Section */}
       <Section background="medium" id="why-xynergy">
         <div className="max-w-5xl mx-auto">
           <Card variant="elevated">
             <div className="text-center mb-8">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                Why We Built <span className="text-gradient">Xynergy</span>
+                Why We Built <span className="text-gradient">Foundry</span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
                 Off-the-shelf AI hid the levers our clients needed. We built our own engine so every decision could be explained, audited, and improved.

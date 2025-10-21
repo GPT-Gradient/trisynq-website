@@ -97,7 +97,7 @@ export default function ProofPage() {
               </p>
               <div className="bg-primary/30 rounded-xl p-6 max-w-3xl mx-auto">
                 <p className="text-gray-300">
-                  No fake testimonials. No cherry-picked wins. Just real outcomes from real operators testing Xynergy-powered solutions.
+                  No fake testimonials. No cherry-picked wins. Just real outcomes from real operators testing Foundry-powered solutions.
                 </p>
               </div>
             </div>
@@ -312,7 +312,7 @@ export default function ProofPage() {
               Apply for Beta
             </Button>
             <Button href="/solutions/partnership" variant="outline" size="lg">
-              Build on Xynergy
+              Build on ClearForge Foundry
             </Button>
           </div>
         </div>

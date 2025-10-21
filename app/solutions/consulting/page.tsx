@@ -364,7 +364,7 @@ export default function ConsultingAdvisoryPage() {
         </div>
       </Section>
 
-      {/* Xynergy Integration */}
+      {/* ClearForge Foundry Integration */}
       <Section background="medium">
         <div className="max-w-4xl mx-auto text-center">
           <Card variant="elevated">
@@ -373,7 +373,7 @@ export default function ConsultingAdvisoryPage() {
                 Our consulting runs on Xynergy—so your roadmap, automations, and results are transparent and explainable.
               </p>
               <Button href="/solutions/partnership" size="lg">
-                Build on Xynergy
+                Build on ClearForge Foundry
               </Button>
             </div>
           </Card>

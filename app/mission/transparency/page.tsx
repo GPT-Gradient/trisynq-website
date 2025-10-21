@@ -305,7 +305,7 @@ export default function TransparencyRevolutionPage() {
 
           <div className="mt-8 bg-background-dark rounded-2xl p-8 border border-primary-blue/20">
             <p className="text-lg text-gray-200">
-              Every Xynergy output can show sources, steps, and confidence. Transparency isn&apos;t a promise; it&apos;s a feature.
+              Every ClearForge Foundry output can show sources, steps, and confidence. Transparency isn&apos;t a promise; it&apos;s a feature.
             </p>
           </div>
         </div>

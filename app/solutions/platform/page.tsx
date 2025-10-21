@@ -17,11 +17,11 @@ export default function PlatformSolutionsPage() {
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
-          {/* Powered by Xynergy Badge */}
+          {/* Powered by ClearForge Foundry Badge */}
           <div className="mb-6 inline-block">
             <div className="bg-gradient-to-r from-primary-blue/20 to-secondary-purple-light/20 rounded-full px-6 py-2 border border-primary-blue/30">
               <p className="text-sm font-bold text-primary-blue">
-                Powered by Xynergy
+                Powered by ClearForge Foundry
               </p>
             </div>
           </div>
@@ -98,7 +98,7 @@ export default function PlatformSolutionsPage() {
           <Card variant="elevated">
             <div className="space-y-4">
               <div className="bg-primary/30 rounded-xl p-6 border border-primary-blue/20">
-                <h4 className="text-xl font-bold text-white mb-3">Xynergy&apos;s &apos;Explain this&apos; view on every major action</h4>
+                <h4 className="text-xl font-bold text-white mb-3">FoundryXynergy&apos;sapos;s &apos;Explain this&apos; view on every major action</h4>
                 <p className="text-gray-300">
                   Full transparency into how AI arrives at every decision.
                 </p>
@@ -506,7 +506,7 @@ export default function PlatformSolutionsPage() {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary-blue">•</span>
-                      <span>Pro: Advanced workflows & Xynergy labs</span>
+                      <span>Pro: Advanced workflows & ClearForge Foundry labs</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-primary-blue">•</span>
@@ -604,7 +604,7 @@ export default function PlatformSolutionsPage() {
               Join the Community
             </Button>
             <Button href="/solutions/partnership" variant="outline" size="lg">
-              Build on Xynergy
+              Build on ClearForge Foundry
             </Button>
           </div>
         </div>

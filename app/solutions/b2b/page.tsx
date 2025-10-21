@@ -206,7 +206,7 @@ export default function B2BSolutionsPage() {
             <Card variant="elevated">
               <h3 className="text-2xl font-bold mb-4 text-secondary-purple-light">Content at Scale</h3>
               <p className="text-gray-300 mb-4">
-                Generate B2B content that actually converts. Powered by Xynergy CORE with your voice, your expertise, your brand.
+                Generate B2B content that actually converts. Powered by ClearForge Foundry with your voice, your expertise, your brand.
               </p>
               <ul className="text-gray-400 space-y-2 text-sm">
                 <li>• Account-specific content generation</li>

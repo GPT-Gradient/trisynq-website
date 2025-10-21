@@ -160,9 +160,9 @@ export default function XynergyLaunchPage() {
         </div>
 
         <div className="bg-background-dark rounded-3xl p-8 border border-primary-blue/30">
-          <h4 className="text-2xl font-bold mb-6 text-center">Built on Xynergy AI Platform</h4>
+          <h4 className="text-2xl font-bold mb-6 text-center">Built on ClearForge Foundry AI Platform</h4>
           <p className="text-lg text-gray-300 text-center mb-4">
-            This entire training platform was created using the Xynergy AI system—the same transparent, locally-controlled AI we teach in the platform. We use exactly what we teach you to build.
+            This entire training platform was created using the ClearForge Foundry AI system—the same transparent, locally-controlled AI we teach in the platform. We use exactly what we teach you to build.
           </p>
           <p className="text-accent-pink font-semibold text-center">
             Proof of concept isn&apos;t just theory. It&apos;s this page you&apos;re reading right now.
@@ -548,9 +548,9 @@ export default function XynergyLaunchPage() {
             <div className="flex items-start gap-4 mb-6">
               <Rocket className="w-12 h-12 text-accent-pink flex-shrink-0" />
               <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Built on Xynergy AI</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Built on ClearForge Foundry AI</h3>
                 <p className="text-gray-300">
-                  This entire platform—every page, every guide, every piece of content—was created using the Xynergy AI system. The same transparent, locally-controlled AI we teach you to implement.
+                  This entire platform—every page, every guide, every piece of content—was created using the ClearForge Foundry AI system. The same transparent, locally-controlled AI we teach you to implement.
                 </p>
               </div>
             </div>
@@ -564,7 +564,7 @@ export default function XynergyLaunchPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-primary-blue mt-0.5 flex-shrink-0" />
-                  <span>Our content: Created with Xynergy AI platform</span>
+                  <span>Our content: Created with ClearForge Foundry AI platform</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle className="w-5 h-5 text-primary-blue mt-0.5 flex-shrink-0" />
@@ -622,7 +622,7 @@ export default function XynergyLaunchPage() {
           </h2>
 
           <p className="text-xl text-gray-300 mb-8">
-            Xynergy Launch is coming in 2025. Join the waitlist now to get early access when we launch beta testing.
+            ClearForge Foundry Launch is coming in 2025. Join the waitlist now to get early access when we launch beta testing.
           </p>
 
           <div className="bg-background-dark rounded-3xl p-8 border border-primary-blue/30 mb-8">

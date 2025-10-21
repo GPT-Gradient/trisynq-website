@@ -38,7 +38,7 @@ export default function SolutionsPage() {
                     <Cpu className="w-10 h-10 text-primary-blue" />
                   </div>
                   <div className="bg-accent-pink/20 text-accent-pink px-4 py-1 rounded-full text-xs font-semibold">
-                    Powered by Xynergy
+                    Powered by ClearForge Foundry
                   </div>
                 </div>
                 <h2 className="text-3xl font-bold mb-3 text-white">Platform</h2>
@@ -89,7 +89,7 @@ export default function SolutionsPage() {
                 </div>
                 <h2 className="text-3xl font-bold mb-3 text-white">Custom</h2>
                 <p className="text-lg text-gray-300 mb-6">
-                  Bespoke systems on top of Xynergy services, fully owned and auditable.
+                  Bespoke systems on top of ClearForge Foundry services, fully owned and auditable.
                 </p>
               </div>
 
@@ -182,7 +182,7 @@ export default function SolutionsPage() {
             Ready to <span className="text-gradient">Get Started?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Explore how Xynergy powers transparent, explainable solutions.
+            Explore how ClearForge Foundry powers transparent, explainable solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/foundry" size="lg">

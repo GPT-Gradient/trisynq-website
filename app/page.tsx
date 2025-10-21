@@ -357,7 +357,7 @@ export default function HomePage() {
           <Card variant="elevated" className="border-2 border-primary-blue/50">
             <div className="mb-3">
               <span className="inline-block bg-accent-pink/20 text-accent-pink text-xs font-semibold px-3 py-1 rounded-full">
-                Powered by Xynergy
+                Powered by ClearForge Foundry
               </span>
             </div>
             <h3 className="text-2xl font-bold mb-3 text-primary-blue">Build.</h3>
@@ -373,7 +373,7 @@ export default function HomePage() {
           <Card variant="elevated" className="border-2 border-secondary-purple-light/50">
             <div className="mb-3">
               <span className="inline-block bg-accent-pink/20 text-accent-pink text-xs font-semibold px-3 py-1 rounded-full">
-                Powered by Xynergy
+                Powered by ClearForge Foundry
               </span>
             </div>
             <h3 className="text-2xl font-bold mb-3 text-secondary-purple-light">Empower.</h3>
@@ -389,7 +389,7 @@ export default function HomePage() {
           <Card variant="elevated" className="border-2 border-accent-pink/50">
             <div className="mb-3">
               <span className="inline-block bg-accent-pink/20 text-accent-pink text-xs font-semibold px-3 py-1 rounded-full">
-                Powered by Xynergy
+                Powered by ClearForge Foundry
               </span>
             </div>
             <h3 className="text-2xl font-bold mb-3 text-accent-pink">Protect.</h3>

@@ -11,7 +11,7 @@ export const metadata: Metadata = generateMetadata({
   canonical: '/foundry/origin-story',
 });
 
-export default function XynergyOriginStoryPage() {
+export default function FoundryOriginStoryPage() {
   return (
     <>
       {/* Hero Section */}
@@ -119,7 +119,7 @@ export default function XynergyOriginStoryPage() {
               &quot;What if we abstracted the pattern? What if we built the <strong className="text-primary-blue">framework</strong> that enterprises use—contextual orchestration, reasoning engines, provenance tracking—and made it accessible to everyone?&quot;
             </p>
             <p className="text-accent-pink text-center font-semibold">
-              That&apos;s when Xynergy CORE was born.
+              That&apos;s when ClearForge Foundry was born.
             </p>
           </div>
         </div>
@@ -203,7 +203,7 @@ export default function XynergyOriginStoryPage() {
                 </ul>
               </div>
               <div>
-                <p className="font-semibold text-accent-pink mb-2">Xynergy CORE:</p>
+                <p className="font-semibold text-accent-pink mb-2">ClearForge Foundry:</p>
                 <ul className="space-y-1">
                   <li>• Explainable at every step</li>
                   <li>• Open patterns, no lock-in</li>
@@ -232,7 +232,7 @@ export default function XynergyOriginStoryPage() {
           <Card variant="elevated" className="border-2 border-accent-pink/30 mb-8">
             <div className="space-y-6 text-gray-300">
               <p className="text-xl text-gray-200">
-                What you see today is Xynergy CORE v1—our first public release of the framework.
+                What you see today is ClearForge Foundry v1—our first public release of the framework.
               </p>
 
               <p className="text-lg">
@@ -286,14 +286,14 @@ export default function XynergyOriginStoryPage() {
             Be Part of the <span className="text-gradient">Story</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Xynergy CORE is evolving. Help us prove that transparency, explainability, and accessibility can beat proprietary complexity.
+            ClearForge Foundry is evolving. Help us prove that transparency, explainability, and accessibility can beat proprietary complexity.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button href="/beta-program" size="lg">
               Join Phase 1
             </Button>
             <Button href="/foundry" variant="outline" size="lg">
-              Explore Xynergy CORE
+              Explore ClearForge Foundry
             </Button>
           </div>
         </div>

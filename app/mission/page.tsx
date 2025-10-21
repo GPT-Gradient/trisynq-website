@@ -294,7 +294,7 @@ export default function ManifestoPage() {
 
           <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 text-center mt-8">
             <p className="text-lg text-gray-200">
-              Xynergy is the technical expression of our mission: transparency that people can use.
+              ClearForge Foundry is the technical expression of our mission: transparency that people can use.
             </p>
           </div>
 
