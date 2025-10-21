@@ -6,19 +6,19 @@ import { generateMetadata } from '@/components/seo/SEOHead';
 import { FileCheck, TrendingUp, Users } from 'lucide-react';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'Proof — Live Outcomes, Playbooks, and Public Demos',
+  title: 'Public Dashboard — Live Outcomes, Playbooks, and Public Demos',
   description: 'Real outcomes from real businesses. No manufactured case studies. Just transparent results.',
-  canonical: '/proof',
+  canonical: '/public-dashboard',
 });
 
-export default function ProofPage() {
+export default function PublicDashboardPage() {
   return (
     <>
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
         <div className="text-center max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-gradient">Proof</span> is the Product.
+            <span className="text-gradient">Public Dashboard</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Live outcomes, playbooks, and public demos. No manufactured case studies.

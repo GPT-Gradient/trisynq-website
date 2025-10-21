@@ -179,7 +179,7 @@ export default function ForgeToolsPage() {
             <Button href="/foundry" size="lg">
               Explore Foundry
             </Button>
-            <Button href="/proof" variant="outline" size="lg">
+            <Button href="/public-dashboard" variant="outline" size="lg">
               See the Proof
             </Button>
           </div>
