@@ -4,7 +4,7 @@ import { useState, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Menu, X, ChevronDown } from 'lucide-react';
-import { mainNavigation } from '@/data/navigation';
+import { mainNavigation, headerCTA } from '@/data/navigation';
 import Button from '@/components/ui/Button';
 
 export default function Header() {
@@ -70,7 +70,7 @@ export default function Header() {
                 {/* Dropdown */}
                 {item.children && openDropdown === item.label && (
                   <div
-                    className="absolute top-full left-0 mt-2 w-64 bg-primary rounded-2xl shadow-xl border border-primary-blue/20 py-2"
+                    className="absolute top-full left-0 mt-2 w-72 bg-primary rounded-2xl shadow-xl border border-primary-blue/20 py-2"
                     onMouseEnter={() => handleMouseEnter(item.label)}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -78,9 +78,14 @@ export default function Header() {
                       <Link
                         key={child.href}
                         href={child.href}
-                        className="block px-4 py-2 text-gray-300 hover:text-white hover:bg-primary-blue/10 transition-colors"
+                        className={`block px-4 py-2 text-gray-300 hover:text-white hover:bg-primary-blue/10 transition-colors ${child.indent ? 'pl-8 text-sm' : ''}`}
                       >
-                        {child.label}
+                        <div>
+                          <div className="font-medium">{child.label}</div>
+                          {child.description && (
+                            <div className="text-xs text-gray-400 mt-0.5">{child.description}</div>
+                          )}
+                        </div>
                       </Link>
                     ))}
                   </div>
@@ -88,16 +93,16 @@ export default function Header() {
               </div>
             ))}
 
-            {/* Start Your Forge Journey CTA Button */}
-            <Button href="/get-started" size="sm" className="whitespace-nowrap ml-auto">
-              Start Your Forge Journey
+            {/* Join Beta CTA Button */}
+            <Button href={headerCTA.href} size="sm" className="whitespace-nowrap ml-auto">
+              {headerCTA.label}
             </Button>
           </div>
 
           {/* Mobile CTA + Menu Button */}
           <div className="lg:hidden flex items-center gap-3 ml-auto">
-            <Button href="/get-started" size="sm" className="text-xs px-3 py-1">
-              Start
+            <Button href={headerCTA.href} size="sm" className="text-xs px-3 py-1">
+              {headerCTA.label}
             </Button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -129,10 +134,15 @@ export default function Header() {
                           <Link
                             key={child.href}
                             href={child.href}
-                            className="block text-gray-400 hover:text-white transition-colors py-1"
+                            className={`block text-gray-400 hover:text-white transition-colors py-1 ${child.indent ? 'pl-4 text-sm' : ''}`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {child.label}
+                            <div>
+                              <div>{child.label}</div>
+                              {child.description && (
+                                <div className="text-xs text-gray-500 mt-0.5">{child.description}</div>
+                              )}
+                            </div>
                           </Link>
                         ))}
                       </div>
@@ -150,8 +160,8 @@ export default function Header() {
               </div>
             ))}
             <div className="mt-4">
-              <Button href="/get-started" className="w-full">
-                Start Your Forge Journey
+              <Button href={headerCTA.href} className="w-full">
+                {headerCTA.label}
               </Button>
             </div>
           </div>

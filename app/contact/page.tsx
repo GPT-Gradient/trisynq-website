@@ -1,232 +1,242 @@
-import { Metadata } from 'next';
-import { GraduationCap, Handshake, Users, Briefcase, Mail, Phone } from 'lucide-react';
+'use client';
+
+import { useSearchParams } from 'next/navigation';
+import { useState, useEffect, FormEvent, Suspense } from 'react';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { generateMetadata } from '@/components/seo/SEOHead';
 
-export const metadata: Metadata = generateMetadata({
-  title: 'Contact — Let\'s Talk',
-  description: 'Choose how you want to work with ClearForge. Each path is designed to capture what matters and route it properly.',
-  canonical: '/contact',
-});
+function ContactForm() {
+  const searchParams = useSearchParams();
+  const [formType, setFormType] = useState('general');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
-export default function ContactPage() {
+  useEffect(() => {
+    const type = searchParams.get('type');
+    if (type) {
+      setFormType(type);
+    }
+  }, [searchParams]);
+
+  const getFormTitle = (type: string): string => {
+    const titles: Record<string, string> = {
+      'beta-os': 'Apply for Business: OS Beta',
+      'nexus': 'Apply for NEXUS Continuum',
+      'connect': 'Request Foundry Connect Access',
+      'waitlist-search': 'Join Search: Visibility Waitlist',
+      'partnership': 'Partner With ClearForge',
+      'general': 'Contact Us'
+    };
+    return titles[type] || titles.general;
+  };
+
+  const getFormDescription = (type: string): string => {
+    const descriptions: Record<string, string> = {
+      'beta-os': 'Get early access to Foundry Business: OS with significant benefits for beta participants.',
+      'nexus': 'Join our 12-18 month search visibility validation program.',
+      'connect': 'Request API access to The Foundry Platform.',
+      'waitlist-search': 'Be notified when Foundry Search: Visibility launches (Q3 2026).',
+      'partnership': 'Discuss consulting, custom development, training, or Continuum partnerships.',
+      'general': 'General inquiries, support, or questions about ClearForge.'
+    };
+    return descriptions[type] || descriptions.general;
+  };
+
+  const getFormFields = (type: string) => {
+    const commonFields = [
+      { name: 'name', label: 'Name', type: 'text', required: true },
+      { name: 'email', label: 'Email', type: 'email', required: true },
+      { name: 'company', label: 'Company', type: 'text', required: false }
+    ];
+
+    const typeSpecificFields: Record<string, any[]> = {
+      'beta-os': [
+        ...commonFields,
+        { name: 'projects', label: 'Number of parallel projects you manage', type: 'number', required: true },
+        { name: 'tools', label: 'Current tools you use (comma-separated)', type: 'text', required: false },
+        { name: 'challenge', label: 'Biggest challenge with context switching', type: 'textarea', required: true }
+      ],
+      'nexus': [
+        ...commonFields,
+        { name: 'website', label: 'Website URL', type: 'url', required: true },
+        { name: 'traffic', label: 'Monthly organic search traffic (estimate)', type: 'text', required: false },
+        { name: 'strategy', label: 'Current SEO/search strategy', type: 'textarea', required: false },
+        { name: 'why', label: 'Why do you want to be a NEXUS partner?', type: 'textarea', required: true }
+      ],
+      'connect': [
+        ...commonFields,
+        { name: 'role', label: 'Developer role/title', type: 'text', required: true },
+        { name: 'use_case', label: 'What will you build with Foundry Connect?', type: 'textarea', required: true },
+        { name: 'volume', label: 'Expected monthly API request volume', type: 'select', options: ['<10K', '10K-100K', '100K-1M', '>1M'], required: false }
+      ],
+      'waitlist-search': [
+        ...commonFields,
+        { name: 'interest', label: 'What interests you about Foundry Search?', type: 'textarea', required: false }
+      ],
+      'partnership': [
+        ...commonFields,
+        { name: 'service_type', label: 'Service Interest', type: 'select', options: ['Consulting', 'Custom Development', 'Training', 'Continuum Partnership', 'Multiple'], required: true },
+        { name: 'details', label: 'Tell us about your needs', type: 'textarea', required: true }
+      ],
+      'general': [
+        ...commonFields,
+        { name: 'subject', label: 'Subject', type: 'text', required: true },
+        { name: 'message', label: 'Message', type: 'textarea', required: true }
+      ]
+    };
+
+    return typeSpecificFields[type] || typeSpecificFields.general;
+  };
+
+  const getSubmitButtonText = (type: string): string => {
+    const texts: Record<string, string> = {
+      'beta-os': 'Apply for Beta',
+      'nexus': 'Submit NEXUS Application',
+      'connect': 'Request API Access',
+      'waitlist-search': 'Join Waitlist',
+      'partnership': 'Submit Inquiry',
+      'general': 'Send Message'
+    };
+    return texts[type] || 'Submit';
+  };
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+
+    const formData = new FormData(e.currentTarget);
+    const data: Record<string, any> = {
+      formType: formType
+    };
+
+    // Collect form data
+    formData.forEach((value, key) => {
+      data[key] = value;
+    });
+
+    try {
+      // Route to appropriate backend handler based on formType
+      const endpoint = formType === 'beta-os' ? '/api/beta' : '/api/contact';
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        (e.target as HTMLFormElement).reset();
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const fields = getFormFields(formType);
+
   return (
     <>
-      {/* Hero */}
       <Section background="gradient" className="pt-32 pb-20">
-        <div className="text-center max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Let&apos;s <span className="text-gradient">Talk</span>
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            {getFormTitle(formType)}
           </h1>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-6">
-            Choose Your Path. We&apos;ll Ask The Right Questions.
-          </p>
-
-          <p className="text-lg text-gray-400">
-            Each conversation starts with understanding what you need. Pick the path that fits, answer the questions that matter, and we&apos;ll route it to the right place.
+          <p className="text-xl text-gray-300">
+            {getFormDescription(formType)}
           </p>
         </div>
       </Section>
 
-      {/* 6 Tiles */}
       <Section background="dark">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="max-w-2xl mx-auto">
+          <Card variant="elevated">
+            <form onSubmit={handleSubmit} className="space-y-6">
+              {fields.map((field) => (
+                <div key={field.name}>
+                  <label htmlFor={field.name} className="block text-sm font-medium text-gray-300 mb-2">
+                    {field.label} {field.required && <span className="text-accent-pink">*</span>}
+                  </label>
 
-          {/* Beta Program */}
-          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-accent-pink/30 hover:border-accent-pink/60">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <div className="bg-accent-pink/20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                  <Mail className="w-8 h-8 text-accent-pink" />
+                  {field.type === 'textarea' ? (
+                    <textarea
+                      id={field.name}
+                      name={field.name}
+                      required={field.required}
+                      rows={4}
+                      className="w-full px-4 py-3 bg-background-dark border border-gray-700 rounded-lg text-white focus:outline-none focus:border-primary-blue transition-colors"
+                    />
+                  ) : field.type === 'select' ? (
+                    <select
+                      id={field.name}
+                      name={field.name}
+                      required={field.required}
+                      className="w-full px-4 py-3 bg-background-dark border border-gray-700 rounded-lg text-white focus:outline-none focus:border-primary-blue transition-colors"
+                    >
+                      <option value="">Select an option</option>
+                      {field.options?.map((option: string) => (
+                        <option key={option} value={option}>{option}</option>
+                      ))}
+                    </select>
+                  ) : (
+                    <input
+                      type={field.type}
+                      id={field.name}
+                      name={field.name}
+                      required={field.required}
+                      className="w-full px-4 py-3 bg-background-dark border border-gray-700 rounded-lg text-white focus:outline-none focus:border-primary-blue transition-colors"
+                    />
+                  )}
                 </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Beta Program</h2>
-                <p className="text-gray-300 mb-4">
-                  Join the first 100 partners. Answer qualification questions. Get scored. Get started.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Response: 48 hours
-                </p>
-              </div>
+              ))}
 
-              <div className="mt-auto">
-                <Button href="/beta" className="w-full group-hover:bg-accent-pink/90">
-                  Apply for Beta
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          {/* Training */}
-          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-primary-blue/30 hover:border-primary-blue/60">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <div className="bg-primary-blue/20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                  <GraduationCap className="w-8 h-8 text-primary-blue" />
+              {submitStatus === 'success' && (
+                <div className="bg-green-500/20 border border-green-500 text-green-400 px-4 py-3 rounded-lg">
+                  Thank you! We&apos;ll get back to you soon.
                 </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Training Inquiry</h2>
-                <p className="text-gray-300 mb-4">
-                  Data, AI, or Combined. Virtual or on-site. Tell us what your team needs to learn.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Response: 48-72 hours
-                </p>
-              </div>
+              )}
 
-              <div className="mt-auto">
-                <Button href="/training" className="w-full group-hover:bg-primary-blue/90">
-                  Explore Training
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          {/* Partnership */}
-          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-secondary-purple/30 hover:border-secondary-purple/60">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <div className="bg-secondary-purple/20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                  <Handshake className="w-8 h-8 text-secondary-purple-light" />
+              {submitStatus === 'error' && (
+                <div className="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg">
+                  Something went wrong. Please try again or email us directly.
                 </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Partnership</h2>
-                <p className="text-gray-300 mb-4">
-                  Co-build products and playbooks. Share learnings, keep the keys. Let&apos;s talk.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Response: 48-72 hours
-                </p>
-              </div>
+              )}
 
-              <div className="mt-auto">
-                <Button href="/solutions/partnership" variant="outline" className="w-full border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white">
-                  Explore Partnership
-                </Button>
-              </div>
-            </div>
+              <Button
+                type="submit"
+                size="lg"
+                className="w-full"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? 'Submitting...' : getSubmitButtonText(formType)}
+              </Button>
+            </form>
           </Card>
-
-          {/* Consulting */}
-          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-primary-blue/30 hover:border-primary-blue/60">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <div className="bg-primary-blue/20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                  <Users className="w-8 h-8 text-primary-blue" />
-                </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Consulting</h2>
-                <p className="text-gray-300 mb-4">
-                  Technology + Data + AI integration. Hands-on experts who build with you.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Response: 48-72 hours
-                </p>
-              </div>
-
-              <div className="mt-auto">
-                <Button href="/solutions/consulting" className="w-full group-hover:bg-primary-blue/90">
-                  Explore Consulting
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          {/* Custom Solutions */}
-          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-accent-pink/30 hover:border-accent-pink/60">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <div className="bg-accent-pink/20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                  <Briefcase className="w-8 h-8 text-accent-pink" />
-                </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Custom Solutions</h2>
-                <p className="text-gray-300 mb-4">
-                  Bespoke systems on top of ClearForge Foundry. Fully owned and auditable by you.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Response: 48-72 hours
-                </p>
-              </div>
-
-              <div className="mt-auto">
-                <Button href="/solutions/custom" variant="outline" className="w-full border-accent-pink text-accent-pink hover:bg-accent-pink hover:text-white">
-                  Explore Custom
-                </Button>
-              </div>
-            </div>
-          </Card>
-
-          {/* General / Other */}
-          <Card variant="elevated" className="group hover:scale-105 transition-transform duration-300 border-2 border-secondary-purple/30 hover:border-secondary-purple/60">
-            <div className="flex flex-col h-full">
-              <div className="mb-6">
-                <div className="bg-secondary-purple/20 rounded-full w-16 h-16 flex items-center justify-center mb-4">
-                  <Phone className="w-8 h-8 text-secondary-purple-light" />
-                </div>
-                <h2 className="text-2xl font-bold mb-3 text-white">Something Else</h2>
-                <p className="text-gray-300 mb-4">
-                  Media, speaking, community, or anything else. Direct email works best.
-                </p>
-                <p className="text-sm text-gray-500">
-                  Response: 24-48 hours
-                </p>
-              </div>
-
-              <div className="mt-auto">
-                <a
-                  href="mailto:hello@clearforgetech.com"
-                  className="inline-flex items-center justify-center font-semibold rounded-full transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-secondary-purple-light text-secondary-purple-light hover:bg-secondary-purple hover:text-white focus:ring-secondary-purple-light px-6 py-3 text-base w-full text-center"
-                >
-                  Email Us Directly
-                </a>
-              </div>
-            </div>
-          </Card>
-
-        </div>
-      </Section>
-
-      {/* Why This Way */}
-      <Section background="medium">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Why <span className="text-gradient">This Approach</span>?
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 text-left">
-            <Card>
-              <h3 className="text-xl font-bold mb-3 text-primary-blue">Better Qualification</h3>
-              <p className="text-gray-300">
-                Each path asks the right questions for that type of engagement. We learn what matters. You don&apos;t waste time explaining context.
-              </p>
-            </Card>
-            <Card>
-              <h3 className="text-xl font-bold mb-3 text-accent-pink">Smarter Routing</h3>
-              <p className="text-gray-300">
-                Your inquiry gets routed to the right person with the right context. Scored for fit. Tracked in our system. No information gets lost.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </Section>
-
-      {/* Office Info */}
-      <Section background="dark">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            <span className="text-gradient">Based</span> in Port St. Lucie, Florida
-          </h2>
-          <p className="text-xl text-gray-300 mb-4">
-            Virtual first. Remote collaboration primary.
-          </p>
-          <p className="text-lg text-gray-400 mb-8">
-            Business hours EST: Monday - Friday, 9am - 5pm
-          </p>
-          <div className="bg-accent-pink/10 rounded-2xl p-6 border border-accent-pink/30 max-w-2xl mx-auto">
-            <p className="text-accent-pink font-semibold">
-              We&apos;re a small, focused team building in public. Response times may vary during intensive development, but we&apos;ll always get back to you.
-            </p>
-          </div>
         </div>
       </Section>
     </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <Suspense fallback={
+      <Section background="gradient" className="pt-32 pb-20">
+        <div className="max-w-4xl mx-auto text-center">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Loading...</h1>
+        </div>
+      </Section>
+    }>
+      <ContactForm />
+    </Suspense>
   );
 }

@@ -3,71 +3,76 @@ import { NavItem } from '@/types';
 export const mainNavigation: NavItem[] = [
   {
     label: 'Foundry',
-    href: '/foundry',
+    href: '/foundry/platform',
     children: [
-      // Platform
-      { label: 'The Foundry Platform', href: '/foundry' },
-      { label: 'Foundry Connect (API)', href: '/foundry/connect' },
-      // Products
-      { label: 'Foundry Business: OS', href: '/foundry/business' },
-      { label: 'Foundry Search: Visibility', href: '/foundry/search' },
-      // Info
-      { label: 'Product Roadmap', href: '/foundry/roadmap' },
-      { label: 'Pricing', href: '/foundry/pricing' },
+      { label: 'Platform', href: '/foundry/platform', description: 'The AI engine powering everything' },
+      { label: 'Business Suite', href: '/foundry/business' },
+      { label: '→ Business: OS', href: '/foundry/business/os', indent: true },
+      { label: 'Search Suite', href: '/foundry/search' },
+      { label: 'Connect', href: '/foundry/connect', description: 'API Access' },
+      { label: 'Roadmap', href: '/foundry/roadmap' },
     ],
   },
   {
     label: 'The Forge',
     href: '/forge',
     children: [
-      // Four Doors
-      { label: 'Knowledge Forge', href: '/forge/knowledge' },
-      { label: 'Tool Forge', href: '/forge/tools' },
-      { label: 'Community Forge', href: '/forge/community' },
-      { label: 'Build Forge', href: '/forge/build' },
-      // Additional
-      { label: 'Blog / Articles', href: '/blog' },
-      { label: 'Continuum Projects', href: '/continuum' },
+      { label: 'Knowledge', href: '/forge/knowledge', description: 'Free education & articles' },
+      { label: 'Tools', href: '/forge/tools', description: 'Free calculators & resources' },
+      { label: 'Community', href: '/forge/community', description: 'Connect with builders' },
+      { label: 'Build', href: '/forge/build', description: 'Transparency & Continuum' },
     ],
   },
   {
-    label: 'Proof',
-    href: '/proof',
+    label: 'Services',
+    href: '/services',
+    children: [
+      { label: 'Consulting', href: '/services/consulting', description: 'Operators-first knowledge transfer' },
+      { label: 'Custom Development', href: '/services/custom', description: 'We build, you own' },
+      { label: 'Training', href: '/services/training', description: 'Workshops & enablement' },
+      { label: 'Continuum Partnership', href: '/services/partnership', description: 'Co-create products' },
+    ],
+  },
+  {
+    label: 'The Continuum',
+    href: '/continuum',
+    children: [
+      { label: 'Overview', href: '/continuum' },
+      { label: 'Public Dashboard', href: '/dashboard' },
+      { label: 'Project NEXUS', href: '/continuum/nexus' },
+      { label: 'Project RE-Connect', href: '/continuum/re-connect' },
+    ],
   },
   {
     label: 'About',
     href: '/about',
     children: [
-      // Company
-      { label: 'Mission & Vision', href: '/about/mission-vision' },
-      { label: 'Our Story', href: '/about/how-we-started' },
-      { label: 'Values', href: '/about/values' },
-      { label: 'Team', href: '/about/team-philosophy' },
-      // Resources
-      { label: 'Manifesto', href: '/manifesto' },
-      { label: 'Data Divide', href: '/data-divide' },
-      { label: 'Transparency Commitment', href: '/transparency' },
+      { label: 'Our Story', href: '/about/story', description: 'How we started & founder journey' },
+      { label: 'Mission & Values', href: '/about/mission', description: 'Manifesto & philosophy' },
+      { label: 'Team', href: '/about/team' },
+      { label: 'Contact', href: '/contact' },
     ],
-  },
-  {
-    label: 'Contact',
-    href: '/contact',
   },
 ];
 
+// CTA Button for header (displayed separately on right side)
+export const headerCTA = {
+  label: 'Join Beta',
+  href: '/contact?type=beta-os',
+};
+
 export const footerNavigation = {
   mission: [
-    { label: 'Manifesto', href: '/manifesto' },
-    { label: 'Transparency Commitment', href: '/transparency' },
+    { label: 'Our Mission', href: '/about/mission' },
     { label: 'The Data Divide', href: '/data-divide' },
-    { label: 'AI Reality Check', href: '/ai-reality-check' },
+    { label: 'Public Dashboard', href: '/dashboard' },
+    { label: 'The Continuum', href: '/continuum' },
   ],
   company: [
-    { label: 'Team Values', href: '/about/team-philosophy' },
-    { label: 'How We Started', href: '/about/how-we-started' },
+    { label: 'Our Story', href: '/about/story' },
+    { label: 'Team', href: '/about/team' },
     { label: 'Careers', href: '/careers' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Get Started', href: '/beta' },
   ],
   legal: [
     { label: 'Legal', href: '/legal' },
