@@ -57,8 +57,8 @@ export const mainNavigation: NavItem[] = [
 
 // CTA Button for header (displayed separately on right side)
 export const headerCTA = {
-  label: 'Join Beta',
-  href: '/contact?type=beta-os',
+  label: 'Reach Out',
+  href: '/contact',
 };
 
 export const footerNavigation = {
