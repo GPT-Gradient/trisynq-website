@@ -1,6 +1,12 @@
 # ClearForge Website
 
-A production-ready Next.js 14+ website for ClearForge — making complexity transparent through Xynergy, our proprietary AI engine that researches, plans, executes, and proves.
+A production-ready Next.js 14+ website for ClearForge Technologies — making enterprise intelligence accessible through The Foundry platform, proven through The Continuum, and shared through The Forge.
+
+**Live URL:** https://clearforge-website-vgjxy554mq-uc.a.run.app
+**Status:** Production v1.0
+**Last Updated:** October 22, 2025
+
+---
 
 ## 🚀 Tech Stack
 
@@ -13,6 +19,8 @@ A production-ready Next.js 14+ website for ClearForge — making complexity tran
 - **Analytics**: Google Analytics 4
 - **API Integration**: Intelligence Gateway
 
+---
+
 ## 📋 Prerequisites
 
 - Node.js 20.x or higher
@@ -20,418 +28,325 @@ A production-ready Next.js 14+ website for ClearForge — making complexity tran
 - Google Cloud SDK (for deployment)
 - Docker (for containerization)
 
+---
+
 ## 🛠️ Local Development
 
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd trisynq-website
-   ```
+### 1. Clone the repository
+```bash
+git clone https://github.com/GPT-Gradient/cloudforge-website.git
+cd clearforge-website
+```
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
+### 2. Install dependencies
+```bash
+npm install
+```
 
-3. **Set up environment variables**
-   ```bash
-   cp .env.example .env.local
-   ```
+### 3. Set up environment variables
+```bash
+cp .env.example .env.local
+```
 
-   Update the following variables in `.env.local`:
-   - `NEXT_PUBLIC_XYNERGY_API_URL`: Xynergy API endpoint
-   - `XYNERGY_API_KEY`: Your Xynergy API key
-   - `NEXT_PUBLIC_GA_MEASUREMENT_ID`: Google Analytics measurement ID
+Update the following variables in `.env.local`:
+- `NEXT_PUBLIC_GATEWAY_URL`: Intelligence Gateway API endpoint
+- `GATEWAY_API_KEY`: Your Gateway API key (stored in GCP Secret Manager)
+- `NEXT_PUBLIC_GA_MEASUREMENT_ID`: Google Analytics measurement ID
 
-4. **Run the development server**
-   ```bash
-   npm run dev
-   ```
+### 4. Run the development server
+```bash
+npm run dev
+```
 
-   Open [http://localhost:3000](http://localhost:3000) in your browser.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-5. **Build for production**
-   ```bash
-   npm run build
-   npm start
-   ```
+### 5. Build for production
+```bash
+npm run build
+npm start
+```
+
+---
 
 ## 📁 Project Structure
 
 ```
-trisynq-website/
+clearforge-website/
+├── .context/                 # Context files for AI assistants (gitignored)
+│   ├── current/             # Active context materials
+│   └── processed/           # Completed materials
 ├── app/                      # Next.js App Router pages
-│   ├── about/               # About pages (How We Started, Team & Philosophy)
-│   ├── api/                 # API routes (beta, contact)
-│   ├── beta/                # Beta program application page
-│   ├── beta-program/        # Beta program structure details
-│   ├── community/           # Community pages (4-phase roadmap)
-│   ├── contact/             # Contact page
-│   ├── continuum/           # Continuum project pages (6 domains)
+│   ├── about/               # About pages (Story, Mission, Team)
+│   ├── api/                 # API routes (beta, contact, health)
+│   ├── blog/                # Blog system
+│   ├── contact/             # Contact page (URL parameter routing)
+│   ├── continuum/           # Continuum pages (Overview, NEXUS, RE-Connect)
 │   ├── dashboard/           # Public transparency dashboard
-│   ├── forge/               # The Forge hub
-│   │   └── topics/          # Topics content hub (coming soon)
-│   ├── get-started/         # Getting started page
-│   ├── how-we-do-it/        # T.R.A.N.S.L.A.T.E. methodology
-│   ├── mission/             # Mission pages (Manifesto, Transparency, Economic Liberation)
-│   ├── proof/               # Proof page (outcomes, playbooks, demos)
-│   ├── solutions/           # Solutions pages (Consulting, Partnership, Platform, Custom)
-│   ├── what-we-do/          # What We Do overview
-│   ├── who-we-are/          # Who We Are overview
-│   ├── xynergy/             # Xynergy engine deep dive
+│   ├── forge/               # The Forge hub + 4 doors
+│   │   ├── build/          # Open source & Continuum transparency
+│   │   ├── community/      # Community hub
+│   │   ├── knowledge/      # Educational content
+│   │   └── tools/          # Free tools & calculators
+│   ├── foundry/             # Foundry product pages
+│   │   ├── business/       # Business Suite
+│   │   │   └── os/        # Business: OS product page
+│   │   ├── connect/        # API access
+│   │   ├── roadmap/        # Product roadmap
+│   │   └── search/         # Search Suite
+│   ├── services/            # Services pages
+│   │   ├── consulting/     # Consulting services
+│   │   ├── custom/         # Custom development
+│   │   ├── partnership/    # Continuum partnerships
+│   │   └── training/       # Training & enablement
 │   ├── layout.tsx           # Root layout with header/footer
 │   ├── page.tsx             # Homepage
 │   ├── robots.ts            # Robots.txt generator
 │   └── sitemap.ts           # Sitemap generator
+├── archive/                  # Archived legacy pages & files
+│   └── 2025-10/             # October 2025 archives
+│       ├── legacy-pages/   # Old pages replaced in rebrand
+│       ├── old-trds/       # Superseded technical docs
+│       └── old-updates/    # Applied update configs
 ├── components/              # React components
-│   ├── analytics/           # Google Analytics components
-│   ├── forms/               # Form components (Beta Application)
-│   ├── layout/              # Layout components (Header, Footer, Layout)
-│   ├── performance/         # Core Web Vitals monitoring
-│   ├── seo/                 # SEO components (SEOHead with generateMetadata)
-│   ├── sections/            # Page sections (Hero, Authority, etc.)
-│   └── ui/                  # Reusable UI components (Button, Card, Section)
-├── data/                    # Static data
+│   ├── analytics/          # Google Analytics components
+│   ├── content/            # Content components (articles, etc.)
+│   ├── forms/              # Form components (Beta Application)
+│   ├── layout/             # Layout components (Header, Footer)
+│   ├── performance/        # Core Web Vitals monitoring
+│   ├── seo/                # SEO components (SEOHead, metadata)
+│   ├── sections/           # Page sections (Hero, Authority)
+│   └── ui/                 # Reusable UI components (Button, Card, Section)
+├── data/                    # Static configuration data
 │   ├── navigation.ts        # Primary navigation structure
 │   └── projects.ts          # Continuum projects data
+├── docs/                    # PROJECT DOCUMENTATION
+│   ├── architecture/       # Technical architecture docs
+│   ├── deployment/         # Deployment guides
+│   ├── implementation/     # Implementation guides
+│   ├── integration/        # API specs and integration
+│   ├── planning/           # TRDs and planning docs
+│   ├── quality/            # Code review notes
+│   ├── trd/                # Technical Requirements Documents
+│   ├── CURRENT_STATE.md    # Current state documentation
+│   ├── QUICKSTART.md       # Quick start guide
+│   └── WEBSITE_PAGE_TREE.md # Site structure
 ├── lib/                     # Utility libraries
-│   ├── utils.ts             # Helper utilities
-│   └── xynergy-api.ts       # Xynergy API integration
-├── types/                   # TypeScript types
-│   └── index.ts             # Shared type definitions
+│   ├── utils.ts            # Helper utilities
+│   └── gateway-client.ts   # Intelligence Gateway integration
 ├── public/                  # Static assets
-├── Media/                   # Requirements and design assets
-├── tailwind.config.ts       # Tailwind configuration
+│   └── images/             # Images (hero backgrounds, logos)
+├── types/                   # TypeScript type definitions
+│   └── index.ts            # Global types
+├── .env.example             # Environment variable template
+├── .gitignore               # Git ignore rules
+├── cloudbuild.yaml          # GCP Cloud Build configuration
+├── deploy.sh                # Deployment script
+├── Dockerfile               # Container configuration
 ├── next.config.js           # Next.js configuration
+├── package.json             # Dependencies
+├── tailwind.config.ts       # Tailwind CSS configuration
 └── tsconfig.json            # TypeScript configuration
 ```
 
-## 🌐 Site Architecture (v6)
+---
 
-### Navigation Structure
+## 📂 File Organization Guidelines
 
-The v6 navigation includes 7 primary items:
+### Where to Save Files
 
-1. **The Forge** (`/forge`) - Hub with 4 doors: Topics, Xynergy, Proof, Community
-2. **Xynergy** (`/xynergy`) - AI engine deep dive
-3. **Proof** (`/proof`) - Outcomes and demos with "Propose the Next Continuum" CTA
-4. **Solutions** (`/solutions`) - Platform, Consulting, Custom, Partnership
-5. **Community** (`/community`) - 4-phase community roadmap
-6. **About** (`/about`) - Company information
-7. **Contact** (`/contact`) - Contact form
+**Documentation** → `./docs/` (NOT root)
+- Technical docs → `./docs/architecture/`
+- Implementation guides → `./docs/implementation/`
+- TRDs → `./docs/trd/`
+- Legacy docs → `./docs/legacy/`
 
-### The Forge Ecosystem
+**Configuration** → `./data/` or root config files
+- Navigation → `./data/navigation.ts`
+- Project data → `./data/projects.ts`
 
-**The Forge** serves as the central hub connecting four key areas:
+**Components** → `./components/`
+- Organized by type (layout, ui, forms, etc.)
 
-1. **Topics** (`/forge/topics`) - Content hub for blogs, how-tos, playbooks (coming soon)
-   - 8 topic areas: AI Transparency, Data Accessibility, Content Operations, Automation, Search & Discovery, Ethics & Governance, SMB Growth, Playbooks
+**Utilities** → `./lib/`
+- Helper functions and API clients
 
-2. **Xynergy** (`/xynergy`) - The proprietary AI engine
-   - 8 engines: Research, Content, Campaign, Automation, Insights, Governance, Learning, Assistant
-   - Plain-English explanations of what each engine does
-   - Xynergy Assistant as background operator
-   - Data usage transparency and opportunity tracking
+**Types** → `./types/`
+- TypeScript type definitions
 
-3. **Proof** (`/proof`) - Transparent results
-   - Live outcomes from Continuum projects
-   - Public playbooks and demos
-   - Links back to Topics and Community
+**Static Assets** → `./public/`
+- Images, fonts, etc.
 
-4. **Community** (`/community`) - 4-phase roadmap (Coming Soon)
-   - Phase 1: Content Forge (blogs, how-tos, white papers)
-   - Phase 2: Engagement Layer (forums, AMAs, live sessions)
-   - Phase 3: Rewards & Recognition (points, perks, revenue share)
-   - Phase 4: Cohorts & Mentorship (guided peer groups)
+### Root Folder (Only Essential Config)
+- `.env.example`, `.env.local`
+- `.gitignore`, `.eslintrc`, etc.
+- `package.json`, `package-lock.json`
+- `next.config.js`, `tailwind.config.ts`, `tsconfig.json`
+- `README.md`, `CHANGELOG.md`
+- **NO markdown documents** (use `./docs/`)
+- **NO data files** (use `./data/`)
 
-### Core Pages
+---
 
-- **Homepage** (`/`) - Hero, 8-engine Xynergy feature, Community teaser, Problem/Promise, Continuum projects, Dashboard preview, Beta program, The 20%
-- **Dashboard** (`/dashboard`) - Public transparency dashboard with live metrics (placeholder)
+## 🗺️ Site Architecture
 
-### The Continuum (6 Domains)
+### Navigation Structure (5 Primary Items)
 
-Domain-specific projects proving transparency works:
+**1. Foundry** (Platform & Products)
+- Platform
+- Business Suite → Business: OS
+- Search Suite
+- Connect (API)
+- Roadmap
 
-1. **Project NEXUS** (`/continuum/nexus`) - Search & Discovery (Phase 1 launching)
-2. **Data Democracy** (`/continuum/data-democracy`) - Analytics for the 43%
-3. **Project No-Cheating** (`/continuum/no-cheating`) - Education transparency
-4. **Project CTO's Heart** (`/continuum/ctos-heart`) - Special needs support
-5. **Project Safe Spaces** (`/continuum/safe-spaces`) - Kids safety without surveillance
-6. **Project RE-Connect** (`/continuum/re-connect`) - Real estate transparency
+**2. The Forge** (Community & Resources)
+- Knowledge (education & articles)
+- Tools (free calculators)
+- Community (beta partners)
+- Build (open source & transparency)
 
-### About Section
+**3. Services** (Professional Services)
+- Consulting
+- Custom Development
+- Training
+- Continuum Partnership
 
-- **About ClearForge** (`/about`) - Company overview
-- **How We Started** (`/about/how-we-started`) - Origin story (Acts I, II, III)
-- **Team & Philosophy** (`/about/team-philosophy`) - Values and approach
-- **Founder Story** (`/about/founder-story-complete`) - Complete founder narrative
+**4. The Continuum** (Validation Process)
+- Overview
+- Public Dashboard
+- Project NEXUS
+- Project RE-Connect
 
-### Mission Section (v6 - Root Level)
+**5. About**
+- Our Story
+- Mission & Values
+- Team
+- Contact
 
-- **Manifesto** (`/manifesto`) - Technology should make humans better—never busier
-- **Transparency Commitment** (`/transparency`) - How we show our work on every output that matters
-- **The Data Divide** (`/data-divide`) - Why most orgs drown in data and how we close the gap
-- **AI Reality Check** (`/ai-reality-check`) - What AI really can do, what it can't, and how to use it without the trust fall
+---
 
-### Solutions (v6 - Updated)
+## 📞 Contact Form Routing
 
-- **Solutions Hub** (`/solutions`) - "Method, Not Magic" — Platform, Consulting, Custom, Partnership
-- **Platform** (`/solutions/platform`) - Spin up explainable workflows in weeks, not quarters
-- **Consulting** (`/solutions/consulting`) - Operators-first knowledge transfer
-- **Custom** (`/solutions/custom`) - Your edge, productized with Xynergy services
-- **Partnership** (`/solutions/partnership`) - Co-build products, share learnings, keep the keys
+The site uses URL parameter-based routing for contact forms:
 
-### Methodology
+**Form Types:**
+- `/contact?type=beta-os` - Business: OS Beta application
+- `/contact?type=nexus` - NEXUS Continuum application
+- `/contact?type=connect` - Foundry Connect API access
+- `/contact?type=waitlist-search` - Search: Visibility waitlist
+- `/contact?type=partnership` - Services partnership inquiry
+- `/contact?type=general` - General contact
 
-- **How We Do It** (`/how-we-do-it`) - T.R.A.N.S.L.A.T.E. framework
-- **Beta Program** (`/beta-program`) - 3-phase beta structure
+All CTAs throughout the site route to these parameterized forms.
+
+---
 
 ## 🚢 Deployment
 
-### Google Cloud Platform (Recommended)
+### GCP Cloud Run Deployment
 
-1. **Prerequisites**
-   - GCP project created
-   - Cloud Build API enabled
-   - Cloud Run API enabled
-   - Artifact Registry or Container Registry enabled
+**Prerequisites:**
+1. GCP project configured (`xynergy-dev-1757909467`)
+2. Cloud Build API enabled
+3. Artifact Registry configured
+4. Secrets configured in Secret Manager:
+   - `gateway-url`
+   - `gateway-api-key`
+   - `ga-measurement-id`
 
-2. **Set up secrets in Google Secret Manager**
-   ```bash
-   # Create secrets
-   echo -n "your-xynergy-api-key" | gcloud secrets create xynergy-api-key --data-file=-
-   echo -n "your-ga-id" | gcloud secrets create ga-measurement-id --data-file=-
-   ```
+**Deploy via Cloud Build:**
+```bash
+./deploy.sh
+```
 
-3. **Deploy using Cloud Build**
-   ```bash
-   gcloud builds submit --config=cloudbuild.yaml
-   ```
+Or manually:
+```bash
+gcloud builds submit \
+  --config=cloudbuild.yaml \
+  --project=xynergy-dev-1757909467 \
+  --substitutions=COMMIT_SHA=$(git rev-parse --short HEAD)
+```
 
-4. **Manual Docker deployment**
-   ```bash
-   # Build the image
-   docker build -t gcr.io/[PROJECT_ID]/clearforge-website:latest .
+**Service URL:**
+https://clearforge-website-vgjxy554mq-uc.a.run.app
 
-   # Push to GCR
-   docker push gcr.io/[PROJECT_ID]/clearforge-website:latest
-
-   # Deploy to Cloud Run
-   gcloud run deploy clearforge-website \
-     --image gcr.io/[PROJECT_ID]/clearforge-website:latest \
-     --region us-central1 \
-     --platform managed \
-     --allow-unauthenticated
-   ```
-
-### Environment Variables for Production
-
-Set these in your Cloud Run service:
-
-- `NODE_ENV=production`
-- `NEXT_TELEMETRY_DISABLED=1`
-- `NEXT_PUBLIC_XYNERGY_API_URL=https://api.xynergy.io/v1`
-- `XYNERGY_API_KEY=<from-secret-manager>`
-- `NEXT_PUBLIC_GA_MEASUREMENT_ID=<from-secret-manager>`
-
-## 🎨 Design System
-
-### Brand Identity
-
-**Company**: ClearForge
-**Engine**: Xynergy
-**Voice**: Confidently rebellious, minimal, transparent, human
-
-### Color Palette
-
-- **Primary Dark**: `#1a202c` - Very dark blue-gray
-- **Primary**: `#2d3748` - Dark blue-gray
-- **Primary Blue**: `#4299e1` - Bright accent blue
-- **Secondary Purple**: `#553c9a` - Deep purple (innovation)
-- **Secondary Purple Light**: `#9f7aea` - Bright purple
-- **Accent Pink**: `#ed64a6` - CTAs and highlights
-- **Background Dark**: `#1a202c`
-- **Background Medium**: `#2d3748`
-
-### Typography
-
-- **Font**: Inter (Google Fonts)
-- **Headings**: Bold, large scale
-- **Body**: 16px base, line-height 1.5
-- **CTAs**: Semibold, clear hierarchy
-
-### Components
-
-- **Button**: 4 variants (primary, secondary, outline, ghost) + 3 sizes (sm, md/default, lg)
-- **Card**: 3 variants (default, bordered, elevated)
-- **Section**: Background variants (dark, medium, gradient)
-
-### Design Principles
-
-1. **Johnny Ive Inspiration**: Minimal, clean, purposeful
-2. **Transparency First**: Show sources, explain logic, prove claims
-3. **No BS**: Direct messaging, no jargon, honest about what works
-4. **Action-Oriented**: CTAs that match user intent, clear next steps
-
-## 🔌 API Integration
-
-### Intelligence Gateway
-
-The website integrates with the Intelligence Gateway service for:
-- **ASO Opportunities**: Real-time keyword and search optimization data
-- **Beta Applications**: Lead capture and qualification
-- **Contact Forms**: General inquiries and partnership requests
-- **Newsletter**: Email list management (future)
-
-**Gateway URL**: `https://intelligence-gateway-{hash}-uc.a.run.app` (set via `NEXT_PUBLIC_GATEWAY_URL`)
-
-### API Routes
-
-- `GET /api/aso/opportunities` - Fetch ASO keyword opportunities (cached 15 minutes)
-- `POST /api/beta` - Submit beta program application (Zod validated)
-- `POST /api/contact` - Submit contact form inquiry (Zod validated)
-- `GET /api/health` - Health check endpoint for Cloud Run monitoring
-
-### Gateway Client
-
-All Gateway integration goes through `lib/gateway-client.ts`:
-- Axios-based HTTP client with Bearer token authentication
-- Comprehensive error handling and logging
-- TypeScript interfaces for all data models
-- Singleton pattern for efficient connection pooling
-
-See [INTEGRATION.md](./INTEGRATION.md) for detailed integration documentation.
-
-## ⚡ Performance
-
-### Core Web Vitals Targets
-
-- **LCP (Largest Contentful Paint)**: < 1.2s
-- **FID (First Input Delay)**: < 50ms
-- **CLS (Cumulative Layout Shift)**: < 0.05
-
-### Optimizations
-
-- Image optimization with Next.js Image component
-- Automatic code splitting
-- Static page generation (51 pages)
-- Compression enabled
-- Security headers configured
-- Minimal JavaScript payload
-
-## 📊 Analytics
-
-Google Analytics 4 is integrated for:
-- Page views and user flow
-- Conversion tracking (beta applications, contact forms)
-- Core Web Vitals monitoring
-- Event tracking
-- Funnel analysis
-
-## 🔒 Security
-
-Security headers configured in `next.config.js`:
-- Strict-Transport-Security
-- X-Frame-Options
-- X-Content-Type-Options
-- X-XSS-Protection
-- Referrer-Policy
-
-## 📝 SEO
-
-- Comprehensive meta tags on all 51 pages
-- Open Graph and Twitter Card support
-- Automatic sitemap generation (`/sitemap.xml`)
-- Robots.txt configuration (`/robots.txt`)
-- Structured data (JSON-LD) ready
-- Canonical URLs configured
-- generateMetadata helper for consistent SEO
+---
 
 ## 🧪 Testing
 
-Run the build to check for errors:
+### Build Verification
 ```bash
 npm run build
 ```
 
-## 📚 Best Practices
-
-### Content Guidelines
-
-1. **Voice & Tone**: Confidently rebellious, minimal, transparent, human
-2. **Messaging**: Focus on "what" and "why", not just "how"
-3. **Proof**: Every claim needs evidence or a placeholder for proof
-4. **Transparency**: Show the work, cite sources, explain decisions
-
-### Code Standards
-
-1. **TypeScript**: All components use TypeScript with proper types
-2. **Component Structure**: Functional components with hooks
-3. **File Naming**: kebab-case for files, PascalCase for components
-4. **Imports**: Organize by external, internal, types
-5. **Comments**: Explain "why", not "what"
-
-### Page Template
-
-```tsx
-import { Metadata } from 'next';
-import Section from '@/components/ui/Section';
-import Card from '@/components/ui/Card';
-import Button from '@/components/ui/Button';
-import { generateMetadata } from '@/components/seo/SEOHead';
-
-export const metadata: Metadata = generateMetadata({
-  title: 'Page Title',
-  description: 'Page description for SEO',
-  canonical: '/page-slug',
-});
-
-export default function PageName() {
-  return (
-    <>
-      <Section background="gradient" className="pt-32 pb-20">
-        {/* Hero content */}
-      </Section>
-
-      <Section background="dark">
-        {/* Additional sections */}
-      </Section>
-    </>
-  );
-}
+### Linting
+```bash
+npm run lint
 ```
 
-### Navigation Updates
-
-When adding new pages, update `/data/navigation.ts`:
-
-```typescript
-export const mainNavigation: NavItem[] = [
-  {
-    label: 'The Forge',
-    href: '/forge',
-  },
-  // ... other items
-];
-```
-
-## 📄 License
-
-Proprietary - ClearForge
-
-## 🤝 Support
-
-For questions or issues:
-- Email: hello@clearforge.ai
-- Response time: 24-48 hours
+### Manual Testing Checklist
+- [ ] All navigation dropdowns work
+- [ ] All 6 contact form variants load correctly
+- [ ] Homepage sections render properly
+- [ ] Foundry product pages functional
+- [ ] Services pages functional
+- [ ] Continuum pages functional
+- [ ] Mobile responsive
+- [ ] Performance acceptable (LCP < 1.2s)
 
 ---
 
-**Built with complete transparency by ClearForge**
+## 🔄 Recent Changes (v1.0)
 
-Powered by Xynergy — the AI engine that researches, plans, executes, and proves.
+**October 22, 2025 - Production v1.0 Release**
 
-🤖 Generated with [Claude Code](https://claude.com/claude-code)
+**Major Updates:**
+- ✅ Complete website rebrand (TriSynq → ClearForge)
+- ✅ Navigation restructured (7 items → 5 items with dropdowns)
+- ✅ Homepage rewritten ("No Gatekeeping" messaging)
+- ✅ Foundry product pages created (Platform, Business: OS, Connect, Search, Roadmap)
+- ✅ Services section created (Consulting, Custom, Training, Partnership)
+- ✅ Continuum integration (Overview + NEXUS + RE-Connect)
+- ✅ Contact form URL routing (6 variants)
+- ✅ The Forge restructured (4-door hub)
+- ✅ About pages consolidated (Story + Mission)
+- ✅ 40+ legacy pages archived
+- ✅ Documentation organized into /docs/ structure
+- ✅ Project structure follows Next.js best practices
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+**Build Status:** ✅ 75 pages → 35-40 pages (cleaned up)
+**Deployment:** ✅ Live on GCP Cloud Run
+
+---
+
+## 📚 Additional Resources
+
+- **Documentation:** `./docs/`
+- **TRDs:** `./docs/trd/`
+- **Current State:** `./docs/CURRENT_STATE.md`
+- **Quick Start:** `./docs/QUICKSTART.md`
+- **Site Structure:** `./docs/WEBSITE_PAGE_TREE.md`
+
+---
+
+## 🤝 Contributing
+
+This is a private repository for ClearForge Technologies. For questions or contributions, contact the development team.
+
+---
+
+## 📄 License
+
+Proprietary - All rights reserved by ClearForge Technologies
+
+---
+
+## 🆘 Support
+
+For technical issues or questions:
+- Check `./docs/` for detailed documentation
+- Review TRDs in `./docs/trd/`
+- Contact the development team
+
+---
+
+**Built with transparency. Proven through The Continuum. Shared through The Forge.**

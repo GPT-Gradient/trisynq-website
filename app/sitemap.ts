@@ -2,48 +2,56 @@ import { MetadataRoute } from 'next';
 import { getGatewayClient } from '@/lib/gateway-client';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://trisynq.ai';
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://www.clearforgetech.com';
 
   const staticRoutes = [
+    // Homepage
     '',
+
+    // About pages
     '/about',
-    '/about/how-we-started',
-    '/about/team-philosophy',
-    '/mission',
-    '/mission/transparency',
-    '/mission/economic-liberation',
-    '/continuum',
-    '/continuum/nexus',
-    '/continuum/data-democracy',
-    '/continuum/no-cheating',
-    '/continuum/ctos-heart',
-    '/continuum/safe-spaces',
-    '/continuum/re-connect',
-    '/solutions/consulting',
-    '/solutions/partnership',
-    '/solutions/platform',
-    '/solutions/custom',
-    '/community/20-percent',
-    '/community/beta-partners',
-    '/community/success-stories',
-    '/community/resources',
-    '/dashboard',
-    '/beta',
-    '/contact',
-    '/blog',
+    '/about/story',
+    '/about/mission',
+    '/about/team',
+
+    // Foundry (Platform & Products)
+    '/foundry/platform',
+    '/foundry/business',
+    '/foundry/business/os',
+    '/foundry/search',
+    '/foundry/connect',
+    '/foundry/roadmap',
+    '/foundry/origin-story',
+
+    // Services
+    '/services',
+    '/services/consulting',
+    '/services/custom',
+    '/services/training',
+    '/services/partnership',
+
+    // The Forge
     '/forge',
     '/forge/knowledge',
     '/forge/tools',
     '/forge/community',
     '/forge/build',
-    '/forge/topics',
-    '/foundry',
-    '/foundry/business',
-    '/foundry/connect',
-    '/foundry/pricing',
-    '/foundry/roadmap',
-    '/foundry/search',
-    '/foundry/origin-story',
+
+    // The Continuum
+    '/continuum',
+    '/continuum/nexus',
+    '/continuum/nexus/apply',
+    '/continuum/nexus/pricing',
+    '/continuum/re-connect',
+
+    // Other
+    '/dashboard',
+    '/public-dashboard',
+    '/contact',
+    '/blog',
+    '/data-divide',
+    '/transparency',
+    '/careers',
   ];
 
   // Fetch all articles for dynamic blog routes
