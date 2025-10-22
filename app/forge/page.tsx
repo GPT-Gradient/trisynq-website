@@ -194,7 +194,7 @@ export default function ForgePage() {
                 </div>
                 <h2 className="text-2xl font-bold mb-3 text-white">Community</h2>
                 <p className="text-sm text-gray-300 mb-6">
-                  20% Army, beta partners, success stories.
+                  Beta partners, builders, success stories.
                 </p>
               </div>
 
@@ -289,7 +289,7 @@ export default function ForgePage() {
             <Button href="/foundry" size="lg">
               Explore Foundry
             </Button>
-            <Button href="/beta" variant="outline" size="lg">
+            <Button href="/contact?type=beta-os" variant="outline" size="lg">
               Join Beta Program
             </Button>
           </div>

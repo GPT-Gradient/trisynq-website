@@ -1,255 +1,198 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowRight, Search, BarChart, GraduationCap, Heart, Shield, Building } from 'lucide-react';
 import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import Button from '@/components/ui/Button';
-import { continuumProjects } from '@/data/projects';
 import { generateMetadata } from '@/components/seo/SEOHead';
 
 export const metadata: Metadata = generateMetadata({
-  title: 'The Continuum: Where Vision Becomes Practice',
-  description: 'Our proving ground for transparent AI, data accessibility, and human impact.',
+  title: 'The Continuum: Proof Before Promises',
+  description: 'How we validate products before launch. Internal use → Partner validation → Commercial release.',
 });
-
-const iconMap: Record<string, any> = {
-  Search,
-  BarChart,
-  GraduationCap,
-  Heart,
-  Shield,
-  Building,
-};
 
 export default function ContinuumOverviewPage() {
   return (
     <>
       {/* Hero Section */}
       <Section background="gradient" className="pt-32 pb-20">
-        <div className="text-center max-w-5xl mx-auto">
-          <div className="flex justify-center mb-8">
-            <Image
-              src="/logos/continuum-logo-with-tagline-primary.png"
-              alt="The Continuum - Evolving. Connecting. Proving."
-              width={400}
-              height={300}
-              className="max-w-sm"
-              priority
-            />
-          </div>
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            The Continuum: <span className="text-gradient">Where Vision Becomes Practice.</span>
+        <div className="text-center max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            The Continuum
           </h1>
-
-          <p className="text-xl md:text-2xl text-gray-300 mb-8">
-            Every domain is an experiment in transparency, AI accessibility, and human impact.
+          <p className="text-2xl text-gray-300 mb-4">
+            Proof before promises.
           </p>
+          <p className="text-xl text-gray-400">
+            Every Foundry product starts here—validated through real use, proven with real companies, then released commercially.
+          </p>
+        </div>
+      </Section>
 
-          <div className="bg-primary/50 rounded-2xl p-6 border border-accent-pink/30 backdrop-blur-sm">
-            <p className="text-lg md:text-xl font-semibold text-white">
-              Every Continuum domain is powered by Xynergy.
+      {/* The 3-Step Process */}
+      <Section background="dark">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            How The Continuum Works
+          </h2>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <Card variant="elevated" className="border-2 border-primary-blue/30">
+              <div className="text-4xl mb-4">1️⃣</div>
+              <h3 className="text-2xl font-bold mb-3">Internal Use</h3>
+              <p className="text-gray-300">
+                We use it ourselves first. Manage our own operations with it. If it doesn&apos;t work for us, we don&apos;t ship it.
+              </p>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-secondary-purple/30">
+              <div className="text-4xl mb-4">2️⃣</div>
+              <h3 className="text-2xl font-bold mb-3">Continuum Partners</h3>
+              <p className="text-gray-300">
+                12-18 month validation with 10-20 real companies. Build case studies organically. Iterate based on real feedback.
+              </p>
+            </Card>
+
+            <Card variant="elevated" className="border-2 border-accent-pink/30">
+              <div className="text-4xl mb-4">3️⃣</div>
+              <h3 className="text-2xl font-bold mb-3">Product Launch</h3>
+              <p className="text-gray-300">
+                Commercial release with proven methodology. Not promises—proof. Your success becomes evidence for everyone else.
+              </p>
+            </Card>
+          </div>
+
+          <div className="bg-primary/30 rounded-2xl p-8 border border-primary-blue/20 text-center">
+            <p className="text-xl text-gray-300">
+              This isn&apos;t a beta program where you test bugs. It&apos;s a validation partnership where we prove methodologies together—and you benefit significantly from being early.
             </p>
           </div>
         </div>
       </Section>
 
-      {/* The Strategy Explained */}
+      {/* Current Projects */}
+      <Section background="medium">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+            Current Continuum Projects
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 text-center">
+            Two active validation tracks. One launching Q1 2026, one in early development.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card variant="elevated" className="border-l-4 border-purple-500">
+              <div className="mb-4">
+                <span className="inline-block bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  PHASE 1 STARTING Q1 2026
+                </span>
+                <h3 className="text-3xl font-bold mb-2">Project NEXUS</h3>
+                <p className="text-lg text-primary-blue mb-4">Search Visibility Intelligence</p>
+              </div>
+
+              <p className="text-gray-300 mb-6">
+                Traditional SEO + AI Overviews. 12-18 month partner validation program. Recruiting 10-20 companies now for Q1 2026 launch.
+              </p>
+
+              <div className="bg-primary/30 rounded-xl p-4 mb-6">
+                <p className="text-sm text-gray-400 mb-2">What Partners Get:</p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Preferred pricing during validation</li>
+                  <li>• Monthly transparency reports</li>
+                  <li>• Direct team access</li>
+                  <li>• Revenue share opportunities (select partners)</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <Button href="/continuum/nexus" className="w-full">
+                  Learn About NEXUS
+                </Button>
+                <Button href="/contact?type=nexus" variant="outline" className="w-full">
+                  Apply for Partnership
+                </Button>
+              </div>
+            </Card>
+
+            <Card variant="elevated" className="border-l-4 border-blue-500">
+              <div className="mb-4">
+                <span className="inline-block bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full text-sm font-semibold mb-3">
+                  EARLY DEVELOPMENT
+                </span>
+                <h3 className="text-3xl font-bold mb-2">Project RE-Connect</h3>
+                <p className="text-lg text-primary-blue mb-4">Real Estate Intelligence & Transparency</p>
+              </div>
+
+              <p className="text-gray-300 mb-6">
+                Bringing transparency to real estate search and transaction intelligence. Currently in early development with initial partner conversations.
+              </p>
+
+              <div className="bg-primary/30 rounded-xl p-4 mb-6">
+                <p className="text-sm text-gray-400 mb-2">Development Status:</p>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Internal architecture design</li>
+                  <li>• Data source validation</li>
+                  <li>• Early partner discussions</li>
+                  <li>• Timeline: TBD based on NEXUS learnings</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <Button href="/continuum/re-connect" className="w-full">
+                  Learn About RE-Connect
+                </Button>
+                <Button href="/contact?type=partnership" variant="outline" className="w-full">
+                  Express Interest
+                </Button>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </Section>
+
+      {/* Why Partner? */}
       <Section background="dark">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-8 text-center">
-            The <span className="text-gradient">Continuum Strategy</span>
+          <h2 className="text-3xl font-bold mb-8 text-center">
+            Why Become a Continuum Partner?
           </h2>
 
-          <Card variant="bordered" className="mb-8">
-            <h3 className="text-2xl font-bold mb-4 text-primary-blue">The Approach</h3>
-            <p className="text-gray-300 mb-4">
-              We don&apos;t just claim transparency works—we prove it systematically across multiple domains. Each project validates our methodology in a different context, building an unbreakable chain of evidence.
-            </p>
-            <p className="text-gray-300">
-              <strong className="text-white">Why Multiple Domains?</strong> Because one success can be dismissed as luck. Six successes across completely different industries becomes a pattern. An undeniable pattern that changes everything.
-            </p>
-          </Card>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card variant="elevated">
-              <h4 className="text-xl font-bold mb-3 text-accent-pink">The Public Process</h4>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Card>
+              <h3 className="text-xl font-semibold mb-3">During Validation</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• Research and methodology development</li>
-                <li>• Partner beta testing (Phase 1-3)</li>
-                <li>• Public documentation of results</li>
-                <li>• White-label platform creation</li>
-                <li>• Community access and implementation</li>
+                <li>• Preferred pricing (significant discount)</li>
+                <li>• Monthly transparency reports</li>
+                <li>• Direct access to founding team</li>
+                <li>• Input on product development</li>
+                <li>• Co-creation of case studies</li>
               </ul>
             </Card>
 
-            <Card variant="elevated">
-              <h4 className="text-xl font-bold mb-3 text-secondary-purple-light">The Evolution</h4>
+            <Card>
+              <h3 className="text-xl font-semibold mb-3">After Launch</h3>
               <ul className="space-y-2 text-gray-300">
-                <li>• Each project informs the next</li>
-                <li>• Methodology refined across domains</li>
-                <li>• Community drives future projects</li>
-                <li>• Transparency becomes inevitable</li>
-                <li>• Playing field gets leveled</li>
+                <li>• Continued preferred pricing</li>
+                <li>• Priority feature access</li>
+                <li>• Public case study recognition</li>
+                <li>• Revenue share opportunities (select partners)</li>
+                <li>• First access to new Continuum projects</li>
               </ul>
             </Card>
           </div>
         </div>
       </Section>
 
-      {/* Current Status Overview */}
-      <Section background="medium">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="text-gradient">Current Status</span> Across All Projects
-          </h2>
-          <p className="text-xl text-gray-400">
-            From active beta to future planning, here&apos;s where we are
-          </p>
-        </div>
-
-        <div className="max-w-5xl mx-auto space-y-6">
-          {continuumProjects.map((project) => {
-            const Icon = iconMap[project.icon];
-            const statusColors: Record<string, string> = {
-              'Phase 1 Beta (First 100)': 'text-green-400 border-green-400/30 bg-green-400/10',
-              'Research Phase': 'text-blue-400 border-blue-400/30 bg-blue-400/10',
-              'Planning 2025': 'text-purple-400 border-purple-400/30 bg-purple-400/10',
-              'Planning Late 2025': 'text-purple-400 border-purple-400/30 bg-purple-400/10',
-              'Planning 2026': 'text-pink-400 border-pink-400/30 bg-pink-400/10',
-              'Planning Mid 2026': 'text-pink-400 border-pink-400/30 bg-pink-400/10',
-            };
-            const statusClass = statusColors[project.status] || 'text-gray-400 border-gray-400/30 bg-gray-400/10';
-
-            return (
-              <Link key={project.id} href={project.link}>
-                <Card variant="bordered" className="hover:border-accent-pink/50 transition-all duration-300 cursor-pointer">
-                  <div className="flex items-start gap-6">
-                    {Icon && <Icon className="w-12 h-12 text-accent-pink flex-shrink-0" />}
-                    <div className="flex-1">
-                      <div className="flex items-start justify-between mb-3">
-                        <div>
-                          <h3 className="text-2xl font-bold text-white mb-1">{project.name}</h3>
-                          <p className="text-sm text-primary-blue">{project.tagline}</p>
-                        </div>
-                        <div className="flex flex-col gap-2 items-end">
-                          <span className={`px-3 py-1 rounded-full text-xs font-semibold border ${statusClass}`}>
-                            {project.status}
-                          </span>
-                          <span className="px-3 py-1 rounded-full text-xs font-semibold border border-secondary-purple-light/30 bg-secondary-purple-light/10 text-secondary-purple-light">
-                            Powered by ClearForge Foundry
-                          </span>
-                        </div>
-                      </div>
-                      <p className="text-gray-300">{project.description}</p>
-                    </div>
-                  </div>
-                </Card>
-              </Link>
-            );
-          })}
-        </div>
-      </Section>
-
-      {/* How Projects Connect */}
-      <Section background="dark">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
-            How <span className="text-gradient">Projects Connect</span>
-          </h2>
-
-          <div className="space-y-6">
-            <Card variant="elevated">
-              <div className="flex items-start gap-4">
-                <ArrowRight className="w-6 h-6 text-accent-pink mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-primary-blue">Search Foundation</h3>
-                  <p className="text-gray-300">Discovery drives everything. If people can&apos;t find you, nothing else matters. Project NEXUS proves authentic expertise can compete with marketing budgets.</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card variant="elevated">
-              <div className="flex items-start gap-4">
-                <ArrowRight className="w-6 h-6 text-accent-pink mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-secondary-purple-light">Data Intelligence</h3>
-                  <p className="text-gray-300">Once they find you, decisions matter. Data Democracy proves SMBs can make enterprise-quality decisions with the data they already have.</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card variant="elevated">
-              <div className="flex items-start gap-4">
-                <ArrowRight className="w-6 h-6 text-accent-pink mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-primary-blue">Education Application</h3>
-                  <p className="text-gray-300">Learning and growth drive progress. Project No-Cheating proves AI enhances education instead of enabling shortcuts.</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card variant="elevated">
-              <div className="flex items-start gap-4">
-                <ArrowRight className="w-6 h-6 text-accent-pink mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-secondary-purple-light">Inclusive Technology</h3>
-                  <p className="text-gray-300">Serving all minds unlocks potential. Project CTO&apos;s Heart proves technology adapts to individuals, not vice versa.</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card variant="elevated">
-              <div className="flex items-start gap-4">
-                <ArrowRight className="w-6 h-6 text-accent-pink mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-primary-blue">Safety Infrastructure</h3>
-                  <p className="text-gray-300">Protecting expression enables creativity. Project Safe Spaces proves safety and freedom coexist transparently.</p>
-                </div>
-              </div>
-            </Card>
-
-            <Card variant="elevated">
-              <div className="flex items-start gap-4">
-                <ArrowRight className="w-6 h-6 text-accent-pink mt-1 flex-shrink-0" />
-                <div>
-                  <h3 className="text-xl font-bold mb-2 text-secondary-purple-light">Industry Transformation</h3>
-                  <p className="text-gray-300">Proven business models scale change. Project RE-Connect proves transparency creates competitive advantage in traditional industries.</p>
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          <div className="mt-12 bg-primary/30 rounded-2xl p-8 border border-primary-blue/20">
-            <h3 className="text-2xl font-bold mb-4 text-center text-gradient">The Compounding Effect</h3>
-            <p className="text-lg text-gray-300 text-center mb-4">
-              Each success doesn&apos;t just stand alone—it accelerates the next. Search optimization creates data. Data insights inform education. Educational tools adapt for special needs. Safety principles protect kids. Real estate proves business value.
-            </p>
-            <p className="text-xl font-bold text-accent-pink text-center">
-              The chain becomes unbreakable. Transparency becomes inevitable.
-            </p>
-          </div>
-        </div>
-      </Section>
-
-      {/* CTA Section */}
+      {/* Transparency */}
       <Section background="gradient">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            Be Part of <span className="text-gradient">Building the Chain</span>
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Full Transparency
           </h2>
           <p className="text-xl text-gray-300 mb-8">
-            Join the first 100 partners proving transparency works across all these domains
+            Track real-time progress, methodology updates, and partner results on our Public Dashboard.
           </p>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button href="/beta" size="lg">
-              Apply for Beta Partnership
-            </Button>
-            <Button href="/community/20-percent-army" variant="outline" size="lg">
-              Join the 20% Army
-            </Button>
-          </div>
+          <Button href="/dashboard" size="lg">
+            View Public Dashboard
+          </Button>
         </div>
       </Section>
     </>
