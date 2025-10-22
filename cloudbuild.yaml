@@ -6,7 +6,7 @@ steps:
       - 'build'
       - '--no-cache'
       - '-t'
-      - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$COMMIT_SHA'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$SHORT_SHA'
       - '-t'
       - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:latest'
       - '.'
@@ -15,7 +15,7 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args:
       - 'push'
-      - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$COMMIT_SHA'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$SHORT_SHA'
 
   - name: 'gcr.io/cloud-builders/docker'
     args:
@@ -30,7 +30,7 @@ steps:
       - 'deploy'
       - 'clearforge-website'
       - '--image'
-      - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$COMMIT_SHA'
+      - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$SHORT_SHA'
       - '--region'
       - 'us-central1'
       - '--platform'
@@ -52,7 +52,7 @@ steps:
       - 'GATEWAY_API_KEY=gateway-api-key:latest,NEXT_PUBLIC_GATEWAY_URL=gateway-url:latest,NEXT_PUBLIC_GA_MEASUREMENT_ID=ga-measurement-id:latest'
 
 images:
-  - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$COMMIT_SHA'
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:$SHORT_SHA'
   - 'us-central1-docker.pkg.dev/$PROJECT_ID/xynergy-platform/clearforge-website:latest'
 
 options:
