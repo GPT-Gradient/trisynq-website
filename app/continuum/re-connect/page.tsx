@@ -381,15 +381,343 @@ export default function ProjectREConnectPage() {
             <p className="text-gray-300 mb-6">
               First 100 partners across ALL Continuum projects get access when each launches—including Project RE-Connect.
             </p>
-            <Button href="/beta" size="lg">
+            <Button href="/contact?type=nexus" size="lg">
               Join the First 100 (All Projects)
             </Button>
           </div>
         </div>
       </Section>
 
-      {/* The Vision */}
+      {/* Partnership Investment & Terms */}
+      <Section background="dark">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            Partnership <span className="text-gradient">Investment & Terms</span>
+          </h2>
+
+          <Card variant="bordered" className="mb-8">
+            <h3 className="text-2xl font-bold mb-6 text-accent-pink">Beta Agent/Brokerage Partnership</h3>
+
+            <div className="bg-gray-800 p-6 rounded-lg mb-6">
+              <div className="flex items-baseline gap-3 mb-4">
+                <span className="text-4xl font-bold text-white">$497</span>
+                <span className="text-xl text-gray-400">/ month per agent</span>
+              </div>
+              <p className="text-sm text-gray-400 mb-4">12-18 month beta partnership period (Mid 2026 launch)</p>
+              <div className="border-t border-gray-700 pt-4">
+                <p className="text-lg font-semibold text-white mb-2">Total Investment: $5,964 - $8,946 per agent</p>
+                <p className="text-sm text-gray-400">For lifetime access to RE-Connect platform + unlimited affiliate revenue</p>
+              </div>
+            </div>
+
+            <div className="space-y-4 mb-6">
+              <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
+                <h4 className="font-bold text-green-400 mb-2">What You Get During Beta Partnership:</h4>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>• Full RE-Connect platform access (transparency dashboards, fee calculators, client education tools)</li>
+                  <li>• Weekly implementation support and coaching</li>
+                  <li>• Transaction-by-transaction feedback and refinement</li>
+                  <li>• Monthly transparency reports (your results vs. traditional approaches)</li>
+                  <li>• Direct access to ClearForge team for questions and strategy</li>
+                  <li>• Public case study showcasing (build your reputation as transparency leader)</li>
+                  <li>• Marketing materials and messaging support</li>
+                </ul>
+              </div>
+
+              <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-4">
+                <h4 className="font-bold text-secondary-purple-light mb-2">What You Get After Beta Completion:</h4>
+                <ul className="space-y-2 text-sm text-gray-300">
+                  <li>• Lifetime access to RE-Connect platform (normally $297/month per agent)</li>
+                  <li>• Lifetime access to ALL future Continuum platforms (6+ planned)</li>
+                  <li>• Unlimited affiliate revenue (30% recurring) for every agent/brokerage you refer</li>
+                  <li>• No monthly fees, no usage caps, no price increases</li>
+                  <li>• Founding partner status in ClearForge ecosystem</li>
+                  <li>• Priority access to new features and tools</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+              <h4 className="font-bold text-primary-blue mb-2">The Math for Brokerages:</h4>
+              <p className="text-gray-300 text-sm mb-3">
+                10 agents × $497/month × 18 months = $89,460 total beta investment. Lifetime platform value: 10 agents × $297/month = $35,640/year. Break-even in ~2.5 years if you never refer anyone.
+              </p>
+              <p className="text-gray-300 text-sm mb-3">
+                <strong className="text-white">Refer 5 agents/brokerages:</strong> Average 3 agents each = 15 users × $297 = $4,455/month revenue pool. Your 30% = $1,336/month recurring ($16,032/year). Combined with platform value, break-even in ~1.5-2 years.
+              </p>
+              <p className="text-accent-pink text-sm font-semibold">
+                Plus: Transparency as competitive differentiator in exclusive buyer agreement era. That&apos;s where the real ROI comes from.
+              </p>
+            </div>
+          </Card>
+
+          <div className="bg-background-dark rounded-2xl p-6 border border-gray-700">
+            <h4 className="text-lg font-bold mb-3 text-white">Payment Terms</h4>
+            <ul className="space-y-2 text-gray-300 text-sm">
+              <li>• Monthly recurring payment ($497/month per agent) via credit card or ACH</li>
+              <li>• Brokerage-level pricing available for 5+ agents</li>
+              <li>• Cancel anytime (but you forfeit lifetime access and affiliate revenue)</li>
+              <li>• Completion bonus: Stay for full 12-18 months → unlock all lifetime benefits</li>
+              <li>• Early termination: You keep tools you built, lose future platform access</li>
+            </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* What to Expect: Partnership Journey */}
       <Section background="medium">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            What to Expect: <span className="text-gradient">The Partnership Journey</span>
+          </h2>
+
+          <div className="space-y-6">
+            <Card variant="elevated">
+              <div className="flex items-start gap-4">
+                <div className="bg-accent-pink/20 p-3 rounded-xl flex-shrink-0">
+                  <span className="text-2xl font-bold text-accent-pink">Months 1-3</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3 text-accent-pink">Onboarding & Framework Setup</h3>
+                  <p className="text-gray-300 mb-4">
+                    Learn the transparency framework. Set up tools. Prepare your first transparent buyer/seller agreements.
+                  </p>
+                  <div className="bg-gray-800 p-4 rounded-lg">
+                    <p className="font-semibold mb-2 text-white">Weekly Activities:</p>
+                    <ul className="text-sm text-gray-400 space-y-1">
+                      <li>• 1-2 hour training sessions on transparency practices</li>
+                      <li>• Platform setup (dashboards, fee calculators, client education materials)</li>
+                      <li>• Messaging and positioning coaching (how to sell transparency as advantage)</li>
+                      <li>• Marketing materials customization (your brand + transparency messaging)</li>
+                      <li>• First buyer/seller agreement reviews and feedback</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card variant="elevated">
+              <div className="flex items-start gap-4">
+                <div className="bg-primary-blue/20 p-3 rounded-xl flex-shrink-0">
+                  <span className="text-2xl font-bold text-primary-blue">Months 4-9</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3 text-primary-blue">Active Transactions & Refinement</h3>
+                  <p className="text-gray-300 mb-4">
+                    Use the transparency framework in real transactions. Track results. Refine approach based on what works.
+                  </p>
+                  <div className="bg-gray-800 p-4 rounded-lg">
+                    <p className="font-semibold mb-2 text-white">Weekly Activities:</p>
+                    <ul className="text-sm text-gray-400 space-y-1">
+                      <li>• 30-60 minute check-ins per active transaction</li>
+                      <li>• Transaction-by-transaction feedback and support</li>
+                      <li>• Monthly transparency reports (your results vs. traditional methods)</li>
+                      <li>• Ongoing coaching on positioning transparency as competitive edge</li>
+                      <li>• Platform feature requests and customization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </Card>
+
+            <Card variant="elevated">
+              <div className="flex items-start gap-4">
+                <div className="bg-secondary-purple-light/20 p-3 rounded-xl flex-shrink-0">
+                  <span className="text-2xl font-bold text-secondary-purple-light">Months 10-18</span>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold mb-3 text-secondary-purple-light">Validation & Case Study</h3>
+                  <p className="text-gray-300 mb-4">
+                    Document your results. Build your reputation as transparency leader. Start referring other agents.
+                  </p>
+                  <div className="bg-gray-800 p-4 rounded-lg mb-4">
+                    <p className="font-semibold mb-2 text-white">Weekly Activities:</p>
+                    <ul className="text-sm text-gray-400 space-y-1">
+                      <li>• Bi-weekly check-ins (you&apos;re largely autonomous now)</li>
+                      <li>• Quarterly case study updates (your wins publicly showcased)</li>
+                      <li>• Affiliate program onboarding (start earning referral revenue)</li>
+                      <li>• Industry thought leadership support (you&apos;re now the expert)</li>
+                    </ul>
+                  </div>
+                  <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
+                    <p className="text-sm text-green-400 font-semibold mb-2">Partnership Completion:</p>
+                    <p className="text-sm text-gray-300">
+                      At month 12-18, partnership converts to lifetime access. All benefits activate. You&apos;re a founding member of the transparent real estate movement.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </Section>
+
+      {/* Ideal Partner Profile */}
+      <Section background="dark">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            Ideal <span className="text-gradient">Partner Profile</span>
+          </h2>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <Card variant="elevated" className="border-l-4 border-green-500">
+              <h3 className="text-xl font-semibold mb-4 text-green-400">You&apos;re a Great Fit If:</h3>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">You&apos;re already known for integrity</strong> — Your reputation is built on trust and client advocacy.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">You see transparency as competitive advantage</strong> — In the exclusive buyer agreement era, clarity wins.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">You want to differentiate on value</strong> — Not just listing access, but demonstrated expertise.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">You&apos;re willing to document publicly</strong> — Your transparent approach will be showcased as case study.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">You can commit 12-18 months</strong> — Building new norms takes time and consistency.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
+                  <span><strong className="text-white">You want to lead industry change</strong> — Be the transparency pioneer in your market.</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card variant="elevated" className="border-l-4 border-red-500">
+              <h3 className="text-xl font-semibold mb-4 text-red-400">You&apos;re NOT a Fit If:</h3>
+              <ul className="space-y-3 text-gray-300 text-sm">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 text-xl mt-0.5">✕</span>
+                  <span><strong className="text-white">You want instant market share</strong> — Building transparency reputation takes consistent demonstration.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 text-xl mt-0.5">✕</span>
+                  <span><strong className="text-white">You rely on opacity for leverage</strong> — Transparency requires competing on value, not information asymmetry.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 text-xl mt-0.5">✕</span>
+                  <span><strong className="text-white">You want set-it-and-forget-it tools</strong> — This requires active participation and feedback.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 text-xl mt-0.5">✕</span>
+                  <span><strong className="text-white">You can&apos;t afford $497/month per agent</strong> — Don&apos;t overextend. This is an investment.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 text-xl mt-0.5">✕</span>
+                  <span><strong className="text-white">You&apos;re not comfortable with public documentation</strong> — Your results will be shared transparently.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-400 text-xl mt-0.5">✕</span>
+                  <span><strong className="text-white">You just want cheaper CRM</strong> — This is about proving a better industry model, not saving money on software.</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          <Card variant="bordered" className="bg-primary/10 border-primary-blue/30">
+            <h3 className="text-xl font-bold mb-4 text-primary-blue">The Real Question:</h3>
+            <p className="text-lg text-gray-300 mb-4">
+              Do you believe transparency and value creation should replace opacity and access-hoarding as the foundation of real estate?
+            </p>
+            <p className="text-white font-semibold">
+              If yes, you&apos;re probably a fit. If not, this isn&apos;t for you.
+            </p>
+          </Card>
+        </div>
+      </Section>
+
+      {/* Decision Framework */}
+      <Section background="medium">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">
+            Is RE-Connect <span className="text-gradient">Right For You?</span>
+          </h2>
+
+          <div className="space-y-6 mb-8">
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-accent-pink">Choose RE-Connect If:</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink text-xl">→</span>
+                  <span>You want to <strong className="text-white">differentiate through transparency</strong> in the exclusive buyer agreement era</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink text-xl">→</span>
+                  <span>You&apos;re ready to <strong className="text-white">compete on value and expertise</strong>, not information asymmetry</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink text-xl">→</span>
+                  <span>You want <strong className="text-white">tools and coaching</strong> to implement transparent practices systematically</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink text-xl">→</span>
+                  <span>You&apos;re willing to <strong className="text-white">document your results publicly</strong> to build industry reputation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-accent-pink text-xl">→</span>
+                  <span>You see <strong className="text-white">lifetime platform access + affiliate revenue</strong> as long-term value</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-primary-blue">Keep Your Current Approach If:</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-blue text-xl">→</span>
+                  <span>Your <strong className="text-white">current practices are working well</strong> and you see no need to change</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-blue text-xl">→</span>
+                  <span>You prefer <strong className="text-white">traditional fee structures</strong> without complete upfront transparency</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-primary-blue text-xl">→</span>
+                  <span>You&apos;re <strong className="text-white">not interested in being an early adopter</strong> of new industry practices</span>
+                </li>
+              </ul>
+            </Card>
+
+            <Card variant="elevated">
+              <h3 className="text-2xl font-bold mb-4 text-secondary-purple-light">Choose Traditional Tech Providers If:</h3>
+              <ul className="space-y-3 text-gray-300">
+                <li className="flex items-start gap-3">
+                  <span className="text-secondary-purple-light text-xl">→</span>
+                  <span>You just need <strong className="text-white">basic CRM or transaction management</strong> without methodology change</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-secondary-purple-light text-xl">→</span>
+                  <span>You want <strong className="text-white">proven, established tools</strong> rather than beta programs</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-secondary-purple-light text-xl">→</span>
+                  <span>You prefer <strong className="text-white">pay-monthly SaaS</strong> without partnership commitments</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+
+          <div className="bg-background-dark rounded-2xl p-8 border border-accent-pink/30">
+            <h3 className="text-2xl font-bold mb-4 text-center text-accent-pink">Still Unsure?</h3>
+            <p className="text-lg text-gray-300 text-center mb-6">
+              When beta opens (Mid 2026), the application process will include a qualification call. We&apos;ll tell you honestly if RE-Connect is right for your practice.
+            </p>
+            <p className="text-center text-sm text-gray-400">
+              We&apos;d rather turn you away than take your money for an approach that won&apos;t work for you.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* The Vision */}
+      <Section background="dark">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             The <span className="text-gradient">Vision</span>
